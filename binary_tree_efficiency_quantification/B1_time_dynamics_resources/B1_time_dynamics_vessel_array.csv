@@ -1,0 +1,7 @@
+name,BC_type,vessel_type,inp_vessels,out_vessels
+inlet,pp_H1,capillary_H_D,,VV_junc1
+VV_junc1,vv_junction,capillary_H_D,inlet,PV1 PV2
+PV1,pp_H3,capillary_H_D_pericyte,VV_junc1,V1
+PV2,pp_H4,capillary_H_D_pericyte,VV_junc1,V2
+V1,vp,capillary_H_D,PV1,
+V2,vp,capillary_H_D,PV2,

@@ -1,0 +1,9 @@
+Flows
+TC1/v_mm3_s , TC2/v_mm3_s, TC3/v_mm3_s, TC4/v_mm3_s, TC5/v_mm3_s, TC6/v_mm3_s, V07/v_mm3_s, V02/v_mm3_s, V03/v_mm3_s
+
+Pressures
+TC1/u_mmHg, TC2/u_mmHg, TC3/u_mmHg, TC4/u_mmHg, TC5/u_mmHg, TC6/u_mmHg, V07/u_mmHg, V02/u_mmHg, V03/u_mmHg
+
+Mean hematocrit
+TC1/H_mean, TC2/H_mean, TC3/H_mean, TC4/H_mean, TC5/H_mean, TC6/H_mean, V07/H_mean, V02/H_mean, V03/H_mean
+

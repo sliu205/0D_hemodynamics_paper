@@ -1,0 +1,4192 @@
+CellML file: /home/sliu205/0D_hemodynamics_paper/Preliminary_results/generated_models/H_D_network/H_D_network.cellml
+Time unit: second
+
+STATES (222)
+--------------------------------------------------------------------------------
+inlet/H_link_R [dimensionless]
+inlet/H_link_L [dimensionless]
+inlet/H_down [dimensionless]
+inlet/RBC_volume [m3]
+inlet/q_C [m3]
+VV_junc1/H_from1 [dimensionless]
+VV_junc1/H_from2 [dimensionless]
+VV_junc1/H_from3 [dimensionless]
+VV_junc1/H_from4 [dimensionless]
+VV_junc1/H_VV1_out_alpha [dimensionless]
+VV_junc1/RBC_volume [m3]
+VV_junc1/q_C [m3]
+VV_junc1/q_C_d [m3]
+V01/H_link_R [dimensionless]
+V01/H_link_L [dimensionless]
+V01/H_down [dimensionless]
+V01/RBC_volume [m3]
+V01/q_C [m3]
+PV01/H_link_R [dimensionless]
+PV01/H_link_L [dimensionless]
+PV01/H_down [dimensionless]
+PV01/RBC_volume [m3]
+PV01/q_C [m3]
+V02/H_link_R [dimensionless]
+V02/H_link_L [dimensionless]
+V02/H_down [dimensionless]
+V02/RBC_volume [m3]
+V02/q_C [m3]
+VV_junc2/H_from1 [dimensionless]
+VV_junc2/H_from2 [dimensionless]
+VV_junc2/H_from3 [dimensionless]
+VV_junc2/H_from4 [dimensionless]
+VV_junc2/H_VV1_out_alpha [dimensionless]
+VV_junc2/RBC_volume [m3]
+VV_junc2/q_C [m3]
+VV_junc2/q_C_d [m3]
+V03/H_link_R [dimensionless]
+V03/H_link_L [dimensionless]
+V03/H_down [dimensionless]
+V03/RBC_volume [m3]
+V03/q_C [m3]
+PV03/H_link_R [dimensionless]
+PV03/H_link_L [dimensionless]
+PV03/H_down [dimensionless]
+PV03/RBC_volume [m3]
+PV03/q_C [m3]
+V04/H_link_R [dimensionless]
+V04/H_link_L [dimensionless]
+V04/H_down [dimensionless]
+V04/RBC_volume [m3]
+V04/q_C [m3]
+VV_junc3/H_from1 [dimensionless]
+VV_junc3/H_from2 [dimensionless]
+VV_junc3/H_from3 [dimensionless]
+VV_junc3/H_from4 [dimensionless]
+VV_junc3/H_VV1_out_alpha [dimensionless]
+VV_junc3/RBC_volume [m3]
+VV_junc3/q_C [m3]
+VV_junc3/q_C_d [m3]
+PV05/H_link_R [dimensionless]
+PV05/H_link_L [dimensionless]
+PV05/H_down [dimensionless]
+PV05/RBC_volume [m3]
+PV05/q_C [m3]
+V05/H_link_R [dimensionless]
+V05/H_link_L [dimensionless]
+V05/H_down [dimensionless]
+V05/RBC_volume [m3]
+V05/q_C [m3]
+PTC1/H_link_R [dimensionless]
+PTC1/H_link_L [dimensionless]
+PTC1/H_down [dimensionless]
+PTC1/RBC_volume [m3]
+PTC1/q_C [m3]
+TC1/H_link_R [dimensionless]
+TC1/H_link_L [dimensionless]
+TC1/H_down [dimensionless]
+TC1/RBC_volume [m3]
+TC1/q_C [m3]
+PV06/H_link_R [dimensionless]
+PV06/H_link_L [dimensionless]
+PV06/H_down [dimensionless]
+PV06/RBC_volume [m3]
+PV06/q_C [m3]
+V06/H_link_R [dimensionless]
+V06/H_link_L [dimensionless]
+V06/H_down [dimensionless]
+V06/RBC_volume [m3]
+V06/q_C [m3]
+VV_junc4/H_from1 [dimensionless]
+VV_junc4/H_from2 [dimensionless]
+VV_junc4/H_from3 [dimensionless]
+VV_junc4/H_from4 [dimensionless]
+VV_junc4/H_VV1_out_alpha [dimensionless]
+VV_junc4/RBC_volume [m3]
+VV_junc4/q_C [m3]
+VV_junc4/q_C_d [m3]
+TC2/H_link_R [dimensionless]
+TC2/H_link_L [dimensionless]
+TC2/H_down [dimensionless]
+TC2/RBC_volume [m3]
+TC2/q_C [m3]
+TC3/H_link_R [dimensionless]
+TC3/H_link_L [dimensionless]
+TC3/H_down [dimensionless]
+TC3/RBC_volume [m3]
+TC3/q_C [m3]
+V07/H_link_R [dimensionless]
+V07/H_link_L [dimensionless]
+V07/H_down [dimensionless]
+V07/RBC_volume [m3]
+V07/q_C [m3]
+VV_junc7/H_from1 [dimensionless]
+VV_junc7/H_from2 [dimensionless]
+VV_junc7/H_from3 [dimensionless]
+VV_junc7/H_from4 [dimensionless]
+VV_junc7/H_VV1_out_alpha [dimensionless]
+VV_junc7/RBC_volume [m3]
+VV_junc7/q_C [m3]
+VV_junc7/q_C_d [m3]
+TC4/H_link_R [dimensionless]
+TC4/H_link_L [dimensionless]
+TC4/H_down [dimensionless]
+TC4/RBC_volume [m3]
+TC4/q_C [m3]
+V13/H_link_R [dimensionless]
+V13/H_link_L [dimensionless]
+V13/H_down [dimensionless]
+V13/RBC_volume [m3]
+V13/q_C [m3]
+V11/H_link_R [dimensionless]
+V11/H_link_L [dimensionless]
+V11/H_down [dimensionless]
+V11/RBC_volume [m3]
+V11/q_C [m3]
+VV_junc5/H_from1 [dimensionless]
+VV_junc5/H_from2 [dimensionless]
+VV_junc5/H_from3 [dimensionless]
+VV_junc5/H_from4 [dimensionless]
+VV_junc5/H_VV1_out_alpha [dimensionless]
+VV_junc5/RBC_volume [m3]
+VV_junc5/q_C [m3]
+VV_junc5/q_C_d [m3]
+PV12/H_link_R [dimensionless]
+PV12/H_link_L [dimensionless]
+PV12/H_down [dimensionless]
+PV12/RBC_volume [m3]
+PV12/q_C [m3]
+V12/H_link_R [dimensionless]
+V12/H_link_L [dimensionless]
+V12/H_down [dimensionless]
+V12/RBC_volume [m3]
+V12/q_C [m3]
+VV_junc6/H_from1 [dimensionless]
+VV_junc6/H_from2 [dimensionless]
+VV_junc6/H_from3 [dimensionless]
+VV_junc6/H_from4 [dimensionless]
+VV_junc6/H_VV1_out_alpha [dimensionless]
+VV_junc6/RBC_volume [m3]
+VV_junc6/q_C [m3]
+VV_junc6/q_C_d [m3]
+V17/H_link_R [dimensionless]
+V17/H_link_L [dimensionless]
+V17/H_down [dimensionless]
+V17/RBC_volume [m3]
+V17/q_C [m3]
+PV14/H_link_R [dimensionless]
+PV14/H_link_L [dimensionless]
+PV14/H_down [dimensionless]
+PV14/RBC_volume [m3]
+PV14/q_C [m3]
+V14/H_link_R [dimensionless]
+V14/H_link_L [dimensionless]
+V14/H_down [dimensionless]
+V14/RBC_volume [m3]
+V14/q_C [m3]
+VV_junc8/H_from1 [dimensionless]
+VV_junc8/H_from2 [dimensionless]
+VV_junc8/H_from3 [dimensionless]
+VV_junc8/H_from4 [dimensionless]
+VV_junc8/H_VV1_out_alpha [dimensionless]
+VV_junc8/RBC_volume [m3]
+VV_junc8/q_C [m3]
+VV_junc8/q_C_d [m3]
+PV16/H_link_R [dimensionless]
+PV16/H_link_L [dimensionless]
+PV16/H_down [dimensionless]
+PV16/RBC_volume [m3]
+PV16/q_C [m3]
+V16/H_link_R [dimensionless]
+V16/H_link_L [dimensionless]
+V16/H_down [dimensionless]
+V16/RBC_volume [m3]
+V16/q_C [m3]
+VV_junc9/H_from1 [dimensionless]
+VV_junc9/H_from2 [dimensionless]
+VV_junc9/H_from3 [dimensionless]
+VV_junc9/H_from4 [dimensionless]
+VV_junc9/H_VV1_out_alpha [dimensionless]
+VV_junc9/RBC_volume [m3]
+VV_junc9/q_C [m3]
+VV_junc9/q_C_d [m3]
+PTC5/H_link_R [dimensionless]
+PTC5/H_link_L [dimensionless]
+PTC5/H_down [dimensionless]
+PTC5/RBC_volume [m3]
+PTC5/q_C [m3]
+TC5/H_link_R [dimensionless]
+TC5/H_link_L [dimensionless]
+TC5/H_down [dimensionless]
+TC5/RBC_volume [m3]
+TC5/q_C [m3]
+PTC6/H_link_R [dimensionless]
+PTC6/H_link_L [dimensionless]
+PTC6/H_down [dimensionless]
+PTC6/RBC_volume [m3]
+PTC6/q_C [m3]
+TC6/H_link_R [dimensionless]
+TC6/H_link_L [dimensionless]
+TC6/H_down [dimensionless]
+TC6/RBC_volume [m3]
+TC6/q_C [m3]
+
+ALGEBRAICS (1453)
+--------------------------------------------------------------------------------
+VV_junc1/q [m3]
+inlet/H_L_in [dimensionless]
+VV_junc2/q [m3]
+VV_junc3/q [m3]
+VV_junc4/q [m3]
+VV_junc7/q [m3]
+VV_junc5/q [m3]
+VV_junc6/q [m3]
+VV_junc8/q [m3]
+VV_junc9/q [m3]
+inlet/H_R_in [dimensionless]
+inlet/q [m3]
+inlet/H_mean [dimensionless]
+inlet/hem_dep_u_rel [dimensionless]
+inlet/mu [Js_per_m3]
+inlet/R [Js_per_m6]
+inlet/u [J_per_m3]
+inlet/u_mmHg [dimensionless]
+inlet/v [m3_per_s]
+inlet/v_mm3_s [mm3_per_s]
+inlet/w_v [dimensionless]
+inlet/v_pos [m3_per_s]
+inlet/v_neg [m3_per_s]
+VV_junc1/H_mean [dimensionless]
+VV_junc1/u [J_per_m3]
+VV_junc1/u_mmHg [dimensionless]
+inlet/v_d [m3_per_s]
+inlet/v_d_mm3_s [mm3_per_s]
+inlet/w_v_d [dimensionless]
+inlet/H_up [dimensionless]
+inlet/v_d_pos [m3_per_s]
+inlet/v_d_neg [m3_per_s]
+inlet/H_L_out [dimensionless]
+inlet/s_v_d [dimensionless]
+inlet/H_R_out [dimensionless]
+inlet/H_down_target [dimensionless]
+inlet/H_mass_L [dimensionless]
+VV_junc1/vj1 [m3_per_s]
+inlet/H_mass_R [dimensionless]
+VV_junc1/w_in1 [dimensionless]
+VV_junc1/w_out1 [dimensionless]
+VV_junc1/Qin1 [m3_per_s]
+VV_junc1/Qout1 [m3_per_s]
+VV_junc1/bc1_is_in [dimensionless]
+VV_junc1/bc1_is_out [dimensionless]
+VV_junc1/u_d [J_per_m3]
+VV_junc1/u_d_mmHg [dimensionless]
+VV_junc1/v [m3_per_s]
+VV_junc1/v_mm3_s [mm3_per_s]
+V01/H_L_in [dimensionless]
+V01/H_R_in [dimensionless]
+V01/q [m3]
+V01/H_mean [dimensionless]
+V01/hem_dep_u_rel [dimensionless]
+V01/mu [Js_per_m3]
+V01/R [Js_per_m6]
+V01/u [J_per_m3]
+V01/u_mmHg [dimensionless]
+V01/v [m3_per_s]
+V01/v_mm3_s [mm3_per_s]
+VV_junc1/vj3 [m3_per_s]
+VV_junc1/w_in3 [dimensionless]
+VV_junc1/w_out3 [dimensionless]
+VV_junc1/Qin3 [m3_per_s]
+VV_junc1/Qout3 [m3_per_s]
+VV_junc1/bc3_is_in [dimensionless]
+VV_junc1/bc3_is_out [dimensionless]
+V01/w_v [dimensionless]
+V01/v_pos [m3_per_s]
+V01/v_neg [m3_per_s]
+PV01/R_constriction [Js_per_m6]
+PV01/H_L_in [dimensionless]
+PV01/H_R_in [dimensionless]
+PV01/q [m3]
+PV01/H_mean [dimensionless]
+PV01/hem_dep_u_rel [dimensionless]
+PV01/mu [Js_per_m3]
+PV01/R [Js_per_m6]
+PV01/u [J_per_m3]
+V01/v_d [m3_per_s]
+PV01/u_mmHg [dimensionless]
+V01/v_d_mm3_s [mm3_per_s]
+V01/w_v_d [dimensionless]
+V01/H_up [dimensionless]
+V01/v_d_pos [m3_per_s]
+V01/v_d_neg [m3_per_s]
+V01/H_L_out [dimensionless]
+V01/s_v_d [dimensionless]
+V01/H_R_out [dimensionless]
+V02/H_L_in [dimensionless]
+V01/H_down_target [dimensionless]
+V01/H_mass_L [dimensionless]
+V02/H_R_in [dimensionless]
+V01/H_mass_R [dimensionless]
+V02/q [m3]
+V02/H_mean [dimensionless]
+V02/hem_dep_u_rel [dimensionless]
+V02/mu [Js_per_m3]
+V02/R [Js_per_m6]
+V02/u [J_per_m3]
+PV01/v [m3_per_s]
+V02/u_mmHg [dimensionless]
+PV01/w_v [dimensionless]
+PV01/v_mm3_s [mm3_per_s]
+VV_junc2/H_mean [dimensionless]
+PV01/H_up [dimensionless]
+PV01/H_L_out [dimensionless]
+PV01/v_pos [m3_per_s]
+PV01/v_neg [m3_per_s]
+VV_junc2/u [J_per_m3]
+PV01/s_v [dimensionless]
+PV01/H_R_out [dimensionless]
+VV_junc2/u_mmHg [dimensionless]
+V02/v [m3_per_s]
+PV01/H_down_target [dimensionless]
+PV01/H_mass_L [dimensionless]
+V02/v_mm3_s [mm3_per_s]
+V02/w_v [dimensionless]
+PV01/H_mass_R [dimensionless]
+V02/H_up [dimensionless]
+V02/v_pos [m3_per_s]
+V02/v_neg [m3_per_s]
+V02/H_L_out [dimensionless]
+V02/s_v [dimensionless]
+V02/H_R_out [dimensionless]
+V02/H_down_target [dimensionless]
+V02/H_mass_L [dimensionless]
+VV_junc2/vj1 [m3_per_s]
+V02/H_mass_R [dimensionless]
+VV_junc2/w_in1 [dimensionless]
+VV_junc2/w_out1 [dimensionless]
+VV_junc2/Qin1 [m3_per_s]
+VV_junc2/Qout1 [m3_per_s]
+VV_junc2/bc1_is_in [dimensionless]
+VV_junc2/bc1_is_out [dimensionless]
+VV_junc2/u_d [J_per_m3]
+VV_junc2/u_d_mmHg [dimensionless]
+VV_junc2/v [m3_per_s]
+VV_junc2/v_mm3_s [mm3_per_s]
+V03/H_L_in [dimensionless]
+V03/H_R_in [dimensionless]
+V03/q [m3]
+V03/H_mean [dimensionless]
+V03/hem_dep_u_rel [dimensionless]
+V03/mu [Js_per_m3]
+V03/R [Js_per_m6]
+V03/u [J_per_m3]
+V03/u_mmHg [dimensionless]
+V03/v [m3_per_s]
+V03/v_mm3_s [mm3_per_s]
+VV_junc2/vj3 [m3_per_s]
+VV_junc2/w_in3 [dimensionless]
+VV_junc2/w_out3 [dimensionless]
+VV_junc2/Qin3 [m3_per_s]
+VV_junc2/Qout3 [m3_per_s]
+VV_junc2/bc3_is_in [dimensionless]
+VV_junc2/bc3_is_out [dimensionless]
+V03/w_v [dimensionless]
+V03/v_pos [m3_per_s]
+V03/v_neg [m3_per_s]
+PV03/R_constriction [Js_per_m6]
+PV03/H_L_in [dimensionless]
+PV03/H_R_in [dimensionless]
+PV03/q [m3]
+PV03/H_mean [dimensionless]
+PV03/hem_dep_u_rel [dimensionless]
+PV03/mu [Js_per_m3]
+PV03/R [Js_per_m6]
+PV03/u [J_per_m3]
+V03/v_d [m3_per_s]
+PV03/u_mmHg [dimensionless]
+V03/w_v_d [dimensionless]
+V03/v_d_mm3_s [mm3_per_s]
+V04/H_L_in [dimensionless]
+V03/H_up [dimensionless]
+V03/v_d_pos [m3_per_s]
+V03/v_d_neg [m3_per_s]
+V04/H_R_in [dimensionless]
+V03/H_L_out [dimensionless]
+V03/s_v_d [dimensionless]
+V03/H_R_out [dimensionless]
+V04/q [m3]
+V07/H_L_in [dimensionless]
+V03/H_down_target [dimensionless]
+V03/H_mass_L [dimensionless]
+V04/H_mean [dimensionless]
+V07/H_R_in [dimensionless]
+V03/H_mass_R [dimensionless]
+V04/hem_dep_u_rel [dimensionless]
+V07/q [m3]
+V04/mu [Js_per_m3]
+V07/H_mean [dimensionless]
+V04/R [Js_per_m6]
+V07/hem_dep_u_rel [dimensionless]
+V04/u [J_per_m3]
+V07/mu [Js_per_m3]
+PV03/v [m3_per_s]
+V04/u_mmHg [dimensionless]
+V07/R [Js_per_m6]
+PV03/w_v [dimensionless]
+PV03/v_mm3_s [mm3_per_s]
+VV_junc3/H_mean [dimensionless]
+V07/u [J_per_m3]
+PV03/H_up [dimensionless]
+PV03/H_L_out [dimensionless]
+PV03/v_pos [m3_per_s]
+PV03/v_neg [m3_per_s]
+VV_junc3/u [J_per_m3]
+V07/u_mmHg [dimensionless]
+V07/v [m3_per_s]
+PV03/s_v [dimensionless]
+PV03/H_R_out [dimensionless]
+VV_junc3/u_mmHg [dimensionless]
+V04/v [m3_per_s]
+V07/v_mm3_s [mm3_per_s]
+VV_junc2/vj4 [m3_per_s]
+PV03/H_down_target [dimensionless]
+PV03/H_mass_L [dimensionless]
+V04/v_mm3_s [mm3_per_s]
+V04/w_v [dimensionless]
+VV_junc2/w_in4 [dimensionless]
+PV03/H_mass_R [dimensionless]
+V04/H_up [dimensionless]
+V04/v_pos [m3_per_s]
+V04/v_neg [m3_per_s]
+V04/H_L_out [dimensionless]
+VV_junc2/w_out4 [dimensionless]
+V04/s_v [dimensionless]
+V04/H_R_out [dimensionless]
+VV_junc2/Qin4 [m3_per_s]
+VV_junc2/Qin_tot [m3_per_s]
+V04/H_down_target [dimensionless]
+V04/H_mass_L [dimensionless]
+VV_junc3/vj1 [m3_per_s]
+VV_junc2/Qout4 [m3_per_s]
+VV_junc2/Qout_tot [m3_per_s]
+V04/H_mass_R [dimensionless]
+VV_junc3/w_in1 [dimensionless]
+VV_junc2/bc4_is_in [dimensionless]
+VV_junc3/w_out1 [dimensionless]
+VV_junc2/bc4_is_out [dimensionless]
+VV_junc2/n_out [dimensionless]
+VV_junc3/Qin1 [m3_per_s]
+VV_junc2/n_in [dimensionless]
+VV_junc3/Qout1 [m3_per_s]
+VV_junc2/junction_type [dimensionless]
+VV_junc3/bc1_is_in [dimensionless]
+VV_junc2/is_split [dimensionless]
+VV_junc2/is_merge [dimensionless]
+VV_junc3/bc1_is_out [dimensionless]
+VV_junc2/feed1 [dimensionless]
+VV_junc3/u_d [J_per_m3]
+VV_junc2/feed2 [dimensionless]
+VV_junc3/u_d_mmHg [dimensionless]
+VV_junc3/v [m3_per_s]
+VV_junc2/feed3 [dimensionless]
+VV_junc3/v_mm3_s [mm3_per_s]
+PV05/R_constriction [Js_per_m6]
+VV_junc2/feed4 [dimensionless]
+PV05/H_L_in [dimensionless]
+PV05/H_R_in [dimensionless]
+VV_junc2/alpha1 [dimensionless]
+PV05/q [m3]
+VV_junc2/alpha2 [dimensionless]
+PV05/H_mean [dimensionless]
+VV_junc2/alpha3 [dimensionless]
+PV05/hem_dep_u_rel [dimensionless]
+VV_junc2/alpha4 [dimensionless]
+PV05/mu [Js_per_m3]
+VV_junc2/Qout1_rem [m3_per_s]
+PV05/R [Js_per_m6]
+VV_junc2/Qout2_rem [m3_per_s]
+PV05/u [J_per_m3]
+VV_junc2/Qout3_rem [m3_per_s]
+PV05/u_mmHg [dimensionless]
+PV05/v [m3_per_s]
+VV_junc2/Qout4_rem [m3_per_s]
+PV05/v_mm3_s [mm3_per_s]
+VV_junc3/vj3 [m3_per_s]
+VV_junc2/beta1 [dimensionless]
+VV_junc3/w_in3 [dimensionless]
+VV_junc2/beta2 [dimensionless]
+VV_junc3/w_out3 [dimensionless]
+VV_junc2/beta3 [dimensionless]
+VV_junc3/Qin3 [m3_per_s]
+VV_junc2/beta4 [dimensionless]
+VV_junc3/Qout3 [m3_per_s]
+VV_junc2/D_F [metre]
+VV_junc3/bc3_is_in [dimensionless]
+VV_junc2/D_alpha [metre]
+VV_junc3/bc3_is_out [dimensionless]
+VV_junc2/D_beta [metre]
+PV05/w_v [dimensionless]
+VV_junc2/v_alpha [m3_per_s]
+PV05/v_pos [m3_per_s]
+PV05/v_neg [m3_per_s]
+V05/H_L_in [dimensionless]
+VV_junc2/v_beta [m3_per_s]
+V05/H_R_in [dimensionless]
+VV_junc2/FQB_alpha [dimensionless]
+V05/q [m3]
+VV_junc2/B [dimensionless]
+V05/H_mean [dimensionless]
+VV_junc2/A [dimensionless]
+V05/hem_dep_u_rel [dimensionless]
+VV_junc2/X_0 [dimensionless]
+V05/mu [Js_per_m3]
+VV_junc2/y_raw [dimensionless]
+V05/R [Js_per_m6]
+VV_junc2/y [dimensionless]
+V05/u [J_per_m3]
+VV_junc2/ph [dimensionless]
+PV05/v_d [m3_per_s]
+V05/u_mmHg [dimensionless]
+VV_junc2/FQE_alpha [dimensionless]
+VV_junc2/epsilon_alpha [dimensionless]
+PV05/w_v_d [dimensionless]
+PV05/v_d_mm3_s [mm3_per_s]
+PTC1/R_constriction [Js_per_m6]
+VV_junc2/H_VV1_out_beta [dimensionless]
+VV_junc2/H_split1 [dimensionless]
+VV_junc2/H_split2 [dimensionless]
+VV_junc2/H_split3 [dimensionless]
+PV05/H_up [dimensionless]
+PV05/v_d_pos [m3_per_s]
+PV05/v_d_neg [m3_per_s]
+PTC1/H_L_in [dimensionless]
+PV05/H_L_out [dimensionless]
+VV_junc2/RBC_out [m3_per_s]
+VV_junc2/H_daughter1 [dimensionless]
+VV_junc2/H_daughter2 [dimensionless]
+VV_junc2/H_daughter3 [dimensionless]
+PV05/s_v_d [dimensionless]
+PV05/H_R_out [dimensionless]
+PTC1/H_R_in [dimensionless]
+PV06/R_constriction [Js_per_m6]
+V07/w_v [dimensionless]
+VV_junc2/H_from1_target [dimensionless]
+VV_junc2/H_from2_target [dimensionless]
+VV_junc2/H_from3_target [dimensionless]
+PV05/H_down_target [dimensionless]
+PV05/H_mass_L [dimensionless]
+PTC1/q [m3]
+PV06/H_L_in [dimensionless]
+V07/v_pos [m3_per_s]
+V07/v_neg [m3_per_s]
+VV_junc7/H_mean [dimensionless]
+PV05/H_mass_R [dimensionless]
+PTC1/H_mean [dimensionless]
+PV06/H_R_in [dimensionless]
+VV_junc7/u [J_per_m3]
+PTC1/hem_dep_u_rel [dimensionless]
+PV06/q [m3]
+VV_junc7/u_mmHg [dimensionless]
+V07/v_d [m3_per_s]
+PTC1/mu [Js_per_m3]
+PV06/H_mean [dimensionless]
+V07/v_d_mm3_s [mm3_per_s]
+V07/w_v_d [dimensionless]
+PTC1/R [Js_per_m6]
+PV06/hem_dep_u_rel [dimensionless]
+V07/H_up [dimensionless]
+V07/v_d_pos [m3_per_s]
+V07/v_d_neg [m3_per_s]
+V07/H_L_out [dimensionless]
+VV_junc2/H_split4 [dimensionless]
+VV_junc2/RBC_in [m3_per_s]
+PTC1/u [J_per_m3]
+PV06/mu [Js_per_m3]
+V07/s_v_d [dimensionless]
+V07/H_R_out [dimensionless]
+VV_junc2/H_daughter4 [dimensionless]
+V05/v [m3_per_s]
+PTC1/u_mmHg [dimensionless]
+PV06/R [Js_per_m6]
+V07/H_down_target [dimensionless]
+V07/H_mass_L [dimensionless]
+VV_junc7/vj1 [m3_per_s]
+VV_junc2/H_from4_target [dimensionless]
+V05/w_v [dimensionless]
+V05/v_mm3_s [mm3_per_s]
+TC1/R_constriction [Js_per_m6]
+PV06/u [J_per_m3]
+V07/H_mass_R [dimensionless]
+VV_junc7/w_in1 [dimensionless]
+V05/H_up [dimensionless]
+V05/H_L_out [dimensionless]
+V05/v_pos [m3_per_s]
+V05/v_neg [m3_per_s]
+TC1/H_L_in [dimensionless]
+PV06/u_mmHg [dimensionless]
+PV06/v [m3_per_s]
+VV_junc7/w_out1 [dimensionless]
+V05/s_v [dimensionless]
+V05/H_R_out [dimensionless]
+TC1/H_R_in [dimensionless]
+PV06/v_mm3_s [mm3_per_s]
+VV_junc3/vj4 [m3_per_s]
+VV_junc7/Qin1 [m3_per_s]
+V05/H_down_target [dimensionless]
+V05/H_mass_L [dimensionless]
+TC1/q [m3]
+VV_junc3/w_in4 [dimensionless]
+VV_junc7/Qout1 [m3_per_s]
+V05/H_mass_R [dimensionless]
+TC1/H_mean [dimensionless]
+VV_junc3/w_out4 [dimensionless]
+VV_junc7/bc1_is_in [dimensionless]
+TC1/hem_dep_u_rel [dimensionless]
+VV_junc3/Qin4 [m3_per_s]
+VV_junc7/bc1_is_out [dimensionless]
+VV_junc3/Qin_tot [m3_per_s]
+TC1/mu [Js_per_m3]
+VV_junc3/Qout4 [m3_per_s]
+VV_junc7/u_d [J_per_m3]
+VV_junc3/Qout_tot [m3_per_s]
+TC1/R [Js_per_m6]
+VV_junc3/bc4_is_in [dimensionless]
+VV_junc7/u_d_mmHg [dimensionless]
+VV_junc7/v [m3_per_s]
+TC1/u [J_per_m3]
+VV_junc3/bc4_is_out [dimensionless]
+VV_junc7/v_mm3_s [mm3_per_s]
+TC4/H_L_in [dimensionless]
+VV_junc3/n_out [dimensionless]
+PTC1/v [m3_per_s]
+TC1/u_mmHg [dimensionless]
+VV_junc3/n_in [dimensionless]
+TC4/H_R_in [dimensionless]
+PTC1/w_v [dimensionless]
+PTC1/v_mm3_s [mm3_per_s]
+TC1/v [m3_per_s]
+VV_junc3/junction_type [dimensionless]
+TC4/q [m3]
+PTC1/H_up [dimensionless]
+PTC1/H_L_out [dimensionless]
+PTC1/v_pos [m3_per_s]
+PTC1/v_neg [m3_per_s]
+TC1/w_v [dimensionless]
+TC1/v_mm3_s [mm3_per_s]
+VV_junc3/is_split [dimensionless]
+TC4/H_mean [dimensionless]
+VV_junc3/is_merge [dimensionless]
+PTC1/s_v [dimensionless]
+PTC1/H_R_out [dimensionless]
+TC1/H_up [dimensionless]
+TC1/H_L_out [dimensionless]
+TC1/v_pos [m3_per_s]
+TC1/v_neg [m3_per_s]
+TC4/hem_dep_u_rel [dimensionless]
+VV_junc3/feed1 [dimensionless]
+PTC1/H_down_target [dimensionless]
+PTC1/H_mass_L [dimensionless]
+TC1/s_v [dimensionless]
+TC1/H_R_out [dimensionless]
+TC4/mu [Js_per_m3]
+VV_junc3/feed2 [dimensionless]
+PTC1/H_mass_R [dimensionless]
+TC1/H_down_target [dimensionless]
+TC1/H_mass_L [dimensionless]
+TC4/R [Js_per_m6]
+VV_junc3/feed3 [dimensionless]
+TC1/H_mass_R [dimensionless]
+TC4/u [J_per_m3]
+VV_junc3/feed4 [dimensionless]
+TC4/u_mmHg [dimensionless]
+TC4/v [m3_per_s]
+VV_junc3/alpha1 [dimensionless]
+TC4/v_mm3_s [mm3_per_s]
+VV_junc7/vj4 [m3_per_s]
+VV_junc3/alpha2 [dimensionless]
+VV_junc7/w_in4 [dimensionless]
+VV_junc3/alpha3 [dimensionless]
+VV_junc7/w_out4 [dimensionless]
+VV_junc3/alpha4 [dimensionless]
+VV_junc7/Qin4 [m3_per_s]
+VV_junc3/Qout1_rem [m3_per_s]
+VV_junc7/Qout4 [m3_per_s]
+VV_junc3/Qout2_rem [m3_per_s]
+VV_junc7/bc4_is_in [dimensionless]
+VV_junc3/Qout3_rem [m3_per_s]
+VV_junc7/bc4_is_out [dimensionless]
+VV_junc3/Qout4_rem [m3_per_s]
+TC4/w_v [dimensionless]
+VV_junc3/beta1 [dimensionless]
+TC4/v_pos [m3_per_s]
+TC4/v_neg [m3_per_s]
+TC4/v_d [m3_per_s]
+VV_junc3/beta2 [dimensionless]
+TC4/w_v_d [dimensionless]
+TC4/v_d_mm3_s [mm3_per_s]
+VV_junc3/beta3 [dimensionless]
+TC4/H_up [dimensionless]
+TC4/v_d_pos [m3_per_s]
+TC4/v_d_neg [m3_per_s]
+TC4/H_L_out [dimensionless]
+VV_junc3/beta4 [dimensionless]
+TC4/s_v_d [dimensionless]
+TC4/H_R_out [dimensionless]
+V13/H_L_in [dimensionless]
+VV_junc3/D_F [metre]
+TC4/H_down_target [dimensionless]
+TC4/H_mass_L [dimensionless]
+V13/H_R_in [dimensionless]
+VV_junc3/D_alpha [metre]
+TC4/H_mass_R [dimensionless]
+V13/q [m3]
+VV_junc3/D_beta [metre]
+V13/H_mean [dimensionless]
+VV_junc3/v_alpha [m3_per_s]
+V13/hem_dep_u_rel [dimensionless]
+VV_junc3/v_beta [m3_per_s]
+V13/mu [Js_per_m3]
+VV_junc3/FQB_alpha [dimensionless]
+V13/R [Js_per_m6]
+VV_junc3/B [dimensionless]
+V13/u [J_per_m3]
+VV_junc3/A [dimensionless]
+V13/u_mmHg [dimensionless]
+V13/v [m3_per_s]
+VV_junc3/X_0 [dimensionless]
+V13/v_mm3_s [mm3_per_s]
+VV_junc7/vj3 [m3_per_s]
+VV_junc3/y_raw [dimensionless]
+VV_junc7/w_in3 [dimensionless]
+VV_junc3/y [dimensionless]
+VV_junc7/w_out3 [dimensionless]
+VV_junc3/ph [dimensionless]
+VV_junc7/Qin3 [m3_per_s]
+VV_junc3/FQE_alpha [dimensionless]
+VV_junc7/Qin_tot [m3_per_s]
+VV_junc7/Qout3 [m3_per_s]
+VV_junc3/epsilon_alpha [dimensionless]
+VV_junc3/H_VV1_out_beta [dimensionless]
+VV_junc7/Qout_tot [m3_per_s]
+VV_junc7/bc3_is_in [dimensionless]
+VV_junc3/H_split1 [dimensionless]
+VV_junc3/H_split2 [dimensionless]
+VV_junc3/H_split3 [dimensionless]
+VV_junc3/RBC_out [m3_per_s]
+VV_junc7/bc3_is_out [dimensionless]
+VV_junc3/H_daughter1 [dimensionless]
+VV_junc3/H_daughter2 [dimensionless]
+VV_junc3/H_daughter3 [dimensionless]
+PV06/w_v [dimensionless]
+VV_junc7/n_out [dimensionless]
+VV_junc7/n_in [dimensionless]
+VV_junc3/H_from1_target [dimensionless]
+VV_junc3/H_from2_target [dimensionless]
+VV_junc3/H_from3_target [dimensionless]
+PV06/v_pos [m3_per_s]
+PV06/v_neg [m3_per_s]
+V06/H_L_in [dimensionless]
+VV_junc7/junction_type [dimensionless]
+V06/H_R_in [dimensionless]
+VV_junc7/is_split [dimensionless]
+V06/q [m3]
+VV_junc7/is_merge [dimensionless]
+V06/H_mean [dimensionless]
+VV_junc7/feed1 [dimensionless]
+V06/hem_dep_u_rel [dimensionless]
+VV_junc7/feed2 [dimensionless]
+V06/mu [Js_per_m3]
+VV_junc7/feed3 [dimensionless]
+V06/R [Js_per_m6]
+VV_junc7/feed4 [dimensionless]
+V06/u [J_per_m3]
+VV_junc7/alpha1 [dimensionless]
+PV06/v_d [m3_per_s]
+V06/u_mmHg [dimensionless]
+VV_junc7/alpha2 [dimensionless]
+PV06/w_v_d [dimensionless]
+PV06/v_d_mm3_s [mm3_per_s]
+VV_junc4/H_mean [dimensionless]
+VV_junc7/alpha3 [dimensionless]
+PV06/H_up [dimensionless]
+PV06/H_L_out [dimensionless]
+PV06/v_d_pos [m3_per_s]
+PV06/v_d_neg [m3_per_s]
+VV_junc4/u [J_per_m3]
+VV_junc7/alpha4 [dimensionless]
+VV_junc3/H_split4 [dimensionless]
+VV_junc3/RBC_in [m3_per_s]
+PV06/s_v_d [dimensionless]
+PV06/H_R_out [dimensionless]
+VV_junc4/u_mmHg [dimensionless]
+V06/v [m3_per_s]
+VV_junc7/Qout1_rem [m3_per_s]
+VV_junc3/H_daughter4 [dimensionless]
+PV06/H_down_target [dimensionless]
+PV06/H_mass_L [dimensionless]
+V06/v_mm3_s [mm3_per_s]
+V06/w_v [dimensionless]
+VV_junc7/Qout2_rem [m3_per_s]
+VV_junc3/H_from4_target [dimensionless]
+PV06/H_mass_R [dimensionless]
+V06/H_up [dimensionless]
+V06/v_pos [m3_per_s]
+V06/v_neg [m3_per_s]
+V06/H_L_out [dimensionless]
+VV_junc7/Qout3_rem [m3_per_s]
+V06/s_v [dimensionless]
+V06/H_R_out [dimensionless]
+VV_junc7/Qout4_rem [m3_per_s]
+V06/H_down_target [dimensionless]
+V06/H_mass_L [dimensionless]
+VV_junc4/vj1 [m3_per_s]
+VV_junc7/beta1 [dimensionless]
+V06/H_mass_R [dimensionless]
+VV_junc4/w_in1 [dimensionless]
+VV_junc7/beta2 [dimensionless]
+VV_junc4/w_out1 [dimensionless]
+VV_junc7/beta3 [dimensionless]
+VV_junc4/Qin1 [m3_per_s]
+VV_junc7/beta4 [dimensionless]
+VV_junc4/Qout1 [m3_per_s]
+VV_junc7/D_F [metre]
+VV_junc4/bc1_is_in [dimensionless]
+VV_junc7/D_alpha [metre]
+VV_junc4/bc1_is_out [dimensionless]
+VV_junc7/D_beta [metre]
+VV_junc4/u_d [J_per_m3]
+VV_junc7/v_alpha [m3_per_s]
+VV_junc4/u_d_mmHg [dimensionless]
+VV_junc4/v [m3_per_s]
+VV_junc7/v_beta [m3_per_s]
+VV_junc4/v_mm3_s [mm3_per_s]
+TC2/H_L_in [dimensionless]
+VV_junc7/FQB_alpha [dimensionless]
+TC2/H_R_in [dimensionless]
+VV_junc7/B [dimensionless]
+TC2/q [m3]
+VV_junc7/A [dimensionless]
+TC2/H_mean [dimensionless]
+VV_junc7/X_0 [dimensionless]
+TC2/hem_dep_u_rel [dimensionless]
+VV_junc7/y_raw [dimensionless]
+TC2/mu [Js_per_m3]
+VV_junc7/y [dimensionless]
+TC2/R [Js_per_m6]
+VV_junc7/ph [dimensionless]
+TC2/u [J_per_m3]
+VV_junc7/FQE_alpha [dimensionless]
+TC2/u_mmHg [dimensionless]
+TC2/v [m3_per_s]
+VV_junc7/epsilon_alpha [dimensionless]
+VV_junc7/H_VV1_out_beta [dimensionless]
+TC2/v_mm3_s [mm3_per_s]
+VV_junc4/vj3 [m3_per_s]
+VV_junc7/H_split1 [dimensionless]
+VV_junc7/H_split2 [dimensionless]
+VV_junc7/H_split4 [dimensionless]
+VV_junc7/RBC_out [m3_per_s]
+VV_junc4/w_in3 [dimensionless]
+VV_junc7/H_daughter1 [dimensionless]
+VV_junc7/H_daughter2 [dimensionless]
+VV_junc7/H_daughter4 [dimensionless]
+V13/w_v [dimensionless]
+VV_junc4/w_out3 [dimensionless]
+VV_junc7/H_from1_target [dimensionless]
+VV_junc7/H_from2_target [dimensionless]
+VV_junc7/H_from4_target [dimensionless]
+V13/v_pos [m3_per_s]
+V13/v_neg [m3_per_s]
+V11/H_L_in [dimensionless]
+VV_junc4/Qin3 [m3_per_s]
+V11/H_R_in [dimensionless]
+VV_junc4/Qout3 [m3_per_s]
+V11/q [m3]
+VV_junc4/bc3_is_in [dimensionless]
+V11/H_mean [dimensionless]
+VV_junc4/bc3_is_out [dimensionless]
+V11/hem_dep_u_rel [dimensionless]
+TC2/w_v [dimensionless]
+V11/mu [Js_per_m3]
+TC2/v_pos [m3_per_s]
+TC2/v_neg [m3_per_s]
+TC2/v_d [m3_per_s]
+V11/R [Js_per_m6]
+TC2/w_v_d [dimensionless]
+TC2/v_d_mm3_s [mm3_per_s]
+V11/u [J_per_m3]
+TC2/H_up [dimensionless]
+TC2/v_d_pos [m3_per_s]
+TC2/v_d_neg [m3_per_s]
+TC2/H_L_out [dimensionless]
+V11/u_mmHg [dimensionless]
+V11/v [m3_per_s]
+TC2/s_v_d [dimensionless]
+TC2/H_R_out [dimensionless]
+TC3/H_L_in [dimensionless]
+V11/v_mm3_s [mm3_per_s]
+VV_junc1/vj4 [m3_per_s]
+TC2/H_down_target [dimensionless]
+TC2/H_mass_L [dimensionless]
+TC3/H_R_in [dimensionless]
+VV_junc1/w_in4 [dimensionless]
+TC2/H_mass_R [dimensionless]
+TC3/q [m3]
+VV_junc1/w_out4 [dimensionless]
+TC3/H_mean [dimensionless]
+VV_junc1/Qin4 [m3_per_s]
+VV_junc1/Qin_tot [m3_per_s]
+TC3/hem_dep_u_rel [dimensionless]
+VV_junc1/Qout4 [m3_per_s]
+VV_junc1/Qout_tot [m3_per_s]
+TC3/mu [Js_per_m3]
+VV_junc1/bc4_is_in [dimensionless]
+TC3/R [Js_per_m6]
+VV_junc1/bc4_is_out [dimensionless]
+VV_junc1/n_out [dimensionless]
+TC3/u [J_per_m3]
+VV_junc1/n_in [dimensionless]
+TC3/u_mmHg [dimensionless]
+TC3/v [m3_per_s]
+VV_junc1/junction_type [dimensionless]
+TC3/v_mm3_s [mm3_per_s]
+VV_junc4/vj4 [m3_per_s]
+VV_junc1/is_split [dimensionless]
+VV_junc1/is_merge [dimensionless]
+VV_junc4/w_in4 [dimensionless]
+VV_junc1/feed1 [dimensionless]
+VV_junc4/w_out4 [dimensionless]
+VV_junc1/feed2 [dimensionless]
+VV_junc4/Qin4 [m3_per_s]
+VV_junc1/feed3 [dimensionless]
+VV_junc4/Qin_tot [m3_per_s]
+VV_junc4/Qout4 [m3_per_s]
+VV_junc1/feed4 [dimensionless]
+VV_junc4/Qout_tot [m3_per_s]
+VV_junc4/bc4_is_in [dimensionless]
+VV_junc4/bc4_is_out [dimensionless]
+VV_junc1/alpha1 [dimensionless]
+VV_junc4/n_out [dimensionless]
+VV_junc4/n_in [dimensionless]
+VV_junc1/alpha2 [dimensionless]
+VV_junc4/junction_type [dimensionless]
+VV_junc1/alpha3 [dimensionless]
+VV_junc4/is_split [dimensionless]
+VV_junc1/alpha4 [dimensionless]
+VV_junc4/is_merge [dimensionless]
+VV_junc1/Qout1_rem [m3_per_s]
+VV_junc4/feed1 [dimensionless]
+VV_junc1/Qout2_rem [m3_per_s]
+VV_junc4/feed2 [dimensionless]
+VV_junc1/Qout3_rem [m3_per_s]
+VV_junc4/feed3 [dimensionless]
+VV_junc1/Qout4_rem [m3_per_s]
+VV_junc4/feed4 [dimensionless]
+VV_junc1/beta1 [dimensionless]
+VV_junc4/alpha1 [dimensionless]
+VV_junc1/beta2 [dimensionless]
+VV_junc4/alpha2 [dimensionless]
+VV_junc1/beta3 [dimensionless]
+VV_junc4/alpha3 [dimensionless]
+VV_junc1/beta4 [dimensionless]
+VV_junc4/alpha4 [dimensionless]
+VV_junc1/D_F [metre]
+VV_junc4/Qout1_rem [m3_per_s]
+VV_junc1/D_alpha [metre]
+VV_junc4/Qout2_rem [m3_per_s]
+VV_junc1/D_beta [metre]
+VV_junc4/Qout3_rem [m3_per_s]
+VV_junc1/v_alpha [m3_per_s]
+VV_junc4/Qout4_rem [m3_per_s]
+VV_junc1/v_beta [m3_per_s]
+VV_junc4/beta1 [dimensionless]
+VV_junc1/FQB_alpha [dimensionless]
+VV_junc4/beta2 [dimensionless]
+VV_junc1/B [dimensionless]
+VV_junc4/beta3 [dimensionless]
+VV_junc1/A [dimensionless]
+VV_junc4/beta4 [dimensionless]
+VV_junc1/X_0 [dimensionless]
+VV_junc4/D_F [metre]
+VV_junc1/y_raw [dimensionless]
+VV_junc4/D_alpha [metre]
+VV_junc1/y [dimensionless]
+VV_junc4/D_beta [metre]
+VV_junc1/ph [dimensionless]
+VV_junc4/v_alpha [m3_per_s]
+VV_junc1/FQE_alpha [dimensionless]
+VV_junc1/epsilon_alpha [dimensionless]
+VV_junc4/v_beta [m3_per_s]
+VV_junc1/H_VV1_out_beta [dimensionless]
+VV_junc1/H_split1 [dimensionless]
+VV_junc1/H_split2 [dimensionless]
+VV_junc1/H_split3 [dimensionless]
+VV_junc4/FQB_alpha [dimensionless]
+VV_junc1/RBC_out [m3_per_s]
+VV_junc1/H_daughter1 [dimensionless]
+VV_junc1/H_daughter2 [dimensionless]
+VV_junc1/H_daughter3 [dimensionless]
+VV_junc4/B [dimensionless]
+V11/w_v [dimensionless]
+VV_junc1/H_from1_target [dimensionless]
+VV_junc1/H_from2_target [dimensionless]
+VV_junc1/H_from3_target [dimensionless]
+VV_junc4/A [dimensionless]
+V11/v_pos [m3_per_s]
+V11/v_neg [m3_per_s]
+VV_junc5/H_mean [dimensionless]
+VV_junc4/X_0 [dimensionless]
+VV_junc5/u [J_per_m3]
+VV_junc4/y_raw [dimensionless]
+VV_junc5/u_mmHg [dimensionless]
+V11/v_d [m3_per_s]
+VV_junc4/y [dimensionless]
+V11/v_d_mm3_s [mm3_per_s]
+V11/w_v_d [dimensionless]
+VV_junc4/ph [dimensionless]
+V11/H_up [dimensionless]
+V11/v_d_pos [m3_per_s]
+V11/v_d_neg [m3_per_s]
+V11/H_L_out [dimensionless]
+VV_junc1/H_split4 [dimensionless]
+VV_junc1/RBC_in [m3_per_s]
+VV_junc4/FQE_alpha [dimensionless]
+V11/s_v_d [dimensionless]
+V11/H_R_out [dimensionless]
+VV_junc1/H_daughter4 [dimensionless]
+VV_junc4/epsilon_alpha [dimensionless]
+VV_junc4/H_VV1_out_beta [dimensionless]
+V11/H_down_target [dimensionless]
+V11/H_mass_L [dimensionless]
+VV_junc5/vj1 [m3_per_s]
+VV_junc1/H_from4_target [dimensionless]
+VV_junc4/H_split1 [dimensionless]
+VV_junc4/H_split2 [dimensionless]
+VV_junc4/H_split3 [dimensionless]
+VV_junc4/RBC_out [m3_per_s]
+V11/H_mass_R [dimensionless]
+VV_junc5/w_in1 [dimensionless]
+VV_junc4/H_daughter1 [dimensionless]
+VV_junc4/H_daughter2 [dimensionless]
+VV_junc4/H_daughter3 [dimensionless]
+TC3/w_v [dimensionless]
+VV_junc5/w_out1 [dimensionless]
+VV_junc4/H_from1_target [dimensionless]
+VV_junc4/H_from2_target [dimensionless]
+VV_junc4/H_from3_target [dimensionless]
+TC3/v_pos [m3_per_s]
+TC3/v_neg [m3_per_s]
+TC3/v_d [m3_per_s]
+VV_junc5/Qin1 [m3_per_s]
+TC3/w_v_d [dimensionless]
+TC3/v_d_mm3_s [mm3_per_s]
+VV_junc5/Qout1 [m3_per_s]
+TC3/H_up [dimensionless]
+TC3/H_L_out [dimensionless]
+TC3/v_d_pos [m3_per_s]
+TC3/v_d_neg [m3_per_s]
+VV_junc5/bc1_is_in [dimensionless]
+VV_junc4/H_split4 [dimensionless]
+VV_junc4/RBC_in [m3_per_s]
+TC3/s_v_d [dimensionless]
+TC3/H_R_out [dimensionless]
+VV_junc5/bc1_is_out [dimensionless]
+VV_junc4/H_daughter4 [dimensionless]
+TC3/H_down_target [dimensionless]
+TC3/H_mass_L [dimensionless]
+VV_junc5/u_d [J_per_m3]
+VV_junc4/H_from4_target [dimensionless]
+TC3/H_mass_R [dimensionless]
+VV_junc5/u_d_mmHg [dimensionless]
+VV_junc5/v [m3_per_s]
+VV_junc5/v_mm3_s [mm3_per_s]
+PV12/H_L_in [dimensionless]
+PV12/H_R_in [dimensionless]
+PV12/q [m3]
+PV12/H_mean [dimensionless]
+PV12/hem_dep_u_rel [dimensionless]
+PV12/mu [Js_per_m3]
+PV12/R [Js_per_m6]
+PV12/u [J_per_m3]
+PV12/u_mmHg [dimensionless]
+PV12/v [m3_per_s]
+PV12/v_mm3_s [mm3_per_s]
+VV_junc5/vj3 [m3_per_s]
+VV_junc5/w_in3 [dimensionless]
+VV_junc5/w_out3 [dimensionless]
+VV_junc5/Qin3 [m3_per_s]
+VV_junc5/Qout3 [m3_per_s]
+VV_junc5/bc3_is_in [dimensionless]
+VV_junc5/bc3_is_out [dimensionless]
+PV12/w_v [dimensionless]
+PV12/v_pos [m3_per_s]
+PV12/v_neg [m3_per_s]
+V12/H_L_in [dimensionless]
+V12/H_R_in [dimensionless]
+V12/q [m3]
+V12/H_mean [dimensionless]
+V12/hem_dep_u_rel [dimensionless]
+V12/mu [Js_per_m3]
+V12/R [Js_per_m6]
+V12/u [J_per_m3]
+PV12/v_d [m3_per_s]
+V12/u_mmHg [dimensionless]
+PV12/w_v_d [dimensionless]
+PV12/v_d_mm3_s [mm3_per_s]
+PV12/H_L_out [dimensionless]
+PV12/H_up [dimensionless]
+PV12/v_d_pos [m3_per_s]
+PV12/v_d_neg [m3_per_s]
+VV_junc6/H_mean [dimensionless]
+PV12/s_v_d [dimensionless]
+PV12/H_R_out [dimensionless]
+VV_junc6/u [J_per_m3]
+PV12/H_down_target [dimensionless]
+PV12/H_mass_L [dimensionless]
+V13/v_d [m3_per_s]
+PV12/H_mass_R [dimensionless]
+VV_junc6/u_mmHg [dimensionless]
+V13/w_v_d [dimensionless]
+V13/v_d_mm3_s [mm3_per_s]
+V13/H_up [dimensionless]
+V13/H_L_out [dimensionless]
+V13/v_d_pos [m3_per_s]
+V13/v_d_neg [m3_per_s]
+VV_junc7/H_split3 [dimensionless]
+VV_junc7/RBC_in [m3_per_s]
+V13/s_v_d [dimensionless]
+V13/H_R_out [dimensionless]
+VV_junc7/H_daughter3 [dimensionless]
+V13/H_down_target [dimensionless]
+V13/H_mass_L [dimensionless]
+V12/v [m3_per_s]
+VV_junc7/H_from3_target [dimensionless]
+V13/H_mass_R [dimensionless]
+V12/v_mm3_s [mm3_per_s]
+V12/w_v [dimensionless]
+V12/H_up [dimensionless]
+V12/v_pos [m3_per_s]
+V12/v_neg [m3_per_s]
+V12/H_L_out [dimensionless]
+V12/s_v [dimensionless]
+V12/H_R_out [dimensionless]
+V12/H_down_target [dimensionless]
+V12/H_mass_L [dimensionless]
+VV_junc6/vj1 [m3_per_s]
+V12/H_mass_R [dimensionless]
+VV_junc6/vj2 [m3_per_s]
+VV_junc6/w_in1 [dimensionless]
+VV_junc6/w_in2 [dimensionless]
+VV_junc6/w_out1 [dimensionless]
+VV_junc6/w_out2 [dimensionless]
+VV_junc6/Qin1 [m3_per_s]
+VV_junc6/Qin2 [m3_per_s]
+VV_junc6/Qout1 [m3_per_s]
+VV_junc6/Qout2 [m3_per_s]
+VV_junc6/bc1_is_in [dimensionless]
+VV_junc6/bc2_is_in [dimensionless]
+VV_junc6/bc1_is_out [dimensionless]
+VV_junc6/bc2_is_out [dimensionless]
+VV_junc6/u_d [J_per_m3]
+VV_junc6/u_d_mmHg [dimensionless]
+VV_junc6/v [m3_per_s]
+VV_junc6/v_mm3_s [mm3_per_s]
+V17/H_L_in [dimensionless]
+V17/H_R_in [dimensionless]
+V17/q [m3]
+V17/H_mean [dimensionless]
+V17/hem_dep_u_rel [dimensionless]
+V17/mu [Js_per_m3]
+V17/R [Js_per_m6]
+V17/u [J_per_m3]
+V17/u_mmHg [dimensionless]
+V17/v [m3_per_s]
+V17/v_mm3_s [mm3_per_s]
+VV_junc6/vj3 [m3_per_s]
+VV_junc6/w_in3 [dimensionless]
+VV_junc6/w_out3 [dimensionless]
+VV_junc6/Qin3 [m3_per_s]
+VV_junc6/Qin_tot [m3_per_s]
+VV_junc6/Qout3 [m3_per_s]
+VV_junc6/Qout_tot [m3_per_s]
+VV_junc6/bc3_is_in [dimensionless]
+VV_junc6/bc3_is_out [dimensionless]
+VV_junc6/n_out [dimensionless]
+VV_junc6/n_in [dimensionless]
+VV_junc6/junction_type [dimensionless]
+VV_junc6/is_split [dimensionless]
+VV_junc6/is_merge [dimensionless]
+VV_junc6/feed1 [dimensionless]
+VV_junc6/feed2 [dimensionless]
+VV_junc6/feed3 [dimensionless]
+VV_junc6/feed4 [dimensionless]
+VV_junc6/alpha1 [dimensionless]
+VV_junc6/alpha2 [dimensionless]
+VV_junc6/alpha3 [dimensionless]
+VV_junc6/alpha4 [dimensionless]
+VV_junc6/Qout1_rem [m3_per_s]
+VV_junc6/Qout2_rem [m3_per_s]
+VV_junc6/Qout3_rem [m3_per_s]
+VV_junc6/Qout4_rem [m3_per_s]
+VV_junc6/beta1 [dimensionless]
+VV_junc6/beta2 [dimensionless]
+VV_junc6/beta3 [dimensionless]
+VV_junc6/beta4 [dimensionless]
+VV_junc6/D_F [metre]
+VV_junc6/D_alpha [metre]
+VV_junc6/D_beta [metre]
+VV_junc6/v_alpha [m3_per_s]
+VV_junc6/v_beta [m3_per_s]
+VV_junc6/FQB_alpha [dimensionless]
+VV_junc6/B [dimensionless]
+VV_junc6/A [dimensionless]
+VV_junc6/X_0 [dimensionless]
+VV_junc6/y_raw [dimensionless]
+VV_junc6/y [dimensionless]
+VV_junc6/ph [dimensionless]
+VV_junc6/FQE_alpha [dimensionless]
+VV_junc6/epsilon_alpha [dimensionless]
+VV_junc6/H_VV1_out_beta [dimensionless]
+VV_junc6/H_split1 [dimensionless]
+VV_junc6/H_split2 [dimensionless]
+VV_junc6/H_split4 [dimensionless]
+VV_junc6/RBC_out [m3_per_s]
+VV_junc6/H_daughter1 [dimensionless]
+VV_junc6/H_daughter2 [dimensionless]
+VV_junc6/H_daughter4 [dimensionless]
+V17/w_v [dimensionless]
+VV_junc6/H_from1_target [dimensionless]
+VV_junc6/H_from2_target [dimensionless]
+VV_junc6/H_from4_target [dimensionless]
+V17/v_pos [m3_per_s]
+V17/v_neg [m3_per_s]
+PV14/H_L_in [dimensionless]
+PV14/H_R_in [dimensionless]
+PV14/q [m3]
+PV14/H_mean [dimensionless]
+PV14/hem_dep_u_rel [dimensionless]
+PV14/mu [Js_per_m3]
+PV14/R [Js_per_m6]
+PV14/u [J_per_m3]
+PV14/u_mmHg [dimensionless]
+PV14/v [m3_per_s]
+PV14/v_mm3_s [mm3_per_s]
+VV_junc5/vj4 [m3_per_s]
+VV_junc5/w_in4 [dimensionless]
+VV_junc5/w_out4 [dimensionless]
+VV_junc5/Qin4 [m3_per_s]
+VV_junc5/Qin_tot [m3_per_s]
+VV_junc5/Qout4 [m3_per_s]
+VV_junc5/Qout_tot [m3_per_s]
+VV_junc5/bc4_is_in [dimensionless]
+VV_junc5/bc4_is_out [dimensionless]
+VV_junc5/n_out [dimensionless]
+VV_junc5/n_in [dimensionless]
+VV_junc5/junction_type [dimensionless]
+VV_junc5/is_split [dimensionless]
+VV_junc5/is_merge [dimensionless]
+VV_junc5/feed1 [dimensionless]
+VV_junc5/feed2 [dimensionless]
+VV_junc5/feed3 [dimensionless]
+VV_junc5/feed4 [dimensionless]
+VV_junc5/alpha1 [dimensionless]
+VV_junc5/alpha2 [dimensionless]
+VV_junc5/alpha3 [dimensionless]
+VV_junc5/alpha4 [dimensionless]
+VV_junc5/Qout1_rem [m3_per_s]
+VV_junc5/Qout2_rem [m3_per_s]
+VV_junc5/Qout3_rem [m3_per_s]
+VV_junc5/Qout4_rem [m3_per_s]
+VV_junc5/beta1 [dimensionless]
+VV_junc5/beta2 [dimensionless]
+VV_junc5/beta3 [dimensionless]
+VV_junc5/beta4 [dimensionless]
+VV_junc5/D_F [metre]
+VV_junc5/D_alpha [metre]
+VV_junc5/D_beta [metre]
+VV_junc5/v_alpha [m3_per_s]
+VV_junc5/v_beta [m3_per_s]
+VV_junc5/FQB_alpha [dimensionless]
+VV_junc5/B [dimensionless]
+VV_junc5/A [dimensionless]
+VV_junc5/X_0 [dimensionless]
+VV_junc5/y_raw [dimensionless]
+VV_junc5/y [dimensionless]
+VV_junc5/ph [dimensionless]
+VV_junc5/FQE_alpha [dimensionless]
+VV_junc5/epsilon_alpha [dimensionless]
+VV_junc5/H_VV1_out_beta [dimensionless]
+VV_junc5/H_split1 [dimensionless]
+VV_junc5/H_split2 [dimensionless]
+VV_junc5/H_split3 [dimensionless]
+VV_junc5/RBC_out [m3_per_s]
+VV_junc5/H_daughter1 [dimensionless]
+VV_junc5/H_daughter2 [dimensionless]
+VV_junc5/H_daughter3 [dimensionless]
+PV14/w_v [dimensionless]
+VV_junc5/H_from1_target [dimensionless]
+VV_junc5/H_from2_target [dimensionless]
+VV_junc5/H_from3_target [dimensionless]
+PV14/v_pos [m3_per_s]
+PV14/v_neg [m3_per_s]
+V14/H_L_in [dimensionless]
+V14/H_R_in [dimensionless]
+V14/q [m3]
+V14/H_mean [dimensionless]
+V14/hem_dep_u_rel [dimensionless]
+V14/mu [Js_per_m3]
+V14/R [Js_per_m6]
+V14/u [J_per_m3]
+PV14/v_d [m3_per_s]
+V14/u_mmHg [dimensionless]
+VV_junc8/H_mean [dimensionless]
+PV14/w_v_d [dimensionless]
+PV14/v_d_mm3_s [mm3_per_s]
+VV_junc8/u [J_per_m3]
+PV14/H_up [dimensionless]
+PV14/H_L_out [dimensionless]
+PV14/v_d_pos [m3_per_s]
+PV14/v_d_neg [m3_per_s]
+VV_junc5/H_split4 [dimensionless]
+VV_junc5/RBC_in [m3_per_s]
+PV14/s_v_d [dimensionless]
+PV14/H_R_out [dimensionless]
+V17/v_d [m3_per_s]
+VV_junc8/u_mmHg [dimensionless]
+VV_junc5/H_daughter4 [dimensionless]
+V17/v_d_mm3_s [mm3_per_s]
+PV14/H_down_target [dimensionless]
+PV14/H_mass_L [dimensionless]
+V17/w_v_d [dimensionless]
+VV_junc5/H_from4_target [dimensionless]
+V17/H_up [dimensionless]
+V17/v_d_pos [m3_per_s]
+V17/v_d_neg [m3_per_s]
+PV14/H_mass_R [dimensionless]
+V17/H_L_out [dimensionless]
+VV_junc6/H_split3 [dimensionless]
+VV_junc6/RBC_in [m3_per_s]
+V17/s_v_d [dimensionless]
+V17/H_R_out [dimensionless]
+VV_junc6/H_daughter3 [dimensionless]
+V17/H_down_target [dimensionless]
+V17/H_mass_L [dimensionless]
+V14/v [m3_per_s]
+VV_junc6/H_from3_target [dimensionless]
+V17/H_mass_R [dimensionless]
+V14/w_v [dimensionless]
+V14/v_mm3_s [mm3_per_s]
+V14/H_up [dimensionless]
+V14/H_L_out [dimensionless]
+V14/v_pos [m3_per_s]
+V14/v_neg [m3_per_s]
+V14/s_v [dimensionless]
+V14/H_R_out [dimensionless]
+V14/H_down_target [dimensionless]
+V14/H_mass_L [dimensionless]
+VV_junc8/vj1 [m3_per_s]
+V14/H_mass_R [dimensionless]
+VV_junc8/vj2 [m3_per_s]
+VV_junc8/w_in1 [dimensionless]
+VV_junc8/w_in2 [dimensionless]
+VV_junc8/w_out1 [dimensionless]
+VV_junc8/w_out2 [dimensionless]
+VV_junc8/Qin1 [m3_per_s]
+VV_junc8/Qin2 [m3_per_s]
+VV_junc8/Qout1 [m3_per_s]
+VV_junc8/Qout2 [m3_per_s]
+VV_junc8/bc1_is_in [dimensionless]
+VV_junc8/bc2_is_in [dimensionless]
+VV_junc8/bc1_is_out [dimensionless]
+VV_junc8/bc2_is_out [dimensionless]
+VV_junc8/u_d [J_per_m3]
+VV_junc8/u_d_mmHg [dimensionless]
+VV_junc8/v [m3_per_s]
+VV_junc8/v_mm3_s [mm3_per_s]
+PV16/R_constriction [Js_per_m6]
+PV16/H_L_in [dimensionless]
+PV16/H_R_in [dimensionless]
+PV16/q [m3]
+PV16/H_mean [dimensionless]
+PV16/hem_dep_u_rel [dimensionless]
+PV16/mu [Js_per_m3]
+PV16/R [Js_per_m6]
+PV16/u [J_per_m3]
+PV16/u_mmHg [dimensionless]
+PV16/v [m3_per_s]
+PV16/v_mm3_s [mm3_per_s]
+VV_junc8/vj3 [m3_per_s]
+VV_junc8/w_in3 [dimensionless]
+VV_junc8/w_out3 [dimensionless]
+VV_junc8/Qin3 [m3_per_s]
+VV_junc8/Qin_tot [m3_per_s]
+VV_junc8/Qout3 [m3_per_s]
+VV_junc8/Qout_tot [m3_per_s]
+VV_junc8/bc3_is_in [dimensionless]
+VV_junc8/bc3_is_out [dimensionless]
+VV_junc8/n_out [dimensionless]
+VV_junc8/n_in [dimensionless]
+VV_junc8/junction_type [dimensionless]
+VV_junc8/is_split [dimensionless]
+VV_junc8/is_merge [dimensionless]
+VV_junc8/feed1 [dimensionless]
+VV_junc8/feed2 [dimensionless]
+VV_junc8/feed3 [dimensionless]
+VV_junc8/feed4 [dimensionless]
+VV_junc8/alpha1 [dimensionless]
+VV_junc8/alpha2 [dimensionless]
+VV_junc8/alpha3 [dimensionless]
+VV_junc8/alpha4 [dimensionless]
+VV_junc8/Qout1_rem [m3_per_s]
+VV_junc8/Qout2_rem [m3_per_s]
+VV_junc8/Qout3_rem [m3_per_s]
+VV_junc8/Qout4_rem [m3_per_s]
+VV_junc8/beta1 [dimensionless]
+VV_junc8/beta2 [dimensionless]
+VV_junc8/beta3 [dimensionless]
+VV_junc8/beta4 [dimensionless]
+VV_junc8/D_F [metre]
+VV_junc8/D_alpha [metre]
+VV_junc8/D_beta [metre]
+VV_junc8/v_alpha [m3_per_s]
+VV_junc8/v_beta [m3_per_s]
+VV_junc8/FQB_alpha [dimensionless]
+VV_junc8/B [dimensionless]
+VV_junc8/A [dimensionless]
+VV_junc8/X_0 [dimensionless]
+VV_junc8/y_raw [dimensionless]
+VV_junc8/y [dimensionless]
+VV_junc8/ph [dimensionless]
+VV_junc8/FQE_alpha [dimensionless]
+VV_junc8/epsilon_alpha [dimensionless]
+VV_junc8/H_VV1_out_beta [dimensionless]
+VV_junc8/H_split1 [dimensionless]
+VV_junc8/H_split2 [dimensionless]
+VV_junc8/H_split4 [dimensionless]
+VV_junc8/RBC_out [m3_per_s]
+VV_junc8/H_daughter1 [dimensionless]
+VV_junc8/H_daughter2 [dimensionless]
+VV_junc8/H_daughter4 [dimensionless]
+PV16/w_v [dimensionless]
+VV_junc8/H_from1_target [dimensionless]
+VV_junc8/H_from2_target [dimensionless]
+VV_junc8/H_from4_target [dimensionless]
+PV16/v_pos [m3_per_s]
+PV16/v_neg [m3_per_s]
+V16/H_L_in [dimensionless]
+V16/H_R_in [dimensionless]
+V16/q [m3]
+V16/H_mean [dimensionless]
+V16/hem_dep_u_rel [dimensionless]
+V16/mu [Js_per_m3]
+V16/R [Js_per_m6]
+V16/u [J_per_m3]
+PV16/v_d [m3_per_s]
+V16/u_mmHg [dimensionless]
+PV16/w_v_d [dimensionless]
+PV16/v_d_mm3_s [mm3_per_s]
+VV_junc9/H_mean [dimensionless]
+PV16/H_up [dimensionless]
+PV16/H_L_out [dimensionless]
+PV16/v_d_pos [m3_per_s]
+PV16/v_d_neg [m3_per_s]
+VV_junc9/u [J_per_m3]
+VV_junc8/H_split3 [dimensionless]
+VV_junc8/RBC_in [m3_per_s]
+PV16/s_v_d [dimensionless]
+PV16/H_R_out [dimensionless]
+VV_junc9/u_mmHg [dimensionless]
+V16/v [m3_per_s]
+VV_junc8/H_daughter3 [dimensionless]
+PV16/H_down_target [dimensionless]
+PV16/H_mass_L [dimensionless]
+V16/v_mm3_s [mm3_per_s]
+V16/w_v [dimensionless]
+VV_junc8/H_from3_target [dimensionless]
+PV16/H_mass_R [dimensionless]
+V16/H_up [dimensionless]
+V16/v_pos [m3_per_s]
+V16/v_neg [m3_per_s]
+V16/H_L_out [dimensionless]
+V16/s_v [dimensionless]
+V16/H_R_out [dimensionless]
+V16/H_down_target [dimensionless]
+V16/H_mass_L [dimensionless]
+VV_junc9/vj1 [m3_per_s]
+V16/H_mass_R [dimensionless]
+VV_junc9/w_in1 [dimensionless]
+VV_junc9/w_out1 [dimensionless]
+VV_junc9/Qin1 [m3_per_s]
+VV_junc9/Qout1 [m3_per_s]
+VV_junc9/bc1_is_in [dimensionless]
+VV_junc9/bc1_is_out [dimensionless]
+VV_junc9/u_d [J_per_m3]
+VV_junc9/u_d_mmHg [dimensionless]
+VV_junc9/v [m3_per_s]
+VV_junc9/v_mm3_s [mm3_per_s]
+PTC5/R_constriction [Js_per_m6]
+PTC5/H_L_in [dimensionless]
+PTC5/H_R_in [dimensionless]
+PTC5/q [m3]
+PTC5/H_mean [dimensionless]
+PTC5/hem_dep_u_rel [dimensionless]
+PTC5/mu [Js_per_m3]
+PTC5/R [Js_per_m6]
+PTC5/u [J_per_m3]
+PTC5/u_mmHg [dimensionless]
+PTC5/v [m3_per_s]
+PTC5/v_mm3_s [mm3_per_s]
+VV_junc9/vj3 [m3_per_s]
+VV_junc9/w_in3 [dimensionless]
+VV_junc9/w_out3 [dimensionless]
+VV_junc9/Qin3 [m3_per_s]
+VV_junc9/Qout3 [m3_per_s]
+VV_junc9/bc3_is_in [dimensionless]
+VV_junc9/bc3_is_out [dimensionless]
+PTC5/w_v [dimensionless]
+PTC5/v_pos [m3_per_s]
+PTC5/v_neg [m3_per_s]
+TC5/H_L_in [dimensionless]
+TC5/H_R_in [dimensionless]
+TC5/q [m3]
+TC5/H_mean [dimensionless]
+TC5/hem_dep_u_rel [dimensionless]
+TC5/mu [Js_per_m3]
+TC5/R [Js_per_m6]
+TC5/u [J_per_m3]
+PTC5/v_d [m3_per_s]
+TC5/u_mmHg [dimensionless]
+PTC5/w_v_d [dimensionless]
+PTC5/v_d_mm3_s [mm3_per_s]
+TC5/v [m3_per_s]
+PTC5/H_up [dimensionless]
+PTC5/v_d_pos [m3_per_s]
+PTC5/v_d_neg [m3_per_s]
+TC5/w_v [dimensionless]
+TC5/v_mm3_s [mm3_per_s]
+PTC5/H_L_out [dimensionless]
+PTC5/s_v_d [dimensionless]
+PTC5/H_R_out [dimensionless]
+TC5/H_up [dimensionless]
+TC5/H_L_out [dimensionless]
+TC5/v_pos [m3_per_s]
+TC5/v_neg [m3_per_s]
+PTC6/R_constriction [Js_per_m6]
+PTC5/H_down_target [dimensionless]
+PTC5/H_mass_L [dimensionless]
+TC5/s_v [dimensionless]
+TC5/H_R_out [dimensionless]
+PTC6/H_L_in [dimensionless]
+PTC5/H_mass_R [dimensionless]
+TC5/H_down_target [dimensionless]
+TC5/H_mass_L [dimensionless]
+PTC6/H_R_in [dimensionless]
+TC5/H_mass_R [dimensionless]
+PTC6/q [m3]
+PTC6/H_mean [dimensionless]
+PTC6/hem_dep_u_rel [dimensionless]
+PTC6/mu [Js_per_m3]
+PTC6/R [Js_per_m6]
+PTC6/u [J_per_m3]
+PTC6/u_mmHg [dimensionless]
+PTC6/v [m3_per_s]
+PTC6/v_mm3_s [mm3_per_s]
+VV_junc9/vj4 [m3_per_s]
+VV_junc9/w_in4 [dimensionless]
+VV_junc9/w_out4 [dimensionless]
+VV_junc9/Qin4 [m3_per_s]
+VV_junc9/Qin_tot [m3_per_s]
+VV_junc9/Qout4 [m3_per_s]
+VV_junc9/Qout_tot [m3_per_s]
+VV_junc9/bc4_is_in [dimensionless]
+VV_junc9/bc4_is_out [dimensionless]
+VV_junc9/n_out [dimensionless]
+VV_junc9/n_in [dimensionless]
+VV_junc9/junction_type [dimensionless]
+VV_junc9/is_split [dimensionless]
+VV_junc9/is_merge [dimensionless]
+VV_junc9/feed1 [dimensionless]
+VV_junc9/feed2 [dimensionless]
+VV_junc9/feed3 [dimensionless]
+VV_junc9/feed4 [dimensionless]
+VV_junc9/alpha1 [dimensionless]
+VV_junc9/alpha2 [dimensionless]
+VV_junc9/alpha3 [dimensionless]
+VV_junc9/alpha4 [dimensionless]
+VV_junc9/Qout1_rem [m3_per_s]
+VV_junc9/Qout2_rem [m3_per_s]
+VV_junc9/Qout3_rem [m3_per_s]
+VV_junc9/Qout4_rem [m3_per_s]
+VV_junc9/beta1 [dimensionless]
+VV_junc9/beta2 [dimensionless]
+VV_junc9/beta3 [dimensionless]
+VV_junc9/beta4 [dimensionless]
+VV_junc9/D_F [metre]
+VV_junc9/D_alpha [metre]
+VV_junc9/D_beta [metre]
+VV_junc9/v_alpha [m3_per_s]
+VV_junc9/v_beta [m3_per_s]
+VV_junc9/FQB_alpha [dimensionless]
+VV_junc9/B [dimensionless]
+VV_junc9/A [dimensionless]
+VV_junc9/X_0 [dimensionless]
+VV_junc9/y_raw [dimensionless]
+VV_junc9/y [dimensionless]
+VV_junc9/ph [dimensionless]
+VV_junc9/FQE_alpha [dimensionless]
+VV_junc9/epsilon_alpha [dimensionless]
+VV_junc9/H_VV1_out_beta [dimensionless]
+VV_junc9/H_split1 [dimensionless]
+VV_junc9/H_split2 [dimensionless]
+VV_junc9/H_split3 [dimensionless]
+VV_junc9/RBC_out [m3_per_s]
+VV_junc9/H_daughter1 [dimensionless]
+VV_junc9/H_daughter2 [dimensionless]
+VV_junc9/H_daughter3 [dimensionless]
+PTC6/w_v [dimensionless]
+VV_junc9/H_from1_target [dimensionless]
+VV_junc9/H_from2_target [dimensionless]
+VV_junc9/H_from3_target [dimensionless]
+PTC6/v_pos [m3_per_s]
+PTC6/v_neg [m3_per_s]
+TC6/H_L_in [dimensionless]
+TC6/H_R_in [dimensionless]
+TC6/q [m3]
+TC6/H_mean [dimensionless]
+TC6/hem_dep_u_rel [dimensionless]
+TC6/mu [Js_per_m3]
+TC6/R [Js_per_m6]
+TC6/u [J_per_m3]
+PTC6/v_d [m3_per_s]
+TC6/u_mmHg [dimensionless]
+PTC6/w_v_d [dimensionless]
+PTC6/v_d_mm3_s [mm3_per_s]
+TC6/v [m3_per_s]
+PTC6/H_up [dimensionless]
+PTC6/H_L_out [dimensionless]
+PTC6/v_d_pos [m3_per_s]
+PTC6/v_d_neg [m3_per_s]
+TC6/w_v [dimensionless]
+TC6/v_mm3_s [mm3_per_s]
+VV_junc9/H_split4 [dimensionless]
+VV_junc9/RBC_in [m3_per_s]
+PTC6/s_v_d [dimensionless]
+PTC6/H_R_out [dimensionless]
+TC6/H_up [dimensionless]
+TC6/H_L_out [dimensionless]
+TC6/v_pos [m3_per_s]
+TC6/v_neg [m3_per_s]
+VV_junc9/H_daughter4 [dimensionless]
+PTC6/H_down_target [dimensionless]
+PTC6/H_mass_L [dimensionless]
+TC6/s_v [dimensionless]
+TC6/H_R_out [dimensionless]
+VV_junc9/H_from4_target [dimensionless]
+PTC6/H_mass_R [dimensionless]
+TC6/H_down_target [dimensionless]
+TC6/H_mass_L [dimensionless]
+TC6/H_mass_R [dimensionless]
+
+CONSTANTS (414)
+--------------------------------------------------------------------------------
+global/H_global_L
+global/H_global_R
+inlet/H_R_out_LHS
+global/gamma_mirror
+global/tau_H_down
+global/tau_H_mean
+global/v_eps
+global/q_C_init
+inlet/r
+global/mu_plasma
+inlet/u_in
+global/u_ext
+global/tau_link
+global/v_scale
+global/one_mm3
+global/div_0
+global/div_0y
+global/tau_junc
+global/v_threshold
+global/k
+VV_junc1/r
+VV_junc1/vbc2
+VV_junc1/H_to2
+VV_junc1/r_bc2
+VV_junc1/C_conn2
+global/R
+V01/r
+global/R_constriction_base
+PV01/R_constriction_final
+global/tau_sig
+global/t0
+PV01/r
+V02/r
+VV_junc2/r
+VV_junc2/vbc2
+VV_junc2/H_to2
+VV_junc2/r_bc2
+VV_junc2/C_conn2
+V03/r
+PV03/R_constriction_final
+PV03/r
+V04/r
+VV_junc3/r
+VV_junc3/vbc2
+VV_junc3/H_to2
+VV_junc3/r_bc2
+VV_junc3/C_conn2
+PV05/R_constriction_final
+PV05/r
+V05/r
+PTC1/R_constriction_final
+PTC1/r
+TC1/R_constriction_final
+TC1/H_L_out_RHS
+TC1/r
+TC1/u_out
+PV06/R_constriction_final
+PV06/r
+V06/r
+VV_junc4/r
+VV_junc4/vbc2
+VV_junc4/H_to2
+VV_junc4/r_bc2
+VV_junc4/C_conn2
+TC2/H_L_out_RHS
+TC2/r
+TC2/u_out
+TC3/H_L_out_RHS
+TC3/r
+TC3/u_out
+V07/r
+VV_junc7/r
+VV_junc7/vbc2
+VV_junc7/H_to2
+VV_junc7/r_bc2
+VV_junc7/C_conn2
+TC4/H_L_out_RHS
+TC4/r
+TC4/u_out
+V13/r
+V11/r
+VV_junc5/r
+VV_junc5/vbc2
+VV_junc5/H_to2
+VV_junc5/r_bc2
+VV_junc5/C_conn2
+PV12/r
+V12/r
+VV_junc6/r
+VV_junc6/vbc4
+VV_junc6/H_to4
+VV_junc6/r_bc4
+VV_junc6/C_conn4
+V17/r
+PV14/r
+V14/r
+VV_junc8/r
+VV_junc8/vbc4
+VV_junc8/H_to4
+VV_junc8/r_bc4
+VV_junc8/C_conn4
+PV16/R_constriction_final
+PV16/r
+V16/r
+VV_junc9/r
+VV_junc9/vbc2
+VV_junc9/H_to2
+VV_junc9/r_bc2
+VV_junc9/C_conn2
+PTC5/R_constriction_final
+PTC5/r
+TC5/H_L_out_RHS
+TC5/r
+TC5/u_out
+PTC6/R_constriction_final
+PTC6/r
+TC6/H_L_out_RHS
+TC6/r
+TC6/u_out
+
+inlet/q_us
+inlet/C
+VV_junc1/q_us
+V01/q_us
+inlet/Z
+PV01/q_us
+PV01/C
+V02/q_us
+V02/C
+VV_junc2/q_us
+V03/q_us
+PV03/q_us
+PV03/C
+V04/q_us
+V04/C
+VV_junc3/q_us
+PV05/q_us
+V05/q_us
+V05/C
+PTC1/q_us
+PTC1/C
+TC1/q_us
+TC1/C
+PV06/q_us
+V06/q_us
+V06/C
+VV_junc4/q_us
+TC2/q_us
+TC3/q_us
+V07/q_us
+VV_junc7/q_us
+TC4/q_us
+V13/q_us
+V11/q_us
+VV_junc5/q_us
+PV12/q_us
+V12/q_us
+VV_junc6/q_us
+V17/q_us
+PV14/q_us
+V14/q_us
+VV_junc8/q_us
+PV16/q_us
+V16/q_us
+V16/C
+VV_junc9/q_us
+PTC5/q_us
+TC5/q_us
+TC5/C
+PTC6/q_us
+TC6/q_us
+TC6/C
+inlet/RBC_volume_init
+VV_junc1/RBC_volume_init
+VV_junc1/C_max12
+V01/RBC_volume_init
+inlet/mu_45
+PV01/RBC_volume_init
+V02/RBC_volume_init
+VV_junc2/RBC_volume_init
+VV_junc2/C_max12
+V03/RBC_volume_init
+PV03/RBC_volume_init
+V04/RBC_volume_init
+VV_junc3/RBC_volume_init
+VV_junc3/C_max12
+PV05/RBC_volume_init
+V05/RBC_volume_init
+PTC1/RBC_volume_init
+TC1/RBC_volume_init
+PV06/RBC_volume_init
+V06/RBC_volume_init
+VV_junc4/RBC_volume_init
+VV_junc4/C_max12
+TC2/RBC_volume_init
+TC3/RBC_volume_init
+V07/RBC_volume_init
+VV_junc7/RBC_volume_init
+TC4/RBC_volume_init
+V13/RBC_volume_init
+V11/RBC_volume_init
+VV_junc5/RBC_volume_init
+PV12/RBC_volume_init
+V12/RBC_volume_init
+VV_junc6/RBC_volume_init
+V17/RBC_volume_init
+PV14/RBC_volume_init
+V14/RBC_volume_init
+VV_junc8/RBC_volume_init
+PV16/RBC_volume_init
+V16/RBC_volume_init
+VV_junc9/RBC_volume_init
+VV_junc9/C_max12
+PTC5/RBC_volume_init
+TC5/RBC_volume_init
+PTC6/RBC_volume_init
+TC6/RBC_volume_init
+V01/C
+VV_junc1/vj2
+V03/C
+PV05/C
+TC2/C
+PTC5/C
+VV_junc1/C_max123
+VV_junc1/D1
+VV_junc2/C_max123
+VV_junc3/C_max123
+VV_junc4/C_max123
+VV_junc9/C_max123
+VV_junc1/D2
+PV06/C
+TC3/C
+V07/C
+V11/C
+PTC6/C
+VV_junc1/C
+VV_junc1/D3
+VV_junc2/C
+VV_junc3/C
+VV_junc4/C
+VV_junc7/C_max12
+VV_junc5/C_max12
+VV_junc9/C
+VV_junc1/D4
+TC4/C
+PV12/C
+VV_junc1/w_in2
+V13/C
+VV_junc5/C_max123
+VV_junc1/w_out2
+VV_junc7/C_max123
+V12/C
+PV14/C
+VV_junc1/Qin2
+VV_junc7/C
+VV_junc5/C
+VV_junc6/C_max12
+VV_junc1/Qout2
+V17/C
+VV_junc1/bc2_is_in
+VV_junc6/C_max123
+V14/C
+VV_junc1/bc2_is_out
+VV_junc6/C
+VV_junc8/C_max12
+V01/Z
+PV16/C
+V01/mu_45
+VV_junc8/C_max123
+PV01/Z
+VV_junc8/C
+PV01/mu_45
+V02/Z
+V02/mu_45
+VV_junc2/vj2
+VV_junc2/D1
+VV_junc2/D2
+VV_junc2/D3
+VV_junc2/D4
+VV_junc2/w_in2
+VV_junc2/w_out2
+VV_junc2/Qin2
+VV_junc2/Qout2
+VV_junc2/bc2_is_in
+VV_junc2/bc2_is_out
+V03/Z
+V03/mu_45
+PV03/Z
+PV03/mu_45
+V04/Z
+V04/mu_45
+VV_junc3/vj2
+VV_junc3/D1
+VV_junc3/D2
+VV_junc3/D3
+VV_junc3/D4
+VV_junc3/w_in2
+VV_junc3/w_out2
+VV_junc3/Qin2
+VV_junc3/Qout2
+VV_junc3/bc2_is_in
+VV_junc3/bc2_is_out
+PV05/Z
+PV05/mu_45
+V05/Z
+V05/mu_45
+PTC1/Z
+PTC1/mu_45
+TC1/Z
+TC1/mu_45
+PV06/Z
+PV06/mu_45
+V06/Z
+V06/mu_45
+VV_junc4/vj2
+VV_junc4/D1
+VV_junc4/D2
+VV_junc4/D3
+VV_junc4/D4
+VV_junc4/w_in2
+VV_junc4/w_out2
+VV_junc4/Qin2
+VV_junc4/Qout2
+VV_junc4/bc2_is_in
+VV_junc4/bc2_is_out
+TC2/Z
+TC2/mu_45
+TC3/Z
+TC3/mu_45
+V07/Z
+V07/mu_45
+VV_junc7/vj2
+VV_junc7/D1
+VV_junc7/D2
+VV_junc7/D3
+VV_junc7/D4
+VV_junc7/w_in2
+VV_junc7/w_out2
+VV_junc7/Qin2
+VV_junc7/Qout2
+VV_junc7/bc2_is_in
+VV_junc7/bc2_is_out
+TC4/Z
+TC4/mu_45
+V13/Z
+V13/mu_45
+V11/Z
+V11/mu_45
+VV_junc5/vj2
+VV_junc5/D1
+VV_junc5/D2
+VV_junc5/D3
+VV_junc5/D4
+VV_junc5/w_in2
+VV_junc5/w_out2
+VV_junc5/Qin2
+VV_junc5/Qout2
+VV_junc5/bc2_is_in
+VV_junc5/bc2_is_out
+PV12/Z
+PV12/mu_45
+V12/Z
+V12/mu_45
+VV_junc6/vj4
+VV_junc6/D1
+VV_junc6/D2
+VV_junc6/D3
+VV_junc6/D4
+VV_junc6/w_in4
+VV_junc6/w_out4
+VV_junc6/Qin4
+VV_junc6/Qout4
+VV_junc6/bc4_is_in
+VV_junc6/bc4_is_out
+V17/Z
+V17/mu_45
+PV14/Z
+PV14/mu_45
+V14/Z
+V14/mu_45
+VV_junc8/vj4
+VV_junc8/D1
+VV_junc8/D2
+VV_junc8/D3
+VV_junc8/D4
+VV_junc8/w_in4
+VV_junc8/w_out4
+VV_junc8/Qin4
+VV_junc8/Qout4
+VV_junc8/bc4_is_in
+VV_junc8/bc4_is_out
+PV16/Z
+PV16/mu_45
+V16/Z
+V16/mu_45
+VV_junc9/vj2
+VV_junc9/D1
+VV_junc9/D2
+VV_junc9/D3
+VV_junc9/D4
+VV_junc9/w_in2
+VV_junc9/w_out2
+VV_junc9/Qin2
+VV_junc9/Qout2
+VV_junc9/bc2_is_in
+VV_junc9/bc2_is_out
+PTC5/Z
+PTC5/mu_45
+TC5/Z
+TC5/mu_45
+PTC6/Z
+PTC6/mu_45
+TC6/Z
+TC6/mu_45
+
+ALL VARIABLES (2089)
+--------------------------------------------------------------------------------
+inlet/H_link_R [dimensionless]
+inlet/H_link_L [dimensionless]
+inlet/H_down [dimensionless]
+inlet/RBC_volume [m3]
+inlet/q_C [m3]
+VV_junc1/H_from1 [dimensionless]
+VV_junc1/H_from2 [dimensionless]
+VV_junc1/H_from3 [dimensionless]
+VV_junc1/H_from4 [dimensionless]
+VV_junc1/H_VV1_out_alpha [dimensionless]
+VV_junc1/RBC_volume [m3]
+VV_junc1/q_C [m3]
+VV_junc1/q_C_d [m3]
+V01/H_link_R [dimensionless]
+V01/H_link_L [dimensionless]
+V01/H_down [dimensionless]
+V01/RBC_volume [m3]
+V01/q_C [m3]
+PV01/H_link_R [dimensionless]
+PV01/H_link_L [dimensionless]
+PV01/H_down [dimensionless]
+PV01/RBC_volume [m3]
+PV01/q_C [m3]
+V02/H_link_R [dimensionless]
+V02/H_link_L [dimensionless]
+V02/H_down [dimensionless]
+V02/RBC_volume [m3]
+V02/q_C [m3]
+VV_junc2/H_from1 [dimensionless]
+VV_junc2/H_from2 [dimensionless]
+VV_junc2/H_from3 [dimensionless]
+VV_junc2/H_from4 [dimensionless]
+VV_junc2/H_VV1_out_alpha [dimensionless]
+VV_junc2/RBC_volume [m3]
+VV_junc2/q_C [m3]
+VV_junc2/q_C_d [m3]
+V03/H_link_R [dimensionless]
+V03/H_link_L [dimensionless]
+V03/H_down [dimensionless]
+V03/RBC_volume [m3]
+V03/q_C [m3]
+PV03/H_link_R [dimensionless]
+PV03/H_link_L [dimensionless]
+PV03/H_down [dimensionless]
+PV03/RBC_volume [m3]
+PV03/q_C [m3]
+V04/H_link_R [dimensionless]
+V04/H_link_L [dimensionless]
+V04/H_down [dimensionless]
+V04/RBC_volume [m3]
+V04/q_C [m3]
+VV_junc3/H_from1 [dimensionless]
+VV_junc3/H_from2 [dimensionless]
+VV_junc3/H_from3 [dimensionless]
+VV_junc3/H_from4 [dimensionless]
+VV_junc3/H_VV1_out_alpha [dimensionless]
+VV_junc3/RBC_volume [m3]
+VV_junc3/q_C [m3]
+VV_junc3/q_C_d [m3]
+PV05/H_link_R [dimensionless]
+PV05/H_link_L [dimensionless]
+PV05/H_down [dimensionless]
+PV05/RBC_volume [m3]
+PV05/q_C [m3]
+V05/H_link_R [dimensionless]
+V05/H_link_L [dimensionless]
+V05/H_down [dimensionless]
+V05/RBC_volume [m3]
+V05/q_C [m3]
+PTC1/H_link_R [dimensionless]
+PTC1/H_link_L [dimensionless]
+PTC1/H_down [dimensionless]
+PTC1/RBC_volume [m3]
+PTC1/q_C [m3]
+TC1/H_link_R [dimensionless]
+TC1/H_link_L [dimensionless]
+TC1/H_down [dimensionless]
+TC1/RBC_volume [m3]
+TC1/q_C [m3]
+PV06/H_link_R [dimensionless]
+PV06/H_link_L [dimensionless]
+PV06/H_down [dimensionless]
+PV06/RBC_volume [m3]
+PV06/q_C [m3]
+V06/H_link_R [dimensionless]
+V06/H_link_L [dimensionless]
+V06/H_down [dimensionless]
+V06/RBC_volume [m3]
+V06/q_C [m3]
+VV_junc4/H_from1 [dimensionless]
+VV_junc4/H_from2 [dimensionless]
+VV_junc4/H_from3 [dimensionless]
+VV_junc4/H_from4 [dimensionless]
+VV_junc4/H_VV1_out_alpha [dimensionless]
+VV_junc4/RBC_volume [m3]
+VV_junc4/q_C [m3]
+VV_junc4/q_C_d [m3]
+TC2/H_link_R [dimensionless]
+TC2/H_link_L [dimensionless]
+TC2/H_down [dimensionless]
+TC2/RBC_volume [m3]
+TC2/q_C [m3]
+TC3/H_link_R [dimensionless]
+TC3/H_link_L [dimensionless]
+TC3/H_down [dimensionless]
+TC3/RBC_volume [m3]
+TC3/q_C [m3]
+V07/H_link_R [dimensionless]
+V07/H_link_L [dimensionless]
+V07/H_down [dimensionless]
+V07/RBC_volume [m3]
+V07/q_C [m3]
+VV_junc7/H_from1 [dimensionless]
+VV_junc7/H_from2 [dimensionless]
+VV_junc7/H_from3 [dimensionless]
+VV_junc7/H_from4 [dimensionless]
+VV_junc7/H_VV1_out_alpha [dimensionless]
+VV_junc7/RBC_volume [m3]
+VV_junc7/q_C [m3]
+VV_junc7/q_C_d [m3]
+TC4/H_link_R [dimensionless]
+TC4/H_link_L [dimensionless]
+TC4/H_down [dimensionless]
+TC4/RBC_volume [m3]
+TC4/q_C [m3]
+V13/H_link_R [dimensionless]
+V13/H_link_L [dimensionless]
+V13/H_down [dimensionless]
+V13/RBC_volume [m3]
+V13/q_C [m3]
+V11/H_link_R [dimensionless]
+V11/H_link_L [dimensionless]
+V11/H_down [dimensionless]
+V11/RBC_volume [m3]
+V11/q_C [m3]
+VV_junc5/H_from1 [dimensionless]
+VV_junc5/H_from2 [dimensionless]
+VV_junc5/H_from3 [dimensionless]
+VV_junc5/H_from4 [dimensionless]
+VV_junc5/H_VV1_out_alpha [dimensionless]
+VV_junc5/RBC_volume [m3]
+VV_junc5/q_C [m3]
+VV_junc5/q_C_d [m3]
+PV12/H_link_R [dimensionless]
+PV12/H_link_L [dimensionless]
+PV12/H_down [dimensionless]
+PV12/RBC_volume [m3]
+PV12/q_C [m3]
+V12/H_link_R [dimensionless]
+V12/H_link_L [dimensionless]
+V12/H_down [dimensionless]
+V12/RBC_volume [m3]
+V12/q_C [m3]
+VV_junc6/H_from1 [dimensionless]
+VV_junc6/H_from2 [dimensionless]
+VV_junc6/H_from3 [dimensionless]
+VV_junc6/H_from4 [dimensionless]
+VV_junc6/H_VV1_out_alpha [dimensionless]
+VV_junc6/RBC_volume [m3]
+VV_junc6/q_C [m3]
+VV_junc6/q_C_d [m3]
+V17/H_link_R [dimensionless]
+V17/H_link_L [dimensionless]
+V17/H_down [dimensionless]
+V17/RBC_volume [m3]
+V17/q_C [m3]
+PV14/H_link_R [dimensionless]
+PV14/H_link_L [dimensionless]
+PV14/H_down [dimensionless]
+PV14/RBC_volume [m3]
+PV14/q_C [m3]
+V14/H_link_R [dimensionless]
+V14/H_link_L [dimensionless]
+V14/H_down [dimensionless]
+V14/RBC_volume [m3]
+V14/q_C [m3]
+VV_junc8/H_from1 [dimensionless]
+VV_junc8/H_from2 [dimensionless]
+VV_junc8/H_from3 [dimensionless]
+VV_junc8/H_from4 [dimensionless]
+VV_junc8/H_VV1_out_alpha [dimensionless]
+VV_junc8/RBC_volume [m3]
+VV_junc8/q_C [m3]
+VV_junc8/q_C_d [m3]
+PV16/H_link_R [dimensionless]
+PV16/H_link_L [dimensionless]
+PV16/H_down [dimensionless]
+PV16/RBC_volume [m3]
+PV16/q_C [m3]
+V16/H_link_R [dimensionless]
+V16/H_link_L [dimensionless]
+V16/H_down [dimensionless]
+V16/RBC_volume [m3]
+V16/q_C [m3]
+VV_junc9/H_from1 [dimensionless]
+VV_junc9/H_from2 [dimensionless]
+VV_junc9/H_from3 [dimensionless]
+VV_junc9/H_from4 [dimensionless]
+VV_junc9/H_VV1_out_alpha [dimensionless]
+VV_junc9/RBC_volume [m3]
+VV_junc9/q_C [m3]
+VV_junc9/q_C_d [m3]
+PTC5/H_link_R [dimensionless]
+PTC5/H_link_L [dimensionless]
+PTC5/H_down [dimensionless]
+PTC5/RBC_volume [m3]
+PTC5/q_C [m3]
+TC5/H_link_R [dimensionless]
+TC5/H_link_L [dimensionless]
+TC5/H_down [dimensionless]
+TC5/RBC_volume [m3]
+TC5/q_C [m3]
+PTC6/H_link_R [dimensionless]
+PTC6/H_link_L [dimensionless]
+PTC6/H_down [dimensionless]
+PTC6/RBC_volume [m3]
+PTC6/q_C [m3]
+TC6/H_link_R [dimensionless]
+TC6/H_link_L [dimensionless]
+TC6/H_down [dimensionless]
+TC6/RBC_volume [m3]
+TC6/q_C [m3]
+VV_junc1/q [m3]
+inlet/H_L_in [dimensionless]
+VV_junc2/q [m3]
+VV_junc3/q [m3]
+VV_junc4/q [m3]
+VV_junc7/q [m3]
+VV_junc5/q [m3]
+VV_junc6/q [m3]
+VV_junc8/q [m3]
+VV_junc9/q [m3]
+inlet/H_R_in [dimensionless]
+inlet/q [m3]
+inlet/H_mean [dimensionless]
+inlet/hem_dep_u_rel [dimensionless]
+inlet/mu [Js_per_m3]
+inlet/R [Js_per_m6]
+inlet/u [J_per_m3]
+inlet/u_mmHg [dimensionless]
+inlet/v [m3_per_s]
+inlet/v_mm3_s [mm3_per_s]
+inlet/w_v [dimensionless]
+inlet/v_pos [m3_per_s]
+inlet/v_neg [m3_per_s]
+VV_junc1/H_mean [dimensionless]
+VV_junc1/u [J_per_m3]
+VV_junc1/u_mmHg [dimensionless]
+inlet/v_d [m3_per_s]
+inlet/v_d_mm3_s [mm3_per_s]
+inlet/w_v_d [dimensionless]
+inlet/H_up [dimensionless]
+inlet/v_d_pos [m3_per_s]
+inlet/v_d_neg [m3_per_s]
+inlet/H_L_out [dimensionless]
+inlet/s_v_d [dimensionless]
+inlet/H_R_out [dimensionless]
+inlet/H_down_target [dimensionless]
+inlet/H_mass_L [dimensionless]
+VV_junc1/vj1 [m3_per_s]
+inlet/H_mass_R [dimensionless]
+VV_junc1/w_in1 [dimensionless]
+VV_junc1/w_out1 [dimensionless]
+VV_junc1/Qin1 [m3_per_s]
+VV_junc1/Qout1 [m3_per_s]
+VV_junc1/bc1_is_in [dimensionless]
+VV_junc1/bc1_is_out [dimensionless]
+VV_junc1/u_d [J_per_m3]
+VV_junc1/u_d_mmHg [dimensionless]
+VV_junc1/v [m3_per_s]
+VV_junc1/v_mm3_s [mm3_per_s]
+V01/H_L_in [dimensionless]
+V01/H_R_in [dimensionless]
+V01/q [m3]
+V01/H_mean [dimensionless]
+V01/hem_dep_u_rel [dimensionless]
+V01/mu [Js_per_m3]
+V01/R [Js_per_m6]
+V01/u [J_per_m3]
+V01/u_mmHg [dimensionless]
+V01/v [m3_per_s]
+V01/v_mm3_s [mm3_per_s]
+VV_junc1/vj3 [m3_per_s]
+VV_junc1/w_in3 [dimensionless]
+VV_junc1/w_out3 [dimensionless]
+VV_junc1/Qin3 [m3_per_s]
+VV_junc1/Qout3 [m3_per_s]
+VV_junc1/bc3_is_in [dimensionless]
+VV_junc1/bc3_is_out [dimensionless]
+V01/w_v [dimensionless]
+V01/v_pos [m3_per_s]
+V01/v_neg [m3_per_s]
+PV01/R_constriction [Js_per_m6]
+PV01/H_L_in [dimensionless]
+PV01/H_R_in [dimensionless]
+PV01/q [m3]
+PV01/H_mean [dimensionless]
+PV01/hem_dep_u_rel [dimensionless]
+PV01/mu [Js_per_m3]
+PV01/R [Js_per_m6]
+PV01/u [J_per_m3]
+V01/v_d [m3_per_s]
+PV01/u_mmHg [dimensionless]
+V01/v_d_mm3_s [mm3_per_s]
+V01/w_v_d [dimensionless]
+V01/H_up [dimensionless]
+V01/v_d_pos [m3_per_s]
+V01/v_d_neg [m3_per_s]
+V01/H_L_out [dimensionless]
+V01/s_v_d [dimensionless]
+V01/H_R_out [dimensionless]
+V02/H_L_in [dimensionless]
+V01/H_down_target [dimensionless]
+V01/H_mass_L [dimensionless]
+V02/H_R_in [dimensionless]
+V01/H_mass_R [dimensionless]
+V02/q [m3]
+V02/H_mean [dimensionless]
+V02/hem_dep_u_rel [dimensionless]
+V02/mu [Js_per_m3]
+V02/R [Js_per_m6]
+V02/u [J_per_m3]
+PV01/v [m3_per_s]
+V02/u_mmHg [dimensionless]
+PV01/w_v [dimensionless]
+PV01/v_mm3_s [mm3_per_s]
+VV_junc2/H_mean [dimensionless]
+PV01/H_up [dimensionless]
+PV01/H_L_out [dimensionless]
+PV01/v_pos [m3_per_s]
+PV01/v_neg [m3_per_s]
+VV_junc2/u [J_per_m3]
+PV01/s_v [dimensionless]
+PV01/H_R_out [dimensionless]
+VV_junc2/u_mmHg [dimensionless]
+V02/v [m3_per_s]
+PV01/H_down_target [dimensionless]
+PV01/H_mass_L [dimensionless]
+V02/v_mm3_s [mm3_per_s]
+V02/w_v [dimensionless]
+PV01/H_mass_R [dimensionless]
+V02/H_up [dimensionless]
+V02/v_pos [m3_per_s]
+V02/v_neg [m3_per_s]
+V02/H_L_out [dimensionless]
+V02/s_v [dimensionless]
+V02/H_R_out [dimensionless]
+V02/H_down_target [dimensionless]
+V02/H_mass_L [dimensionless]
+VV_junc2/vj1 [m3_per_s]
+V02/H_mass_R [dimensionless]
+VV_junc2/w_in1 [dimensionless]
+VV_junc2/w_out1 [dimensionless]
+VV_junc2/Qin1 [m3_per_s]
+VV_junc2/Qout1 [m3_per_s]
+VV_junc2/bc1_is_in [dimensionless]
+VV_junc2/bc1_is_out [dimensionless]
+VV_junc2/u_d [J_per_m3]
+VV_junc2/u_d_mmHg [dimensionless]
+VV_junc2/v [m3_per_s]
+VV_junc2/v_mm3_s [mm3_per_s]
+V03/H_L_in [dimensionless]
+V03/H_R_in [dimensionless]
+V03/q [m3]
+V03/H_mean [dimensionless]
+V03/hem_dep_u_rel [dimensionless]
+V03/mu [Js_per_m3]
+V03/R [Js_per_m6]
+V03/u [J_per_m3]
+V03/u_mmHg [dimensionless]
+V03/v [m3_per_s]
+V03/v_mm3_s [mm3_per_s]
+VV_junc2/vj3 [m3_per_s]
+VV_junc2/w_in3 [dimensionless]
+VV_junc2/w_out3 [dimensionless]
+VV_junc2/Qin3 [m3_per_s]
+VV_junc2/Qout3 [m3_per_s]
+VV_junc2/bc3_is_in [dimensionless]
+VV_junc2/bc3_is_out [dimensionless]
+V03/w_v [dimensionless]
+V03/v_pos [m3_per_s]
+V03/v_neg [m3_per_s]
+PV03/R_constriction [Js_per_m6]
+PV03/H_L_in [dimensionless]
+PV03/H_R_in [dimensionless]
+PV03/q [m3]
+PV03/H_mean [dimensionless]
+PV03/hem_dep_u_rel [dimensionless]
+PV03/mu [Js_per_m3]
+PV03/R [Js_per_m6]
+PV03/u [J_per_m3]
+V03/v_d [m3_per_s]
+PV03/u_mmHg [dimensionless]
+V03/w_v_d [dimensionless]
+V03/v_d_mm3_s [mm3_per_s]
+V04/H_L_in [dimensionless]
+V03/H_up [dimensionless]
+V03/v_d_pos [m3_per_s]
+V03/v_d_neg [m3_per_s]
+V04/H_R_in [dimensionless]
+V03/H_L_out [dimensionless]
+V03/s_v_d [dimensionless]
+V03/H_R_out [dimensionless]
+V04/q [m3]
+V07/H_L_in [dimensionless]
+V03/H_down_target [dimensionless]
+V03/H_mass_L [dimensionless]
+V04/H_mean [dimensionless]
+V07/H_R_in [dimensionless]
+V03/H_mass_R [dimensionless]
+V04/hem_dep_u_rel [dimensionless]
+V07/q [m3]
+V04/mu [Js_per_m3]
+V07/H_mean [dimensionless]
+V04/R [Js_per_m6]
+V07/hem_dep_u_rel [dimensionless]
+V04/u [J_per_m3]
+V07/mu [Js_per_m3]
+PV03/v [m3_per_s]
+V04/u_mmHg [dimensionless]
+V07/R [Js_per_m6]
+PV03/w_v [dimensionless]
+PV03/v_mm3_s [mm3_per_s]
+VV_junc3/H_mean [dimensionless]
+V07/u [J_per_m3]
+PV03/H_up [dimensionless]
+PV03/H_L_out [dimensionless]
+PV03/v_pos [m3_per_s]
+PV03/v_neg [m3_per_s]
+VV_junc3/u [J_per_m3]
+V07/u_mmHg [dimensionless]
+V07/v [m3_per_s]
+PV03/s_v [dimensionless]
+PV03/H_R_out [dimensionless]
+VV_junc3/u_mmHg [dimensionless]
+V04/v [m3_per_s]
+V07/v_mm3_s [mm3_per_s]
+VV_junc2/vj4 [m3_per_s]
+PV03/H_down_target [dimensionless]
+PV03/H_mass_L [dimensionless]
+V04/v_mm3_s [mm3_per_s]
+V04/w_v [dimensionless]
+VV_junc2/w_in4 [dimensionless]
+PV03/H_mass_R [dimensionless]
+V04/H_up [dimensionless]
+V04/v_pos [m3_per_s]
+V04/v_neg [m3_per_s]
+V04/H_L_out [dimensionless]
+VV_junc2/w_out4 [dimensionless]
+V04/s_v [dimensionless]
+V04/H_R_out [dimensionless]
+VV_junc2/Qin4 [m3_per_s]
+VV_junc2/Qin_tot [m3_per_s]
+V04/H_down_target [dimensionless]
+V04/H_mass_L [dimensionless]
+VV_junc3/vj1 [m3_per_s]
+VV_junc2/Qout4 [m3_per_s]
+VV_junc2/Qout_tot [m3_per_s]
+V04/H_mass_R [dimensionless]
+VV_junc3/w_in1 [dimensionless]
+VV_junc2/bc4_is_in [dimensionless]
+VV_junc3/w_out1 [dimensionless]
+VV_junc2/bc4_is_out [dimensionless]
+VV_junc2/n_out [dimensionless]
+VV_junc3/Qin1 [m3_per_s]
+VV_junc2/n_in [dimensionless]
+VV_junc3/Qout1 [m3_per_s]
+VV_junc2/junction_type [dimensionless]
+VV_junc3/bc1_is_in [dimensionless]
+VV_junc2/is_split [dimensionless]
+VV_junc2/is_merge [dimensionless]
+VV_junc3/bc1_is_out [dimensionless]
+VV_junc2/feed1 [dimensionless]
+VV_junc3/u_d [J_per_m3]
+VV_junc2/feed2 [dimensionless]
+VV_junc3/u_d_mmHg [dimensionless]
+VV_junc3/v [m3_per_s]
+VV_junc2/feed3 [dimensionless]
+VV_junc3/v_mm3_s [mm3_per_s]
+PV05/R_constriction [Js_per_m6]
+VV_junc2/feed4 [dimensionless]
+PV05/H_L_in [dimensionless]
+PV05/H_R_in [dimensionless]
+VV_junc2/alpha1 [dimensionless]
+PV05/q [m3]
+VV_junc2/alpha2 [dimensionless]
+PV05/H_mean [dimensionless]
+VV_junc2/alpha3 [dimensionless]
+PV05/hem_dep_u_rel [dimensionless]
+VV_junc2/alpha4 [dimensionless]
+PV05/mu [Js_per_m3]
+VV_junc2/Qout1_rem [m3_per_s]
+PV05/R [Js_per_m6]
+VV_junc2/Qout2_rem [m3_per_s]
+PV05/u [J_per_m3]
+VV_junc2/Qout3_rem [m3_per_s]
+PV05/u_mmHg [dimensionless]
+PV05/v [m3_per_s]
+VV_junc2/Qout4_rem [m3_per_s]
+PV05/v_mm3_s [mm3_per_s]
+VV_junc3/vj3 [m3_per_s]
+VV_junc2/beta1 [dimensionless]
+VV_junc3/w_in3 [dimensionless]
+VV_junc2/beta2 [dimensionless]
+VV_junc3/w_out3 [dimensionless]
+VV_junc2/beta3 [dimensionless]
+VV_junc3/Qin3 [m3_per_s]
+VV_junc2/beta4 [dimensionless]
+VV_junc3/Qout3 [m3_per_s]
+VV_junc2/D_F [metre]
+VV_junc3/bc3_is_in [dimensionless]
+VV_junc2/D_alpha [metre]
+VV_junc3/bc3_is_out [dimensionless]
+VV_junc2/D_beta [metre]
+PV05/w_v [dimensionless]
+VV_junc2/v_alpha [m3_per_s]
+PV05/v_pos [m3_per_s]
+PV05/v_neg [m3_per_s]
+V05/H_L_in [dimensionless]
+VV_junc2/v_beta [m3_per_s]
+V05/H_R_in [dimensionless]
+VV_junc2/FQB_alpha [dimensionless]
+V05/q [m3]
+VV_junc2/B [dimensionless]
+V05/H_mean [dimensionless]
+VV_junc2/A [dimensionless]
+V05/hem_dep_u_rel [dimensionless]
+VV_junc2/X_0 [dimensionless]
+V05/mu [Js_per_m3]
+VV_junc2/y_raw [dimensionless]
+V05/R [Js_per_m6]
+VV_junc2/y [dimensionless]
+V05/u [J_per_m3]
+VV_junc2/ph [dimensionless]
+PV05/v_d [m3_per_s]
+V05/u_mmHg [dimensionless]
+VV_junc2/FQE_alpha [dimensionless]
+VV_junc2/epsilon_alpha [dimensionless]
+PV05/w_v_d [dimensionless]
+PV05/v_d_mm3_s [mm3_per_s]
+PTC1/R_constriction [Js_per_m6]
+VV_junc2/H_VV1_out_beta [dimensionless]
+VV_junc2/H_split1 [dimensionless]
+VV_junc2/H_split2 [dimensionless]
+VV_junc2/H_split3 [dimensionless]
+PV05/H_up [dimensionless]
+PV05/v_d_pos [m3_per_s]
+PV05/v_d_neg [m3_per_s]
+PTC1/H_L_in [dimensionless]
+PV05/H_L_out [dimensionless]
+VV_junc2/RBC_out [m3_per_s]
+VV_junc2/H_daughter1 [dimensionless]
+VV_junc2/H_daughter2 [dimensionless]
+VV_junc2/H_daughter3 [dimensionless]
+PV05/s_v_d [dimensionless]
+PV05/H_R_out [dimensionless]
+PTC1/H_R_in [dimensionless]
+PV06/R_constriction [Js_per_m6]
+V07/w_v [dimensionless]
+VV_junc2/H_from1_target [dimensionless]
+VV_junc2/H_from2_target [dimensionless]
+VV_junc2/H_from3_target [dimensionless]
+PV05/H_down_target [dimensionless]
+PV05/H_mass_L [dimensionless]
+PTC1/q [m3]
+PV06/H_L_in [dimensionless]
+V07/v_pos [m3_per_s]
+V07/v_neg [m3_per_s]
+VV_junc7/H_mean [dimensionless]
+PV05/H_mass_R [dimensionless]
+PTC1/H_mean [dimensionless]
+PV06/H_R_in [dimensionless]
+VV_junc7/u [J_per_m3]
+PTC1/hem_dep_u_rel [dimensionless]
+PV06/q [m3]
+VV_junc7/u_mmHg [dimensionless]
+V07/v_d [m3_per_s]
+PTC1/mu [Js_per_m3]
+PV06/H_mean [dimensionless]
+V07/v_d_mm3_s [mm3_per_s]
+V07/w_v_d [dimensionless]
+PTC1/R [Js_per_m6]
+PV06/hem_dep_u_rel [dimensionless]
+V07/H_up [dimensionless]
+V07/v_d_pos [m3_per_s]
+V07/v_d_neg [m3_per_s]
+V07/H_L_out [dimensionless]
+VV_junc2/H_split4 [dimensionless]
+VV_junc2/RBC_in [m3_per_s]
+PTC1/u [J_per_m3]
+PV06/mu [Js_per_m3]
+V07/s_v_d [dimensionless]
+V07/H_R_out [dimensionless]
+VV_junc2/H_daughter4 [dimensionless]
+V05/v [m3_per_s]
+PTC1/u_mmHg [dimensionless]
+PV06/R [Js_per_m6]
+V07/H_down_target [dimensionless]
+V07/H_mass_L [dimensionless]
+VV_junc7/vj1 [m3_per_s]
+VV_junc2/H_from4_target [dimensionless]
+V05/w_v [dimensionless]
+V05/v_mm3_s [mm3_per_s]
+TC1/R_constriction [Js_per_m6]
+PV06/u [J_per_m3]
+V07/H_mass_R [dimensionless]
+VV_junc7/w_in1 [dimensionless]
+V05/H_up [dimensionless]
+V05/H_L_out [dimensionless]
+V05/v_pos [m3_per_s]
+V05/v_neg [m3_per_s]
+TC1/H_L_in [dimensionless]
+PV06/u_mmHg [dimensionless]
+PV06/v [m3_per_s]
+VV_junc7/w_out1 [dimensionless]
+V05/s_v [dimensionless]
+V05/H_R_out [dimensionless]
+TC1/H_R_in [dimensionless]
+PV06/v_mm3_s [mm3_per_s]
+VV_junc3/vj4 [m3_per_s]
+VV_junc7/Qin1 [m3_per_s]
+V05/H_down_target [dimensionless]
+V05/H_mass_L [dimensionless]
+TC1/q [m3]
+VV_junc3/w_in4 [dimensionless]
+VV_junc7/Qout1 [m3_per_s]
+V05/H_mass_R [dimensionless]
+TC1/H_mean [dimensionless]
+VV_junc3/w_out4 [dimensionless]
+VV_junc7/bc1_is_in [dimensionless]
+TC1/hem_dep_u_rel [dimensionless]
+VV_junc3/Qin4 [m3_per_s]
+VV_junc7/bc1_is_out [dimensionless]
+VV_junc3/Qin_tot [m3_per_s]
+TC1/mu [Js_per_m3]
+VV_junc3/Qout4 [m3_per_s]
+VV_junc7/u_d [J_per_m3]
+VV_junc3/Qout_tot [m3_per_s]
+TC1/R [Js_per_m6]
+VV_junc3/bc4_is_in [dimensionless]
+VV_junc7/u_d_mmHg [dimensionless]
+VV_junc7/v [m3_per_s]
+TC1/u [J_per_m3]
+VV_junc3/bc4_is_out [dimensionless]
+VV_junc7/v_mm3_s [mm3_per_s]
+TC4/H_L_in [dimensionless]
+VV_junc3/n_out [dimensionless]
+PTC1/v [m3_per_s]
+TC1/u_mmHg [dimensionless]
+VV_junc3/n_in [dimensionless]
+TC4/H_R_in [dimensionless]
+PTC1/w_v [dimensionless]
+PTC1/v_mm3_s [mm3_per_s]
+TC1/v [m3_per_s]
+VV_junc3/junction_type [dimensionless]
+TC4/q [m3]
+PTC1/H_up [dimensionless]
+PTC1/H_L_out [dimensionless]
+PTC1/v_pos [m3_per_s]
+PTC1/v_neg [m3_per_s]
+TC1/w_v [dimensionless]
+TC1/v_mm3_s [mm3_per_s]
+VV_junc3/is_split [dimensionless]
+TC4/H_mean [dimensionless]
+VV_junc3/is_merge [dimensionless]
+PTC1/s_v [dimensionless]
+PTC1/H_R_out [dimensionless]
+TC1/H_up [dimensionless]
+TC1/H_L_out [dimensionless]
+TC1/v_pos [m3_per_s]
+TC1/v_neg [m3_per_s]
+TC4/hem_dep_u_rel [dimensionless]
+VV_junc3/feed1 [dimensionless]
+PTC1/H_down_target [dimensionless]
+PTC1/H_mass_L [dimensionless]
+TC1/s_v [dimensionless]
+TC1/H_R_out [dimensionless]
+TC4/mu [Js_per_m3]
+VV_junc3/feed2 [dimensionless]
+PTC1/H_mass_R [dimensionless]
+TC1/H_down_target [dimensionless]
+TC1/H_mass_L [dimensionless]
+TC4/R [Js_per_m6]
+VV_junc3/feed3 [dimensionless]
+TC1/H_mass_R [dimensionless]
+TC4/u [J_per_m3]
+VV_junc3/feed4 [dimensionless]
+TC4/u_mmHg [dimensionless]
+TC4/v [m3_per_s]
+VV_junc3/alpha1 [dimensionless]
+TC4/v_mm3_s [mm3_per_s]
+VV_junc7/vj4 [m3_per_s]
+VV_junc3/alpha2 [dimensionless]
+VV_junc7/w_in4 [dimensionless]
+VV_junc3/alpha3 [dimensionless]
+VV_junc7/w_out4 [dimensionless]
+VV_junc3/alpha4 [dimensionless]
+VV_junc7/Qin4 [m3_per_s]
+VV_junc3/Qout1_rem [m3_per_s]
+VV_junc7/Qout4 [m3_per_s]
+VV_junc3/Qout2_rem [m3_per_s]
+VV_junc7/bc4_is_in [dimensionless]
+VV_junc3/Qout3_rem [m3_per_s]
+VV_junc7/bc4_is_out [dimensionless]
+VV_junc3/Qout4_rem [m3_per_s]
+TC4/w_v [dimensionless]
+VV_junc3/beta1 [dimensionless]
+TC4/v_pos [m3_per_s]
+TC4/v_neg [m3_per_s]
+TC4/v_d [m3_per_s]
+VV_junc3/beta2 [dimensionless]
+TC4/w_v_d [dimensionless]
+TC4/v_d_mm3_s [mm3_per_s]
+VV_junc3/beta3 [dimensionless]
+TC4/H_up [dimensionless]
+TC4/v_d_pos [m3_per_s]
+TC4/v_d_neg [m3_per_s]
+TC4/H_L_out [dimensionless]
+VV_junc3/beta4 [dimensionless]
+TC4/s_v_d [dimensionless]
+TC4/H_R_out [dimensionless]
+V13/H_L_in [dimensionless]
+VV_junc3/D_F [metre]
+TC4/H_down_target [dimensionless]
+TC4/H_mass_L [dimensionless]
+V13/H_R_in [dimensionless]
+VV_junc3/D_alpha [metre]
+TC4/H_mass_R [dimensionless]
+V13/q [m3]
+VV_junc3/D_beta [metre]
+V13/H_mean [dimensionless]
+VV_junc3/v_alpha [m3_per_s]
+V13/hem_dep_u_rel [dimensionless]
+VV_junc3/v_beta [m3_per_s]
+V13/mu [Js_per_m3]
+VV_junc3/FQB_alpha [dimensionless]
+V13/R [Js_per_m6]
+VV_junc3/B [dimensionless]
+V13/u [J_per_m3]
+VV_junc3/A [dimensionless]
+V13/u_mmHg [dimensionless]
+V13/v [m3_per_s]
+VV_junc3/X_0 [dimensionless]
+V13/v_mm3_s [mm3_per_s]
+VV_junc7/vj3 [m3_per_s]
+VV_junc3/y_raw [dimensionless]
+VV_junc7/w_in3 [dimensionless]
+VV_junc3/y [dimensionless]
+VV_junc7/w_out3 [dimensionless]
+VV_junc3/ph [dimensionless]
+VV_junc7/Qin3 [m3_per_s]
+VV_junc3/FQE_alpha [dimensionless]
+VV_junc7/Qin_tot [m3_per_s]
+VV_junc7/Qout3 [m3_per_s]
+VV_junc3/epsilon_alpha [dimensionless]
+VV_junc3/H_VV1_out_beta [dimensionless]
+VV_junc7/Qout_tot [m3_per_s]
+VV_junc7/bc3_is_in [dimensionless]
+VV_junc3/H_split1 [dimensionless]
+VV_junc3/H_split2 [dimensionless]
+VV_junc3/H_split3 [dimensionless]
+VV_junc3/RBC_out [m3_per_s]
+VV_junc7/bc3_is_out [dimensionless]
+VV_junc3/H_daughter1 [dimensionless]
+VV_junc3/H_daughter2 [dimensionless]
+VV_junc3/H_daughter3 [dimensionless]
+PV06/w_v [dimensionless]
+VV_junc7/n_out [dimensionless]
+VV_junc7/n_in [dimensionless]
+VV_junc3/H_from1_target [dimensionless]
+VV_junc3/H_from2_target [dimensionless]
+VV_junc3/H_from3_target [dimensionless]
+PV06/v_pos [m3_per_s]
+PV06/v_neg [m3_per_s]
+V06/H_L_in [dimensionless]
+VV_junc7/junction_type [dimensionless]
+V06/H_R_in [dimensionless]
+VV_junc7/is_split [dimensionless]
+V06/q [m3]
+VV_junc7/is_merge [dimensionless]
+V06/H_mean [dimensionless]
+VV_junc7/feed1 [dimensionless]
+V06/hem_dep_u_rel [dimensionless]
+VV_junc7/feed2 [dimensionless]
+V06/mu [Js_per_m3]
+VV_junc7/feed3 [dimensionless]
+V06/R [Js_per_m6]
+VV_junc7/feed4 [dimensionless]
+V06/u [J_per_m3]
+VV_junc7/alpha1 [dimensionless]
+PV06/v_d [m3_per_s]
+V06/u_mmHg [dimensionless]
+VV_junc7/alpha2 [dimensionless]
+PV06/w_v_d [dimensionless]
+PV06/v_d_mm3_s [mm3_per_s]
+VV_junc4/H_mean [dimensionless]
+VV_junc7/alpha3 [dimensionless]
+PV06/H_up [dimensionless]
+PV06/H_L_out [dimensionless]
+PV06/v_d_pos [m3_per_s]
+PV06/v_d_neg [m3_per_s]
+VV_junc4/u [J_per_m3]
+VV_junc7/alpha4 [dimensionless]
+VV_junc3/H_split4 [dimensionless]
+VV_junc3/RBC_in [m3_per_s]
+PV06/s_v_d [dimensionless]
+PV06/H_R_out [dimensionless]
+VV_junc4/u_mmHg [dimensionless]
+V06/v [m3_per_s]
+VV_junc7/Qout1_rem [m3_per_s]
+VV_junc3/H_daughter4 [dimensionless]
+PV06/H_down_target [dimensionless]
+PV06/H_mass_L [dimensionless]
+V06/v_mm3_s [mm3_per_s]
+V06/w_v [dimensionless]
+VV_junc7/Qout2_rem [m3_per_s]
+VV_junc3/H_from4_target [dimensionless]
+PV06/H_mass_R [dimensionless]
+V06/H_up [dimensionless]
+V06/v_pos [m3_per_s]
+V06/v_neg [m3_per_s]
+V06/H_L_out [dimensionless]
+VV_junc7/Qout3_rem [m3_per_s]
+V06/s_v [dimensionless]
+V06/H_R_out [dimensionless]
+VV_junc7/Qout4_rem [m3_per_s]
+V06/H_down_target [dimensionless]
+V06/H_mass_L [dimensionless]
+VV_junc4/vj1 [m3_per_s]
+VV_junc7/beta1 [dimensionless]
+V06/H_mass_R [dimensionless]
+VV_junc4/w_in1 [dimensionless]
+VV_junc7/beta2 [dimensionless]
+VV_junc4/w_out1 [dimensionless]
+VV_junc7/beta3 [dimensionless]
+VV_junc4/Qin1 [m3_per_s]
+VV_junc7/beta4 [dimensionless]
+VV_junc4/Qout1 [m3_per_s]
+VV_junc7/D_F [metre]
+VV_junc4/bc1_is_in [dimensionless]
+VV_junc7/D_alpha [metre]
+VV_junc4/bc1_is_out [dimensionless]
+VV_junc7/D_beta [metre]
+VV_junc4/u_d [J_per_m3]
+VV_junc7/v_alpha [m3_per_s]
+VV_junc4/u_d_mmHg [dimensionless]
+VV_junc4/v [m3_per_s]
+VV_junc7/v_beta [m3_per_s]
+VV_junc4/v_mm3_s [mm3_per_s]
+TC2/H_L_in [dimensionless]
+VV_junc7/FQB_alpha [dimensionless]
+TC2/H_R_in [dimensionless]
+VV_junc7/B [dimensionless]
+TC2/q [m3]
+VV_junc7/A [dimensionless]
+TC2/H_mean [dimensionless]
+VV_junc7/X_0 [dimensionless]
+TC2/hem_dep_u_rel [dimensionless]
+VV_junc7/y_raw [dimensionless]
+TC2/mu [Js_per_m3]
+VV_junc7/y [dimensionless]
+TC2/R [Js_per_m6]
+VV_junc7/ph [dimensionless]
+TC2/u [J_per_m3]
+VV_junc7/FQE_alpha [dimensionless]
+TC2/u_mmHg [dimensionless]
+TC2/v [m3_per_s]
+VV_junc7/epsilon_alpha [dimensionless]
+VV_junc7/H_VV1_out_beta [dimensionless]
+TC2/v_mm3_s [mm3_per_s]
+VV_junc4/vj3 [m3_per_s]
+VV_junc7/H_split1 [dimensionless]
+VV_junc7/H_split2 [dimensionless]
+VV_junc7/H_split4 [dimensionless]
+VV_junc7/RBC_out [m3_per_s]
+VV_junc4/w_in3 [dimensionless]
+VV_junc7/H_daughter1 [dimensionless]
+VV_junc7/H_daughter2 [dimensionless]
+VV_junc7/H_daughter4 [dimensionless]
+V13/w_v [dimensionless]
+VV_junc4/w_out3 [dimensionless]
+VV_junc7/H_from1_target [dimensionless]
+VV_junc7/H_from2_target [dimensionless]
+VV_junc7/H_from4_target [dimensionless]
+V13/v_pos [m3_per_s]
+V13/v_neg [m3_per_s]
+V11/H_L_in [dimensionless]
+VV_junc4/Qin3 [m3_per_s]
+V11/H_R_in [dimensionless]
+VV_junc4/Qout3 [m3_per_s]
+V11/q [m3]
+VV_junc4/bc3_is_in [dimensionless]
+V11/H_mean [dimensionless]
+VV_junc4/bc3_is_out [dimensionless]
+V11/hem_dep_u_rel [dimensionless]
+TC2/w_v [dimensionless]
+V11/mu [Js_per_m3]
+TC2/v_pos [m3_per_s]
+TC2/v_neg [m3_per_s]
+TC2/v_d [m3_per_s]
+V11/R [Js_per_m6]
+TC2/w_v_d [dimensionless]
+TC2/v_d_mm3_s [mm3_per_s]
+V11/u [J_per_m3]
+TC2/H_up [dimensionless]
+TC2/v_d_pos [m3_per_s]
+TC2/v_d_neg [m3_per_s]
+TC2/H_L_out [dimensionless]
+V11/u_mmHg [dimensionless]
+V11/v [m3_per_s]
+TC2/s_v_d [dimensionless]
+TC2/H_R_out [dimensionless]
+TC3/H_L_in [dimensionless]
+V11/v_mm3_s [mm3_per_s]
+VV_junc1/vj4 [m3_per_s]
+TC2/H_down_target [dimensionless]
+TC2/H_mass_L [dimensionless]
+TC3/H_R_in [dimensionless]
+VV_junc1/w_in4 [dimensionless]
+TC2/H_mass_R [dimensionless]
+TC3/q [m3]
+VV_junc1/w_out4 [dimensionless]
+TC3/H_mean [dimensionless]
+VV_junc1/Qin4 [m3_per_s]
+VV_junc1/Qin_tot [m3_per_s]
+TC3/hem_dep_u_rel [dimensionless]
+VV_junc1/Qout4 [m3_per_s]
+VV_junc1/Qout_tot [m3_per_s]
+TC3/mu [Js_per_m3]
+VV_junc1/bc4_is_in [dimensionless]
+TC3/R [Js_per_m6]
+VV_junc1/bc4_is_out [dimensionless]
+VV_junc1/n_out [dimensionless]
+TC3/u [J_per_m3]
+VV_junc1/n_in [dimensionless]
+TC3/u_mmHg [dimensionless]
+TC3/v [m3_per_s]
+VV_junc1/junction_type [dimensionless]
+TC3/v_mm3_s [mm3_per_s]
+VV_junc4/vj4 [m3_per_s]
+VV_junc1/is_split [dimensionless]
+VV_junc1/is_merge [dimensionless]
+VV_junc4/w_in4 [dimensionless]
+VV_junc1/feed1 [dimensionless]
+VV_junc4/w_out4 [dimensionless]
+VV_junc1/feed2 [dimensionless]
+VV_junc4/Qin4 [m3_per_s]
+VV_junc1/feed3 [dimensionless]
+VV_junc4/Qin_tot [m3_per_s]
+VV_junc4/Qout4 [m3_per_s]
+VV_junc1/feed4 [dimensionless]
+VV_junc4/Qout_tot [m3_per_s]
+VV_junc4/bc4_is_in [dimensionless]
+VV_junc4/bc4_is_out [dimensionless]
+VV_junc1/alpha1 [dimensionless]
+VV_junc4/n_out [dimensionless]
+VV_junc4/n_in [dimensionless]
+VV_junc1/alpha2 [dimensionless]
+VV_junc4/junction_type [dimensionless]
+VV_junc1/alpha3 [dimensionless]
+VV_junc4/is_split [dimensionless]
+VV_junc1/alpha4 [dimensionless]
+VV_junc4/is_merge [dimensionless]
+VV_junc1/Qout1_rem [m3_per_s]
+VV_junc4/feed1 [dimensionless]
+VV_junc1/Qout2_rem [m3_per_s]
+VV_junc4/feed2 [dimensionless]
+VV_junc1/Qout3_rem [m3_per_s]
+VV_junc4/feed3 [dimensionless]
+VV_junc1/Qout4_rem [m3_per_s]
+VV_junc4/feed4 [dimensionless]
+VV_junc1/beta1 [dimensionless]
+VV_junc4/alpha1 [dimensionless]
+VV_junc1/beta2 [dimensionless]
+VV_junc4/alpha2 [dimensionless]
+VV_junc1/beta3 [dimensionless]
+VV_junc4/alpha3 [dimensionless]
+VV_junc1/beta4 [dimensionless]
+VV_junc4/alpha4 [dimensionless]
+VV_junc1/D_F [metre]
+VV_junc4/Qout1_rem [m3_per_s]
+VV_junc1/D_alpha [metre]
+VV_junc4/Qout2_rem [m3_per_s]
+VV_junc1/D_beta [metre]
+VV_junc4/Qout3_rem [m3_per_s]
+VV_junc1/v_alpha [m3_per_s]
+VV_junc4/Qout4_rem [m3_per_s]
+VV_junc1/v_beta [m3_per_s]
+VV_junc4/beta1 [dimensionless]
+VV_junc1/FQB_alpha [dimensionless]
+VV_junc4/beta2 [dimensionless]
+VV_junc1/B [dimensionless]
+VV_junc4/beta3 [dimensionless]
+VV_junc1/A [dimensionless]
+VV_junc4/beta4 [dimensionless]
+VV_junc1/X_0 [dimensionless]
+VV_junc4/D_F [metre]
+VV_junc1/y_raw [dimensionless]
+VV_junc4/D_alpha [metre]
+VV_junc1/y [dimensionless]
+VV_junc4/D_beta [metre]
+VV_junc1/ph [dimensionless]
+VV_junc4/v_alpha [m3_per_s]
+VV_junc1/FQE_alpha [dimensionless]
+VV_junc1/epsilon_alpha [dimensionless]
+VV_junc4/v_beta [m3_per_s]
+VV_junc1/H_VV1_out_beta [dimensionless]
+VV_junc1/H_split1 [dimensionless]
+VV_junc1/H_split2 [dimensionless]
+VV_junc1/H_split3 [dimensionless]
+VV_junc4/FQB_alpha [dimensionless]
+VV_junc1/RBC_out [m3_per_s]
+VV_junc1/H_daughter1 [dimensionless]
+VV_junc1/H_daughter2 [dimensionless]
+VV_junc1/H_daughter3 [dimensionless]
+VV_junc4/B [dimensionless]
+V11/w_v [dimensionless]
+VV_junc1/H_from1_target [dimensionless]
+VV_junc1/H_from2_target [dimensionless]
+VV_junc1/H_from3_target [dimensionless]
+VV_junc4/A [dimensionless]
+V11/v_pos [m3_per_s]
+V11/v_neg [m3_per_s]
+VV_junc5/H_mean [dimensionless]
+VV_junc4/X_0 [dimensionless]
+VV_junc5/u [J_per_m3]
+VV_junc4/y_raw [dimensionless]
+VV_junc5/u_mmHg [dimensionless]
+V11/v_d [m3_per_s]
+VV_junc4/y [dimensionless]
+V11/v_d_mm3_s [mm3_per_s]
+V11/w_v_d [dimensionless]
+VV_junc4/ph [dimensionless]
+V11/H_up [dimensionless]
+V11/v_d_pos [m3_per_s]
+V11/v_d_neg [m3_per_s]
+V11/H_L_out [dimensionless]
+VV_junc1/H_split4 [dimensionless]
+VV_junc1/RBC_in [m3_per_s]
+VV_junc4/FQE_alpha [dimensionless]
+V11/s_v_d [dimensionless]
+V11/H_R_out [dimensionless]
+VV_junc1/H_daughter4 [dimensionless]
+VV_junc4/epsilon_alpha [dimensionless]
+VV_junc4/H_VV1_out_beta [dimensionless]
+V11/H_down_target [dimensionless]
+V11/H_mass_L [dimensionless]
+VV_junc5/vj1 [m3_per_s]
+VV_junc1/H_from4_target [dimensionless]
+VV_junc4/H_split1 [dimensionless]
+VV_junc4/H_split2 [dimensionless]
+VV_junc4/H_split3 [dimensionless]
+VV_junc4/RBC_out [m3_per_s]
+V11/H_mass_R [dimensionless]
+VV_junc5/w_in1 [dimensionless]
+VV_junc4/H_daughter1 [dimensionless]
+VV_junc4/H_daughter2 [dimensionless]
+VV_junc4/H_daughter3 [dimensionless]
+TC3/w_v [dimensionless]
+VV_junc5/w_out1 [dimensionless]
+VV_junc4/H_from1_target [dimensionless]
+VV_junc4/H_from2_target [dimensionless]
+VV_junc4/H_from3_target [dimensionless]
+TC3/v_pos [m3_per_s]
+TC3/v_neg [m3_per_s]
+TC3/v_d [m3_per_s]
+VV_junc5/Qin1 [m3_per_s]
+TC3/w_v_d [dimensionless]
+TC3/v_d_mm3_s [mm3_per_s]
+VV_junc5/Qout1 [m3_per_s]
+TC3/H_up [dimensionless]
+TC3/H_L_out [dimensionless]
+TC3/v_d_pos [m3_per_s]
+TC3/v_d_neg [m3_per_s]
+VV_junc5/bc1_is_in [dimensionless]
+VV_junc4/H_split4 [dimensionless]
+VV_junc4/RBC_in [m3_per_s]
+TC3/s_v_d [dimensionless]
+TC3/H_R_out [dimensionless]
+VV_junc5/bc1_is_out [dimensionless]
+VV_junc4/H_daughter4 [dimensionless]
+TC3/H_down_target [dimensionless]
+TC3/H_mass_L [dimensionless]
+VV_junc5/u_d [J_per_m3]
+VV_junc4/H_from4_target [dimensionless]
+TC3/H_mass_R [dimensionless]
+VV_junc5/u_d_mmHg [dimensionless]
+VV_junc5/v [m3_per_s]
+VV_junc5/v_mm3_s [mm3_per_s]
+PV12/H_L_in [dimensionless]
+PV12/H_R_in [dimensionless]
+PV12/q [m3]
+PV12/H_mean [dimensionless]
+PV12/hem_dep_u_rel [dimensionless]
+PV12/mu [Js_per_m3]
+PV12/R [Js_per_m6]
+PV12/u [J_per_m3]
+PV12/u_mmHg [dimensionless]
+PV12/v [m3_per_s]
+PV12/v_mm3_s [mm3_per_s]
+VV_junc5/vj3 [m3_per_s]
+VV_junc5/w_in3 [dimensionless]
+VV_junc5/w_out3 [dimensionless]
+VV_junc5/Qin3 [m3_per_s]
+VV_junc5/Qout3 [m3_per_s]
+VV_junc5/bc3_is_in [dimensionless]
+VV_junc5/bc3_is_out [dimensionless]
+PV12/w_v [dimensionless]
+PV12/v_pos [m3_per_s]
+PV12/v_neg [m3_per_s]
+V12/H_L_in [dimensionless]
+V12/H_R_in [dimensionless]
+V12/q [m3]
+V12/H_mean [dimensionless]
+V12/hem_dep_u_rel [dimensionless]
+V12/mu [Js_per_m3]
+V12/R [Js_per_m6]
+V12/u [J_per_m3]
+PV12/v_d [m3_per_s]
+V12/u_mmHg [dimensionless]
+PV12/w_v_d [dimensionless]
+PV12/v_d_mm3_s [mm3_per_s]
+PV12/H_L_out [dimensionless]
+PV12/H_up [dimensionless]
+PV12/v_d_pos [m3_per_s]
+PV12/v_d_neg [m3_per_s]
+VV_junc6/H_mean [dimensionless]
+PV12/s_v_d [dimensionless]
+PV12/H_R_out [dimensionless]
+VV_junc6/u [J_per_m3]
+PV12/H_down_target [dimensionless]
+PV12/H_mass_L [dimensionless]
+V13/v_d [m3_per_s]
+PV12/H_mass_R [dimensionless]
+VV_junc6/u_mmHg [dimensionless]
+V13/w_v_d [dimensionless]
+V13/v_d_mm3_s [mm3_per_s]
+V13/H_up [dimensionless]
+V13/H_L_out [dimensionless]
+V13/v_d_pos [m3_per_s]
+V13/v_d_neg [m3_per_s]
+VV_junc7/H_split3 [dimensionless]
+VV_junc7/RBC_in [m3_per_s]
+V13/s_v_d [dimensionless]
+V13/H_R_out [dimensionless]
+VV_junc7/H_daughter3 [dimensionless]
+V13/H_down_target [dimensionless]
+V13/H_mass_L [dimensionless]
+V12/v [m3_per_s]
+VV_junc7/H_from3_target [dimensionless]
+V13/H_mass_R [dimensionless]
+V12/v_mm3_s [mm3_per_s]
+V12/w_v [dimensionless]
+V12/H_up [dimensionless]
+V12/v_pos [m3_per_s]
+V12/v_neg [m3_per_s]
+V12/H_L_out [dimensionless]
+V12/s_v [dimensionless]
+V12/H_R_out [dimensionless]
+V12/H_down_target [dimensionless]
+V12/H_mass_L [dimensionless]
+VV_junc6/vj1 [m3_per_s]
+V12/H_mass_R [dimensionless]
+VV_junc6/vj2 [m3_per_s]
+VV_junc6/w_in1 [dimensionless]
+VV_junc6/w_in2 [dimensionless]
+VV_junc6/w_out1 [dimensionless]
+VV_junc6/w_out2 [dimensionless]
+VV_junc6/Qin1 [m3_per_s]
+VV_junc6/Qin2 [m3_per_s]
+VV_junc6/Qout1 [m3_per_s]
+VV_junc6/Qout2 [m3_per_s]
+VV_junc6/bc1_is_in [dimensionless]
+VV_junc6/bc2_is_in [dimensionless]
+VV_junc6/bc1_is_out [dimensionless]
+VV_junc6/bc2_is_out [dimensionless]
+VV_junc6/u_d [J_per_m3]
+VV_junc6/u_d_mmHg [dimensionless]
+VV_junc6/v [m3_per_s]
+VV_junc6/v_mm3_s [mm3_per_s]
+V17/H_L_in [dimensionless]
+V17/H_R_in [dimensionless]
+V17/q [m3]
+V17/H_mean [dimensionless]
+V17/hem_dep_u_rel [dimensionless]
+V17/mu [Js_per_m3]
+V17/R [Js_per_m6]
+V17/u [J_per_m3]
+V17/u_mmHg [dimensionless]
+V17/v [m3_per_s]
+V17/v_mm3_s [mm3_per_s]
+VV_junc6/vj3 [m3_per_s]
+VV_junc6/w_in3 [dimensionless]
+VV_junc6/w_out3 [dimensionless]
+VV_junc6/Qin3 [m3_per_s]
+VV_junc6/Qin_tot [m3_per_s]
+VV_junc6/Qout3 [m3_per_s]
+VV_junc6/Qout_tot [m3_per_s]
+VV_junc6/bc3_is_in [dimensionless]
+VV_junc6/bc3_is_out [dimensionless]
+VV_junc6/n_out [dimensionless]
+VV_junc6/n_in [dimensionless]
+VV_junc6/junction_type [dimensionless]
+VV_junc6/is_split [dimensionless]
+VV_junc6/is_merge [dimensionless]
+VV_junc6/feed1 [dimensionless]
+VV_junc6/feed2 [dimensionless]
+VV_junc6/feed3 [dimensionless]
+VV_junc6/feed4 [dimensionless]
+VV_junc6/alpha1 [dimensionless]
+VV_junc6/alpha2 [dimensionless]
+VV_junc6/alpha3 [dimensionless]
+VV_junc6/alpha4 [dimensionless]
+VV_junc6/Qout1_rem [m3_per_s]
+VV_junc6/Qout2_rem [m3_per_s]
+VV_junc6/Qout3_rem [m3_per_s]
+VV_junc6/Qout4_rem [m3_per_s]
+VV_junc6/beta1 [dimensionless]
+VV_junc6/beta2 [dimensionless]
+VV_junc6/beta3 [dimensionless]
+VV_junc6/beta4 [dimensionless]
+VV_junc6/D_F [metre]
+VV_junc6/D_alpha [metre]
+VV_junc6/D_beta [metre]
+VV_junc6/v_alpha [m3_per_s]
+VV_junc6/v_beta [m3_per_s]
+VV_junc6/FQB_alpha [dimensionless]
+VV_junc6/B [dimensionless]
+VV_junc6/A [dimensionless]
+VV_junc6/X_0 [dimensionless]
+VV_junc6/y_raw [dimensionless]
+VV_junc6/y [dimensionless]
+VV_junc6/ph [dimensionless]
+VV_junc6/FQE_alpha [dimensionless]
+VV_junc6/epsilon_alpha [dimensionless]
+VV_junc6/H_VV1_out_beta [dimensionless]
+VV_junc6/H_split1 [dimensionless]
+VV_junc6/H_split2 [dimensionless]
+VV_junc6/H_split4 [dimensionless]
+VV_junc6/RBC_out [m3_per_s]
+VV_junc6/H_daughter1 [dimensionless]
+VV_junc6/H_daughter2 [dimensionless]
+VV_junc6/H_daughter4 [dimensionless]
+V17/w_v [dimensionless]
+VV_junc6/H_from1_target [dimensionless]
+VV_junc6/H_from2_target [dimensionless]
+VV_junc6/H_from4_target [dimensionless]
+V17/v_pos [m3_per_s]
+V17/v_neg [m3_per_s]
+PV14/H_L_in [dimensionless]
+PV14/H_R_in [dimensionless]
+PV14/q [m3]
+PV14/H_mean [dimensionless]
+PV14/hem_dep_u_rel [dimensionless]
+PV14/mu [Js_per_m3]
+PV14/R [Js_per_m6]
+PV14/u [J_per_m3]
+PV14/u_mmHg [dimensionless]
+PV14/v [m3_per_s]
+PV14/v_mm3_s [mm3_per_s]
+VV_junc5/vj4 [m3_per_s]
+VV_junc5/w_in4 [dimensionless]
+VV_junc5/w_out4 [dimensionless]
+VV_junc5/Qin4 [m3_per_s]
+VV_junc5/Qin_tot [m3_per_s]
+VV_junc5/Qout4 [m3_per_s]
+VV_junc5/Qout_tot [m3_per_s]
+VV_junc5/bc4_is_in [dimensionless]
+VV_junc5/bc4_is_out [dimensionless]
+VV_junc5/n_out [dimensionless]
+VV_junc5/n_in [dimensionless]
+VV_junc5/junction_type [dimensionless]
+VV_junc5/is_split [dimensionless]
+VV_junc5/is_merge [dimensionless]
+VV_junc5/feed1 [dimensionless]
+VV_junc5/feed2 [dimensionless]
+VV_junc5/feed3 [dimensionless]
+VV_junc5/feed4 [dimensionless]
+VV_junc5/alpha1 [dimensionless]
+VV_junc5/alpha2 [dimensionless]
+VV_junc5/alpha3 [dimensionless]
+VV_junc5/alpha4 [dimensionless]
+VV_junc5/Qout1_rem [m3_per_s]
+VV_junc5/Qout2_rem [m3_per_s]
+VV_junc5/Qout3_rem [m3_per_s]
+VV_junc5/Qout4_rem [m3_per_s]
+VV_junc5/beta1 [dimensionless]
+VV_junc5/beta2 [dimensionless]
+VV_junc5/beta3 [dimensionless]
+VV_junc5/beta4 [dimensionless]
+VV_junc5/D_F [metre]
+VV_junc5/D_alpha [metre]
+VV_junc5/D_beta [metre]
+VV_junc5/v_alpha [m3_per_s]
+VV_junc5/v_beta [m3_per_s]
+VV_junc5/FQB_alpha [dimensionless]
+VV_junc5/B [dimensionless]
+VV_junc5/A [dimensionless]
+VV_junc5/X_0 [dimensionless]
+VV_junc5/y_raw [dimensionless]
+VV_junc5/y [dimensionless]
+VV_junc5/ph [dimensionless]
+VV_junc5/FQE_alpha [dimensionless]
+VV_junc5/epsilon_alpha [dimensionless]
+VV_junc5/H_VV1_out_beta [dimensionless]
+VV_junc5/H_split1 [dimensionless]
+VV_junc5/H_split2 [dimensionless]
+VV_junc5/H_split3 [dimensionless]
+VV_junc5/RBC_out [m3_per_s]
+VV_junc5/H_daughter1 [dimensionless]
+VV_junc5/H_daughter2 [dimensionless]
+VV_junc5/H_daughter3 [dimensionless]
+PV14/w_v [dimensionless]
+VV_junc5/H_from1_target [dimensionless]
+VV_junc5/H_from2_target [dimensionless]
+VV_junc5/H_from3_target [dimensionless]
+PV14/v_pos [m3_per_s]
+PV14/v_neg [m3_per_s]
+V14/H_L_in [dimensionless]
+V14/H_R_in [dimensionless]
+V14/q [m3]
+V14/H_mean [dimensionless]
+V14/hem_dep_u_rel [dimensionless]
+V14/mu [Js_per_m3]
+V14/R [Js_per_m6]
+V14/u [J_per_m3]
+PV14/v_d [m3_per_s]
+V14/u_mmHg [dimensionless]
+VV_junc8/H_mean [dimensionless]
+PV14/w_v_d [dimensionless]
+PV14/v_d_mm3_s [mm3_per_s]
+VV_junc8/u [J_per_m3]
+PV14/H_up [dimensionless]
+PV14/H_L_out [dimensionless]
+PV14/v_d_pos [m3_per_s]
+PV14/v_d_neg [m3_per_s]
+VV_junc5/H_split4 [dimensionless]
+VV_junc5/RBC_in [m3_per_s]
+PV14/s_v_d [dimensionless]
+PV14/H_R_out [dimensionless]
+V17/v_d [m3_per_s]
+VV_junc8/u_mmHg [dimensionless]
+VV_junc5/H_daughter4 [dimensionless]
+V17/v_d_mm3_s [mm3_per_s]
+PV14/H_down_target [dimensionless]
+PV14/H_mass_L [dimensionless]
+V17/w_v_d [dimensionless]
+VV_junc5/H_from4_target [dimensionless]
+V17/H_up [dimensionless]
+V17/v_d_pos [m3_per_s]
+V17/v_d_neg [m3_per_s]
+PV14/H_mass_R [dimensionless]
+V17/H_L_out [dimensionless]
+VV_junc6/H_split3 [dimensionless]
+VV_junc6/RBC_in [m3_per_s]
+V17/s_v_d [dimensionless]
+V17/H_R_out [dimensionless]
+VV_junc6/H_daughter3 [dimensionless]
+V17/H_down_target [dimensionless]
+V17/H_mass_L [dimensionless]
+V14/v [m3_per_s]
+VV_junc6/H_from3_target [dimensionless]
+V17/H_mass_R [dimensionless]
+V14/w_v [dimensionless]
+V14/v_mm3_s [mm3_per_s]
+V14/H_up [dimensionless]
+V14/H_L_out [dimensionless]
+V14/v_pos [m3_per_s]
+V14/v_neg [m3_per_s]
+V14/s_v [dimensionless]
+V14/H_R_out [dimensionless]
+V14/H_down_target [dimensionless]
+V14/H_mass_L [dimensionless]
+VV_junc8/vj1 [m3_per_s]
+V14/H_mass_R [dimensionless]
+VV_junc8/vj2 [m3_per_s]
+VV_junc8/w_in1 [dimensionless]
+VV_junc8/w_in2 [dimensionless]
+VV_junc8/w_out1 [dimensionless]
+VV_junc8/w_out2 [dimensionless]
+VV_junc8/Qin1 [m3_per_s]
+VV_junc8/Qin2 [m3_per_s]
+VV_junc8/Qout1 [m3_per_s]
+VV_junc8/Qout2 [m3_per_s]
+VV_junc8/bc1_is_in [dimensionless]
+VV_junc8/bc2_is_in [dimensionless]
+VV_junc8/bc1_is_out [dimensionless]
+VV_junc8/bc2_is_out [dimensionless]
+VV_junc8/u_d [J_per_m3]
+VV_junc8/u_d_mmHg [dimensionless]
+VV_junc8/v [m3_per_s]
+VV_junc8/v_mm3_s [mm3_per_s]
+PV16/R_constriction [Js_per_m6]
+PV16/H_L_in [dimensionless]
+PV16/H_R_in [dimensionless]
+PV16/q [m3]
+PV16/H_mean [dimensionless]
+PV16/hem_dep_u_rel [dimensionless]
+PV16/mu [Js_per_m3]
+PV16/R [Js_per_m6]
+PV16/u [J_per_m3]
+PV16/u_mmHg [dimensionless]
+PV16/v [m3_per_s]
+PV16/v_mm3_s [mm3_per_s]
+VV_junc8/vj3 [m3_per_s]
+VV_junc8/w_in3 [dimensionless]
+VV_junc8/w_out3 [dimensionless]
+VV_junc8/Qin3 [m3_per_s]
+VV_junc8/Qin_tot [m3_per_s]
+VV_junc8/Qout3 [m3_per_s]
+VV_junc8/Qout_tot [m3_per_s]
+VV_junc8/bc3_is_in [dimensionless]
+VV_junc8/bc3_is_out [dimensionless]
+VV_junc8/n_out [dimensionless]
+VV_junc8/n_in [dimensionless]
+VV_junc8/junction_type [dimensionless]
+VV_junc8/is_split [dimensionless]
+VV_junc8/is_merge [dimensionless]
+VV_junc8/feed1 [dimensionless]
+VV_junc8/feed2 [dimensionless]
+VV_junc8/feed3 [dimensionless]
+VV_junc8/feed4 [dimensionless]
+VV_junc8/alpha1 [dimensionless]
+VV_junc8/alpha2 [dimensionless]
+VV_junc8/alpha3 [dimensionless]
+VV_junc8/alpha4 [dimensionless]
+VV_junc8/Qout1_rem [m3_per_s]
+VV_junc8/Qout2_rem [m3_per_s]
+VV_junc8/Qout3_rem [m3_per_s]
+VV_junc8/Qout4_rem [m3_per_s]
+VV_junc8/beta1 [dimensionless]
+VV_junc8/beta2 [dimensionless]
+VV_junc8/beta3 [dimensionless]
+VV_junc8/beta4 [dimensionless]
+VV_junc8/D_F [metre]
+VV_junc8/D_alpha [metre]
+VV_junc8/D_beta [metre]
+VV_junc8/v_alpha [m3_per_s]
+VV_junc8/v_beta [m3_per_s]
+VV_junc8/FQB_alpha [dimensionless]
+VV_junc8/B [dimensionless]
+VV_junc8/A [dimensionless]
+VV_junc8/X_0 [dimensionless]
+VV_junc8/y_raw [dimensionless]
+VV_junc8/y [dimensionless]
+VV_junc8/ph [dimensionless]
+VV_junc8/FQE_alpha [dimensionless]
+VV_junc8/epsilon_alpha [dimensionless]
+VV_junc8/H_VV1_out_beta [dimensionless]
+VV_junc8/H_split1 [dimensionless]
+VV_junc8/H_split2 [dimensionless]
+VV_junc8/H_split4 [dimensionless]
+VV_junc8/RBC_out [m3_per_s]
+VV_junc8/H_daughter1 [dimensionless]
+VV_junc8/H_daughter2 [dimensionless]
+VV_junc8/H_daughter4 [dimensionless]
+PV16/w_v [dimensionless]
+VV_junc8/H_from1_target [dimensionless]
+VV_junc8/H_from2_target [dimensionless]
+VV_junc8/H_from4_target [dimensionless]
+PV16/v_pos [m3_per_s]
+PV16/v_neg [m3_per_s]
+V16/H_L_in [dimensionless]
+V16/H_R_in [dimensionless]
+V16/q [m3]
+V16/H_mean [dimensionless]
+V16/hem_dep_u_rel [dimensionless]
+V16/mu [Js_per_m3]
+V16/R [Js_per_m6]
+V16/u [J_per_m3]
+PV16/v_d [m3_per_s]
+V16/u_mmHg [dimensionless]
+PV16/w_v_d [dimensionless]
+PV16/v_d_mm3_s [mm3_per_s]
+VV_junc9/H_mean [dimensionless]
+PV16/H_up [dimensionless]
+PV16/H_L_out [dimensionless]
+PV16/v_d_pos [m3_per_s]
+PV16/v_d_neg [m3_per_s]
+VV_junc9/u [J_per_m3]
+VV_junc8/H_split3 [dimensionless]
+VV_junc8/RBC_in [m3_per_s]
+PV16/s_v_d [dimensionless]
+PV16/H_R_out [dimensionless]
+VV_junc9/u_mmHg [dimensionless]
+V16/v [m3_per_s]
+VV_junc8/H_daughter3 [dimensionless]
+PV16/H_down_target [dimensionless]
+PV16/H_mass_L [dimensionless]
+V16/v_mm3_s [mm3_per_s]
+V16/w_v [dimensionless]
+VV_junc8/H_from3_target [dimensionless]
+PV16/H_mass_R [dimensionless]
+V16/H_up [dimensionless]
+V16/v_pos [m3_per_s]
+V16/v_neg [m3_per_s]
+V16/H_L_out [dimensionless]
+V16/s_v [dimensionless]
+V16/H_R_out [dimensionless]
+V16/H_down_target [dimensionless]
+V16/H_mass_L [dimensionless]
+VV_junc9/vj1 [m3_per_s]
+V16/H_mass_R [dimensionless]
+VV_junc9/w_in1 [dimensionless]
+VV_junc9/w_out1 [dimensionless]
+VV_junc9/Qin1 [m3_per_s]
+VV_junc9/Qout1 [m3_per_s]
+VV_junc9/bc1_is_in [dimensionless]
+VV_junc9/bc1_is_out [dimensionless]
+VV_junc9/u_d [J_per_m3]
+VV_junc9/u_d_mmHg [dimensionless]
+VV_junc9/v [m3_per_s]
+VV_junc9/v_mm3_s [mm3_per_s]
+PTC5/R_constriction [Js_per_m6]
+PTC5/H_L_in [dimensionless]
+PTC5/H_R_in [dimensionless]
+PTC5/q [m3]
+PTC5/H_mean [dimensionless]
+PTC5/hem_dep_u_rel [dimensionless]
+PTC5/mu [Js_per_m3]
+PTC5/R [Js_per_m6]
+PTC5/u [J_per_m3]
+PTC5/u_mmHg [dimensionless]
+PTC5/v [m3_per_s]
+PTC5/v_mm3_s [mm3_per_s]
+VV_junc9/vj3 [m3_per_s]
+VV_junc9/w_in3 [dimensionless]
+VV_junc9/w_out3 [dimensionless]
+VV_junc9/Qin3 [m3_per_s]
+VV_junc9/Qout3 [m3_per_s]
+VV_junc9/bc3_is_in [dimensionless]
+VV_junc9/bc3_is_out [dimensionless]
+PTC5/w_v [dimensionless]
+PTC5/v_pos [m3_per_s]
+PTC5/v_neg [m3_per_s]
+TC5/H_L_in [dimensionless]
+TC5/H_R_in [dimensionless]
+TC5/q [m3]
+TC5/H_mean [dimensionless]
+TC5/hem_dep_u_rel [dimensionless]
+TC5/mu [Js_per_m3]
+TC5/R [Js_per_m6]
+TC5/u [J_per_m3]
+PTC5/v_d [m3_per_s]
+TC5/u_mmHg [dimensionless]
+PTC5/w_v_d [dimensionless]
+PTC5/v_d_mm3_s [mm3_per_s]
+TC5/v [m3_per_s]
+PTC5/H_up [dimensionless]
+PTC5/v_d_pos [m3_per_s]
+PTC5/v_d_neg [m3_per_s]
+TC5/w_v [dimensionless]
+TC5/v_mm3_s [mm3_per_s]
+PTC5/H_L_out [dimensionless]
+PTC5/s_v_d [dimensionless]
+PTC5/H_R_out [dimensionless]
+TC5/H_up [dimensionless]
+TC5/H_L_out [dimensionless]
+TC5/v_pos [m3_per_s]
+TC5/v_neg [m3_per_s]
+PTC6/R_constriction [Js_per_m6]
+PTC5/H_down_target [dimensionless]
+PTC5/H_mass_L [dimensionless]
+TC5/s_v [dimensionless]
+TC5/H_R_out [dimensionless]
+PTC6/H_L_in [dimensionless]
+PTC5/H_mass_R [dimensionless]
+TC5/H_down_target [dimensionless]
+TC5/H_mass_L [dimensionless]
+PTC6/H_R_in [dimensionless]
+TC5/H_mass_R [dimensionless]
+PTC6/q [m3]
+PTC6/H_mean [dimensionless]
+PTC6/hem_dep_u_rel [dimensionless]
+PTC6/mu [Js_per_m3]
+PTC6/R [Js_per_m6]
+PTC6/u [J_per_m3]
+PTC6/u_mmHg [dimensionless]
+PTC6/v [m3_per_s]
+PTC6/v_mm3_s [mm3_per_s]
+VV_junc9/vj4 [m3_per_s]
+VV_junc9/w_in4 [dimensionless]
+VV_junc9/w_out4 [dimensionless]
+VV_junc9/Qin4 [m3_per_s]
+VV_junc9/Qin_tot [m3_per_s]
+VV_junc9/Qout4 [m3_per_s]
+VV_junc9/Qout_tot [m3_per_s]
+VV_junc9/bc4_is_in [dimensionless]
+VV_junc9/bc4_is_out [dimensionless]
+VV_junc9/n_out [dimensionless]
+VV_junc9/n_in [dimensionless]
+VV_junc9/junction_type [dimensionless]
+VV_junc9/is_split [dimensionless]
+VV_junc9/is_merge [dimensionless]
+VV_junc9/feed1 [dimensionless]
+VV_junc9/feed2 [dimensionless]
+VV_junc9/feed3 [dimensionless]
+VV_junc9/feed4 [dimensionless]
+VV_junc9/alpha1 [dimensionless]
+VV_junc9/alpha2 [dimensionless]
+VV_junc9/alpha3 [dimensionless]
+VV_junc9/alpha4 [dimensionless]
+VV_junc9/Qout1_rem [m3_per_s]
+VV_junc9/Qout2_rem [m3_per_s]
+VV_junc9/Qout3_rem [m3_per_s]
+VV_junc9/Qout4_rem [m3_per_s]
+VV_junc9/beta1 [dimensionless]
+VV_junc9/beta2 [dimensionless]
+VV_junc9/beta3 [dimensionless]
+VV_junc9/beta4 [dimensionless]
+VV_junc9/D_F [metre]
+VV_junc9/D_alpha [metre]
+VV_junc9/D_beta [metre]
+VV_junc9/v_alpha [m3_per_s]
+VV_junc9/v_beta [m3_per_s]
+VV_junc9/FQB_alpha [dimensionless]
+VV_junc9/B [dimensionless]
+VV_junc9/A [dimensionless]
+VV_junc9/X_0 [dimensionless]
+VV_junc9/y_raw [dimensionless]
+VV_junc9/y [dimensionless]
+VV_junc9/ph [dimensionless]
+VV_junc9/FQE_alpha [dimensionless]
+VV_junc9/epsilon_alpha [dimensionless]
+VV_junc9/H_VV1_out_beta [dimensionless]
+VV_junc9/H_split1 [dimensionless]
+VV_junc9/H_split2 [dimensionless]
+VV_junc9/H_split3 [dimensionless]
+VV_junc9/RBC_out [m3_per_s]
+VV_junc9/H_daughter1 [dimensionless]
+VV_junc9/H_daughter2 [dimensionless]
+VV_junc9/H_daughter3 [dimensionless]
+PTC6/w_v [dimensionless]
+VV_junc9/H_from1_target [dimensionless]
+VV_junc9/H_from2_target [dimensionless]
+VV_junc9/H_from3_target [dimensionless]
+PTC6/v_pos [m3_per_s]
+PTC6/v_neg [m3_per_s]
+TC6/H_L_in [dimensionless]
+TC6/H_R_in [dimensionless]
+TC6/q [m3]
+TC6/H_mean [dimensionless]
+TC6/hem_dep_u_rel [dimensionless]
+TC6/mu [Js_per_m3]
+TC6/R [Js_per_m6]
+TC6/u [J_per_m3]
+PTC6/v_d [m3_per_s]
+TC6/u_mmHg [dimensionless]
+PTC6/w_v_d [dimensionless]
+PTC6/v_d_mm3_s [mm3_per_s]
+TC6/v [m3_per_s]
+PTC6/H_up [dimensionless]
+PTC6/H_L_out [dimensionless]
+PTC6/v_d_pos [m3_per_s]
+PTC6/v_d_neg [m3_per_s]
+TC6/w_v [dimensionless]
+TC6/v_mm3_s [mm3_per_s]
+VV_junc9/H_split4 [dimensionless]
+VV_junc9/RBC_in [m3_per_s]
+PTC6/s_v_d [dimensionless]
+PTC6/H_R_out [dimensionless]
+TC6/H_up [dimensionless]
+TC6/H_L_out [dimensionless]
+TC6/v_pos [m3_per_s]
+TC6/v_neg [m3_per_s]
+VV_junc9/H_daughter4 [dimensionless]
+PTC6/H_down_target [dimensionless]
+PTC6/H_mass_L [dimensionless]
+TC6/s_v [dimensionless]
+TC6/H_R_out [dimensionless]
+VV_junc9/H_from4_target [dimensionless]
+PTC6/H_mass_R [dimensionless]
+TC6/H_down_target [dimensionless]
+TC6/H_mass_L [dimensionless]
+TC6/H_mass_R [dimensionless]
+global/H_global_L
+global/H_global_R
+inlet/H_R_out_LHS
+global/gamma_mirror
+global/tau_H_down
+global/tau_H_mean
+global/v_eps
+global/q_C_init
+inlet/r
+global/mu_plasma
+inlet/u_in
+global/u_ext
+global/tau_link
+global/v_scale
+global/one_mm3
+global/div_0
+global/div_0y
+global/tau_junc
+global/v_threshold
+global/k
+VV_junc1/r
+VV_junc1/vbc2
+VV_junc1/H_to2
+VV_junc1/r_bc2
+VV_junc1/C_conn2
+global/R
+V01/r
+global/R_constriction_base
+PV01/R_constriction_final
+global/tau_sig
+global/t0
+PV01/r
+V02/r
+VV_junc2/r
+VV_junc2/vbc2
+VV_junc2/H_to2
+VV_junc2/r_bc2
+VV_junc2/C_conn2
+V03/r
+PV03/R_constriction_final
+PV03/r
+V04/r
+VV_junc3/r
+VV_junc3/vbc2
+VV_junc3/H_to2
+VV_junc3/r_bc2
+VV_junc3/C_conn2
+PV05/R_constriction_final
+PV05/r
+V05/r
+PTC1/R_constriction_final
+PTC1/r
+TC1/R_constriction_final
+TC1/H_L_out_RHS
+TC1/r
+TC1/u_out
+PV06/R_constriction_final
+PV06/r
+V06/r
+VV_junc4/r
+VV_junc4/vbc2
+VV_junc4/H_to2
+VV_junc4/r_bc2
+VV_junc4/C_conn2
+TC2/H_L_out_RHS
+TC2/r
+TC2/u_out
+TC3/H_L_out_RHS
+TC3/r
+TC3/u_out
+V07/r
+VV_junc7/r
+VV_junc7/vbc2
+VV_junc7/H_to2
+VV_junc7/r_bc2
+VV_junc7/C_conn2
+TC4/H_L_out_RHS
+TC4/r
+TC4/u_out
+V13/r
+V11/r
+VV_junc5/r
+VV_junc5/vbc2
+VV_junc5/H_to2
+VV_junc5/r_bc2
+VV_junc5/C_conn2
+PV12/r
+V12/r
+VV_junc6/r
+VV_junc6/vbc4
+VV_junc6/H_to4
+VV_junc6/r_bc4
+VV_junc6/C_conn4
+V17/r
+PV14/r
+V14/r
+VV_junc8/r
+VV_junc8/vbc4
+VV_junc8/H_to4
+VV_junc8/r_bc4
+VV_junc8/C_conn4
+PV16/R_constriction_final
+PV16/r
+V16/r
+VV_junc9/r
+VV_junc9/vbc2
+VV_junc9/H_to2
+VV_junc9/r_bc2
+VV_junc9/C_conn2
+PTC5/R_constriction_final
+PTC5/r
+TC5/H_L_out_RHS
+TC5/r
+TC5/u_out
+PTC6/R_constriction_final
+PTC6/r
+TC6/H_L_out_RHS
+TC6/r
+TC6/u_out
+
+inlet/q_us
+inlet/C
+VV_junc1/q_us
+V01/q_us
+inlet/Z
+PV01/q_us
+PV01/C
+V02/q_us
+V02/C
+VV_junc2/q_us
+V03/q_us
+PV03/q_us
+PV03/C
+V04/q_us
+V04/C
+VV_junc3/q_us
+PV05/q_us
+V05/q_us
+V05/C
+PTC1/q_us
+PTC1/C
+TC1/q_us
+TC1/C
+PV06/q_us
+V06/q_us
+V06/C
+VV_junc4/q_us
+TC2/q_us
+TC3/q_us
+V07/q_us
+VV_junc7/q_us
+TC4/q_us
+V13/q_us
+V11/q_us
+VV_junc5/q_us
+PV12/q_us
+V12/q_us
+VV_junc6/q_us
+V17/q_us
+PV14/q_us
+V14/q_us
+VV_junc8/q_us
+PV16/q_us
+V16/q_us
+V16/C
+VV_junc9/q_us
+PTC5/q_us
+TC5/q_us
+TC5/C
+PTC6/q_us
+TC6/q_us
+TC6/C
+inlet/RBC_volume_init
+VV_junc1/RBC_volume_init
+VV_junc1/C_max12
+V01/RBC_volume_init
+inlet/mu_45
+PV01/RBC_volume_init
+V02/RBC_volume_init
+VV_junc2/RBC_volume_init
+VV_junc2/C_max12
+V03/RBC_volume_init
+PV03/RBC_volume_init
+V04/RBC_volume_init
+VV_junc3/RBC_volume_init
+VV_junc3/C_max12
+PV05/RBC_volume_init
+V05/RBC_volume_init
+PTC1/RBC_volume_init
+TC1/RBC_volume_init
+PV06/RBC_volume_init
+V06/RBC_volume_init
+VV_junc4/RBC_volume_init
+VV_junc4/C_max12
+TC2/RBC_volume_init
+TC3/RBC_volume_init
+V07/RBC_volume_init
+VV_junc7/RBC_volume_init
+TC4/RBC_volume_init
+V13/RBC_volume_init
+V11/RBC_volume_init
+VV_junc5/RBC_volume_init
+PV12/RBC_volume_init
+V12/RBC_volume_init
+VV_junc6/RBC_volume_init
+V17/RBC_volume_init
+PV14/RBC_volume_init
+V14/RBC_volume_init
+VV_junc8/RBC_volume_init
+PV16/RBC_volume_init
+V16/RBC_volume_init
+VV_junc9/RBC_volume_init
+VV_junc9/C_max12
+PTC5/RBC_volume_init
+TC5/RBC_volume_init
+PTC6/RBC_volume_init
+TC6/RBC_volume_init
+V01/C
+VV_junc1/vj2
+V03/C
+PV05/C
+TC2/C
+PTC5/C
+VV_junc1/C_max123
+VV_junc1/D1
+VV_junc2/C_max123
+VV_junc3/C_max123
+VV_junc4/C_max123
+VV_junc9/C_max123
+VV_junc1/D2
+PV06/C
+TC3/C
+V07/C
+V11/C
+PTC6/C
+VV_junc1/C
+VV_junc1/D3
+VV_junc2/C
+VV_junc3/C
+VV_junc4/C
+VV_junc7/C_max12
+VV_junc5/C_max12
+VV_junc9/C
+VV_junc1/D4
+TC4/C
+PV12/C
+VV_junc1/w_in2
+V13/C
+VV_junc5/C_max123
+VV_junc1/w_out2
+VV_junc7/C_max123
+V12/C
+PV14/C
+VV_junc1/Qin2
+VV_junc7/C
+VV_junc5/C
+VV_junc6/C_max12
+VV_junc1/Qout2
+V17/C
+VV_junc1/bc2_is_in
+VV_junc6/C_max123
+V14/C
+VV_junc1/bc2_is_out
+VV_junc6/C
+VV_junc8/C_max12
+V01/Z
+PV16/C
+V01/mu_45
+VV_junc8/C_max123
+PV01/Z
+VV_junc8/C
+PV01/mu_45
+V02/Z
+V02/mu_45
+VV_junc2/vj2
+VV_junc2/D1
+VV_junc2/D2
+VV_junc2/D3
+VV_junc2/D4
+VV_junc2/w_in2
+VV_junc2/w_out2
+VV_junc2/Qin2
+VV_junc2/Qout2
+VV_junc2/bc2_is_in
+VV_junc2/bc2_is_out
+V03/Z
+V03/mu_45
+PV03/Z
+PV03/mu_45
+V04/Z
+V04/mu_45
+VV_junc3/vj2
+VV_junc3/D1
+VV_junc3/D2
+VV_junc3/D3
+VV_junc3/D4
+VV_junc3/w_in2
+VV_junc3/w_out2
+VV_junc3/Qin2
+VV_junc3/Qout2
+VV_junc3/bc2_is_in
+VV_junc3/bc2_is_out
+PV05/Z
+PV05/mu_45
+V05/Z
+V05/mu_45
+PTC1/Z
+PTC1/mu_45
+TC1/Z
+TC1/mu_45
+PV06/Z
+PV06/mu_45
+V06/Z
+V06/mu_45
+VV_junc4/vj2
+VV_junc4/D1
+VV_junc4/D2
+VV_junc4/D3
+VV_junc4/D4
+VV_junc4/w_in2
+VV_junc4/w_out2
+VV_junc4/Qin2
+VV_junc4/Qout2
+VV_junc4/bc2_is_in
+VV_junc4/bc2_is_out
+TC2/Z
+TC2/mu_45
+TC3/Z
+TC3/mu_45
+V07/Z
+V07/mu_45
+VV_junc7/vj2
+VV_junc7/D1
+VV_junc7/D2
+VV_junc7/D3
+VV_junc7/D4
+VV_junc7/w_in2
+VV_junc7/w_out2
+VV_junc7/Qin2
+VV_junc7/Qout2
+VV_junc7/bc2_is_in
+VV_junc7/bc2_is_out
+TC4/Z
+TC4/mu_45
+V13/Z
+V13/mu_45
+V11/Z
+V11/mu_45
+VV_junc5/vj2
+VV_junc5/D1
+VV_junc5/D2
+VV_junc5/D3
+VV_junc5/D4
+VV_junc5/w_in2
+VV_junc5/w_out2
+VV_junc5/Qin2
+VV_junc5/Qout2
+VV_junc5/bc2_is_in
+VV_junc5/bc2_is_out
+PV12/Z
+PV12/mu_45
+V12/Z
+V12/mu_45
+VV_junc6/vj4
+VV_junc6/D1
+VV_junc6/D2
+VV_junc6/D3
+VV_junc6/D4
+VV_junc6/w_in4
+VV_junc6/w_out4
+VV_junc6/Qin4
+VV_junc6/Qout4
+VV_junc6/bc4_is_in
+VV_junc6/bc4_is_out
+V17/Z
+V17/mu_45
+PV14/Z
+PV14/mu_45
+V14/Z
+V14/mu_45
+VV_junc8/vj4
+VV_junc8/D1
+VV_junc8/D2
+VV_junc8/D3
+VV_junc8/D4
+VV_junc8/w_in4
+VV_junc8/w_out4
+VV_junc8/Qin4
+VV_junc8/Qout4
+VV_junc8/bc4_is_in
+VV_junc8/bc4_is_out
+PV16/Z
+PV16/mu_45
+V16/Z
+V16/mu_45
+VV_junc9/vj2
+VV_junc9/D1
+VV_junc9/D2
+VV_junc9/D3
+VV_junc9/D4
+VV_junc9/w_in2
+VV_junc9/w_out2
+VV_junc9/Qin2
+VV_junc9/Qout2
+VV_junc9/bc2_is_in
+VV_junc9/bc2_is_out
+PTC5/Z
+PTC5/mu_45
+TC5/Z
+TC5/mu_45
+PTC6/Z
+PTC6/mu_45
+TC6/Z
+TC6/mu_45
