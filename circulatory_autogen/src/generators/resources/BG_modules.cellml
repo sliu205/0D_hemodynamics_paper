@@ -28235,20 +28235,16 @@ question?????????? whether ode (q_c and q_C_d) should be vbc1-4 or vj1-4-->
                 <eq/>
                 <ci>H_VV_out_alpha</ci>
                 <apply>
-                    <minus/>
-                    <ci>H_VV_out_alpha</ci>
+                    <divide/>
                     <apply>
-                        <divide/>
-                        <apply>
-                            <times/>
-                            <ci>H_mean</ci>
-                            <ci>FQE_alpha</ci>
-                        </apply>
-                        <apply>
-                            <plus/>
-                            <ci>FQB_alpha</ci>
-                            <ci>div_0</ci>
-                        </apply>
+                        <times/>
+                        <ci>H_mean</ci>
+                        <ci>FQE_alpha</ci>
+                    </apply>
+                    <apply>
+                        <plus/>
+                        <ci>FQB_alpha</ci>
+                        <ci>div_0</ci>
                     </apply>
                 </apply>
             </apply>
