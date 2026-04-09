@@ -6598,8 +6598,8 @@
           
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -6720,8 +6720,8 @@
           
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -6845,8 +6845,8 @@
           
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -6967,8 +6967,8 @@
           
           
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -7089,8 +7089,8 @@
           
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -7219,8 +7219,8 @@
           
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -7349,8 +7349,8 @@
           
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -7480,8 +7480,8 @@
           
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -7610,8 +7610,8 @@
           
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -7720,8 +7720,8 @@
 
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -7835,8 +7835,8 @@
 
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -7950,8 +7950,8 @@
 
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -8082,8 +8082,8 @@
           
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -8209,8 +8209,8 @@
           
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -8339,8 +8339,8 @@
           
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -8466,8 +8466,8 @@
           
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -8593,8 +8593,8 @@
           
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -8710,8 +8710,8 @@
 
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -8832,8 +8832,8 @@
 
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -8952,8 +8952,8 @@
 
 
           ["H_mean", "dimensionless", "access", "variable"],
-          ["H_mass_L", "dimensionless", "access", "variable"],
-          ["H_mass_R", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
 
 	  ["q_C", "m3", "access", "variable"],
 	  ["q", "m3", "access", "variable"],
@@ -8973,6 +8973,2493 @@
           ["u_mmHg", "dimensionless", "access", "variable"]
         ]
       },
+      
+      {
+        "vessel_type":"capillary_H_D_I",
+        "BC_type":"pp",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"PP_capillary_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"radius_port",
+            "variables":["r"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v","u_in"]
+          },
+          {
+            "port_type":"compliance_port",
+            "variables":["C"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v_d","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v", "v_d"]
+          },
+          {
+            "port_type":"radius_port",
+            "variables":["r"]
+          },
+          {
+            "port_type":"compliance_port",
+            "variables":["C"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["u_in", "J_per_m3", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          ["w_v_d", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],
+          
+          ["s_v_d", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+          ["v_d_pos", "m3_per_s", "access", "variable"],
+          ["v_d_neg", "m3_per_s", "access", "variable"],
+          
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"],          
+          ["v_d", "m3_per_s", "access", "variable"],
+          ["v_d_mm3_s", "mm3_per_s", "access", "variable"]
+        ]
+      },
+       {
+        "vessel_type":"capillary_H_D_I",
+        "BC_type":"pp_H1",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"PP_capillary_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v","u_in"]
+          }
+          
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port1",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port1",
+            "variables":["v_d","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v", "v_d"]
+          },
+          {
+            "port_type":"radius_port1",
+            "variables":["r"]
+          },
+          {
+            "port_type":"compliance_port1",
+            "variables":["C"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["u_in", "J_per_m3", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          ["w_v_d", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],
+          
+          ["s_v_d", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+          ["v_d_pos", "m3_per_s", "access", "variable"],
+          ["v_d_neg", "m3_per_s", "access", "variable"],
+          
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"],          
+          ["v_d", "m3_per_s", "access", "variable"],
+          ["v_d_mm3_s", "mm3_per_s", "access", "variable"]
+        ]
+      },
+      {
+        "vessel_type":"capillary_H_D_I",
+        "BC_type":"pp_H2",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"PP_capillary_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v","u_in"]
+          },
+          {
+            "port_type":"compliance_port",
+            "variables":["C"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port2",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port2",
+            "variables":["v_d","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v", "v_d"]
+          },
+          {
+            "port_type":"radius_port2",
+            "variables":["r"]
+          },
+          {
+            "port_type":"compliance_port2",
+            "variables":["C"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["u_in", "J_per_m3", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          ["w_v_d", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],
+          
+          ["s_v_d", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+          ["v_d_pos", "m3_per_s", "access", "variable"],
+          ["v_d_neg", "m3_per_s", "access", "variable"],
+          
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"],          
+          ["v_d", "m3_per_s", "access", "variable"],
+          ["v_d_mm3_s", "mm3_per_s", "access", "variable"]
+        ]
+      },
+      
+      {
+        "vessel_type":"capillary_H_D_I",
+        "BC_type":"pp_H3",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"PP_capillary_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port3",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"radius_port3",
+            "variables":["r"]
+          },
+          {
+            "port_type":"vessel_port3",
+            "variables":["v","u_in"]
+          },
+          {
+            "port_type":"compliance_port3",
+            "variables":["C"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v_d","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v", "v_d"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["u_in", "J_per_m3", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          ["w_v_d", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],
+          
+          ["s_v_d", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+          ["v_d_pos", "m3_per_s", "access", "variable"],
+          ["v_d_neg", "m3_per_s", "access", "variable"],
+          
+          
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"],          
+          ["v_d", "m3_per_s", "access", "variable"],
+          ["v_d_mm3_s", "mm3_per_s", "access", "variable"]
+        ]
+      },
+      
+      {
+        "vessel_type":"capillary_H_D_I",
+        "BC_type":"pp_H4",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"PP_capillary_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port4",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"radius_port4",
+            "variables":["r"]
+          },
+          {
+            "port_type":"vessel_port4",
+            "variables":["v","u_in"]
+          },
+          {
+            "port_type":"compliance_port4",
+            "variables":["C"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v_d","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v", "v_d"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["u_in", "J_per_m3", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          ["w_v_d", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],
+          
+          ["s_v_d", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+          ["v_d_pos", "m3_per_s", "access", "variable"],
+          ["v_d_neg", "m3_per_s", "access", "variable"],
+          
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"],          
+          ["v_d", "m3_per_s", "access", "variable"],
+          ["v_d_mm3_s", "mm3_per_s", "access", "variable"]
+        ]
+      },
+      
+      {
+        "vessel_type":"capillary_H_D_I",
+        "BC_type":"pp_H4L_H1R",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"PP_capillary_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port4",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"radius_port4",
+            "variables":["r"]
+          },
+          {
+            "port_type":"vessel_port4",
+            "variables":["v","u_in"]
+          },
+          {
+            "port_type":"compliance_port4",
+            "variables":["C"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port1",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port1",
+            "variables":["v_d","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"radius_port1",
+            "variables":["r"]
+          },
+          {
+            "port_type":"compliance_port1",
+            "variables":["C"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v", "v_d"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["u_in", "J_per_m3", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          ["w_v_d", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],
+          
+          ["s_v_d", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+          ["v_d_pos", "m3_per_s", "access", "variable"],
+          ["v_d_neg", "m3_per_s", "access", "variable"],
+          
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"],          
+          ["v_d", "m3_per_s", "access", "variable"],
+          ["v_d_mm3_s", "mm3_per_s", "access", "variable"]
+        ]
+      },
+      
+      {
+        "vessel_type":"capillary_H_D_I",
+        "BC_type":"pp_H3L_H1R",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"PP_capillary_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port3",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"radius_port3",
+            "variables":["r"]
+          },
+          {
+            "port_type":"vessel_port3",
+            "variables":["v","u_in"]
+          },
+          {
+            "port_type":"compliance_port3",
+            "variables":["C"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port1",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port1",
+            "variables":["v_d","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"radius_port1",
+            "variables":["r"]
+          },
+          {
+            "port_type":"compliance_port1",
+            "variables":["C"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v", "v_d"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["u_in", "J_per_m3", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          ["w_v_d", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],
+          
+          ["s_v_d", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+          ["v_d_pos", "m3_per_s", "access", "variable"],
+          ["v_d_neg", "m3_per_s", "access", "variable"],
+          
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"],          
+          ["v_d", "m3_per_s", "access", "variable"],
+          ["v_d_mm3_s", "mm3_per_s", "access", "variable"]
+        ]
+      },
+      
+      
+      {
+        "vessel_type":"capillary_H_D_I",
+        "BC_type":"pp_H4L_H2R",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"PP_capillary_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port4",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"radius_port4",
+            "variables":["r"]
+          },
+          {
+            "port_type":"vessel_port4",
+            "variables":["v","u_in"]
+          },
+          {
+            "port_type":"compliance_port4",
+            "variables":["C"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port2",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port2",
+            "variables":["v_d","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"radius_port2",
+            "variables":["r"]
+          },
+          {
+            "port_type":"compliance_port2",
+            "variables":["C"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v", "v_d"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["u_in", "J_per_m3", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          ["w_v_d", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],
+          
+          ["s_v_d", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+          ["v_d_pos", "m3_per_s", "access", "variable"],
+          ["v_d_neg", "m3_per_s", "access", "variable"],
+          
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"],          
+          ["v_d", "m3_per_s", "access", "variable"],
+          ["v_d_mm3_s", "mm3_per_s", "access", "variable"]
+        ]
+      },
+      
+      {
+        "vessel_type":"capillary_H_D_I",
+        "BC_type":"pp_H3L_H2R",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"PP_capillary_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port3",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"radius_port3",
+            "variables":["r"]
+          },
+          {
+            "port_type":"vessel_port3",
+            "variables":["v","u_in"]
+          },
+          {
+            "port_type":"compliance_port3",
+            "variables":["C"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port2",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port2",
+            "variables":["v_d","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"radius_port2",
+            "variables":["r"]
+          },
+          {
+            "port_type":"compliance_port2",
+            "variables":["C"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v", "v_d"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["u_in", "J_per_m3", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          ["w_v_d", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],
+          
+          ["s_v_d", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+          ["v_d_pos", "m3_per_s", "access", "variable"],
+          ["v_d_neg", "m3_per_s", "access", "variable"],
+          
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"],          
+          ["v_d", "m3_per_s", "access", "variable"],
+          ["v_d_mm3_s", "mm3_per_s", "access", "variable"]
+        ]
+      },
+	{
+        "vessel_type":"capillary_H_D_I",
+        "BC_type":"vp",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"VP_capillary_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v_in", "u"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v_in", "v"]
+          }
+
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["v_in", "m3_per_s", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],   
+          ["s_v", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"]
+        ]
+      },
+	{
+        "vessel_type":"capillary_H_D_I",
+        "BC_type":"vp_H1",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"VP_capillary_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v_in", "u"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port1",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port1",
+            "variables":["v","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"radius_port1",
+            "variables":["r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v_in", "v"]
+          },
+          {
+            "port_type":"compliance_port1",
+            "variables":["C"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["v_in", "m3_per_s", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],   
+          ["s_v", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"]
+        ]
+      },
+	{
+        "vessel_type":"capillary_H_D_I",
+        "BC_type":"vp_H2",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"VP_capillary_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v_in", "u"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port2",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port2",
+            "variables":["v","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"radius_port2",
+            "variables":["r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v_in", "v"]
+          },
+          {
+            "port_type":"compliance_port2",
+            "variables":["C"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["v_in", "m3_per_s", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],   
+          ["s_v", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"]
+        ]
+      },
+            {
+        "vessel_type":"capillary_H_D_pericyte_I",
+        "BC_type":"pp",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"PP_pericyte_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"radius_port",
+            "variables":["r"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v","u_in"]
+          },
+          {
+            "port_type":"compliance_port",
+            "variables":["C"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v_d","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v", "v_d"]
+          },
+          {
+            "port_type":"radius_port",
+            "variables":["r"]
+          },
+          {
+            "port_type":"compliance_port",
+            "variables":["C"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["R_constriction_base", "Js_per_m6", "access", "global_constant"],
+          ["R_constriction_final", "Js_per_m6", "access", "constant"],
+          ["R_constriction", "Js_per_m6", "access", "variable"],
+          
+          ["tau_sig", "second", "access", "global_constant"],
+          ["t0", "second", "access", "global_constant"],
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["u_in", "J_per_m3", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          ["w_v_d", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],
+          
+          ["s_v_d", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+          ["v_d_pos", "m3_per_s", "access", "variable"],
+          ["v_d_neg", "m3_per_s", "access", "variable"],
+          
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"],          
+          ["v_d", "m3_per_s", "access", "variable"],
+          ["v_d_mm3_s", "mm3_per_s", "access", "variable"]
+        ]
+      },
+       {
+        "vessel_type":"capillary_H_D_pericyte_I",
+        "BC_type":"pp_H1",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"PP_pericyte_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v","u_in"]
+          }
+          
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port1",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port1",
+            "variables":["v_d","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v", "v_d"]
+          },
+          {
+            "port_type":"radius_port1",
+            "variables":["r"]
+          },
+          {
+            "port_type":"compliance_port1",
+            "variables":["C"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["R_constriction_base", "Js_per_m6", "access", "global_constant"],
+          ["R_constriction_final", "Js_per_m6", "access", "constant"],
+          ["R_constriction", "Js_per_m6", "access", "variable"],
+          
+          ["tau_sig", "second", "access", "global_constant"],
+          ["t0", "second", "access", "global_constant"],
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["u_in", "J_per_m3", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          ["w_v_d", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],
+          
+          ["s_v_d", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+          ["v_d_pos", "m3_per_s", "access", "variable"],
+          ["v_d_neg", "m3_per_s", "access", "variable"],
+          
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"],          
+          ["v_d", "m3_per_s", "access", "variable"],
+          ["v_d_mm3_s", "mm3_per_s", "access", "variable"]
+        ]
+      },
+      {
+        "vessel_type":"capillary_H_D_pericyte_I",
+        "BC_type":"pp_H2",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"PP_pericyte_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v","u_in"]
+          },
+          {
+            "port_type":"compliance_port",
+            "variables":["C"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port2",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port2",
+            "variables":["v_d","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v", "v_d"]
+          },
+          {
+            "port_type":"radius_port2",
+            "variables":["r"]
+          },
+          {
+            "port_type":"compliance_port2",
+            "variables":["C"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["R_constriction_base", "Js_per_m6", "access", "global_constant"],
+          ["R_constriction_final", "Js_per_m6", "access", "constant"],
+          ["R_constriction", "Js_per_m6", "access", "variable"],
+          
+          ["tau_sig", "second", "access", "global_constant"],
+          ["t0", "second", "access", "global_constant"],
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["u_in", "J_per_m3", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          ["w_v_d", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],
+          
+          ["s_v_d", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+          ["v_d_pos", "m3_per_s", "access", "variable"],
+          ["v_d_neg", "m3_per_s", "access", "variable"],
+          
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"],          
+          ["v_d", "m3_per_s", "access", "variable"],
+          ["v_d_mm3_s", "mm3_per_s", "access", "variable"]
+        ]
+      },
+      
+      {
+        "vessel_type":"capillary_H_D_pericyte_I",
+        "BC_type":"pp_H3",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"PP_pericyte_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port3",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"radius_port3",
+            "variables":["r"]
+          },
+          {
+            "port_type":"vessel_port3",
+            "variables":["v","u_in"]
+          },
+          {
+            "port_type":"compliance_port3",
+            "variables":["C"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v_d","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v", "v_d"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["R_constriction_base", "Js_per_m6", "access", "global_constant"],
+          ["R_constriction_final", "Js_per_m6", "access", "constant"],
+          ["R_constriction", "Js_per_m6", "access", "variable"],
+          
+          ["tau_sig", "second", "access", "global_constant"],
+          ["t0", "second", "access", "global_constant"],
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["u_in", "J_per_m3", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          ["w_v_d", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],
+          
+          ["s_v_d", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+          ["v_d_pos", "m3_per_s", "access", "variable"],
+          ["v_d_neg", "m3_per_s", "access", "variable"],
+          
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"],          
+          ["v_d", "m3_per_s", "access", "variable"],
+          ["v_d_mm3_s", "mm3_per_s", "access", "variable"]
+        ]
+      },
+      
+      {
+        "vessel_type":"capillary_H_D_pericyte_I",
+        "BC_type":"pp_H4",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"PP_pericyte_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port4",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"radius_port4",
+            "variables":["r"]
+          },
+          {
+            "port_type":"vessel_port4",
+            "variables":["v","u_in"]
+          },
+          {
+            "port_type":"compliance_port4",
+            "variables":["C"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v_d","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v", "v_d"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["R_constriction_base", "Js_per_m6", "access", "global_constant"],
+          ["R_constriction_final", "Js_per_m6", "access", "constant"],
+          ["R_constriction", "Js_per_m6", "access", "variable"],
+          
+          ["tau_sig", "second", "access", "global_constant"],
+          ["t0", "second", "access", "global_constant"],
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["u_in", "J_per_m3", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          ["w_v_d", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],
+          
+          ["s_v_d", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+          ["v_d_pos", "m3_per_s", "access", "variable"],
+          ["v_d_neg", "m3_per_s", "access", "variable"],
+          
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"],          
+          ["v_d", "m3_per_s", "access", "variable"],
+          ["v_d_mm3_s", "mm3_per_s", "access", "variable"]
+        ]
+      },
+      
+
+      {
+        "vessel_type":"capillary_H_D_pericyte_I",
+        "BC_type":"vp",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"VP_pericyte_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v_in", "u"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v_in", "v"]
+          }
+
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["R_constriction_base", "Js_per_m6", "access", "global_constant"],
+          ["R_constriction_final", "Js_per_m6", "access", "constant"],
+          ["R_constriction", "Js_per_m6", "access", "variable"],
+          
+          ["tau_sig", "second", "access", "global_constant"],
+          ["t0", "second", "access", "global_constant"],
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["v_in", "m3_per_s", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],   
+          ["s_v", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"]
+        ]
+      },
+      
+      
+	{
+        "vessel_type":"capillary_H_D_pericyte_I",
+        "BC_type":"vp_H1",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"VP_pericyte_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v_in", "u"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port1",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port1",
+            "variables":["v","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"radius_port1",
+            "variables":["r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v_in", "v"]
+          },
+          {
+            "port_type":"compliance_port1",
+            "variables":["C"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["R_constriction_base", "Js_per_m6", "access", "global_constant"],
+          ["R_constriction_final", "Js_per_m6", "access", "constant"],
+          ["R_constriction", "Js_per_m6", "access", "variable"],
+          
+          ["tau_sig", "second", "access", "global_constant"],
+          ["t0", "second", "access", "global_constant"],
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["v_in", "m3_per_s", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],   
+          ["s_v", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"]
+        ]
+      },
+	{
+        "vessel_type":"capillary_H_D_pericyte_I",
+        "BC_type":"vp_H2",
+        "module_format":"cellml",
+        "module_file":"BG_modules.cellml",
+        "module_type":"VP_pericyte_H_D_I",
+        "entrance_ports":
+        [
+          {
+            "port_type":"H_port",
+            "variables":["H_R_out_LHS","H_L_out"]
+          },
+          {
+            "port_type":"vessel_port",
+            "variables":["v_in", "u"]
+          }
+        ],
+        "exit_ports":
+        [
+          {
+            "port_type":"H_port2",
+            "variables":["H_R_out","H_L_out_RHS"]
+          },
+          {
+            "port_type":"vessel_port2",
+            "variables":["v","u_out"]
+          },
+          {
+            "port_type":"length_and_radius_port",
+            "variables":["l", "r"]
+          },
+          {
+            "port_type":"radius_port2",
+            "variables":["r"]
+          },
+          {
+            "port_type":"volume_port",
+            "variables":["q"]
+          },
+          {
+            "port_type":"flow_in_out_port",
+            "variables":["v_in", "v"]
+          },
+          {
+            "port_type":"compliance_port2",
+            "variables":["C"]
+          }
+        ],
+        "general_ports":
+        [
+        ],
+        "variables_and_units":
+        [
+          ["R_constriction_base", "Js_per_m6", "access", "global_constant"],
+          ["R_constriction_final", "Js_per_m6", "access", "constant"],
+          ["R_constriction", "Js_per_m6", "access", "variable"],
+          
+          ["tau_sig", "second", "access", "global_constant"],
+          ["t0", "second", "access", "global_constant"],
+          ["H_global_L", "dimensionless", "access", "global_constant"],
+          ["H_global_R", "dimensionless", "access", "global_constant"],
+          ["H_L_out_RHS", "dimensionless", "access", "boundary_condition"],
+          ["H_R_out_LHS", "dimensionless", "access", "boundary_condition"],
+          ["gamma_mirror", "dimensionless", "access", "global_constant"],
+	  ["tau_H_down", "second", "access", "global_constant"],
+	  ["tau_H_mean", "second", "access", "global_constant"],
+	  ["v_eps", "m3_per_s", "access", "global_constant"],
+	  ["q_C_init", "m3", "access", "global_constant"],
+	  ["l", "metre", "no_access", "constant"],
+          ["r", "metre", "access", "constant"],
+          ["mu_plasma", "Js_per_m3", "access", "global_constant"],
+          ["v_in", "m3_per_s", "access", "boundary_condition"],
+          ["u_out", "J_per_m3", "access", "boundary_condition"],
+          ["u_ext", "J_per_m3", "access", "global_constant"],
+          ["tau_link", "second", "access", "global_constant"],
+          ["v_scale", "m3_per_s", "access", "global_constant"],
+          ["one_mm3", "m3", "access", "global_constant"],
+          
+          ["w_v", "dimensionless", "access", "variable"],
+          
+          ["H_link_R", "dimensionless", "access", "variable"],
+          ["H_link_L", "dimensionless", "access", "variable"],
+          ["H_L_in", "dimensionless", "access", "variable"],
+          ["H_R_in", "dimensionless", "access", "variable"],
+          ["H_up", "dimensionless", "access", "variable"],
+          ["H_down", "dimensionless", "access", "variable"],
+          ["H_down_target", "dimensionless", "access", "variable"],   
+          ["s_v", "dimensionless", "access", "variable"],
+          ["H_L_out", "dimensionless", "access", "variable"],
+          ["H_R_out", "dimensionless", "access", "variable"],
+          
+          ["RBC_volume", "m3", "access", "variable"],
+          ["RBC_volume_init", "m3", "access", "variable"],
+          
+          ["v_pos", "m3_per_s", "access", "variable"],
+          ["v_neg", "m3_per_s", "access", "variable"],
+
+
+          ["H_mean", "dimensionless", "access", "variable"],
+          ["H_volume_L", "dimensionless", "access", "variable"],
+          ["H_volume_R", "dimensionless", "access", "variable"],
+
+	  ["q_C", "m3", "access", "variable"],
+	  ["q", "m3", "access", "variable"],
+	  ["q_us", "m3", "access", "variable"],
+	  
+	  ["C", "m6_per_J", "access", "variable"],
+	  ["Z", "dimensionless", "access", "variable"],
+	  ["mu_45", "dimensionless", "access", "variable"],
+	  ["mu", "Js_per_m3", "access", "variable"],
+	  ["hem_dep_u_rel", "dimensionless", "access", "variable"],
+	  
+	  ["R", "Js_per_m6", "access", "variable"],
+	  ["v", "m3_per_s", "access", "variable"],
+	  ["v_mm3_s", "mm3_per_s", "access", "variable"],
+          
+          ["u", "J_per_m3", "access", "variable"],
+          ["u_mmHg", "dimensionless", "access", "variable"]
+        ]
+      },
+      
+      
+      
+
+      
       {
         "vessel_type":"capillary_H_D",
         "BC_type":"vv_junction",
@@ -9064,7 +11551,6 @@
         [
           ["div_0", "dimensionless", "access", "global_constant"],
           ["div_0y", "dimensionless", "access", "global_constant"],
-          ["tau_junc", "second", "access", "global_constant"],
           ["v_threshold", "m3_per_s", "access", "global_constant"],
           ["k", "dimensionless", "access", "global_constant"],       
           ["H_global_L", "dimensionless", "access", "global_constant"],
@@ -9189,7 +11675,7 @@
           ["ph", "dimensionless", "access", "variable"],
           ["y_raw", "dimensionless", "access", "variable"],
           ["y", "dimensionless", "access", "variable"],
-          ["epsilon_alpha", "dimensionless", "access", "variable"],
+
           ["H_VV_out_alpha", "dimensionless", "access", "variable"],
           ["H_VV_out_beta", "dimensionless", "access", "variable"],
           
@@ -9226,7 +11712,7 @@
       
       
       {
-        "vessel_type":"capillary_H_D",
+        "vessel_type":"capillary_H_D_I",
         "BC_type":"vv_junction_I",
         "module_format":"cellml",
         "module_file":"BG_modules.cellml",
@@ -9316,7 +11802,7 @@
         [
           ["div_0", "dimensionless", "access", "global_constant"],
           ["div_0y", "dimensionless", "access", "global_constant"],
-          ["tau_junc", "second", "access", "global_constant"],
+
           ["v_threshold", "m3_per_s", "access", "global_constant"],
           ["k", "dimensionless", "access", "global_constant"],       
           ["H_global_L", "dimensionless", "access", "global_constant"],

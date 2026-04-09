@@ -2,7 +2,7 @@
 <!--#This model was automatically generated with the circulatory_autogen software-->
 <!--# https://github.com/FinbarArgus/circulatory_autogen -->
 <model name="CardiovascularSystem" xmlns="http://www.cellml.org/cellml/1.1#" xmlns:cellml="http://www.cellml.org/cellml/1.1#" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <import xlink:href="B1_time_dynamics_parameters.cellml">
+    <import xlink:href="B1_TD_parameters.cellml">
         <component component_ref="parameters" name="parameters"/>
         <component component_ref="parameters_global" name="parameters_global"/>
     </import>
@@ -11,7 +11,7 @@
     </component>
     <!--#STARTGENBELOW-->
 <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;units&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;//-->
-<import xlink:href="B1_time_dynamics_units.cellml">
+<import xlink:href="B1_TD_units.cellml">
     <units name="s2" units_ref="s2"/>
     <units name="Hz" units_ref="Hz"/>
     <units name="millis" units_ref="millis"/>
@@ -223,22 +223,22 @@
     <units name="kPa_s_per_L" units_ref="kPa_s_per_L"/>
 </import>
 <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;imports&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;//-->
-<import xlink:href="B1_time_dynamics_modules.cellml">
+<import xlink:href="B1_TD_modules.cellml">
     <component component_ref="PP_capillary_H_D" name="inlet_module"/>
 </import>
-<import xlink:href="B1_time_dynamics_modules.cellml">
+<import xlink:href="B1_TD_modules.cellml">
     <component component_ref="VV_junction_H_D" name="VV_junc1_module"/>
 </import>
-<import xlink:href="B1_time_dynamics_modules.cellml">
+<import xlink:href="B1_TD_modules.cellml">
     <component component_ref="PP_pericyte_H_D" name="PV1_module"/>
 </import>
-<import xlink:href="B1_time_dynamics_modules.cellml">
+<import xlink:href="B1_TD_modules.cellml">
     <component component_ref="PP_pericyte_H_D" name="PV2_module"/>
 </import>
-<import xlink:href="B1_time_dynamics_modules.cellml">
+<import xlink:href="B1_TD_modules.cellml">
     <component component_ref="VP_capillary_H_D" name="V1_module"/>
 </import>
-<import xlink:href="B1_time_dynamics_modules.cellml">
+<import xlink:href="B1_TD_modules.cellml">
     <component component_ref="VP_capillary_H_D" name="V2_module"/>
 </import>
 <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;vessel mappings&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;//-->
@@ -480,9 +480,8 @@
    <variable name="ph" public_interface="in" units="dimensionless"/>
    <variable name="y_raw" public_interface="in" units="dimensionless"/>
    <variable name="y" public_interface="in" units="dimensionless"/>
-   <variable name="epsilon_alpha" public_interface="in" units="dimensionless"/>
-   <variable name="H_VV1_out_alpha" public_interface="in" units="dimensionless"/>
-   <variable name="H_VV1_out_beta" public_interface="in" units="dimensionless"/>
+   <variable name="H_VV_out_alpha" public_interface="in" units="dimensionless"/>
+   <variable name="H_VV_out_beta" public_interface="in" units="dimensionless"/>
    <variable name="RBC_in" public_interface="in" units="m3_per_s"/>
    <variable name="RBC_out" public_interface="in" units="m3_per_s"/>
    <variable name="RBC_volume_init" public_interface="in" units="m3"/>
@@ -893,9 +892,8 @@
    <map_variables variable_1="ph" variable_2="ph"/>
    <map_variables variable_1="y_raw" variable_2="y_raw"/>
    <map_variables variable_1="y" variable_2="y"/>
-   <map_variables variable_1="epsilon_alpha" variable_2="epsilon_alpha"/>
-   <map_variables variable_1="H_VV1_out_alpha" variable_2="H_VV1_out_alpha"/>
-   <map_variables variable_1="H_VV1_out_beta" variable_2="H_VV1_out_beta"/>
+   <map_variables variable_1="H_VV_out_alpha" variable_2="H_VV_out_alpha"/>
+   <map_variables variable_1="H_VV_out_beta" variable_2="H_VV_out_beta"/>
    <map_variables variable_1="RBC_in" variable_2="RBC_in"/>
    <map_variables variable_1="RBC_out" variable_2="RBC_out"/>
    <map_variables variable_1="RBC_volume_init" variable_2="RBC_volume_init"/>

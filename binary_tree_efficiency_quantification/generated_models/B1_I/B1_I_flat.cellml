@@ -861,7 +861,6 @@
     <variable name="one_mm3" units="m3" initial_value="0.000000001" interface="public"/>
     <variable name="div_0" units="dimensionless" initial_value="1E-25" interface="public"/>
     <variable name="div_0y" units="dimensionless" initial_value="0.00000001" interface="public"/>
-    <variable name="tau_junc" units="second" initial_value="0.0001" interface="public"/>
     <variable name="v_threshold" units="m3_per_s" initial_value="1E-18" interface="public"/>
     <variable name="k" units="dimensionless" initial_value="1000" interface="public"/>
     <variable name="R" units="Js_per_m6" initial_value="1000000000000000" interface="public"/>
@@ -904,15 +903,15 @@
     <variable name="s_v_d" units="dimensionless" interface="public"/>
     <variable name="H_L_out" units="dimensionless" interface="public"/>
     <variable name="H_R_out" units="dimensionless" interface="public"/>
-    <variable name="RBC_volume" units="m3" initial_value="RBC_volume_init" interface="public"/>
+    <variable name="RBC_volume" units="m3" interface="public"/>
     <variable name="RBC_volume_init" units="m3" interface="public"/>
     <variable name="v_pos" units="m3_per_s" interface="public"/>
     <variable name="v_neg" units="m3_per_s" interface="public"/>
     <variable name="v_d_pos" units="m3_per_s" interface="public"/>
     <variable name="v_d_neg" units="m3_per_s" interface="public"/>
     <variable name="H_mean" units="dimensionless" interface="public"/>
-    <variable name="H_mass_L" units="dimensionless" interface="public"/>
-    <variable name="H_mass_R" units="dimensionless" interface="public"/>
+    <variable name="H_volume_L" units="dimensionless" interface="public"/>
+    <variable name="H_volume_R" units="dimensionless" interface="public"/>
     <variable name="q_C" units="m3" initial_value="q_C_init" interface="public"/>
     <variable name="q" units="m3" interface="public"/>
     <variable name="q_us" units="m3" interface="public"/>
@@ -1179,24 +1178,26 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <apply>
         <eq/>
+        <ci>RBC_volume</ci>
         <apply>
-          <diff/>
-          <bvar>
-            <ci>t</ci>
-          </bvar>
-          <ci>RBC_volume</ci>
-        </apply>
-        <apply>
-          <minus/>
+          <divide/>
           <apply>
-            <times/>
-            <ci>v</ci>
-            <ci>H_mass_L</ci>
+            <minus/>
+            <apply>
+              <times/>
+              <ci>v</ci>
+              <ci>H_volume_L</ci>
+            </apply>
+            <apply>
+              <times/>
+              <ci>v_d</ci>
+              <ci>H_volume_R</ci>
+            </apply>
           </apply>
           <apply>
-            <times/>
+            <plus/>
+            <ci>v</ci>
             <ci>v_d</ci>
-            <ci>H_mass_R</ci>
           </apply>
         </apply>
       </apply>
@@ -1282,7 +1283,7 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:cellml="http://www.cellml.org/cellml/2.0#">
       <apply>
         <eq/>
-        <ci>H_mass_L</ci>
+        <ci>H_volume_L</ci>
         <apply>
           <plus/>
           <apply>
@@ -1303,7 +1304,7 @@
       </apply>
       <apply>
         <eq/>
-        <ci>H_mass_R</ci>
+        <ci>H_volume_R</ci>
         <apply>
           <plus/>
           <apply>
@@ -1723,7 +1724,6 @@
   <component name="VV_junc1_module">
     <variable name="div_0" units="dimensionless" interface="public"/>
     <variable name="div_0y" units="dimensionless" interface="public"/>
-    <variable name="tau_junc" units="second" interface="public"/>
     <variable name="v_threshold" units="m3_per_s" interface="public"/>
     <variable name="k" units="dimensionless" interface="public"/>
     <variable name="t" units="second" interface="public"/>
@@ -1760,10 +1760,10 @@
     <variable name="H_from2_target" units="dimensionless" interface="public"/>
     <variable name="H_from3_target" units="dimensionless" interface="public"/>
     <variable name="H_from4_target" units="dimensionless" interface="public"/>
-    <variable name="H_from1" units="dimensionless" initial_value="H_global_L" interface="public"/>
-    <variable name="H_from2" units="dimensionless" initial_value="H_global_L" interface="public"/>
-    <variable name="H_from3" units="dimensionless" initial_value="H_global_L" interface="public"/>
-    <variable name="H_from4" units="dimensionless" initial_value="H_global_L" interface="public"/>
+    <variable name="H_from1" units="dimensionless" interface="public"/>
+    <variable name="H_from2" units="dimensionless" interface="public"/>
+    <variable name="H_from3" units="dimensionless" interface="public"/>
+    <variable name="H_from4" units="dimensionless" interface="public"/>
     <variable name="r_bc1" units="metre" interface="public"/>
     <variable name="r_bc2" units="metre" interface="public"/>
     <variable name="r_bc3" units="metre" interface="public"/>
@@ -2175,94 +2175,38 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <apply>
         <eq/>
+        <ci>H_from1</ci>
         <apply>
-          <diff/>
-          <bvar>
-            <ci>t</ci>
-          </bvar>
-          <ci>H_from1</ci>
-        </apply>
-        <apply>
-          <divide/>
-          <apply>
-            <times/>
-            <ci>w_out1</ci>
-            <apply>
-              <minus/>
-              <ci>H_from1_target</ci>
-              <ci>H_from1</ci>
-            </apply>
-          </apply>
-          <ci>tau_junc</ci>
+          <times/>
+          <ci>w_out1</ci>
+          <ci>H_from1_target</ci>
         </apply>
       </apply>
       <apply>
         <eq/>
+        <ci>H_from2</ci>
         <apply>
-          <diff/>
-          <bvar>
-            <ci>t</ci>
-          </bvar>
-          <ci>H_from2</ci>
-        </apply>
-        <apply>
-          <divide/>
-          <apply>
-            <times/>
-            <ci>w_out2</ci>
-            <apply>
-              <minus/>
-              <ci>H_from2_target</ci>
-              <ci>H_from2</ci>
-            </apply>
-          </apply>
-          <ci>tau_junc</ci>
+          <times/>
+          <ci>w_out2</ci>
+          <ci>H_from2_target</ci>
         </apply>
       </apply>
       <apply>
         <eq/>
+        <ci>H_from3</ci>
         <apply>
-          <diff/>
-          <bvar>
-            <ci>t</ci>
-          </bvar>
-          <ci>H_from3</ci>
-        </apply>
-        <apply>
-          <divide/>
-          <apply>
-            <times/>
-            <ci>w_out3</ci>
-            <apply>
-              <minus/>
-              <ci>H_from3_target</ci>
-              <ci>H_from3</ci>
-            </apply>
-          </apply>
-          <ci>tau_junc</ci>
+          <times/>
+          <ci>w_out3</ci>
+          <ci>H_from3_target</ci>
         </apply>
       </apply>
       <apply>
         <eq/>
+        <ci>H_from4</ci>
         <apply>
-          <diff/>
-          <bvar>
-            <ci>t</ci>
-          </bvar>
-          <ci>H_from4</ci>
-        </apply>
-        <apply>
-          <divide/>
-          <apply>
-            <times/>
-            <ci>w_out4</ci>
-            <apply>
-              <minus/>
-              <ci>H_from4_target</ci>
-              <ci>H_from4</ci>
-            </apply>
-          </apply>
-          <ci>tau_junc</ci>
+          <times/>
+          <ci>w_out4</ci>
+          <ci>H_from4_target</ci>
         </apply>
       </apply>
     </math>
@@ -3789,20 +3733,16 @@
         <eq/>
         <ci>H_VV_out_alpha</ci>
         <apply>
-          <minus/>
-          <ci>H_VV_out_alpha</ci>
+          <divide/>
           <apply>
-            <divide/>
-            <apply>
-              <times/>
-              <ci>H_mean</ci>
-              <ci>FQE_alpha</ci>
-            </apply>
-            <apply>
-              <plus/>
-              <ci>FQB_alpha</ci>
-              <ci>div_0</ci>
-            </apply>
+            <times/>
+            <ci>H_mean</ci>
+            <ci>FQE_alpha</ci>
+          </apply>
+          <apply>
+            <plus/>
+            <ci>FQB_alpha</ci>
+            <ci>div_0</ci>
           </apply>
         </apply>
       </apply>
@@ -4182,15 +4122,15 @@
     <variable name="s_v_d" units="dimensionless" interface="public"/>
     <variable name="H_L_out" units="dimensionless" interface="public"/>
     <variable name="H_R_out" units="dimensionless" interface="public"/>
-    <variable name="RBC_volume" units="m3" initial_value="RBC_volume_init" interface="public"/>
+    <variable name="RBC_volume" units="m3" interface="public"/>
     <variable name="RBC_volume_init" units="m3" interface="public"/>
     <variable name="v_pos" units="m3_per_s" interface="public"/>
     <variable name="v_neg" units="m3_per_s" interface="public"/>
     <variable name="v_d_pos" units="m3_per_s" interface="public"/>
     <variable name="v_d_neg" units="m3_per_s" interface="public"/>
     <variable name="H_mean" units="dimensionless" interface="public"/>
-    <variable name="H_mass_L" units="dimensionless" interface="public"/>
-    <variable name="H_mass_R" units="dimensionless" interface="public"/>
+    <variable name="H_volume_L" units="dimensionless" interface="public"/>
+    <variable name="H_volume_R" units="dimensionless" interface="public"/>
     <variable name="q_C" units="m3" initial_value="q_C_init" interface="public"/>
     <variable name="q" units="m3" interface="public"/>
     <variable name="q_us" units="m3" interface="public"/>
@@ -4494,24 +4434,26 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <apply>
         <eq/>
+        <ci>RBC_volume</ci>
         <apply>
-          <diff/>
-          <bvar>
-            <ci>t</ci>
-          </bvar>
-          <ci>RBC_volume</ci>
-        </apply>
-        <apply>
-          <minus/>
+          <divide/>
           <apply>
-            <times/>
-            <ci>v</ci>
-            <ci>H_mass_L</ci>
+            <minus/>
+            <apply>
+              <times/>
+              <ci>v</ci>
+              <ci>H_volume_L</ci>
+            </apply>
+            <apply>
+              <times/>
+              <ci>v_d</ci>
+              <ci>H_volume_R</ci>
+            </apply>
           </apply>
           <apply>
-            <times/>
+            <plus/>
+            <ci>v</ci>
             <ci>v_d</ci>
-            <ci>H_mass_R</ci>
           </apply>
         </apply>
       </apply>
@@ -4597,7 +4539,7 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:cellml="http://www.cellml.org/cellml/2.0#">
       <apply>
         <eq/>
-        <ci>H_mass_L</ci>
+        <ci>H_volume_L</ci>
         <apply>
           <plus/>
           <apply>
@@ -4618,7 +4560,7 @@
       </apply>
       <apply>
         <eq/>
-        <ci>H_mass_R</ci>
+        <ci>H_volume_R</ci>
         <apply>
           <plus/>
           <apply>
@@ -5076,15 +5018,15 @@
     <variable name="s_v_d" units="dimensionless" interface="public"/>
     <variable name="H_L_out" units="dimensionless" interface="public"/>
     <variable name="H_R_out" units="dimensionless" interface="public"/>
-    <variable name="RBC_volume" units="m3" initial_value="RBC_volume_init" interface="public"/>
+    <variable name="RBC_volume" units="m3" interface="public"/>
     <variable name="RBC_volume_init" units="m3" interface="public"/>
     <variable name="v_pos" units="m3_per_s" interface="public"/>
     <variable name="v_neg" units="m3_per_s" interface="public"/>
     <variable name="v_d_pos" units="m3_per_s" interface="public"/>
     <variable name="v_d_neg" units="m3_per_s" interface="public"/>
     <variable name="H_mean" units="dimensionless" interface="public"/>
-    <variable name="H_mass_L" units="dimensionless" interface="public"/>
-    <variable name="H_mass_R" units="dimensionless" interface="public"/>
+    <variable name="H_volume_L" units="dimensionless" interface="public"/>
+    <variable name="H_volume_R" units="dimensionless" interface="public"/>
     <variable name="q_C" units="m3" initial_value="q_C_init" interface="public"/>
     <variable name="q" units="m3" interface="public"/>
     <variable name="q_us" units="m3" interface="public"/>
@@ -5388,24 +5330,26 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <apply>
         <eq/>
+        <ci>RBC_volume</ci>
         <apply>
-          <diff/>
-          <bvar>
-            <ci>t</ci>
-          </bvar>
-          <ci>RBC_volume</ci>
-        </apply>
-        <apply>
-          <minus/>
+          <divide/>
           <apply>
-            <times/>
-            <ci>v</ci>
-            <ci>H_mass_L</ci>
+            <minus/>
+            <apply>
+              <times/>
+              <ci>v</ci>
+              <ci>H_volume_L</ci>
+            </apply>
+            <apply>
+              <times/>
+              <ci>v_d</ci>
+              <ci>H_volume_R</ci>
+            </apply>
           </apply>
           <apply>
-            <times/>
+            <plus/>
+            <ci>v</ci>
             <ci>v_d</ci>
-            <ci>H_mass_R</ci>
           </apply>
         </apply>
       </apply>
@@ -5491,7 +5435,7 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:cellml="http://www.cellml.org/cellml/2.0#">
       <apply>
         <eq/>
-        <ci>H_mass_L</ci>
+        <ci>H_volume_L</ci>
         <apply>
           <plus/>
           <apply>
@@ -5512,7 +5456,7 @@
       </apply>
       <apply>
         <eq/>
-        <ci>H_mass_R</ci>
+        <ci>H_volume_R</ci>
         <apply>
           <plus/>
           <apply>
@@ -5964,13 +5908,13 @@
     <variable name="s_v" units="dimensionless" interface="public"/>
     <variable name="H_L_out" units="dimensionless" interface="public"/>
     <variable name="H_R_out" units="dimensionless" interface="public"/>
-    <variable name="RBC_volume" units="m3" initial_value="RBC_volume_init" interface="public"/>
+    <variable name="RBC_volume" units="m3" interface="public"/>
     <variable name="RBC_volume_init" units="m3" interface="public"/>
     <variable name="v_pos" units="m3_per_s" interface="public"/>
     <variable name="v_neg" units="m3_per_s" interface="public"/>
     <variable name="H_mean" units="dimensionless" interface="public"/>
-    <variable name="H_mass_L" units="dimensionless" interface="public"/>
-    <variable name="H_mass_R" units="dimensionless" interface="public"/>
+    <variable name="H_volume_L" units="dimensionless" interface="public"/>
+    <variable name="H_volume_R" units="dimensionless" interface="public"/>
     <variable name="q_C" units="m3" initial_value="q_C_init" interface="public"/>
     <variable name="q" units="m3" interface="public"/>
     <variable name="q_us" units="m3" interface="public"/>
@@ -6211,24 +6155,26 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <apply>
         <eq/>
+        <ci>RBC_volume</ci>
         <apply>
-          <diff/>
-          <bvar>
-            <ci>t</ci>
-          </bvar>
-          <ci>RBC_volume</ci>
-        </apply>
-        <apply>
-          <minus/>
+          <divide/>
           <apply>
-            <times/>
-            <ci>v_in</ci>
-            <ci>H_mass_L</ci>
+            <minus/>
+            <apply>
+              <times/>
+              <ci>v_in</ci>
+              <ci>H_volume_L</ci>
+            </apply>
+            <apply>
+              <times/>
+              <ci>v</ci>
+              <ci>H_volume_R</ci>
+            </apply>
           </apply>
           <apply>
-            <times/>
+            <plus/>
+            <ci>v_in</ci>
             <ci>v</ci>
-            <ci>H_mass_R</ci>
           </apply>
         </apply>
       </apply>
@@ -6287,7 +6233,7 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:cellml="http://www.cellml.org/cellml/2.0#">
       <apply>
         <eq/>
-        <ci>H_mass_L</ci>
+        <ci>H_volume_L</ci>
         <apply>
           <plus/>
           <apply>
@@ -6308,7 +6254,7 @@
       </apply>
       <apply>
         <eq/>
-        <ci>H_mass_R</ci>
+        <ci>H_volume_R</ci>
         <apply>
           <plus/>
           <apply>
@@ -6724,13 +6670,13 @@
     <variable name="s_v" units="dimensionless" interface="public"/>
     <variable name="H_L_out" units="dimensionless" interface="public"/>
     <variable name="H_R_out" units="dimensionless" interface="public"/>
-    <variable name="RBC_volume" units="m3" initial_value="RBC_volume_init" interface="public"/>
+    <variable name="RBC_volume" units="m3" interface="public"/>
     <variable name="RBC_volume_init" units="m3" interface="public"/>
     <variable name="v_pos" units="m3_per_s" interface="public"/>
     <variable name="v_neg" units="m3_per_s" interface="public"/>
     <variable name="H_mean" units="dimensionless" interface="public"/>
-    <variable name="H_mass_L" units="dimensionless" interface="public"/>
-    <variable name="H_mass_R" units="dimensionless" interface="public"/>
+    <variable name="H_volume_L" units="dimensionless" interface="public"/>
+    <variable name="H_volume_R" units="dimensionless" interface="public"/>
     <variable name="q_C" units="m3" initial_value="q_C_init" interface="public"/>
     <variable name="q" units="m3" interface="public"/>
     <variable name="q_us" units="m3" interface="public"/>
@@ -6971,24 +6917,26 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <apply>
         <eq/>
+        <ci>RBC_volume</ci>
         <apply>
-          <diff/>
-          <bvar>
-            <ci>t</ci>
-          </bvar>
-          <ci>RBC_volume</ci>
-        </apply>
-        <apply>
-          <minus/>
+          <divide/>
           <apply>
-            <times/>
-            <ci>v_in</ci>
-            <ci>H_mass_L</ci>
+            <minus/>
+            <apply>
+              <times/>
+              <ci>v_in</ci>
+              <ci>H_volume_L</ci>
+            </apply>
+            <apply>
+              <times/>
+              <ci>v</ci>
+              <ci>H_volume_R</ci>
+            </apply>
           </apply>
           <apply>
-            <times/>
+            <plus/>
+            <ci>v_in</ci>
             <ci>v</ci>
-            <ci>H_mass_R</ci>
           </apply>
         </apply>
       </apply>
@@ -7047,7 +6995,7 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:cellml="http://www.cellml.org/cellml/2.0#">
       <apply>
         <eq/>
-        <ci>H_mass_L</ci>
+        <ci>H_volume_L</ci>
         <apply>
           <plus/>
           <apply>
@@ -7068,7 +7016,7 @@
       </apply>
       <apply>
         <eq/>
-        <ci>H_mass_R</ci>
+        <ci>H_volume_R</ci>
         <apply>
           <plus/>
           <apply>
@@ -7491,8 +7439,8 @@
     <variable name="v_d_pos" units="m3_per_s" interface="public"/>
     <variable name="v_d_neg" units="m3_per_s" interface="public"/>
     <variable name="H_mean" units="dimensionless" interface="public"/>
-    <variable name="H_mass_L" units="dimensionless" interface="public"/>
-    <variable name="H_mass_R" units="dimensionless" interface="public"/>
+    <variable name="H_volume_L" units="dimensionless" interface="public"/>
+    <variable name="H_volume_R" units="dimensionless" interface="public"/>
     <variable name="q_C" units="m3" interface="public"/>
     <variable name="q" units="m3" interface="public"/>
     <variable name="q_us" units="m3" interface="public"/>
@@ -7512,7 +7460,6 @@
   <component name="VV_junc1">
     <variable name="div_0" units="dimensionless" interface="public"/>
     <variable name="div_0y" units="dimensionless" interface="public"/>
-    <variable name="tau_junc" units="second" interface="public"/>
     <variable name="v_threshold" units="m3_per_s" interface="public"/>
     <variable name="k" units="dimensionless" interface="public"/>
     <variable name="H_global_L" units="dimensionless" interface="public"/>
@@ -7671,8 +7618,8 @@
     <variable name="v_d_pos" units="m3_per_s" interface="public"/>
     <variable name="v_d_neg" units="m3_per_s" interface="public"/>
     <variable name="H_mean" units="dimensionless" interface="public"/>
-    <variable name="H_mass_L" units="dimensionless" interface="public"/>
-    <variable name="H_mass_R" units="dimensionless" interface="public"/>
+    <variable name="H_volume_L" units="dimensionless" interface="public"/>
+    <variable name="H_volume_R" units="dimensionless" interface="public"/>
     <variable name="q_C" units="m3" interface="public"/>
     <variable name="q" units="m3" interface="public"/>
     <variable name="q_us" units="m3" interface="public"/>
@@ -7727,8 +7674,8 @@
     <variable name="v_d_pos" units="m3_per_s" interface="public"/>
     <variable name="v_d_neg" units="m3_per_s" interface="public"/>
     <variable name="H_mean" units="dimensionless" interface="public"/>
-    <variable name="H_mass_L" units="dimensionless" interface="public"/>
-    <variable name="H_mass_R" units="dimensionless" interface="public"/>
+    <variable name="H_volume_L" units="dimensionless" interface="public"/>
+    <variable name="H_volume_R" units="dimensionless" interface="public"/>
     <variable name="q_C" units="m3" interface="public"/>
     <variable name="q" units="m3" interface="public"/>
     <variable name="q_us" units="m3" interface="public"/>
@@ -7777,8 +7724,8 @@
     <variable name="v_pos" units="m3_per_s" interface="public"/>
     <variable name="v_neg" units="m3_per_s" interface="public"/>
     <variable name="H_mean" units="dimensionless" interface="public"/>
-    <variable name="H_mass_L" units="dimensionless" interface="public"/>
-    <variable name="H_mass_R" units="dimensionless" interface="public"/>
+    <variable name="H_volume_L" units="dimensionless" interface="public"/>
+    <variable name="H_volume_R" units="dimensionless" interface="public"/>
     <variable name="q_C" units="m3" interface="public"/>
     <variable name="q" units="m3" interface="public"/>
     <variable name="q_us" units="m3" interface="public"/>
@@ -7825,8 +7772,8 @@
     <variable name="v_pos" units="m3_per_s" interface="public"/>
     <variable name="v_neg" units="m3_per_s" interface="public"/>
     <variable name="H_mean" units="dimensionless" interface="public"/>
-    <variable name="H_mass_L" units="dimensionless" interface="public"/>
-    <variable name="H_mass_R" units="dimensionless" interface="public"/>
+    <variable name="H_volume_L" units="dimensionless" interface="public"/>
+    <variable name="H_volume_R" units="dimensionless" interface="public"/>
     <variable name="q_C" units="m3" interface="public"/>
     <variable name="q" units="m3" interface="public"/>
     <variable name="q_us" units="m3" interface="public"/>
@@ -7856,7 +7803,6 @@
     <variable name="one_mm3" units="m3" interface="public"/>
     <variable name="div_0" units="dimensionless" interface="public"/>
     <variable name="div_0y" units="dimensionless" interface="public"/>
-    <variable name="tau_junc" units="second" interface="public"/>
     <variable name="v_threshold" units="m3_per_s" interface="public"/>
     <variable name="k" units="dimensionless" interface="public"/>
     <variable name="R" units="Js_per_m6" interface="public"/>
@@ -7915,7 +7861,6 @@
     <map_variables variable_1="one_mm3" variable_2="one_mm3"/>
     <map_variables variable_1="div_0" variable_2="div_0"/>
     <map_variables variable_1="div_0y" variable_2="div_0y"/>
-    <map_variables variable_1="tau_junc" variable_2="tau_junc"/>
     <map_variables variable_1="v_threshold" variable_2="v_threshold"/>
     <map_variables variable_1="k" variable_2="k"/>
     <map_variables variable_1="R" variable_2="R"/>
@@ -7947,7 +7892,6 @@
     <map_variables variable_1="one_mm3" variable_2="one_mm3"/>
     <map_variables variable_1="div_0" variable_2="div_0"/>
     <map_variables variable_1="div_0y" variable_2="div_0y"/>
-    <map_variables variable_1="tau_junc" variable_2="tau_junc"/>
     <map_variables variable_1="v_threshold" variable_2="v_threshold"/>
     <map_variables variable_1="k" variable_2="k"/>
     <map_variables variable_1="R" variable_2="R"/>
@@ -8067,8 +8011,8 @@
     <map_variables variable_1="v_d_pos" variable_2="v_d_pos"/>
     <map_variables variable_1="v_d_neg" variable_2="v_d_neg"/>
     <map_variables variable_1="H_mean" variable_2="H_mean"/>
-    <map_variables variable_1="H_mass_L" variable_2="H_mass_L"/>
-    <map_variables variable_1="H_mass_R" variable_2="H_mass_R"/>
+    <map_variables variable_1="H_volume_L" variable_2="H_volume_L"/>
+    <map_variables variable_1="H_volume_R" variable_2="H_volume_R"/>
     <map_variables variable_1="q_C" variable_2="q_C"/>
     <map_variables variable_1="q" variable_2="q"/>
     <map_variables variable_1="q_us" variable_2="q_us"/>
@@ -8096,7 +8040,6 @@
   <connection component_1="VV_junc1_module" component_2="VV_junc1">
     <map_variables variable_1="div_0" variable_2="div_0"/>
     <map_variables variable_1="div_0y" variable_2="div_0y"/>
-    <map_variables variable_1="tau_junc" variable_2="tau_junc"/>
     <map_variables variable_1="v_threshold" variable_2="v_threshold"/>
     <map_variables variable_1="k" variable_2="k"/>
     <map_variables variable_1="H_global_L" variable_2="H_global_L"/>
@@ -8271,8 +8214,8 @@
     <map_variables variable_1="v_d_pos" variable_2="v_d_pos"/>
     <map_variables variable_1="v_d_neg" variable_2="v_d_neg"/>
     <map_variables variable_1="H_mean" variable_2="H_mean"/>
-    <map_variables variable_1="H_mass_L" variable_2="H_mass_L"/>
-    <map_variables variable_1="H_mass_R" variable_2="H_mass_R"/>
+    <map_variables variable_1="H_volume_L" variable_2="H_volume_L"/>
+    <map_variables variable_1="H_volume_R" variable_2="H_volume_R"/>
     <map_variables variable_1="q_C" variable_2="q_C"/>
     <map_variables variable_1="q" variable_2="q"/>
     <map_variables variable_1="q_us" variable_2="q_us"/>
@@ -8333,8 +8276,8 @@
     <map_variables variable_1="v_d_pos" variable_2="v_d_pos"/>
     <map_variables variable_1="v_d_neg" variable_2="v_d_neg"/>
     <map_variables variable_1="H_mean" variable_2="H_mean"/>
-    <map_variables variable_1="H_mass_L" variable_2="H_mass_L"/>
-    <map_variables variable_1="H_mass_R" variable_2="H_mass_R"/>
+    <map_variables variable_1="H_volume_L" variable_2="H_volume_L"/>
+    <map_variables variable_1="H_volume_R" variable_2="H_volume_R"/>
     <map_variables variable_1="q_C" variable_2="q_C"/>
     <map_variables variable_1="q" variable_2="q"/>
     <map_variables variable_1="q_us" variable_2="q_us"/>
@@ -8389,8 +8332,8 @@
     <map_variables variable_1="v_pos" variable_2="v_pos"/>
     <map_variables variable_1="v_neg" variable_2="v_neg"/>
     <map_variables variable_1="H_mean" variable_2="H_mean"/>
-    <map_variables variable_1="H_mass_L" variable_2="H_mass_L"/>
-    <map_variables variable_1="H_mass_R" variable_2="H_mass_R"/>
+    <map_variables variable_1="H_volume_L" variable_2="H_volume_L"/>
+    <map_variables variable_1="H_volume_R" variable_2="H_volume_R"/>
     <map_variables variable_1="q_C" variable_2="q_C"/>
     <map_variables variable_1="q" variable_2="q"/>
     <map_variables variable_1="q_us" variable_2="q_us"/>
@@ -8437,8 +8380,8 @@
     <map_variables variable_1="v_pos" variable_2="v_pos"/>
     <map_variables variable_1="v_neg" variable_2="v_neg"/>
     <map_variables variable_1="H_mean" variable_2="H_mean"/>
-    <map_variables variable_1="H_mass_L" variable_2="H_mass_L"/>
-    <map_variables variable_1="H_mass_R" variable_2="H_mass_R"/>
+    <map_variables variable_1="H_volume_L" variable_2="H_volume_L"/>
+    <map_variables variable_1="H_volume_R" variable_2="H_volume_R"/>
     <map_variables variable_1="q_C" variable_2="q_C"/>
     <map_variables variable_1="q" variable_2="q"/>
     <map_variables variable_1="q_us" variable_2="q_us"/>

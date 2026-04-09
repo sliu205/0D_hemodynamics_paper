@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <model name="Parameters" xmlns="http://www.cellml.org/cellml/1.1#" xmlns:cellml="http://www.cellml.org/cellml/1.1#" xmlns:xlink="http://www.w3.org/1999/xlink">
 <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;parameter_units&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;//-->
-<import xlink:href="B1_time_dynamics_units.cellml">
+<import xlink:href="B1_TD_units.cellml">
     <units name="s2" units_ref="s2"/>
     <units name="Hz" units_ref="Hz"/>
     <units name="millis" units_ref="millis"/>

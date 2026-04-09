@@ -1760,10 +1760,10 @@
     <variable name="H_from2_target" units="dimensionless" interface="public"/>
     <variable name="H_from3_target" units="dimensionless" interface="public"/>
     <variable name="H_from4_target" units="dimensionless" interface="public"/>
-    <variable name="H_from1" units="dimensionless" initial_value="H_global_L" interface="public"/>
-    <variable name="H_from2" units="dimensionless" initial_value="H_global_L" interface="public"/>
-    <variable name="H_from3" units="dimensionless" initial_value="H_global_L" interface="public"/>
-    <variable name="H_from4" units="dimensionless" initial_value="H_global_L" interface="public"/>
+    <variable name="H_from1" units="dimensionless" interface="public"/>
+    <variable name="H_from2" units="dimensionless" interface="public"/>
+    <variable name="H_from3" units="dimensionless" interface="public"/>
+    <variable name="H_from4" units="dimensionless" interface="public"/>
     <variable name="r_bc1" units="metre" interface="public"/>
     <variable name="r_bc2" units="metre" interface="public"/>
     <variable name="r_bc3" units="metre" interface="public"/>
@@ -1832,9 +1832,8 @@
     <variable name="ph" units="dimensionless" interface="public"/>
     <variable name="y_raw" units="dimensionless" interface="public"/>
     <variable name="y" units="dimensionless" interface="public"/>
-    <variable name="epsilon_alpha" units="dimensionless" interface="public"/>
-    <variable name="H_VV1_out_alpha" units="dimensionless" initial_value="H_global_L" interface="public"/>
-    <variable name="H_VV1_out_beta" units="dimensionless" interface="public"/>
+    <variable name="H_VV_out_alpha" units="dimensionless" interface="public"/>
+    <variable name="H_VV_out_beta" units="dimensionless" interface="public"/>
     <variable name="RBC_in" units="m3_per_s" interface="public"/>
     <variable name="RBC_out" units="m3_per_s" interface="public"/>
     <variable name="RBC_volume_init" units="m3" interface="public"/>
@@ -1892,7 +1891,7 @@
         <ci>H_split1</ci>
         <piecewise>
           <piece>
-            <ci>H_VV1_out_alpha</ci>
+            <ci>H_VV_out_alpha</ci>
             <apply>
               <eq/>
               <ci>alpha1</ci>
@@ -1900,7 +1899,7 @@
             </apply>
           </piece>
           <piece>
-            <ci>H_VV1_out_beta</ci>
+            <ci>H_VV_out_beta</ci>
             <apply>
               <eq/>
               <ci>beta1</ci>
@@ -1919,7 +1918,7 @@
         <ci>H_split2</ci>
         <piecewise>
           <piece>
-            <ci>H_VV1_out_alpha</ci>
+            <ci>H_VV_out_alpha</ci>
             <apply>
               <eq/>
               <ci>alpha2</ci>
@@ -1927,7 +1926,7 @@
             </apply>
           </piece>
           <piece>
-            <ci>H_VV1_out_beta</ci>
+            <ci>H_VV_out_beta</ci>
             <apply>
               <eq/>
               <ci>beta2</ci>
@@ -1945,7 +1944,7 @@
         <ci>H_split3</ci>
         <piecewise>
           <piece>
-            <ci>H_VV1_out_alpha</ci>
+            <ci>H_VV_out_alpha</ci>
             <apply>
               <eq/>
               <ci>alpha3</ci>
@@ -1953,7 +1952,7 @@
             </apply>
           </piece>
           <piece>
-            <ci>H_VV1_out_beta</ci>
+            <ci>H_VV_out_beta</ci>
             <apply>
               <eq/>
               <ci>beta3</ci>
@@ -1971,7 +1970,7 @@
         <ci>H_split4</ci>
         <piecewise>
           <piece>
-            <ci>H_VV1_out_alpha</ci>
+            <ci>H_VV_out_alpha</ci>
             <apply>
               <eq/>
               <ci>alpha4</ci>
@@ -1979,7 +1978,7 @@
             </apply>
           </piece>
           <piece>
-            <ci>H_VV1_out_beta</ci>
+            <ci>H_VV_out_beta</ci>
             <apply>
               <eq/>
               <ci>beta4</ci>
@@ -2176,94 +2175,38 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <apply>
         <eq/>
+        <ci>H_from1</ci>
         <apply>
-          <diff/>
-          <bvar>
-            <ci>t</ci>
-          </bvar>
-          <ci>H_from1</ci>
-        </apply>
-        <apply>
-          <divide/>
-          <apply>
-            <times/>
-            <ci>w_out1</ci>
-            <apply>
-              <minus/>
-              <ci>H_from1_target</ci>
-              <ci>H_from1</ci>
-            </apply>
-          </apply>
-          <ci>tau_junc</ci>
+          <times/>
+          <ci>w_out1</ci>
+          <ci>H_from1_target</ci>
         </apply>
       </apply>
       <apply>
         <eq/>
+        <ci>H_from2</ci>
         <apply>
-          <diff/>
-          <bvar>
-            <ci>t</ci>
-          </bvar>
-          <ci>H_from2</ci>
-        </apply>
-        <apply>
-          <divide/>
-          <apply>
-            <times/>
-            <ci>w_out2</ci>
-            <apply>
-              <minus/>
-              <ci>H_from2_target</ci>
-              <ci>H_from2</ci>
-            </apply>
-          </apply>
-          <ci>tau_junc</ci>
+          <times/>
+          <ci>w_out2</ci>
+          <ci>H_from2_target</ci>
         </apply>
       </apply>
       <apply>
         <eq/>
+        <ci>H_from3</ci>
         <apply>
-          <diff/>
-          <bvar>
-            <ci>t</ci>
-          </bvar>
-          <ci>H_from3</ci>
-        </apply>
-        <apply>
-          <divide/>
-          <apply>
-            <times/>
-            <ci>w_out3</ci>
-            <apply>
-              <minus/>
-              <ci>H_from3_target</ci>
-              <ci>H_from3</ci>
-            </apply>
-          </apply>
-          <ci>tau_junc</ci>
+          <times/>
+          <ci>w_out3</ci>
+          <ci>H_from3_target</ci>
         </apply>
       </apply>
       <apply>
         <eq/>
+        <ci>H_from4</ci>
         <apply>
-          <diff/>
-          <bvar>
-            <ci>t</ci>
-          </bvar>
-          <ci>H_from4</ci>
-        </apply>
-        <apply>
-          <divide/>
-          <apply>
-            <times/>
-            <ci>w_out4</ci>
-            <apply>
-              <minus/>
-              <ci>H_from4_target</ci>
-              <ci>H_from4</ci>
-            </apply>
-          </apply>
-          <ci>tau_junc</ci>
+          <times/>
+          <ci>w_out4</ci>
+          <ci>H_from4_target</ci>
         </apply>
       </apply>
     </math>
@@ -3788,51 +3731,26 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <apply>
         <eq/>
-        <ci>epsilon_alpha</ci>
+        <ci>H_VV_out_alpha</ci>
         <apply>
-          <minus/>
-          <ci>H_VV1_out_alpha</ci>
+          <divide/>
           <apply>
-            <divide/>
-            <apply>
-              <times/>
-              <ci>H_mean</ci>
-              <ci>FQE_alpha</ci>
-            </apply>
-            <apply>
-              <plus/>
-              <ci>FQB_alpha</ci>
-              <ci>div_0</ci>
-            </apply>
+            <times/>
+            <ci>H_mean</ci>
+            <ci>FQE_alpha</ci>
           </apply>
-        </apply>
-      </apply>
-    </math>
-    <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <apply>
-        <eq/>
-        <apply>
-          <diff/>
-          <bvar>
-            <ci>t</ci>
-          </bvar>
-          <ci>H_VV1_out_alpha</ci>
-        </apply>
-        <apply>
-          <times/>
-          <ci>is_split</ci>
           <apply>
-            <minus/>
-            <ci>k</ci>
+            <plus/>
+            <ci>FQB_alpha</ci>
+            <ci>div_0</ci>
           </apply>
-          <ci>epsilon_alpha</ci>
         </apply>
       </apply>
     </math>
     <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:cellml="http://www.cellml.org/cellml/2.0#">
       <apply>
         <eq/>
-        <ci>H_VV1_out_beta</ci>
+        <ci>H_VV_out_beta</ci>
         <apply>
           <divide/>
           <apply>
@@ -7632,9 +7550,8 @@
     <variable name="ph" units="dimensionless" interface="public"/>
     <variable name="y_raw" units="dimensionless" interface="public"/>
     <variable name="y" units="dimensionless" interface="public"/>
-    <variable name="epsilon_alpha" units="dimensionless" interface="public"/>
-    <variable name="H_VV1_out_alpha" units="dimensionless" interface="public"/>
-    <variable name="H_VV1_out_beta" units="dimensionless" interface="public"/>
+    <variable name="H_VV_out_alpha" units="dimensionless" interface="public"/>
+    <variable name="H_VV_out_beta" units="dimensionless" interface="public"/>
     <variable name="RBC_in" units="m3_per_s" interface="public"/>
     <variable name="RBC_out" units="m3_per_s" interface="public"/>
     <variable name="RBC_volume_init" units="m3" interface="public"/>
@@ -8217,9 +8134,8 @@
     <map_variables variable_1="ph" variable_2="ph"/>
     <map_variables variable_1="y_raw" variable_2="y_raw"/>
     <map_variables variable_1="y" variable_2="y"/>
-    <map_variables variable_1="epsilon_alpha" variable_2="epsilon_alpha"/>
-    <map_variables variable_1="H_VV1_out_alpha" variable_2="H_VV1_out_alpha"/>
-    <map_variables variable_1="H_VV1_out_beta" variable_2="H_VV1_out_beta"/>
+    <map_variables variable_1="H_VV_out_alpha" variable_2="H_VV_out_alpha"/>
+    <map_variables variable_1="H_VV_out_beta" variable_2="H_VV_out_beta"/>
     <map_variables variable_1="RBC_in" variable_2="RBC_in"/>
     <map_variables variable_1="RBC_out" variable_2="RBC_out"/>
     <map_variables variable_1="RBC_volume_init" variable_2="RBC_volume_init"/>

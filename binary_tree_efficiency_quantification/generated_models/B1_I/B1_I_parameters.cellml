@@ -227,7 +227,6 @@
 <variable initial_value="0.000000001" name="one_mm3" public_interface="out" units="m3"/>
 <variable initial_value="1E-25" name="div_0" public_interface="out" units="dimensionless"/>
 <variable initial_value="0.00000001" name="div_0y" public_interface="out" units="dimensionless"/>
-<variable initial_value="0.0001" name="tau_junc" public_interface="out" units="second"/>
 <variable initial_value="1E-18" name="v_threshold" public_interface="out" units="m3_per_s"/>
 <variable initial_value="1000" name="k" public_interface="out" units="dimensionless"/>
 <variable initial_value="1000000000000000" name="R" public_interface="out" units="Js_per_m6"/>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <model name="modules" xmlns="http://www.cellml.org/cellml/1.1#" xmlns:cellml="http://www.cellml.org/cellml/1.1#" xmlns:xlink="http://www.w3.org/1999/xlink">
 <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;module_units&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;//-->
-<import xlink:href="B2_time_dynamics_units.cellml">
+<import xlink:href="B1_TD_units.cellml">
     <units name="s2" units_ref="s2"/>
     <units name="Hz" units_ref="Hz"/>
     <units name="millis" units_ref="millis"/>
@@ -3116,105 +3116,53 @@ instaneous coupling requirement/////////-->
                 </piecewise>
             </apply>
         </math>
-        <variable initial_value="H_global_L" name="H_from1" public_interface="out" units="dimensionless"/>
-        <variable initial_value="H_global_L" name="H_from2" public_interface="out" units="dimensionless"/>
-        <variable initial_value="H_global_L" name="H_from3" public_interface="out" units="dimensionless"/>
-        <variable initial_value="H_global_L" name="H_from4" public_interface="out" units="dimensionless"/>
+        <variable name="H_from1" public_interface="out" units="dimensionless"/>
+        <variable name="H_from2" public_interface="out" units="dimensionless"/>
+        <variable name="H_from3" public_interface="out" units="dimensionless"/>
+        <variable name="H_from4" public_interface="out" units="dimensionless"/>
         <!-- When w_out ~ 0 (not a daughter), derivative ~0 => holds last daughter value.-->
+        <!--ode(H_from1, t) = w_out1*(H_from1_target-H_from1)/tau_junc;-->
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
+                <ci>H_from1</ci>
                 <apply>
-                    <diff/>
-                    <bvar>
-                        <ci>t</ci>
-                    </bvar>
-                    <ci>H_from1</ci>
-                </apply>
-                <apply>
-                    <divide/>
-                    <apply>
-                        <times/>
-                        <ci>w_out1</ci>
-                        <apply>
-                            <minus/>
-                            <ci>H_from1_target</ci>
-                            <ci>H_from1</ci>
-                        </apply>
-                    </apply>
-                    <ci>tau_junc</ci>
+                    <times/>
+                    <ci>w_out1</ci>
+                    <ci>H_from1_target</ci>
                 </apply>
             </apply>
             <apply>
                 <eq/>
+                <ci>H_from2</ci>
                 <apply>
-                    <diff/>
-                    <bvar>
-                        <ci>t</ci>
-                    </bvar>
-                    <ci>H_from2</ci>
-                </apply>
-                <apply>
-                    <divide/>
-                    <apply>
-                        <times/>
-                        <ci>w_out2</ci>
-                        <apply>
-                            <minus/>
-                            <ci>H_from2_target</ci>
-                            <ci>H_from2</ci>
-                        </apply>
-                    </apply>
-                    <ci>tau_junc</ci>
+                    <times/>
+                    <ci>w_out2</ci>
+                    <ci>H_from2_target</ci>
                 </apply>
             </apply>
             <apply>
                 <eq/>
+                <ci>H_from3</ci>
                 <apply>
-                    <diff/>
-                    <bvar>
-                        <ci>t</ci>
-                    </bvar>
-                    <ci>H_from3</ci>
-                </apply>
-                <apply>
-                    <divide/>
-                    <apply>
-                        <times/>
-                        <ci>w_out3</ci>
-                        <apply>
-                            <minus/>
-                            <ci>H_from3_target</ci>
-                            <ci>H_from3</ci>
-                        </apply>
-                    </apply>
-                    <ci>tau_junc</ci>
+                    <times/>
+                    <ci>w_out3</ci>
+                    <ci>H_from3_target</ci>
                 </apply>
             </apply>
             <apply>
                 <eq/>
+                <ci>H_from4</ci>
                 <apply>
-                    <diff/>
-                    <bvar>
-                        <ci>t</ci>
-                    </bvar>
-                    <ci>H_from4</ci>
-                </apply>
-                <apply>
-                    <divide/>
-                    <apply>
-                        <times/>
-                        <ci>w_out4</ci>
-                        <apply>
-                            <minus/>
-                            <ci>H_from4_target</ci>
-                            <ci>H_from4</ci>
-                        </apply>
-                    </apply>
-                    <ci>tau_junc</ci>
+                    <times/>
+                    <ci>w_out4</ci>
+                    <ci>H_from4_target</ci>
                 </apply>
             </apply>
         </math>
+        <!--ode(H_from2, t) = w_out2*(H_from2_target-H_from2)/tau_junc;
+ode(H_from3, t) = w_out3*(H_from3_target-H_from3)/tau_junc;
+ode(H_from4, t) = w_out4*(H_from4_target-H_from4)/tau_junc;-->
         <variable name="r_bc1" public_interface="in" units="metre"/>
         <!-- diameter of vessel at port 1 (junction side)-->
         <variable name="r_bc2" public_interface="in" units="metre"/>
@@ -4819,52 +4767,29 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="epsilon_alpha" public_interface="out" units="dimensionless"/>
+        <!--var epsilon_alpha: dimensionless {pub: out};-->
+        <!--epsilon_alpha = H_VV_out_alpha-H_mean*FQE_alpha/(FQB_alpha+div_0);-->
+        <variable name="H_VV_out_alpha" public_interface="out" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
-                <ci>epsilon_alpha</ci>
+                <ci>H_VV_out_alpha</ci>
                 <apply>
-                    <minus/>
-                    <ci>H_VV_out_alpha</ci>
+                    <divide/>
                     <apply>
-                        <divide/>
-                        <apply>
-                            <times/>
-                            <ci>H_mean</ci>
-                            <ci>FQE_alpha</ci>
-                        </apply>
-                        <apply>
-                            <plus/>
-                            <ci>FQB_alpha</ci>
-                            <ci>div_0</ci>
-                        </apply>
+                        <times/>
+                        <ci>H_mean</ci>
+                        <ci>FQE_alpha</ci>
+                    </apply>
+                    <apply>
+                        <plus/>
+                        <ci>FQB_alpha</ci>
+                        <ci>div_0</ci>
                     </apply>
                 </apply>
             </apply>
         </math>
-        <variable initial_value="H_global_L" name="H_VV_out_alpha" public_interface="out" units="dimensionless"/>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <apply>
-                <eq/>
-                <apply>
-                    <diff/>
-                    <bvar>
-                        <ci>t</ci>
-                    </bvar>
-                    <ci>H_VV_out_alpha</ci>
-                </apply>
-                <apply>
-                    <times/>
-                    <ci>is_split</ci>
-                    <apply>
-                        <minus/>
-                        <ci>k</ci>
-                    </apply>
-                    <ci>epsilon_alpha</ci>
-                </apply>
-            </apply>
-        </math>
+        <!--ode(H_VV_out_alpha, t) = is_split*-k*epsilon_alpha;-->
         <variable name="H_VV_out_beta" public_interface="out" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
