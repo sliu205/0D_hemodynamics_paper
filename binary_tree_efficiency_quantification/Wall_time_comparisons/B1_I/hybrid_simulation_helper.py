@@ -170,16 +170,26 @@ class HybridSimulationHelper:
         self._mod = mod
 
         # ── fix numpy 1.24+ incompatibility in auto-generated CellML code ────
-        # B1_I.py calls vstack(a, b) with two positional args.
-        # numpy >= 1.24 requires vstack([a, b]).
-        # Patch the name in the module namespace — no need to edit B1_I.py.
+        # B1_I.py (from numpy import *) calls vstack(a, b) with two positional
+        # args AND assumes scalar broadcasting inside vstack.
+        # numpy >= 1.24 requires a single sequence arg and does not broadcast.
+        # This is the proven shim that restores both behaviours.
         import numpy as _np
-        _orig_vstack = _np.vstack
-        def _vstack_compat(*args):
-            if len(args) == 1:
-                return _orig_vstack(args[0])
-            return _orig_vstack(args)
+        _np_vstack_orig = _np.vstack
+        def _vstack_compat(tup, *extra):
+            if extra:                          # vstack(a, b) → collect all args
+                tup = (tup,) + extra
+            arrs = [_np.atleast_1d(_np.asarray(x, dtype=float)) for x in tup]
+            max_len = max(a.shape[0] for a in arrs)
+            padded = [
+                _np.full(max_len, a[0]) if a.shape[0] == 1 and max_len > 1 else a
+                for a in arrs
+            ]
+            return _np_vstack_orig(padded)
+        # patch both the module namespace AND global numpy so every call site
+        # (including calls inside amax/amin wrappers) uses the shim
         mod.vstack = _vstack_compat
+        _np.vstack  = _vstack_compat
 
         # pull the four functions we need
         self._initConsts       = mod.initConsts
@@ -260,7 +270,10 @@ class HybridSimulationHelper:
         finally:
             self._mod.rootfind_0 = orig   # always restore
 
-        return np.array(rates, dtype=float)
+        # cast every rate to a plain float — guards against any remaining
+        # 0-d or 1-element numpy arrays slipping through into the rates list
+        return np.array([float(np.asarray(r).flat[0]) for r in rates],
+                        dtype=float)
 
     # ──────────────────────────────────────────────────────────────────────────
     def reset_and_clear(self):

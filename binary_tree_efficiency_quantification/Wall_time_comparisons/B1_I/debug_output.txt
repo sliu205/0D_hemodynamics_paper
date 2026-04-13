@@ -17,11 +17,23 @@
   Loading model: /home/sliu205/0D_hemodynamics_paper/binary_tree_efficiency_quantification/Wall_time_comparisons/B1_I/B1_I.py
   Model loaded OK
   Running simulation...
-/home/sliu205/0D_hemodynamics_paper/binary_tree_efficiency_quantification/Wall_time_comparisons/B1_I/run_B1_I.py:68: RuntimeWarning: solve_ivp failed: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (23,) + inhomogeneous part.
+/home/sliu205/0D_hemodynamics_paper/binary_tree_efficiency_quantification/Wall_time_comparisons/B1_I/B1_I.py:1006: RuntimeWarning: invalid value encountered in power
+  resid[35] = (algebraic[69]-(1.00000+(((constants[80]-1.00000)*(power(1.00000-algebraic[65], constants[79])-1.00000))/(power(1.00000-constants[0], constants[79])-1.00000))*(power((2.00000*constants[31]*1.00000e+06)/(2.00000*constants[31]*1.00000e+06-1.10000), 2.00000))))
+/home/sliu205/0D_hemodynamics_paper/binary_tree_efficiency_quantification/Wall_time_comparisons/B1_I/B1_I.py:993: RuntimeWarning: invalid value encountered in power
+  resid[22] = (algebraic[56]-(1.00000+(((constants[78]-1.00000)*(power(1.00000-algebraic[52], constants[77])-1.00000))/(power(1.00000-constants[0], constants[77])-1.00000))*(power((2.00000*constants[29]*1.00000e+06)/(2.00000*constants[29]*1.00000e+06-1.10000), 2.00000))))
+/home/sliu205/0D_hemodynamics_paper/binary_tree_efficiency_quantification/Wall_time_comparisons/B1_I/B1_I.py:980: RuntimeWarning: invalid value encountered in power
+  resid[9] = (algebraic[43]-(1.00000+(((constants[58]-1.00000)*(power(1.00000-algebraic[39], constants[48])-1.00000))/(power(1.00000-constants[0], constants[48])-1.00000))*(power((2.00000*constants[8]*1.00000e+06)/(2.00000*constants[8]*1.00000e+06-1.10000), 2.00000))))
+/home/sliu205/0D_hemodynamics_paper/binary_tree_efficiency_quantification/Wall_time_comparisons/B1_I/B1_I.py:1029: RuntimeWarning: invalid value encountered in power
+  resid[58] = (algebraic[92]-(1.00000+(((constants[84]-1.00000)*(power(1.00000-algebraic[88], constants[83])-1.00000))/(power(1.00000-constants[0], constants[83])-1.00000))*(power((2.00000*constants[36]*1.00000e+06)/(2.00000*constants[36]*1.00000e+06-1.10000), 2.00000))))
+/home/sliu205/0D_hemodynamics_paper/binary_tree_efficiency_quantification/Wall_time_comparisons/B1_I/B1_I.py:1018: RuntimeWarning: invalid value encountered in power
+  resid[47] = (algebraic[81]-(1.00000+(((constants[82]-1.00000)*(power(1.00000-algebraic[77], constants[81])-1.00000))/(power(1.00000-constants[0], constants[81])-1.00000))*(power((2.00000*constants[33]*1.00000e+06)/(2.00000*constants[33]*1.00000e+06-1.10000), 2.00000))))
+/home/sliu205/0D_hemodynamics_paper/binary_tree_efficiency_quantification/Wall_time_comparisons/B1_I/B1_I.py:587: RuntimeWarning: overflow encountered in exp
+  algebraic[191] = 1.00000/(1.00000+exp(-(algebraic[186]+algebraic[185]*algebraic[190])))
+/home/sliu205/0D_hemodynamics_paper/binary_tree_efficiency_quantification/Wall_time_comparisons/B1_I/run_B1_I.py:68: RuntimeWarning: solve_ivp did not succeed: Required step size is less than spacing between numbers.
   ok   = sim.run()
 
 ─────────────────────────────────────────────
-  Wall time : 0.047 s  (0.00 min)
+  Wall time : 5.037 s  (0.08 min)
   Status    : FAILED
 ─────────────────────────────────────────────
 
