@@ -1,0 +1,28 @@
+=== run_B1_I.py starting ===
+  stdlib OK
+  numpy 1.26.4 OK
+  matplotlib OK
+/home/sliu205/Desktop/OpenCOR-0-8-1-Linux/Python/lib/python3.12/site-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/home/sliu205/Desktop/OpenCOR-0-8-1-Linux/Python/lib/python3.12/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/home/sliu205/Desktop/OpenCOR-0-8-1-Linux/Python/lib/python3.12/site-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/home/sliu205/Desktop/OpenCOR-0-8-1-Linux/Python/lib/python3.12/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+  scipy OK
+  THIS_DIR = /home/sliu205/0D_hemodynamics_paper/binary_tree_efficiency_quantification/Wall_time_comparisons/B1_I
+  importing hybrid_simulation_helper...
+  HybridSimulationHelper OK
+  Loading model: /home/sliu205/0D_hemodynamics_paper/binary_tree_efficiency_quantification/Wall_time_comparisons/B1_I/B1_I.py
+  Model loaded OK
+  Running simulation...
+/home/sliu205/0D_hemodynamics_paper/binary_tree_efficiency_quantification/Wall_time_comparisons/B1_I/run_B1_I.py:68: RuntimeWarning: solve_ivp failed: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (23,) + inhomogeneous part.
+  ok   = sim.run()
+
+─────────────────────────────────────────────
+  Wall time : 0.047 s  (0.00 min)
+  Status    : FAILED
+─────────────────────────────────────────────
+
+ERROR: Simulation failed — see warnings above.
