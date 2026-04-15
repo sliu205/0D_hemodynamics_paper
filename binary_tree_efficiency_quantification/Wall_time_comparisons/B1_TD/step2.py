@@ -247,6 +247,9 @@ print(f"Found {len(state_list)} state variables")
 all_equations = []
 ode_equations = []
 
+# Get set of variables that are already parameters (have values)
+param_vars = {name for name in params.keys() if '__' in name and not name.startswith('INIT_')}
+
 for comp_inst, tmpl in templates.items():
     comp_base = comp_inst.replace('_module', '')
     
@@ -266,6 +269,9 @@ for comp_inst, tmpl in templates.items():
     # Algebraic
     for lhs, rhs in tmpl['alg']:
         lhs_name = f"{comp_base}__{lhs}"
+        # Skip if this variable already has a parameter value
+        if lhs_name in param_vars:
+            continue
         ns_rhs = rhs
         for var in tmpl['vars']:
             ns_rhs = re.sub(rf'\b{var}\b', f'{comp_base}__{var}', ns_rhs)
@@ -274,6 +280,9 @@ for comp_inst, tmpl in templates.items():
     # sel/case equations
     for lhs, rhs in tmpl.get('sel', []):
         lhs_name = f"{comp_base}__{lhs}"
+        # Skip if this variable already has a parameter value
+        if lhs_name in param_vars:
+            continue
         ns_rhs = rhs
         for var in tmpl['vars']:
             ns_rhs = re.sub(rf'\b{var}\b', f'{comp_base}__{var}', ns_rhs)
@@ -283,13 +292,30 @@ for comp_inst, tmpl in templates.items():
 
 # Apply variable mappings to replace mapped variables
 def apply_mappings(expr, var_mappings):
-    """Replace variables in expression according to mappings."""
+    """Replace variables in expression according to mappings.
+    Apply in two phases:
+    1. Component-to-component connections
+    2. Remove parameters/parameters_global references
+    """
+    # Phase 1: Component connections (neither side is parameters)
     for (comp_a, var_a), (comp_b, var_b) in var_mappings.items():
-        old_name = f"{comp_a}__{var_a}"
-        new_name = f"{comp_b}__{var_b}"
-        # Replace if old_name appears in expression
-        if old_name in expr:
+        if comp_a not in ['parameters', 'parameters_global'] and comp_b not in ['parameters', 'parameters_global']:
+            old_name = f"{comp_a}__{var_a}"
+            new_name = f"{comp_b}__{var_b}"
+            if old_name in expr:
+                expr = re.sub(rf'\b{re.escape(old_name)}\b', new_name, expr)
+    
+    # Phase 2: Remove parameters/parameters_global references
+    for (comp_a, var_a), (comp_b, var_b) in var_mappings.items():
+        if comp_a in ['parameters', 'parameters_global']:
+            old_name = f"{comp_a}__{var_a}"
+            new_name = f"{comp_b}__{var_b}"
             expr = re.sub(rf'\b{re.escape(old_name)}\b', new_name, expr)
+        elif comp_b in ['parameters', 'parameters_global']:
+            old_name = f"{comp_b}__{var_b}"
+            new_name = f"{comp_a}__{var_a}"
+            expr = re.sub(rf'\b{re.escape(old_name)}\b', new_name, expr)
+    
     return expr
 
 all_equations = [(lhs, apply_mappings(rhs, var_mappings)) for lhs, rhs in all_equations]
@@ -322,9 +348,6 @@ def topo_sort_equations(equations, defined_vars):
     """Simple topological sort - defined_vars are already available."""
     # Start with provided defined vars
     defined = set(defined_vars)
-    # Also consider all LHS variables as "will be defined" 
-    # (they're in the list to be sorted)
-    all_lhs = {lhs for lhs, rhs in equations}
     
     ordered = []
     remaining = list(equations)
@@ -340,11 +363,10 @@ def topo_sort_equations(equations, defined_vars):
             # Find all variables used in RHS
             deps = set(re.findall(r'\b([a-zA-Z_]\w*__\w+)\b', rhs))
             # Check if all dependencies are satisfied
-            # Either already defined, or will be defined (in all_lhs)
-            unmet = deps - defined - all_lhs
+            unmet = deps - defined
             if not unmet:
                 ordered.append((lhs, rhs))
-                defined.add(lhs)
+                defined.add(lhs)  # Now THIS variable is defined
                 progress = True
             else:
                 next_rem.append((lhs, rhs))
@@ -357,7 +379,7 @@ def topo_sort_equations(equations, defined_vars):
                 # Show first few problematic equations
                 for lhs, rhs in remaining[:3]:
                     deps = set(re.findall(r'\b([a-zA-Z_]\w*__\w+)\b', rhs))
-                    unmet = deps - defined - all_lhs
+                    unmet = deps - defined
                     print(f"    {lhs} depends on: {unmet}")
             break
     
@@ -386,6 +408,10 @@ for check in ['inlet__v', 'inlet__v_scale', 'inlet__v_d', 'VV_junc1__w_in2']:
 all_equations = topo_sort_equations(all_equations, predefined)
 
 print("Equations sorted")
+print(f"First 10 sorted equations:")
+for i, (lhs, rhs) in enumerate(all_equations[:10]):
+    deps = set(re.findall(r'\b([a-zA-Z_]\w*__\w+)\b', rhs))
+    print(f"  {i}: {lhs} (deps: {len(deps)})")
 
 # ==============================================================================
 # 6. Write output
@@ -438,6 +464,9 @@ for i, (sname, _) in enumerate(state_list):
 
 lines.extend([
     '',
+    '    # Time variable',
+    '    environment__time = t',
+    '',
     '    # Algebraic equations',
 ])
 
@@ -462,17 +491,33 @@ lines.extend([
     '',
     'if __name__ == "__main__":',
     '    print("Running simulation...")',
+    '    print(f"Initial conditions: {y0[:5]}...")',
+    '    ',
+    '    # Test at t=0',
+    '    try:',
+    '        dydt0 = ode_rhs(0, y0)',
+    '        print(f"RHS at t=0: {dydt0[:5]}...")',
+    '        if np.any(np.isnan(dydt0)) or np.any(np.isinf(dydt0)):',
+    '            print("ERROR: NaN or Inf in initial RHS!")',
+    '            import sys',
+    '            sys.exit(1)',
+    '    except Exception as e:',
+    '        print(f"ERROR evaluating RHS at t=0: {e}")',
+    '        import sys',
+    '        sys.exit(1)',
+    '    ',
     '    sol = solve_ivp(',
     '        ode_rhs,',
     '        [0, 1000],',
     '        y0,',
-    '        method="LSODA",',
-    '        t_eval=np.linspace(0, 1000, 10001),',
-    '        rtol=1e-8,',
-    '        atol=1e-12,',
+    '        method="BDF",  # More robust for stiff systems',
+    '        t_eval=np.linspace(0, 1000, 1001),  # Fewer points initially',
+    '        rtol=1e-6,  # Looser tolerances',
+    '        atol=1e-9,',
     '    )',
     '    if sol.success:',
     '        print(f"Success! {sol.t.shape[0]} points")',
+    '        print(f"Final state: {sol.y[:, -1][:5]}...")',
     '    else:',
     '        print(f"Failed: {sol.message}")',
 ])
