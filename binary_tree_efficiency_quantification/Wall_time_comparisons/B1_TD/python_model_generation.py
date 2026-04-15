@@ -23,7 +23,7 @@ from collections import defaultdict
 
 MAIN_CELLML    = "B1_TD.txt"            # main model file
 MODULES_CELLML = "B1_TD_modules.txt"    # modules/components file
-PARAMS_FILE    = "model_params.py"                 # optional: "model_params.py" or None
+PARAMS_FILE    = "B1_TD_params.py"                 # optional: "model_params.py" or None
 OUTPUT_FILE    = "generated_model.py"   # where to write the output
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -239,15 +239,20 @@ def _convert_condition(cond):
 # 6.  TOPOLOGICAL SORT OF ALGEBRAIC EQUATIONS
 # ──────────────────────────────────────────────────────────────────────────────
 
-def topo_sort(equations, state_vars=None):
+def topo_sort(equations, state_vars=None, param_vars=None):
     """
     Topologically sort algebraic equations.
+    Returns: (ordered_equations, circular_equations)
+    
     state_vars: set of state variable names that are already defined (from y vector)
+    param_vars: set of parameter names that are already defined (from params file)
     """
     if state_vars is None:
         state_vars = set()
+    if param_vars is None:
+        param_vars = set()
     
-    defined   = set(state_vars)  # State variables are pre-defined
+    defined   = set(state_vars) | set(param_vars)  # Both states and params are pre-defined
     ordered   = []
     remaining = list(equations)
     skip_kw   = {'np', 't', 'True', 'False', 'if', 'else', 'and', 'or',
@@ -281,17 +286,19 @@ def topo_sort(equations, state_vars=None):
         if not progress_made and remaining:
             break
 
-    # Handle remaining equations with circular dependencies
+    # Return both ordered and circular equations separately
+    circular = []
     if remaining:
-        print(f"WARNING: {len(remaining)} equations have circular dependencies")
+        print(f"WARNING: {len(remaining)} equations have circular dependencies and will be solved iteratively")
         for lhs, rhs in remaining:
             deps = set(re.findall(r'\b([a-zA-Z_]\w*)\b', rhs))
             unmet = {d for d in deps if d not in defined and not d.startswith('np') and d not in skip_kw}
-            print(f"  {lhs} depends on undefined: {unmet}")
-            ordered.append((lhs, f"{rhs}  # WARNING: circular dependency"))
-            defined.add(lhs)
+            if unmet:  # Only print if there are truly undefined variables
+                print(f"  {lhs} depends on: {unmet}")
+            circular.append((lhs, rhs))
+            defined.add(lhs)  # Add to defined so we can continue
 
-    return ordered
+    return ordered, circular
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -344,6 +351,30 @@ def generate_python_model(main_text, modules_text, params_file=None):
             param_subs[ca][va] = vb
 
     lines = []
+
+    # ── Extract parameter names ──────────────────────────────────────────
+    param_names = set()
+    if params_file:
+        try:
+            with open(params_file) as f:
+                ptext = f.read()
+            for pl in ptext.splitlines():
+                m = re.match(r'^\s*(\w+__\w+)\s*=', pl)
+                if m:
+                    param_names.add(m.group(1))
+        except FileNotFoundError:
+            pass
+    
+    # Also add parameters that are mapped through param_subs
+    # These are variables in components that are mapped to global parameters
+    for comp_inst, param_map in param_subs.items():
+        for local_var, param_name in param_map.items():
+            # The local variable in the component will refer to the parameter
+            # So mark it as defined
+            full_name = ns(comp_inst, local_var)
+            param_names.add(full_name)
+            # Also add the parameter name itself (in case it's referenced directly)
+            param_names.add(param_name)
 
     # ── header ───────────────────────────────────────────────────────────
     lines += [
@@ -462,12 +493,25 @@ def generate_python_model(main_text, modules_text, params_file=None):
     lines.append('')
 
     state_var_names = {sname for sname, _ in state_list}
-    sorted_alg = topo_sort(all_equations, state_var_names)
+    sorted_alg, circular_alg = topo_sort(all_equations, state_var_names, param_names)
 
     lines.append('    # -- algebraic equations (auto-sorted) ---------------')
     for lhs, rhs in sorted_alg:
         lines.append(f'    {lhs} = {rhs}')
     lines.append('')
+
+    if circular_alg:
+        # Generate iterative solver for circular dependencies
+        lines.append('    # -- circular algebraic equations (solved iteratively) --')
+        lines.append('    # Initialize circular variables with guess values')
+        for lhs, rhs in circular_alg:
+            lines.append(f'    {lhs} = 0.0  # initial guess')
+        lines.append('')
+        lines.append('    # Fixed-point iteration to resolve circular dependencies')
+        lines.append('    for _iter in range(10):  # max 10 iterations')
+        for lhs, rhs in circular_alg:
+            lines.append(f'        {lhs} = {rhs}')
+        lines.append('')
 
     lines.append('    # -- assemble dydt -----------------------------------')
     lines.append('    dydt = np.zeros(len(y))')

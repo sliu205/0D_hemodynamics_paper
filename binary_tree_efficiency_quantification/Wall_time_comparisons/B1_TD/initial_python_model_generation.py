@@ -1,8 +1,8 @@
 """
 generate_model_params.py
 ========================
-Reads a CellML (.cellml) file plus TWO CSV files, then generates
-model_params.py with every component variable populated where possible.
+Reads a CellML (.cellml) file, a modules file, plus TWO CSV files, 
+then generates model_params.py with every component variable populated where possible.
 
 CSV FORMAT 1  –  initial_params.csv
     category,variable,value
@@ -20,12 +20,13 @@ Resolution priority for each CellML variable (comp/var):
     4. None  +  *** NOT FOUND ***  comment
 
 Usage:
-    python generate_model_params.py  [cellml]  [initial_params.csv]  [parameters.csv]  [output]
+    python generate_model_params.py  [cellml]  [modules]  [initial_params.csv]  [parameters.csv]  [output]
 
 Defaults:
     cellml           = B1_TD_txt.cellml
+    modules          = B1_TD_modules.txt
     initial_params   = initial_params.csv
-    parameters_csv   = parameters.csv
+    parameters_csv   = B1_TD_parameters.csv
     output           = model_params.py
 """
 
@@ -39,19 +40,20 @@ import os
 # CLI / DEFAULT PATHS
 # ============================================================
 
-cellml_path = sys.argv[1] if len(sys.argv) > 1 else "B1_TD_txt.cellml"
-csv1_path   = sys.argv[2] if len(sys.argv) > 2 else "initial_params.csv"
-csv2_path   = sys.argv[3] if len(sys.argv) > 3 else "B1_TD_parameters.csv"
-out_path    = sys.argv[4] if len(sys.argv) > 4 else "model_params.py"
+cellml_path = sys.argv[1] if len(sys.argv) > 1 else "B1_TD.txt"
+modules_path = sys.argv[2] if len(sys.argv) > 2 else "B1_TD_modules.txt"  # NEW
+csv1_path   = sys.argv[3] if len(sys.argv) > 3 else "initial_params.csv"
+csv2_path   = sys.argv[4] if len(sys.argv) > 4 else "B1_TD_parameters.csv"
+out_path    = sys.argv[5] if len(sys.argv) > 5 else "model_params.py"
 
 for p in (cellml_path,):
     if not os.path.isfile(p):
         print(f"ERROR: file not found: {p}")
         sys.exit(1)
 
-for p in (csv1_path, csv2_path):
+for p in (modules_path, csv1_path, csv2_path):
     if not os.path.isfile(p):
-        print(f"WARNING: CSV not found, skipping: {p}")
+        print(f"WARNING: file not found, skipping: {p}")
 
 
 # ============================================================
@@ -116,11 +118,61 @@ for m in comp_block_re.finditer(cellml_text):
         continue
     components[comp_name] = [(v, u) for v, u in vars_found]
 
+# Also parse module instances (comp X using comp Y;)
+comp_using_re = re.compile(r'comp\s+(\w+)\s+using\s+comp\s+(\w+)\s*;')
+comp_to_module = {}  # {instance_name: template_name}
+for m in comp_using_re.finditer(cellml_text):
+    comp_to_module[m.group(1)] = m.group(2)
+
+# Remove any module templates from components (they end with _module typically)
+# Keep only the actual instances that will be used
+instances = set(comp_to_module.keys())
+components = {k: v for k, v in components.items() if k in instances or not k.endswith('_module')}
+
 known_comps = set(components.keys())
 
-print(f"\nFound {len(components)} components in {cellml_path}")
+print(f"\nFound {len(components)} component instances in {cellml_path}")
 for c, vs in components.items():
     print(f"  {c}: {len(vs)} variables")
+
+# ============================================================
+# STEP 2b – PARSE B1_TD_modules.txt to get template variables
+# ============================================================
+
+module_templates = {}  # {template_name: [(var_name, unit)]}
+
+if os.path.isfile(modules_path):
+    with open(modules_path, "r") as f:
+        modules_text = f.read()
+    
+    for m in comp_block_re.finditer(modules_text):
+        template_name = m.group(1)
+        block = m.group(2)
+        vars_found = var_line_re.findall(block)
+        if vars_found:
+            module_templates[template_name] = [(v, u) for v, u in vars_found]
+    
+    print(f"\nFound {len(module_templates)} module templates in {modules_path}")
+    
+    # Now expand INSTANCE components based on their module templates
+    # We DON'T add the template itself to components, only expand instances
+    for comp_inst, tmpl_name in comp_to_module.items():
+        if tmpl_name in module_templates:
+            # Create or expand the instance component
+            if comp_inst not in components:
+                components[comp_inst] = []
+            
+            # Merge module template variables into the instance
+            existing_vars = {v for v, u in components[comp_inst]}
+            added_count = 0
+            for var, unit in module_templates[tmpl_name]:
+                if var not in existing_vars:
+                    components[comp_inst].append((var, unit))
+                    added_count += 1
+            print(f"  Expanded instance '{comp_inst}' with {added_count} vars from template '{tmpl_name}'")
+    
+    # Update known_comps to only include actual instances, not templates
+    known_comps = set(components.keys())
 
 
 # ============================================================
