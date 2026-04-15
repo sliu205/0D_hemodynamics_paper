@@ -774,7 +774,21 @@ def rootfind_0(voi, constants, rates, states, algebraic):
     """Calculate values of algebraic variables for DAE"""
     from scipy.optimize import fsolve
     global initialGuess0
-    if initialGuess0 is None: initialGuess0 = ones(61)*0.1
+    if initialGuess0 is None:
+    # Use current algebraic values as guess (much better)
+        initialGuess0 = ones(61)*0.1
+
+        try:
+            initialGuess0[0] = algebraic[34]
+            initialGuess0[1] = algebraic[35]
+            initialGuess0[2] = algebraic[36]
+            initialGuess0[3] = algebraic[37]
+            initialGuess0[4] = algebraic[38]
+            initialGuess0[5] = algebraic[39]
+            initialGuess0[6] = algebraic[40]
+            initialGuess0[7] = algebraic[41]
+        except:
+            pass
     if not iterable(voi):
         soln = fsolve(residualSN_0, initialGuess0, args=(algebraic, voi, constants, rates, states), xtol=1E-6)
         initialGuess0 = soln

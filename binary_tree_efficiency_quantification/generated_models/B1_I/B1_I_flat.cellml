@@ -903,8 +903,6 @@
     <variable name="s_v_d" units="dimensionless" interface="public"/>
     <variable name="H_L_out" units="dimensionless" interface="public"/>
     <variable name="H_R_out" units="dimensionless" interface="public"/>
-    <variable name="RBC_volume" units="m3" interface="public"/>
-    <variable name="RBC_volume_init" units="m3" interface="public"/>
     <variable name="v_pos" units="m3_per_s" interface="public"/>
     <variable name="v_neg" units="m3_per_s" interface="public"/>
     <variable name="v_d_pos" units="m3_per_s" interface="public"/>
@@ -1175,44 +1173,6 @@
         </apply>
       </apply>
     </math>
-    <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <apply>
-        <eq/>
-        <ci>RBC_volume</ci>
-        <apply>
-          <divide/>
-          <apply>
-            <minus/>
-            <apply>
-              <times/>
-              <ci>v</ci>
-              <ci>H_volume_L</ci>
-            </apply>
-            <apply>
-              <times/>
-              <ci>v_d</ci>
-              <ci>H_volume_R</ci>
-            </apply>
-          </apply>
-          <apply>
-            <plus/>
-            <ci>v</ci>
-            <ci>v_d</ci>
-          </apply>
-        </apply>
-      </apply>
-    </math>
-    <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <apply>
-        <eq/>
-        <ci>RBC_volume_init</ci>
-        <apply>
-          <times/>
-          <ci>H_global_L</ci>
-          <ci>q_us</ci>
-        </apply>
-      </apply>
-    </math>
     <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:cellml="http://www.cellml.org/cellml/2.0#">
       <apply>
         <eq/>
@@ -1275,8 +1235,33 @@
         <ci>H_mean</ci>
         <apply>
           <divide/>
-          <ci>RBC_volume</ci>
-          <ci>q</ci>
+          <apply>
+            <plus/>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci>v</ci>
+                <ci>H_volume_L</ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci>v_d</ci>
+                <ci>H_volume_R</ci>
+              </apply>
+            </apply>
+            <ci>v_scale</ci>
+          </apply>
+          <apply>
+            <plus/>
+            <ci>v</ci>
+            <ci>v_d</ci>
+            <apply>
+              <times/>
+              <cn cellml:units="dimensionless">2</cn>
+              <ci>v_scale</ci>
+            </apply>
+          </apply>
         </apply>
       </apply>
     </math>
@@ -4122,8 +4107,6 @@
     <variable name="s_v_d" units="dimensionless" interface="public"/>
     <variable name="H_L_out" units="dimensionless" interface="public"/>
     <variable name="H_R_out" units="dimensionless" interface="public"/>
-    <variable name="RBC_volume" units="m3" interface="public"/>
-    <variable name="RBC_volume_init" units="m3" interface="public"/>
     <variable name="v_pos" units="m3_per_s" interface="public"/>
     <variable name="v_neg" units="m3_per_s" interface="public"/>
     <variable name="v_d_pos" units="m3_per_s" interface="public"/>
@@ -4431,44 +4414,6 @@
         </apply>
       </apply>
     </math>
-    <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <apply>
-        <eq/>
-        <ci>RBC_volume</ci>
-        <apply>
-          <divide/>
-          <apply>
-            <minus/>
-            <apply>
-              <times/>
-              <ci>v</ci>
-              <ci>H_volume_L</ci>
-            </apply>
-            <apply>
-              <times/>
-              <ci>v_d</ci>
-              <ci>H_volume_R</ci>
-            </apply>
-          </apply>
-          <apply>
-            <plus/>
-            <ci>v</ci>
-            <ci>v_d</ci>
-          </apply>
-        </apply>
-      </apply>
-    </math>
-    <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <apply>
-        <eq/>
-        <ci>RBC_volume_init</ci>
-        <apply>
-          <times/>
-          <ci>H_global_L</ci>
-          <ci>q_us</ci>
-        </apply>
-      </apply>
-    </math>
     <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:cellml="http://www.cellml.org/cellml/2.0#">
       <apply>
         <eq/>
@@ -4531,8 +4476,33 @@
         <ci>H_mean</ci>
         <apply>
           <divide/>
-          <ci>RBC_volume</ci>
-          <ci>q</ci>
+          <apply>
+            <plus/>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci>v</ci>
+                <ci>H_volume_L</ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci>v_d</ci>
+                <ci>H_volume_R</ci>
+              </apply>
+            </apply>
+            <ci>v_scale</ci>
+          </apply>
+          <apply>
+            <plus/>
+            <ci>v</ci>
+            <ci>v_d</ci>
+            <apply>
+              <times/>
+              <cn cellml:units="dimensionless">2</cn>
+              <ci>v_scale</ci>
+            </apply>
+          </apply>
         </apply>
       </apply>
     </math>
@@ -5018,8 +4988,6 @@
     <variable name="s_v_d" units="dimensionless" interface="public"/>
     <variable name="H_L_out" units="dimensionless" interface="public"/>
     <variable name="H_R_out" units="dimensionless" interface="public"/>
-    <variable name="RBC_volume" units="m3" interface="public"/>
-    <variable name="RBC_volume_init" units="m3" interface="public"/>
     <variable name="v_pos" units="m3_per_s" interface="public"/>
     <variable name="v_neg" units="m3_per_s" interface="public"/>
     <variable name="v_d_pos" units="m3_per_s" interface="public"/>
@@ -5327,44 +5295,6 @@
         </apply>
       </apply>
     </math>
-    <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <apply>
-        <eq/>
-        <ci>RBC_volume</ci>
-        <apply>
-          <divide/>
-          <apply>
-            <minus/>
-            <apply>
-              <times/>
-              <ci>v</ci>
-              <ci>H_volume_L</ci>
-            </apply>
-            <apply>
-              <times/>
-              <ci>v_d</ci>
-              <ci>H_volume_R</ci>
-            </apply>
-          </apply>
-          <apply>
-            <plus/>
-            <ci>v</ci>
-            <ci>v_d</ci>
-          </apply>
-        </apply>
-      </apply>
-    </math>
-    <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <apply>
-        <eq/>
-        <ci>RBC_volume_init</ci>
-        <apply>
-          <times/>
-          <ci>H_global_L</ci>
-          <ci>q_us</ci>
-        </apply>
-      </apply>
-    </math>
     <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:cellml="http://www.cellml.org/cellml/2.0#">
       <apply>
         <eq/>
@@ -5427,8 +5357,33 @@
         <ci>H_mean</ci>
         <apply>
           <divide/>
-          <ci>RBC_volume</ci>
-          <ci>q</ci>
+          <apply>
+            <plus/>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci>v</ci>
+                <ci>H_volume_L</ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci>v_d</ci>
+                <ci>H_volume_R</ci>
+              </apply>
+            </apply>
+            <ci>v_scale</ci>
+          </apply>
+          <apply>
+            <plus/>
+            <ci>v</ci>
+            <ci>v_d</ci>
+            <apply>
+              <times/>
+              <cn cellml:units="dimensionless">2</cn>
+              <ci>v_scale</ci>
+            </apply>
+          </apply>
         </apply>
       </apply>
     </math>
@@ -5908,8 +5863,6 @@
     <variable name="s_v" units="dimensionless" interface="public"/>
     <variable name="H_L_out" units="dimensionless" interface="public"/>
     <variable name="H_R_out" units="dimensionless" interface="public"/>
-    <variable name="RBC_volume" units="m3" interface="public"/>
-    <variable name="RBC_volume_init" units="m3" interface="public"/>
     <variable name="v_pos" units="m3_per_s" interface="public"/>
     <variable name="v_neg" units="m3_per_s" interface="public"/>
     <variable name="H_mean" units="dimensionless" interface="public"/>
@@ -6152,44 +6105,6 @@
         </apply>
       </apply>
     </math>
-    <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <apply>
-        <eq/>
-        <ci>RBC_volume</ci>
-        <apply>
-          <divide/>
-          <apply>
-            <minus/>
-            <apply>
-              <times/>
-              <ci>v_in</ci>
-              <ci>H_volume_L</ci>
-            </apply>
-            <apply>
-              <times/>
-              <ci>v</ci>
-              <ci>H_volume_R</ci>
-            </apply>
-          </apply>
-          <apply>
-            <plus/>
-            <ci>v_in</ci>
-            <ci>v</ci>
-          </apply>
-        </apply>
-      </apply>
-    </math>
-    <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <apply>
-        <eq/>
-        <ci>RBC_volume_init</ci>
-        <apply>
-          <times/>
-          <ci>H_global_L</ci>
-          <ci>q_us</ci>
-        </apply>
-      </apply>
-    </math>
     <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:cellml="http://www.cellml.org/cellml/2.0#">
       <apply>
         <eq/>
@@ -6225,8 +6140,33 @@
         <ci>H_mean</ci>
         <apply>
           <divide/>
-          <ci>RBC_volume</ci>
-          <ci>q</ci>
+          <apply>
+            <plus/>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci>v_in</ci>
+                <ci>H_volume_L</ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci>v</ci>
+                <ci>H_volume_R</ci>
+              </apply>
+            </apply>
+            <ci>v_scale</ci>
+          </apply>
+          <apply>
+            <plus/>
+            <ci>v_in</ci>
+            <ci>v</ci>
+            <apply>
+              <times/>
+              <cn cellml:units="dimensionless">2</cn>
+              <ci>v_scale</ci>
+            </apply>
+          </apply>
         </apply>
       </apply>
     </math>
@@ -6670,8 +6610,6 @@
     <variable name="s_v" units="dimensionless" interface="public"/>
     <variable name="H_L_out" units="dimensionless" interface="public"/>
     <variable name="H_R_out" units="dimensionless" interface="public"/>
-    <variable name="RBC_volume" units="m3" interface="public"/>
-    <variable name="RBC_volume_init" units="m3" interface="public"/>
     <variable name="v_pos" units="m3_per_s" interface="public"/>
     <variable name="v_neg" units="m3_per_s" interface="public"/>
     <variable name="H_mean" units="dimensionless" interface="public"/>
@@ -6914,44 +6852,6 @@
         </apply>
       </apply>
     </math>
-    <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <apply>
-        <eq/>
-        <ci>RBC_volume</ci>
-        <apply>
-          <divide/>
-          <apply>
-            <minus/>
-            <apply>
-              <times/>
-              <ci>v_in</ci>
-              <ci>H_volume_L</ci>
-            </apply>
-            <apply>
-              <times/>
-              <ci>v</ci>
-              <ci>H_volume_R</ci>
-            </apply>
-          </apply>
-          <apply>
-            <plus/>
-            <ci>v_in</ci>
-            <ci>v</ci>
-          </apply>
-        </apply>
-      </apply>
-    </math>
-    <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <apply>
-        <eq/>
-        <ci>RBC_volume_init</ci>
-        <apply>
-          <times/>
-          <ci>H_global_L</ci>
-          <ci>q_us</ci>
-        </apply>
-      </apply>
-    </math>
     <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:cellml="http://www.cellml.org/cellml/2.0#">
       <apply>
         <eq/>
@@ -6987,8 +6887,33 @@
         <ci>H_mean</ci>
         <apply>
           <divide/>
-          <ci>RBC_volume</ci>
-          <ci>q</ci>
+          <apply>
+            <plus/>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci>v_in</ci>
+                <ci>H_volume_L</ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci>v</ci>
+                <ci>H_volume_R</ci>
+              </apply>
+            </apply>
+            <ci>v_scale</ci>
+          </apply>
+          <apply>
+            <plus/>
+            <ci>v_in</ci>
+            <ci>v</ci>
+            <apply>
+              <times/>
+              <cn cellml:units="dimensionless">2</cn>
+              <ci>v_scale</ci>
+            </apply>
+          </apply>
         </apply>
       </apply>
     </math>
@@ -7432,8 +7357,6 @@
     <variable name="s_v_d" units="dimensionless" interface="public"/>
     <variable name="H_L_out" units="dimensionless" interface="public"/>
     <variable name="H_R_out" units="dimensionless" interface="public"/>
-    <variable name="RBC_volume" units="m3" interface="public"/>
-    <variable name="RBC_volume_init" units="m3" interface="public"/>
     <variable name="v_pos" units="m3_per_s" interface="public"/>
     <variable name="v_neg" units="m3_per_s" interface="public"/>
     <variable name="v_d_pos" units="m3_per_s" interface="public"/>
@@ -7611,8 +7534,6 @@
     <variable name="s_v_d" units="dimensionless" interface="public"/>
     <variable name="H_L_out" units="dimensionless" interface="public"/>
     <variable name="H_R_out" units="dimensionless" interface="public"/>
-    <variable name="RBC_volume" units="m3" interface="public"/>
-    <variable name="RBC_volume_init" units="m3" interface="public"/>
     <variable name="v_pos" units="m3_per_s" interface="public"/>
     <variable name="v_neg" units="m3_per_s" interface="public"/>
     <variable name="v_d_pos" units="m3_per_s" interface="public"/>
@@ -7667,8 +7588,6 @@
     <variable name="s_v_d" units="dimensionless" interface="public"/>
     <variable name="H_L_out" units="dimensionless" interface="public"/>
     <variable name="H_R_out" units="dimensionless" interface="public"/>
-    <variable name="RBC_volume" units="m3" interface="public"/>
-    <variable name="RBC_volume_init" units="m3" interface="public"/>
     <variable name="v_pos" units="m3_per_s" interface="public"/>
     <variable name="v_neg" units="m3_per_s" interface="public"/>
     <variable name="v_d_pos" units="m3_per_s" interface="public"/>
@@ -7719,8 +7638,6 @@
     <variable name="s_v" units="dimensionless" interface="public"/>
     <variable name="H_L_out" units="dimensionless" interface="public"/>
     <variable name="H_R_out" units="dimensionless" interface="public"/>
-    <variable name="RBC_volume" units="m3" interface="public"/>
-    <variable name="RBC_volume_init" units="m3" interface="public"/>
     <variable name="v_pos" units="m3_per_s" interface="public"/>
     <variable name="v_neg" units="m3_per_s" interface="public"/>
     <variable name="H_mean" units="dimensionless" interface="public"/>
@@ -7767,8 +7684,6 @@
     <variable name="s_v" units="dimensionless" interface="public"/>
     <variable name="H_L_out" units="dimensionless" interface="public"/>
     <variable name="H_R_out" units="dimensionless" interface="public"/>
-    <variable name="RBC_volume" units="m3" interface="public"/>
-    <variable name="RBC_volume_init" units="m3" interface="public"/>
     <variable name="v_pos" units="m3_per_s" interface="public"/>
     <variable name="v_neg" units="m3_per_s" interface="public"/>
     <variable name="H_mean" units="dimensionless" interface="public"/>
@@ -8004,8 +7919,6 @@
     <map_variables variable_1="s_v_d" variable_2="s_v_d"/>
     <map_variables variable_1="H_L_out" variable_2="H_L_out"/>
     <map_variables variable_1="H_R_out" variable_2="H_R_out"/>
-    <map_variables variable_1="RBC_volume" variable_2="RBC_volume"/>
-    <map_variables variable_1="RBC_volume_init" variable_2="RBC_volume_init"/>
     <map_variables variable_1="v_pos" variable_2="v_pos"/>
     <map_variables variable_1="v_neg" variable_2="v_neg"/>
     <map_variables variable_1="v_d_pos" variable_2="v_d_pos"/>
@@ -8207,8 +8120,6 @@
     <map_variables variable_1="s_v_d" variable_2="s_v_d"/>
     <map_variables variable_1="H_L_out" variable_2="H_L_out"/>
     <map_variables variable_1="H_R_out" variable_2="H_R_out"/>
-    <map_variables variable_1="RBC_volume" variable_2="RBC_volume"/>
-    <map_variables variable_1="RBC_volume_init" variable_2="RBC_volume_init"/>
     <map_variables variable_1="v_pos" variable_2="v_pos"/>
     <map_variables variable_1="v_neg" variable_2="v_neg"/>
     <map_variables variable_1="v_d_pos" variable_2="v_d_pos"/>
@@ -8269,8 +8180,6 @@
     <map_variables variable_1="s_v_d" variable_2="s_v_d"/>
     <map_variables variable_1="H_L_out" variable_2="H_L_out"/>
     <map_variables variable_1="H_R_out" variable_2="H_R_out"/>
-    <map_variables variable_1="RBC_volume" variable_2="RBC_volume"/>
-    <map_variables variable_1="RBC_volume_init" variable_2="RBC_volume_init"/>
     <map_variables variable_1="v_pos" variable_2="v_pos"/>
     <map_variables variable_1="v_neg" variable_2="v_neg"/>
     <map_variables variable_1="v_d_pos" variable_2="v_d_pos"/>
@@ -8327,8 +8236,6 @@
     <map_variables variable_1="s_v" variable_2="s_v"/>
     <map_variables variable_1="H_L_out" variable_2="H_L_out"/>
     <map_variables variable_1="H_R_out" variable_2="H_R_out"/>
-    <map_variables variable_1="RBC_volume" variable_2="RBC_volume"/>
-    <map_variables variable_1="RBC_volume_init" variable_2="RBC_volume_init"/>
     <map_variables variable_1="v_pos" variable_2="v_pos"/>
     <map_variables variable_1="v_neg" variable_2="v_neg"/>
     <map_variables variable_1="H_mean" variable_2="H_mean"/>
@@ -8375,8 +8282,6 @@
     <map_variables variable_1="s_v" variable_2="s_v"/>
     <map_variables variable_1="H_L_out" variable_2="H_L_out"/>
     <map_variables variable_1="H_R_out" variable_2="H_R_out"/>
-    <map_variables variable_1="RBC_volume" variable_2="RBC_volume"/>
-    <map_variables variable_1="RBC_volume_init" variable_2="RBC_volume_init"/>
     <map_variables variable_1="v_pos" variable_2="v_pos"/>
     <map_variables variable_1="v_neg" variable_2="v_neg"/>
     <map_variables variable_1="H_mean" variable_2="H_mean"/>

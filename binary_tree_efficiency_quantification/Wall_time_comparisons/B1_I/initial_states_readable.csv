@@ -1,0 +1,24 @@
+variable,value
+H_link_R in component PP_capillary_H_D_I (dimensionless),0.45
+H_link_L in component PP_capillary_H_D_I (dimensionless),0.45
+H_down in component PP_capillary_H_D_I (dimensionless),0.45
+q_C in component PP_capillary_H_D_I (m3),0
+RBC_volume in component VV_junction_H_D_I (m3),5.0893800988154656e-17
+q_C in component VV_junction_H_D_I (m3),0
+q_C_d in component VV_junction_H_D_I (m3),0
+H_link_R in component PP_pericyte_H_D_I (dimensionless),0.45
+H_link_L in component PP_pericyte_H_D_I (dimensionless),0.45
+H_down in component PP_pericyte_H_D_I (dimensionless),0.45
+q_C in component PP_pericyte_H_D_I (m3),0
+H_link_R in component PP_pericyte_H_D_I (dimensionless),0.45
+H_link_L in component PP_pericyte_H_D_I (dimensionless),0.45
+H_down in component PP_pericyte_H_D_I (dimensionless),0.45
+q_C in component PP_pericyte_H_D_I (m3),0
+H_link_R in component VP_capillary_H_D_I (dimensionless),0.45
+H_link_L in component VP_capillary_H_D_I (dimensionless),0.45
+H_down in component VP_capillary_H_D_I (dimensionless),0.45
+q_C in component VP_capillary_H_D_I (m3),0
+H_link_R in component VP_capillary_H_D_I (dimensionless),0.45
+H_link_L in component VP_capillary_H_D_I (dimensionless),0.45
+H_down in component VP_capillary_H_D_I (dimensionless),0.45
+q_C in component VP_capillary_H_D_I (m3),0

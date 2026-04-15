@@ -2911,46 +2911,10 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="RBC_volume" public_interface="out" units="m3"/>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <apply>
-                <eq/>
-                <ci>RBC_volume</ci>
-                <apply>
-                    <divide/>
-                    <apply>
-                        <minus/>
-                        <apply>
-                            <times/>
-                            <ci>v</ci>
-                            <ci>H_volume_L</ci>
-                        </apply>
-                        <apply>
-                            <times/>
-                            <ci>v_d</ci>
-                            <ci>H_volume_R</ci>
-                        </apply>
-                    </apply>
-                    <apply>
-                        <plus/>
-                        <ci>v</ci>
-                        <ci>v_d</ci>
-                    </apply>
-                </apply>
-            </apply>
-        </math>
-        <variable name="RBC_volume_init" public_interface="out" units="m3"/>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <apply>
-                <eq/>
-                <ci>RBC_volume_init</ci>
-                <apply>
-                    <times/>
-                    <ci>H_global_L</ci>
-                    <ci>q_us</ci>
-                </apply>
-            </apply>
-        </math>
+        <!--var RBC_volume: m3 {pub: out};-->
+        <!--RBC_volume = (v*H_volume_L-v_d*H_volume_R)/(v+v_d);-->
+        <!--var RBC_volume_init: m3 {pub: out};-->
+        <!--RBC_volume_init = H_global_L*q_us;-->
         <!--pos/neg for RBC mass conservation only-->
         <variable name="v_pos" public_interface="out" units="m3_per_s"/>
         <variable name="v_neg" public_interface="out" units="m3_per_s"/>
@@ -3018,8 +2982,33 @@ instaneous coupling requirement/////////-->
                 <ci>H_mean</ci>
                 <apply>
                     <divide/>
-                    <ci>RBC_volume</ci>
-                    <ci>q</ci>
+                    <apply>
+                        <plus/>
+                        <apply>
+                            <minus/>
+                            <apply>
+                                <times/>
+                                <ci>v</ci>
+                                <ci>H_volume_L</ci>
+                            </apply>
+                            <apply>
+                                <times/>
+                                <ci>v_d</ci>
+                                <ci>H_volume_R</ci>
+                            </apply>
+                        </apply>
+                        <ci>v_scale</ci>
+                    </apply>
+                    <apply>
+                        <plus/>
+                        <ci>v</ci>
+                        <ci>v_d</ci>
+                        <apply>
+                            <times/>
+                            <cn cellml:units="dimensionless">2</cn>
+                            <ci>v_scale</ci>
+                        </apply>
+                    </apply>
                 </apply>
             </apply>
         </math>
@@ -3814,46 +3803,10 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="RBC_volume" public_interface="out" units="m3"/>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <apply>
-                <eq/>
-                <ci>RBC_volume</ci>
-                <apply>
-                    <divide/>
-                    <apply>
-                        <minus/>
-                        <apply>
-                            <times/>
-                            <ci>v</ci>
-                            <ci>H_volume_L</ci>
-                        </apply>
-                        <apply>
-                            <times/>
-                            <ci>v_d</ci>
-                            <ci>H_volume_R</ci>
-                        </apply>
-                    </apply>
-                    <apply>
-                        <plus/>
-                        <ci>v</ci>
-                        <ci>v_d</ci>
-                    </apply>
-                </apply>
-            </apply>
-        </math>
-        <variable name="RBC_volume_init" public_interface="out" units="m3"/>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <apply>
-                <eq/>
-                <ci>RBC_volume_init</ci>
-                <apply>
-                    <times/>
-                    <ci>H_global_L</ci>
-                    <ci>q_us</ci>
-                </apply>
-            </apply>
-        </math>
+        <!--var RBC_volume: m3 {pub: out};-->
+        <!--RBC_volume = (v*H_volume_L-v_d*H_volume_R)/(v+v_d);-->
+        <!--var RBC_volume_init: m3 {pub: out};-->
+        <!--RBC_volume_init = H_global_L*q_us;-->
         <!--pos/neg for RBC mass conservation only-->
         <variable name="v_pos" public_interface="out" units="m3_per_s"/>
         <variable name="v_neg" public_interface="out" units="m3_per_s"/>
@@ -3921,8 +3874,33 @@ instaneous coupling requirement/////////-->
                 <ci>H_mean</ci>
                 <apply>
                     <divide/>
-                    <ci>RBC_volume</ci>
-                    <ci>q</ci>
+                    <apply>
+                        <plus/>
+                        <apply>
+                            <minus/>
+                            <apply>
+                                <times/>
+                                <ci>v</ci>
+                                <ci>H_volume_L</ci>
+                            </apply>
+                            <apply>
+                                <times/>
+                                <ci>v_d</ci>
+                                <ci>H_volume_R</ci>
+                            </apply>
+                        </apply>
+                        <ci>v_scale</ci>
+                    </apply>
+                    <apply>
+                        <plus/>
+                        <ci>v</ci>
+                        <ci>v_d</ci>
+                        <apply>
+                            <times/>
+                            <cn cellml:units="dimensionless">2</cn>
+                            <ci>v_scale</ci>
+                        </apply>
+                    </apply>
                 </apply>
             </apply>
         </math>
@@ -4654,46 +4632,10 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="RBC_volume" public_interface="out" units="m3"/>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <apply>
-                <eq/>
-                <ci>RBC_volume</ci>
-                <apply>
-                    <divide/>
-                    <apply>
-                        <minus/>
-                        <apply>
-                            <times/>
-                            <ci>v_in</ci>
-                            <ci>H_volume_L</ci>
-                        </apply>
-                        <apply>
-                            <times/>
-                            <ci>v</ci>
-                            <ci>H_volume_R</ci>
-                        </apply>
-                    </apply>
-                    <apply>
-                        <plus/>
-                        <ci>v_in</ci>
-                        <ci>v</ci>
-                    </apply>
-                </apply>
-            </apply>
-        </math>
-        <variable name="RBC_volume_init" public_interface="out" units="m3"/>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <apply>
-                <eq/>
-                <ci>RBC_volume_init</ci>
-                <apply>
-                    <times/>
-                    <ci>H_global_L</ci>
-                    <ci>q_us</ci>
-                </apply>
-            </apply>
-        </math>
+        <!--var RBC_volume: m3 {pub: out};-->
+        <!--RBC_volume = (v_in*H_volume_L-v*H_volume_R)/(v_in+v);-->
+        <!--var RBC_volume_init: m3 {pub: out};-->
+        <!--RBC_volume_init = H_global_L*q_us;-->
         <!--pos/neg for RBC mass conservation only-->
         <variable name="v_pos" public_interface="out" units="m3_per_s"/>
         <variable name="v_neg" public_interface="out" units="m3_per_s"/>
@@ -4732,8 +4674,33 @@ instaneous coupling requirement/////////-->
                 <ci>H_mean</ci>
                 <apply>
                     <divide/>
-                    <ci>RBC_volume</ci>
-                    <ci>q</ci>
+                    <apply>
+                        <plus/>
+                        <apply>
+                            <minus/>
+                            <apply>
+                                <times/>
+                                <ci>v_in</ci>
+                                <ci>H_volume_L</ci>
+                            </apply>
+                            <apply>
+                                <times/>
+                                <ci>v</ci>
+                                <ci>H_volume_R</ci>
+                            </apply>
+                        </apply>
+                        <ci>v_scale</ci>
+                    </apply>
+                    <apply>
+                        <plus/>
+                        <ci>v_in</ci>
+                        <ci>v</ci>
+                        <apply>
+                            <times/>
+                            <cn cellml:units="dimensionless">2</cn>
+                            <ci>v_scale</ci>
+                        </apply>
+                    </apply>
                 </apply>
             </apply>
         </math>

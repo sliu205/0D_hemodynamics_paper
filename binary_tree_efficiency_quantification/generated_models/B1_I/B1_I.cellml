@@ -354,8 +354,6 @@
    <variable name="s_v_d" public_interface="in" units="dimensionless"/>
    <variable name="H_L_out" public_interface="in" units="dimensionless"/>
    <variable name="H_R_out" public_interface="in" units="dimensionless"/>
-   <variable name="RBC_volume" public_interface="in" units="m3"/>
-   <variable name="RBC_volume_init" public_interface="in" units="m3"/>
    <variable name="v_pos" public_interface="in" units="m3_per_s"/>
    <variable name="v_neg" public_interface="in" units="m3_per_s"/>
    <variable name="v_d_pos" public_interface="in" units="m3_per_s"/>
@@ -533,8 +531,6 @@
    <variable name="s_v_d" public_interface="in" units="dimensionless"/>
    <variable name="H_L_out" public_interface="in" units="dimensionless"/>
    <variable name="H_R_out" public_interface="in" units="dimensionless"/>
-   <variable name="RBC_volume" public_interface="in" units="m3"/>
-   <variable name="RBC_volume_init" public_interface="in" units="m3"/>
    <variable name="v_pos" public_interface="in" units="m3_per_s"/>
    <variable name="v_neg" public_interface="in" units="m3_per_s"/>
    <variable name="v_d_pos" public_interface="in" units="m3_per_s"/>
@@ -589,8 +585,6 @@
    <variable name="s_v_d" public_interface="in" units="dimensionless"/>
    <variable name="H_L_out" public_interface="in" units="dimensionless"/>
    <variable name="H_R_out" public_interface="in" units="dimensionless"/>
-   <variable name="RBC_volume" public_interface="in" units="m3"/>
-   <variable name="RBC_volume_init" public_interface="in" units="m3"/>
    <variable name="v_pos" public_interface="in" units="m3_per_s"/>
    <variable name="v_neg" public_interface="in" units="m3_per_s"/>
    <variable name="v_d_pos" public_interface="in" units="m3_per_s"/>
@@ -641,8 +635,6 @@
    <variable name="s_v" public_interface="in" units="dimensionless"/>
    <variable name="H_L_out" public_interface="in" units="dimensionless"/>
    <variable name="H_R_out" public_interface="in" units="dimensionless"/>
-   <variable name="RBC_volume" public_interface="in" units="m3"/>
-   <variable name="RBC_volume_init" public_interface="in" units="m3"/>
    <variable name="v_pos" public_interface="in" units="m3_per_s"/>
    <variable name="v_neg" public_interface="in" units="m3_per_s"/>
    <variable name="H_mean" public_interface="in" units="dimensionless"/>
@@ -689,8 +681,6 @@
    <variable name="s_v" public_interface="in" units="dimensionless"/>
    <variable name="H_L_out" public_interface="in" units="dimensionless"/>
    <variable name="H_R_out" public_interface="in" units="dimensionless"/>
-   <variable name="RBC_volume" public_interface="in" units="m3"/>
-   <variable name="RBC_volume_init" public_interface="in" units="m3"/>
    <variable name="v_pos" public_interface="in" units="m3_per_s"/>
    <variable name="v_neg" public_interface="in" units="m3_per_s"/>
    <variable name="H_mean" public_interface="in" units="dimensionless"/>
@@ -763,8 +753,6 @@
    <map_variables variable_1="s_v_d" variable_2="s_v_d"/>
    <map_variables variable_1="H_L_out" variable_2="H_L_out"/>
    <map_variables variable_1="H_R_out" variable_2="H_R_out"/>
-   <map_variables variable_1="RBC_volume" variable_2="RBC_volume"/>
-   <map_variables variable_1="RBC_volume_init" variable_2="RBC_volume_init"/>
    <map_variables variable_1="v_pos" variable_2="v_pos"/>
    <map_variables variable_1="v_neg" variable_2="v_neg"/>
    <map_variables variable_1="v_d_pos" variable_2="v_d_pos"/>
@@ -944,8 +932,6 @@
    <map_variables variable_1="s_v_d" variable_2="s_v_d"/>
    <map_variables variable_1="H_L_out" variable_2="H_L_out"/>
    <map_variables variable_1="H_R_out" variable_2="H_R_out"/>
-   <map_variables variable_1="RBC_volume" variable_2="RBC_volume"/>
-   <map_variables variable_1="RBC_volume_init" variable_2="RBC_volume_init"/>
    <map_variables variable_1="v_pos" variable_2="v_pos"/>
    <map_variables variable_1="v_neg" variable_2="v_neg"/>
    <map_variables variable_1="v_d_pos" variable_2="v_d_pos"/>
@@ -1001,8 +987,6 @@
    <map_variables variable_1="s_v_d" variable_2="s_v_d"/>
    <map_variables variable_1="H_L_out" variable_2="H_L_out"/>
    <map_variables variable_1="H_R_out" variable_2="H_R_out"/>
-   <map_variables variable_1="RBC_volume" variable_2="RBC_volume"/>
-   <map_variables variable_1="RBC_volume_init" variable_2="RBC_volume_init"/>
    <map_variables variable_1="v_pos" variable_2="v_pos"/>
    <map_variables variable_1="v_neg" variable_2="v_neg"/>
    <map_variables variable_1="v_d_pos" variable_2="v_d_pos"/>
@@ -1054,8 +1038,6 @@
    <map_variables variable_1="s_v" variable_2="s_v"/>
    <map_variables variable_1="H_L_out" variable_2="H_L_out"/>
    <map_variables variable_1="H_R_out" variable_2="H_R_out"/>
-   <map_variables variable_1="RBC_volume" variable_2="RBC_volume"/>
-   <map_variables variable_1="RBC_volume_init" variable_2="RBC_volume_init"/>
    <map_variables variable_1="v_pos" variable_2="v_pos"/>
    <map_variables variable_1="v_neg" variable_2="v_neg"/>
    <map_variables variable_1="H_mean" variable_2="H_mean"/>
@@ -1103,8 +1085,6 @@
    <map_variables variable_1="s_v" variable_2="s_v"/>
    <map_variables variable_1="H_L_out" variable_2="H_L_out"/>
    <map_variables variable_1="H_R_out" variable_2="H_R_out"/>
-   <map_variables variable_1="RBC_volume" variable_2="RBC_volume"/>
-   <map_variables variable_1="RBC_volume_init" variable_2="RBC_volume_init"/>
    <map_variables variable_1="v_pos" variable_2="v_pos"/>
    <map_variables variable_1="v_neg" variable_2="v_neg"/>
    <map_variables variable_1="H_mean" variable_2="H_mean"/>

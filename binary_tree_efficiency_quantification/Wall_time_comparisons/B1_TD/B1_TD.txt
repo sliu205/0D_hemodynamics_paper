@@ -1,0 +1,1353 @@
+//#This model was automatically generated with the circulatory_autogen software
+
+//# https://github.com/FinbarArgus/circulatory_autogen 
+
+def model CardiovascularSystem as
+    def import using "B1_TD_parameters.cellml" for
+        comp parameters using comp parameters;
+        comp parameters_global using comp parameters_global;
+    enddef;
+
+    def comp environment as
+        var time: second {pub: out};
+    enddef;
+
+    //#STARTGENBELOW
+
+    //------------units------------//
+
+    def import using "B1_TD_units.cellml" for
+        unit s2 using unit s2;
+        unit Hz using unit Hz;
+        unit millis using unit millis;
+        unit per_millis using unit per_millis;
+        unit mm using unit mm;
+        unit m2 using unit m2;
+        unit mm2 using unit mm2;
+        unit m3 using unit m3;
+        unit m4 using unit m4;
+        unit mm3 using unit mm3;
+        unit J_per_s using unit J_per_s;
+        unit mol_per_s using unit mol_per_s;
+        unit mmol_per_s using unit mmol_per_s;
+        unit umol_per_s using unit umol_per_s;
+        unit C_per_s using unit C_per_s;
+        unit mC_per_s using unit mC_per_s;
+        unit uC_per_s using unit uC_per_s;
+        unit nC_per_s using unit nC_per_s;
+        unit Cm_per_millis using unit Cm_per_millis;
+        unit m_per_s using unit m_per_s;
+        unit mm_per_s using unit mm_per_s;
+        unit um_per_s using unit um_per_s;
+        unit rad_per_s using unit rad_per_s;
+        unit m3_per_s using unit m3_per_s;
+        unit mL using unit mL;
+        unit per_milliL_s using unit per_milliL_s;
+        unit s_per_m3 using unit s_per_m3;
+        unit s_per_milliV using unit s_per_milliV;
+        unit s_per_millis using unit s_per_millis;
+        unit millis_per_s using unit millis_per_s;
+        unit mm3_per_s using unit mm3_per_s;
+        unit l_per_s using unit l_per_s;
+        unit per_ml_s using unit per_ml_s;
+        unit per_m3_s using unit per_m3_s;
+        unit J_per_mol using unit J_per_mol;
+        unit J_per_kmol_K using unit J_per_kmol_K;
+        unit J_per_M using unit J_per_M;
+        unit J_per_C using unit J_per_C;
+        unit J_per_C_s using unit J_per_C_s;
+        unit J_per_m using unit J_per_m;
+        unit J_per_m3 using unit J_per_m3;
+        unit mmHg using unit mmHg;
+        unit per_mmHg using unit per_mmHg;
+        unit mmHg2 using unit mmHg2;
+        unit Pa_per_mmHg using unit Pa_per_mmHg;
+        unit m3_per_J using unit m3_per_J;
+        unit J_per_m3s using unit J_per_m3s;
+        unit m3_per_Js using unit m3_per_Js;
+        unit J2_per_m6 using unit J2_per_m6;
+        unit Js2_per_C2 using unit Js2_per_C2;
+        unit Js2_per_mol2 using unit Js2_per_mol2;
+        unit Js_per_mol2 using unit Js_per_mol2;
+        unit Js_per_C2 using unit Js_per_C2;
+        unit J_per_mol2 using unit J_per_mol2;
+        unit C2_per_J_s using unit C2_per_J_s;
+        unit J_per_C2 using unit J_per_C2;
+        unit C2_per_J using unit C2_per_J;
+        unit mol_per_m3 using unit mol_per_m3;
+        unit M using unit M;
+        unit mM using unit mM;
+        unit milliM using unit milliM;
+        unit uM using unit uM;
+        unit kg_per_m3 using unit kg_per_m3;
+        unit m3_per_kg using unit m3_per_kg;
+        unit per_m3 using unit per_m3;
+        unit mol_per_m2_s using unit mol_per_m2_s;
+        unit mM_m_per_s using unit mM_m_per_s;
+        unit J_per_m2_s using unit J_per_m2_s;
+        unit Js_per_m4 using unit Js_per_m4;
+        unit mM_per_s using unit mM_per_s;
+        unit per_s using unit per_s;
+        unit per_s2 using unit per_s2;
+        unit per_mM_s using unit per_mM_s;
+        unit m6_per_mol2_s using unit m6_per_mol2_s;
+        unit m3_per_mol using unit m3_per_mol;
+        unit mol_per_m3_s using unit mol_per_m3_s;
+        unit per_mol using unit per_mol;
+        unit J_per_mol_K using unit J_per_mol_K;
+        unit m2_per_s using unit m2_per_s;
+        unit per_C using unit per_C;
+        unit per_m using unit per_m;
+        unit per_mM using unit per_mM;
+        unit Js2_per_m2 using unit Js2_per_m2;
+        unit Js_per_m2 using unit Js_per_m2;
+        unit J_per_m2 using unit J_per_m2;
+        unit m_per_s2 using unit m_per_s2;
+        unit rad_per_s2 using unit rad_per_s2;
+        unit Js_per_m3 using unit Js_per_m3;
+        unit Js2_per_m5 using unit Js2_per_m5;
+        unit m5_per_Js2 using unit m5_per_Js2;
+        unit J_per_m6 using unit J_per_m6;
+        unit m6_per_J using unit m6_per_J;
+        unit m6_per_Js using unit m6_per_Js;
+        unit mm6_per_J using unit mm6_per_J;
+        unit Js2_per_m9 using unit Js2_per_m9;
+        unit m6s_per_J using unit m6s_per_J;
+        unit Js_per_m6 using unit Js_per_m6;
+        unit Js2_per_m6 using unit Js2_per_m6;
+        unit m3_per_s2 using unit m3_per_s2;
+        unit mm3_per_s2 using unit mm3_per_s2;
+        unit per_mm3 using unit per_mm3;
+        unit UnitValve using unit UnitValve;
+        unit J_per_m9 using unit J_per_m9;
+        unit milliV using unit milliV;
+        unit per_milliV using unit per_milliV;
+        unit millis_per_milliV using unit millis_per_milliV;
+        unit per_V using unit per_V;
+        unit milliV_per_V using unit milliV_per_V;
+        unit V_per_milliV using unit V_per_milliV;
+        unit V_per_s using unit V_per_s;
+        unit milliV_per_kiloV using unit milliV_per_kiloV;
+        unit V2 using unit V2;
+        unit milliV2 using unit milliV2;
+        unit millimol using unit millimol;
+        unit millimolar using unit millimolar;
+        unit per_millimolar using unit per_millimolar;
+        unit per_millimolar_s using unit per_millimolar_s;
+        unit per_millimolar2_s using unit per_millimolar2_s;
+        unit millimolar_per_s using unit millimolar_per_s;
+        unit millimolar_per_megamolar using unit millimolar_per_megamolar;
+        unit per_millimol_milliS using unit per_millimol_milliS;
+        unit per_millimol_millis using unit per_millimol_millis;
+        unit per_millimol_s using unit per_millimol_s;
+        unit microm using unit microm;
+        unit microS using unit microS;
+        unit microm3 using unit microm3;
+        unit m3_per_microm3 using unit m3_per_microm3;
+        unit picoF using unit picoF;
+        unit S_per_F using unit S_per_F;
+        unit m3_per_Fs using unit m3_per_Fs;
+        unit A_per_F using unit A_per_F;
+        unit megaOhm using unit megaOhm;
+        unit nanoA using unit nanoA;
+        unit nanoA_per_milliA using unit nanoA_per_milliA;
+        unit nanoA_per_A using unit nanoA_per_A;
+        unit A_per_nanoA using unit A_per_nanoA;
+        unit C_per_mol using unit C_per_mol;
+        unit m3_per_J_millis using unit m3_per_J_millis;
+        unit m3_per_mol_millis using unit m3_per_mol_millis;
+        unit m3_per_millimol_s using unit m3_per_millimol_s;
+        unit millimol_per_m3 using unit millimol_per_m3;
+        unit mmol_per_l using unit mmol_per_l;
+        unit l_per_mmol using unit l_per_mmol;
+        unit l_per_mmol_per_s using unit l_per_mmol_per_s;
+        unit l2_per_mmol_per_s using unit l2_per_mmol_per_s;
+        unit mmol_per_s2 using unit mmol_per_s2;
+        unit mmol using unit mmol;
+        unit mmol_per_l_per_s using unit mmol_per_l_per_s;
+        unit Hz2 using unit Hz2;
+        unit cm using unit cm;
+        unit J_per_m4_s using unit J_per_m4_s;
+        unit m3_per_mol_per_sec using unit m3_per_mol_per_sec;
+        unit mol_per_m3_per_kPa using unit mol_per_m3_per_kPa;
+        unit mol_per_m3_per_Pa using unit mol_per_m3_per_Pa;
+        unit m3_per_mol_per_s using unit m3_per_mol_per_s;
+        unit mol_per_m3_per_s using unit mol_per_m3_per_s;
+        unit dim using unit dim;
+        unit fmol using unit fmol;
+        unit per_fmol using unit per_fmol;
+        unit nJ_per_s using unit nJ_per_s;
+        unit fmol_per_s using unit fmol_per_s;
+        unit nC_per_fmol using unit nC_per_fmol;
+        unit nC using unit nC;
+        unit nJ_per_fmol using unit nJ_per_fmol;
+        unit nJ_per_nC using unit nJ_per_nC;
+        unit fC using unit fC;
+        unit fF using unit fF;
+        unit volt_per_sec using unit volt_per_sec;
+        unit J_per_K_per_mol using unit J_per_K_per_mol;
+        unit nS using unit nS;
+        unit nSmV using unit nSmV;
+        unit per_ms using unit per_ms;
+        unit mM4 using unit mM4;
+        unit mM_per_ms using unit mM_per_ms;
+        unit mMms using unit mMms;
+        unit per_mMms using unit per_mMms;
+        unit molar using unit molar;
+        unit micromolar using unit micromolar;
+        unit nanomolar using unit nanomolar;
+        unit ms using unit ms;
+        unit m_cubed using unit m_cubed;
+        unit mV using unit mV;
+        unit m_cubed_per_second using unit m_cubed_per_second;
+        unit micromolar_m_cubed using unit micromolar_m_cubed;
+        unit C using unit C;
+        unit C_per_millimol using unit C_per_millimol;
+        unit picoA using unit picoA;
+        unit picoA_per_picoFarad using unit picoA_per_picoFarad;
+        unit microL using unit microL;
+        unit picoFarad using unit picoFarad;
+        unit cm3_per_second using unit cm3_per_second;
+        unit um3_per_second using unit um3_per_second;
+        unit m3mM using unit m3mM;
+        unit ms2 using unit ms2;
+        unit nM3_per_ps using unit nM3_per_ps;
+        unit per_s_squared_m_cubed using unit per_s_squared_m_cubed;
+        unit per_meters_cubed using unit per_meters_cubed;
+        unit umeter3 using unit umeter3;
+        unit mill1 using unit mill1;
+        unit picoV using unit picoV;
+        unit pic0 using unit pic0;
+        unit nanoV using unit nanoV;
+        unit nan0 using unit nan0;
+        unit kPa using unit kPa;
+        unit L_per_s using unit L_per_s;
+        unit L_per_s_per_kPa using unit L_per_s_per_kPa;
+        unit kPa_per_L using unit kPa_per_L;
+        unit L_per_kPa using unit L_per_kPa;
+        unit kPa_s_per_L using unit kPa_s_per_L;
+    enddef;
+
+    //------------imports------------//
+
+    def import using "B1_TD_modules.cellml" for
+        comp inlet_module using comp PP_capillary_H_D;
+    enddef;
+
+    def import using "B1_TD_modules.cellml" for
+        comp VV_junc1_module using comp VV_junction_H_D;
+    enddef;
+
+    def import using "B1_TD_modules.cellml" for
+        comp PV1_module using comp PP_pericyte_H_D;
+    enddef;
+
+    def import using "B1_TD_modules.cellml" for
+        comp PV2_module using comp PP_pericyte_H_D;
+    enddef;
+
+    def import using "B1_TD_modules.cellml" for
+        comp V1_module using comp VP_capillary_H_D;
+    enddef;
+
+    def import using "B1_TD_modules.cellml" for
+        comp V2_module using comp VP_capillary_H_D;
+    enddef;
+
+    //------------vessel mappings------------//
+
+    def map between inlet_module and VV_junc1_module for
+        vars H_R_out and H_to1;
+        vars H_L_out_RHS and H_from1;
+    enddef;
+
+    def map between inlet_module and VV_junc1_module for
+        vars v_d and vbc1;
+        vars u_out and u;
+    enddef;
+
+    def map between inlet_module and VV_junc1_module for
+        vars r and r_bc1;
+    enddef;
+
+    def map between inlet_module and VV_junc1_module for
+        vars C and C_conn1;
+    enddef;
+
+    def map between VV_junc1_module and PV1_module for
+        vars vbc3 and v;
+        vars u_d and u_in;
+    enddef;
+
+    def map between VV_junc1_module and PV1_module for
+        vars H_from3 and H_R_out_LHS;
+        vars H_to3 and H_L_out;
+    enddef;
+
+    def map between VV_junc1_module and PV1_module for
+        vars r_bc3 and r;
+    enddef;
+
+    def map between VV_junc1_module and PV1_module for
+        vars C_conn3 and C;
+    enddef;
+
+    def map between VV_junc1_module and PV2_module for
+        vars vbc4 and v;
+        vars u_d and u_in;
+    enddef;
+
+    def map between VV_junc1_module and PV2_module for
+        vars H_from4 and H_R_out_LHS;
+        vars H_to4 and H_L_out;
+    enddef;
+
+    def map between VV_junc1_module and PV2_module for
+        vars r_bc4 and r;
+    enddef;
+
+    def map between VV_junc1_module and PV2_module for
+        vars C_conn4 and C;
+    enddef;
+
+    def map between PV1_module and V1_module for
+        vars H_R_out and H_R_out_LHS;
+        vars H_L_out_RHS and H_L_out;
+    enddef;
+
+    def map between PV1_module and V1_module for
+        vars v_d and v_in;
+        vars u_out and u;
+    enddef;
+
+    def map between PV2_module and V2_module for
+        vars H_R_out and H_R_out_LHS;
+        vars H_L_out_RHS and H_L_out;
+    enddef;
+
+    def map between PV2_module and V2_module for
+        vars v_d and v_in;
+        vars u_out and u;
+    enddef;
+
+    //------------terminal venous connection------------//
+
+    def comp terminal_venous_connection as
+    enddef;
+
+    //------------generic junction connection------------//
+
+    def comp generic_junction_connection as
+    enddef;
+
+    //------------applying multiport operations for ports------------//
+
+    def comp sum_blood_volume as
+    enddef;
+
+    //------------access_variables------------//
+
+    def comp inlet as
+        var H_global_L: dimensionless {pub: in};
+        var H_global_R: dimensionless {pub: in};
+        var H_R_out_LHS: dimensionless {pub: in};
+        var gamma_mirror: dimensionless {pub: in};
+        var tau_H_down: second {pub: in};
+        var tau_H_mean: second {pub: in};
+        var v_eps: m3_per_s {pub: in};
+        var q_C_init: m3 {pub: in};
+        var r: metre {pub: in};
+        var mu_plasma: Js_per_m3 {pub: in};
+        var u_in: J_per_m3 {pub: in};
+        var u_ext: J_per_m3 {pub: in};
+        var tau_link: second {pub: in};
+        var v_scale: m3_per_s {pub: in};
+        var one_mm3: m3 {pub: in};
+        var w_v: dimensionless {pub: in};
+        var w_v_d: dimensionless {pub: in};
+        var H_link_R: dimensionless {pub: in};
+        var H_link_L: dimensionless {pub: in};
+        var H_L_in: dimensionless {pub: in};
+        var H_R_in: dimensionless {pub: in};
+        var H_up: dimensionless {pub: in};
+        var H_down: dimensionless {pub: in};
+        var H_down_target: dimensionless {pub: in};
+        var s_v_d: dimensionless {pub: in};
+        var H_L_out: dimensionless {pub: in};
+        var H_R_out: dimensionless {pub: in};
+        var RBC_volume: m3 {pub: in};
+        var RBC_volume_init: m3 {pub: in};
+        var v_pos: m3_per_s {pub: in};
+        var v_neg: m3_per_s {pub: in};
+        var v_d_pos: m3_per_s {pub: in};
+        var v_d_neg: m3_per_s {pub: in};
+        var H_mean: dimensionless {pub: in};
+        var H_mass_L: dimensionless {pub: in};
+        var H_mass_R: dimensionless {pub: in};
+        var q_C: m3 {pub: in};
+        var q: m3 {pub: in};
+        var q_us: m3 {pub: in};
+        var C: m6_per_J {pub: in};
+        var Z: dimensionless {pub: in};
+        var mu_45: dimensionless {pub: in};
+        var mu: Js_per_m3 {pub: in};
+        var hem_dep_u_rel: dimensionless {pub: in};
+        var R: Js_per_m6 {pub: in};
+        var v: m3_per_s {pub: in};
+        var v_mm3_s: mm3_per_s {pub: in};
+        var u: J_per_m3 {pub: in};
+        var u_mmHg: dimensionless {pub: in};
+        var v_d: m3_per_s {pub: in};
+        var v_d_mm3_s: mm3_per_s {pub: in};
+    enddef;
+
+    def comp VV_junc1 as
+        var div_0: dimensionless {pub: in};
+        var div_0y: dimensionless {pub: in};
+        var tau_junc: second {pub: in};
+        var v_threshold: m3_per_s {pub: in};
+        var k: dimensionless {pub: in};
+        var H_global_L: dimensionless {pub: in};
+        var H_global_R: dimensionless {pub: in};
+        var q_C_init: m3 {pub: in};
+        var r: metre {pub: in};
+        var mu_plasma: Js_per_m3 {pub: in};
+        var u_ext: J_per_m3 {pub: in};
+        var v_scale: m3_per_s {pub: in};
+        var one_mm3: m3 {pub: in};
+        var vbc2: m3_per_s {pub: in};
+        var vj1: m3_per_s {pub: in};
+        var vj2: m3_per_s {pub: in};
+        var vj3: m3_per_s {pub: in};
+        var vj4: m3_per_s {pub: in};
+        var H_to2: dimensionless {pub: in};
+        var H_split1: dimensionless {pub: in};
+        var H_split2: dimensionless {pub: in};
+        var H_split3: dimensionless {pub: in};
+        var H_split4: dimensionless {pub: in};
+        var H_daughter1: dimensionless {pub: in};
+        var H_daughter2: dimensionless {pub: in};
+        var H_daughter3: dimensionless {pub: in};
+        var H_daughter4: dimensionless {pub: in};
+        var H_from1_target: dimensionless {pub: in};
+        var H_from2_target: dimensionless {pub: in};
+        var H_from3_target: dimensionless {pub: in};
+        var H_from4_target: dimensionless {pub: in};
+        var H_from1: dimensionless {pub: in};
+        var H_from2: dimensionless {pub: in};
+        var H_from3: dimensionless {pub: in};
+        var H_from4: dimensionless {pub: in};
+        var r_bc2: metre {pub: in};
+        var D1: metre {pub: in};
+        var D2: metre {pub: in};
+        var D3: metre {pub: in};
+        var D4: metre {pub: in};
+        var w_in1: dimensionless {pub: in};
+        var w_in2: dimensionless {pub: in};
+        var w_in3: dimensionless {pub: in};
+        var w_in4: dimensionless {pub: in};
+        var w_out1: dimensionless {pub: in};
+        var w_out2: dimensionless {pub: in};
+        var w_out3: dimensionless {pub: in};
+        var w_out4: dimensionless {pub: in};
+        var Qin1: m3_per_s {pub: in};
+        var Qin2: m3_per_s {pub: in};
+        var Qin3: m3_per_s {pub: in};
+        var Qin4: m3_per_s {pub: in};
+        var Qout1: m3_per_s {pub: in};
+        var Qout2: m3_per_s {pub: in};
+        var Qout3: m3_per_s {pub: in};
+        var Qout4: m3_per_s {pub: in};
+        var Qin_tot: m3_per_s {pub: in};
+        var Qout_tot: m3_per_s {pub: in};
+        var bc1_is_in: dimensionless {pub: in};
+        var bc2_is_in: dimensionless {pub: in};
+        var bc3_is_in: dimensionless {pub: in};
+        var bc4_is_in: dimensionless {pub: in};
+        var bc1_is_out: dimensionless {pub: in};
+        var bc2_is_out: dimensionless {pub: in};
+        var bc3_is_out: dimensionless {pub: in};
+        var bc4_is_out: dimensionless {pub: in};
+        var n_in: dimensionless {pub: in};
+        var n_out: dimensionless {pub: in};
+        var junction_type: dimensionless {pub: in};
+        var is_split: dimensionless {pub: in};
+        var is_merge: dimensionless {pub: in};
+        var feed1: dimensionless {pub: in};
+        var feed2: dimensionless {pub: in};
+        var feed3: dimensionless {pub: in};
+        var feed4: dimensionless {pub: in};
+        var alpha1: dimensionless {pub: in};
+        var alpha2: dimensionless {pub: in};
+        var alpha3: dimensionless {pub: in};
+        var alpha4: dimensionless {pub: in};
+        var Qout1_rem: m3_per_s {pub: in};
+        var Qout2_rem: m3_per_s {pub: in};
+        var Qout3_rem: m3_per_s {pub: in};
+        var Qout4_rem: m3_per_s {pub: in};
+        var beta1: dimensionless {pub: in};
+        var beta2: dimensionless {pub: in};
+        var beta3: dimensionless {pub: in};
+        var beta4: dimensionless {pub: in};
+        var D_F: metre {pub: in};
+        var D_alpha: metre {pub: in};
+        var D_beta: metre {pub: in};
+        var v_alpha: m3_per_s {pub: in};
+        var v_beta: m3_per_s {pub: in};
+        var FQB_alpha: dimensionless {pub: in};
+        var FQE_alpha: dimensionless {pub: in};
+        var B: dimensionless {pub: in};
+        var A: dimensionless {pub: in};
+        var X_0: dimensionless {pub: in};
+        var ph: dimensionless {pub: in};
+        var y_raw: dimensionless {pub: in};
+        var y: dimensionless {pub: in};
+        var H_VV_out_alpha: dimensionless {pub: in};
+        var H_VV_out_beta: dimensionless {pub: in};
+        var RBC_in: m3_per_s {pub: in};
+        var RBC_out: m3_per_s {pub: in};
+        var RBC_volume_init: m3 {pub: in};
+        var RBC_volume: m3 {pub: in};
+        var H_mean: dimensionless {pub: in};
+        var C_conn2: m6_per_J {pub: in};
+        var C_max12: m6_per_J {pub: in};
+        var C_max123: m6_per_J {pub: in};
+        var C: m6_per_J {pub: in};
+        var q_C: m3 {pub: in};
+        var q_C_d: m3 {pub: in};
+        var q: m3 {pub: in};
+        var q_us: m3 {pub: in};
+        var R: Js_per_m6 {pub: in};
+        var u: J_per_m3 {pub: in};
+        var u_mmHg: dimensionless {pub: in};
+        var v: m3_per_s {pub: in};
+        var v_mm3_s: mm3_per_s {pub: in};
+        var u_d: J_per_m3 {pub: in};
+        var u_d_mmHg: dimensionless {pub: in};
+    enddef;
+
+    def comp PV1 as
+        var R_constriction_base: Js_per_m6 {pub: in};
+        var R_constriction_final: Js_per_m6 {pub: in};
+        var R_constriction: Js_per_m6 {pub: in};
+        var tau_sig: second {pub: in};
+        var t0: second {pub: in};
+        var H_global_L: dimensionless {pub: in};
+        var H_global_R: dimensionless {pub: in};
+        var gamma_mirror: dimensionless {pub: in};
+        var tau_H_down: second {pub: in};
+        var tau_H_mean: second {pub: in};
+        var v_eps: m3_per_s {pub: in};
+        var q_C_init: m3 {pub: in};
+        var r: metre {pub: in};
+        var mu_plasma: Js_per_m3 {pub: in};
+        var u_ext: J_per_m3 {pub: in};
+        var tau_link: second {pub: in};
+        var v_scale: m3_per_s {pub: in};
+        var one_mm3: m3 {pub: in};
+        var w_v: dimensionless {pub: in};
+        var w_v_d: dimensionless {pub: in};
+        var H_link_R: dimensionless {pub: in};
+        var H_link_L: dimensionless {pub: in};
+        var H_L_in: dimensionless {pub: in};
+        var H_R_in: dimensionless {pub: in};
+        var H_up: dimensionless {pub: in};
+        var H_down: dimensionless {pub: in};
+        var H_down_target: dimensionless {pub: in};
+        var s_v_d: dimensionless {pub: in};
+        var H_L_out: dimensionless {pub: in};
+        var H_R_out: dimensionless {pub: in};
+        var RBC_volume: m3 {pub: in};
+        var RBC_volume_init: m3 {pub: in};
+        var v_pos: m3_per_s {pub: in};
+        var v_neg: m3_per_s {pub: in};
+        var v_d_pos: m3_per_s {pub: in};
+        var v_d_neg: m3_per_s {pub: in};
+        var H_mean: dimensionless {pub: in};
+        var H_mass_L: dimensionless {pub: in};
+        var H_mass_R: dimensionless {pub: in};
+        var q_C: m3 {pub: in};
+        var q: m3 {pub: in};
+        var q_us: m3 {pub: in};
+        var C: m6_per_J {pub: in};
+        var Z: dimensionless {pub: in};
+        var mu_45: dimensionless {pub: in};
+        var mu: Js_per_m3 {pub: in};
+        var hem_dep_u_rel: dimensionless {pub: in};
+        var R: Js_per_m6 {pub: in};
+        var v: m3_per_s {pub: in};
+        var v_mm3_s: mm3_per_s {pub: in};
+        var u: J_per_m3 {pub: in};
+        var u_mmHg: dimensionless {pub: in};
+        var v_d: m3_per_s {pub: in};
+        var v_d_mm3_s: mm3_per_s {pub: in};
+    enddef;
+
+    def comp PV2 as
+        var R_constriction_base: Js_per_m6 {pub: in};
+        var R_constriction_final: Js_per_m6 {pub: in};
+        var R_constriction: Js_per_m6 {pub: in};
+        var tau_sig: second {pub: in};
+        var t0: second {pub: in};
+        var H_global_L: dimensionless {pub: in};
+        var H_global_R: dimensionless {pub: in};
+        var gamma_mirror: dimensionless {pub: in};
+        var tau_H_down: second {pub: in};
+        var tau_H_mean: second {pub: in};
+        var v_eps: m3_per_s {pub: in};
+        var q_C_init: m3 {pub: in};
+        var r: metre {pub: in};
+        var mu_plasma: Js_per_m3 {pub: in};
+        var u_ext: J_per_m3 {pub: in};
+        var tau_link: second {pub: in};
+        var v_scale: m3_per_s {pub: in};
+        var one_mm3: m3 {pub: in};
+        var w_v: dimensionless {pub: in};
+        var w_v_d: dimensionless {pub: in};
+        var H_link_R: dimensionless {pub: in};
+        var H_link_L: dimensionless {pub: in};
+        var H_L_in: dimensionless {pub: in};
+        var H_R_in: dimensionless {pub: in};
+        var H_up: dimensionless {pub: in};
+        var H_down: dimensionless {pub: in};
+        var H_down_target: dimensionless {pub: in};
+        var s_v_d: dimensionless {pub: in};
+        var H_L_out: dimensionless {pub: in};
+        var H_R_out: dimensionless {pub: in};
+        var RBC_volume: m3 {pub: in};
+        var RBC_volume_init: m3 {pub: in};
+        var v_pos: m3_per_s {pub: in};
+        var v_neg: m3_per_s {pub: in};
+        var v_d_pos: m3_per_s {pub: in};
+        var v_d_neg: m3_per_s {pub: in};
+        var H_mean: dimensionless {pub: in};
+        var H_mass_L: dimensionless {pub: in};
+        var H_mass_R: dimensionless {pub: in};
+        var q_C: m3 {pub: in};
+        var q: m3 {pub: in};
+        var q_us: m3 {pub: in};
+        var C: m6_per_J {pub: in};
+        var Z: dimensionless {pub: in};
+        var mu_45: dimensionless {pub: in};
+        var mu: Js_per_m3 {pub: in};
+        var hem_dep_u_rel: dimensionless {pub: in};
+        var R: Js_per_m6 {pub: in};
+        var v: m3_per_s {pub: in};
+        var v_mm3_s: mm3_per_s {pub: in};
+        var u: J_per_m3 {pub: in};
+        var u_mmHg: dimensionless {pub: in};
+        var v_d: m3_per_s {pub: in};
+        var v_d_mm3_s: mm3_per_s {pub: in};
+    enddef;
+
+    def comp V1 as
+        var H_global_L: dimensionless {pub: in};
+        var H_global_R: dimensionless {pub: in};
+        var H_L_out_RHS: dimensionless {pub: in};
+        var gamma_mirror: dimensionless {pub: in};
+        var tau_H_down: second {pub: in};
+        var tau_H_mean: second {pub: in};
+        var v_eps: m3_per_s {pub: in};
+        var q_C_init: m3 {pub: in};
+        var r: metre {pub: in};
+        var mu_plasma: Js_per_m3 {pub: in};
+        var u_out: J_per_m3 {pub: in};
+        var u_ext: J_per_m3 {pub: in};
+        var tau_link: second {pub: in};
+        var v_scale: m3_per_s {pub: in};
+        var one_mm3: m3 {pub: in};
+        var w_v: dimensionless {pub: in};
+        var H_link_R: dimensionless {pub: in};
+        var H_link_L: dimensionless {pub: in};
+        var H_L_in: dimensionless {pub: in};
+        var H_R_in: dimensionless {pub: in};
+        var H_up: dimensionless {pub: in};
+        var H_down: dimensionless {pub: in};
+        var H_down_target: dimensionless {pub: in};
+        var s_v: dimensionless {pub: in};
+        var H_L_out: dimensionless {pub: in};
+        var H_R_out: dimensionless {pub: in};
+        var RBC_volume: m3 {pub: in};
+        var RBC_volume_init: m3 {pub: in};
+        var v_pos: m3_per_s {pub: in};
+        var v_neg: m3_per_s {pub: in};
+        var H_mean: dimensionless {pub: in};
+        var H_mass_L: dimensionless {pub: in};
+        var H_mass_R: dimensionless {pub: in};
+        var q_C: m3 {pub: in};
+        var q: m3 {pub: in};
+        var q_us: m3 {pub: in};
+        var C: m6_per_J {pub: in};
+        var Z: dimensionless {pub: in};
+        var mu_45: dimensionless {pub: in};
+        var mu: Js_per_m3 {pub: in};
+        var hem_dep_u_rel: dimensionless {pub: in};
+        var R: Js_per_m6 {pub: in};
+        var v: m3_per_s {pub: in};
+        var v_mm3_s: mm3_per_s {pub: in};
+        var u: J_per_m3 {pub: in};
+        var u_mmHg: dimensionless {pub: in};
+    enddef;
+
+    def comp V2 as
+        var H_global_L: dimensionless {pub: in};
+        var H_global_R: dimensionless {pub: in};
+        var H_L_out_RHS: dimensionless {pub: in};
+        var gamma_mirror: dimensionless {pub: in};
+        var tau_H_down: second {pub: in};
+        var tau_H_mean: second {pub: in};
+        var v_eps: m3_per_s {pub: in};
+        var q_C_init: m3 {pub: in};
+        var r: metre {pub: in};
+        var mu_plasma: Js_per_m3 {pub: in};
+        var u_out: J_per_m3 {pub: in};
+        var u_ext: J_per_m3 {pub: in};
+        var tau_link: second {pub: in};
+        var v_scale: m3_per_s {pub: in};
+        var one_mm3: m3 {pub: in};
+        var w_v: dimensionless {pub: in};
+        var H_link_R: dimensionless {pub: in};
+        var H_link_L: dimensionless {pub: in};
+        var H_L_in: dimensionless {pub: in};
+        var H_R_in: dimensionless {pub: in};
+        var H_up: dimensionless {pub: in};
+        var H_down: dimensionless {pub: in};
+        var H_down_target: dimensionless {pub: in};
+        var s_v: dimensionless {pub: in};
+        var H_L_out: dimensionless {pub: in};
+        var H_R_out: dimensionless {pub: in};
+        var RBC_volume: m3 {pub: in};
+        var RBC_volume_init: m3 {pub: in};
+        var v_pos: m3_per_s {pub: in};
+        var v_neg: m3_per_s {pub: in};
+        var H_mean: dimensionless {pub: in};
+        var H_mass_L: dimensionless {pub: in};
+        var H_mass_R: dimensionless {pub: in};
+        var q_C: m3 {pub: in};
+        var q: m3 {pub: in};
+        var q_us: m3 {pub: in};
+        var C: m6_per_J {pub: in};
+        var Z: dimensionless {pub: in};
+        var mu_45: dimensionless {pub: in};
+        var mu: Js_per_m3 {pub: in};
+        var hem_dep_u_rel: dimensionless {pub: in};
+        var R: Js_per_m6 {pub: in};
+        var v: m3_per_s {pub: in};
+        var v_mm3_s: mm3_per_s {pub: in};
+        var u: J_per_m3 {pub: in};
+        var u_mmHg: dimensionless {pub: in};
+    enddef;
+
+    //------------global_parameters_access------------//
+
+    def comp global as
+        var H_global_L: dimensionless {pub: in};
+        var H_global_R: dimensionless {pub: in};
+        var gamma_mirror: dimensionless {pub: in};
+        var tau_H_down: second {pub: in};
+        var tau_H_mean: second {pub: in};
+        var v_eps: m3_per_s {pub: in};
+        var q_C_init: m3 {pub: in};
+        var mu_plasma: Js_per_m3 {pub: in};
+        var u_ext: J_per_m3 {pub: in};
+        var tau_link: second {pub: in};
+        var v_scale: m3_per_s {pub: in};
+        var one_mm3: m3 {pub: in};
+        var div_0: dimensionless {pub: in};
+        var div_0y: dimensionless {pub: in};
+        var tau_junc: second {pub: in};
+        var v_threshold: m3_per_s {pub: in};
+        var k: dimensionless {pub: in};
+        var R: Js_per_m6 {pub: in};
+        var R_constriction_base: Js_per_m6 {pub: in};
+        var tau_sig: second {pub: in};
+        var t0: second {pub: in};
+    enddef;
+
+    //------------own vessel mappings------------//
+
+    def map between inlet and inlet_module for
+        vars H_global_L and H_global_L;
+        vars H_global_R and H_global_R;
+        vars H_R_out_LHS and H_R_out_LHS;
+        vars gamma_mirror and gamma_mirror;
+        vars tau_H_down and tau_H_down;
+        vars tau_H_mean and tau_H_mean;
+        vars v_eps and v_eps;
+        vars q_C_init and q_C_init;
+        vars r and r;
+        vars mu_plasma and mu_plasma;
+        vars u_in and u_in;
+        vars u_ext and u_ext;
+        vars tau_link and tau_link;
+        vars v_scale and v_scale;
+        vars one_mm3 and one_mm3;
+        vars w_v and w_v;
+        vars w_v_d and w_v_d;
+        vars H_link_R and H_link_R;
+        vars H_link_L and H_link_L;
+        vars H_L_in and H_L_in;
+        vars H_R_in and H_R_in;
+        vars H_up and H_up;
+        vars H_down and H_down;
+        vars H_down_target and H_down_target;
+        vars s_v_d and s_v_d;
+        vars H_L_out and H_L_out;
+        vars H_R_out and H_R_out;
+        vars RBC_volume and RBC_volume;
+        vars RBC_volume_init and RBC_volume_init;
+        vars v_pos and v_pos;
+        vars v_neg and v_neg;
+        vars v_d_pos and v_d_pos;
+        vars v_d_neg and v_d_neg;
+        vars H_mean and H_mean;
+        vars H_mass_L and H_mass_L;
+        vars H_mass_R and H_mass_R;
+        vars q_C and q_C;
+        vars q and q;
+        vars q_us and q_us;
+        vars C and C;
+        vars Z and Z;
+        vars mu_45 and mu_45;
+        vars mu and mu;
+        vars hem_dep_u_rel and hem_dep_u_rel;
+        vars R and R;
+        vars v and v;
+        vars v_mm3_s and v_mm3_s;
+        vars u and u;
+        vars u_mmHg and u_mmHg;
+        vars v_d and v_d;
+        vars v_d_mm3_s and v_d_mm3_s;
+    enddef;
+
+    def map between VV_junc1 and VV_junc1_module for
+        vars div_0 and div_0;
+        vars div_0y and div_0y;
+        vars tau_junc and tau_junc;
+        vars v_threshold and v_threshold;
+        vars k and k;
+        vars H_global_L and H_global_L;
+        vars H_global_R and H_global_R;
+        vars q_C_init and q_C_init;
+        vars r and r;
+        vars mu_plasma and mu_plasma;
+        vars u_ext and u_ext;
+        vars v_scale and v_scale;
+        vars one_mm3 and one_mm3;
+        vars vbc2 and vbc2;
+        vars vj1 and vj1;
+        vars vj2 and vj2;
+        vars vj3 and vj3;
+        vars vj4 and vj4;
+        vars H_to2 and H_to2;
+        vars H_split1 and H_split1;
+        vars H_split2 and H_split2;
+        vars H_split3 and H_split3;
+        vars H_split4 and H_split4;
+        vars H_daughter1 and H_daughter1;
+        vars H_daughter2 and H_daughter2;
+        vars H_daughter3 and H_daughter3;
+        vars H_daughter4 and H_daughter4;
+        vars H_from1_target and H_from1_target;
+        vars H_from2_target and H_from2_target;
+        vars H_from3_target and H_from3_target;
+        vars H_from4_target and H_from4_target;
+        vars H_from1 and H_from1;
+        vars H_from2 and H_from2;
+        vars H_from3 and H_from3;
+        vars H_from4 and H_from4;
+        vars r_bc2 and r_bc2;
+        vars D1 and D1;
+        vars D2 and D2;
+        vars D3 and D3;
+        vars D4 and D4;
+        vars w_in1 and w_in1;
+        vars w_in2 and w_in2;
+        vars w_in3 and w_in3;
+        vars w_in4 and w_in4;
+        vars w_out1 and w_out1;
+        vars w_out2 and w_out2;
+        vars w_out3 and w_out3;
+        vars w_out4 and w_out4;
+        vars Qin1 and Qin1;
+        vars Qin2 and Qin2;
+        vars Qin3 and Qin3;
+        vars Qin4 and Qin4;
+        vars Qout1 and Qout1;
+        vars Qout2 and Qout2;
+        vars Qout3 and Qout3;
+        vars Qout4 and Qout4;
+        vars Qin_tot and Qin_tot;
+        vars Qout_tot and Qout_tot;
+        vars bc1_is_in and bc1_is_in;
+        vars bc2_is_in and bc2_is_in;
+        vars bc3_is_in and bc3_is_in;
+        vars bc4_is_in and bc4_is_in;
+        vars bc1_is_out and bc1_is_out;
+        vars bc2_is_out and bc2_is_out;
+        vars bc3_is_out and bc3_is_out;
+        vars bc4_is_out and bc4_is_out;
+        vars n_in and n_in;
+        vars n_out and n_out;
+        vars junction_type and junction_type;
+        vars is_split and is_split;
+        vars is_merge and is_merge;
+        vars feed1 and feed1;
+        vars feed2 and feed2;
+        vars feed3 and feed3;
+        vars feed4 and feed4;
+        vars alpha1 and alpha1;
+        vars alpha2 and alpha2;
+        vars alpha3 and alpha3;
+        vars alpha4 and alpha4;
+        vars Qout1_rem and Qout1_rem;
+        vars Qout2_rem and Qout2_rem;
+        vars Qout3_rem and Qout3_rem;
+        vars Qout4_rem and Qout4_rem;
+        vars beta1 and beta1;
+        vars beta2 and beta2;
+        vars beta3 and beta3;
+        vars beta4 and beta4;
+        vars D_F and D_F;
+        vars D_alpha and D_alpha;
+        vars D_beta and D_beta;
+        vars v_alpha and v_alpha;
+        vars v_beta and v_beta;
+        vars FQB_alpha and FQB_alpha;
+        vars FQE_alpha and FQE_alpha;
+        vars B and B;
+        vars A and A;
+        vars X_0 and X_0;
+        vars ph and ph;
+        vars y_raw and y_raw;
+        vars y and y;
+        vars H_VV_out_alpha and H_VV_out_alpha;
+        vars H_VV_out_beta and H_VV_out_beta;
+        vars RBC_in and RBC_in;
+        vars RBC_out and RBC_out;
+        vars RBC_volume_init and RBC_volume_init;
+        vars RBC_volume and RBC_volume;
+        vars H_mean and H_mean;
+        vars C_conn2 and C_conn2;
+        vars C_max12 and C_max12;
+        vars C_max123 and C_max123;
+        vars C and C;
+        vars q_C and q_C;
+        vars q_C_d and q_C_d;
+        vars q and q;
+        vars q_us and q_us;
+        vars R and R;
+        vars u and u;
+        vars u_mmHg and u_mmHg;
+        vars v and v;
+        vars v_mm3_s and v_mm3_s;
+        vars u_d and u_d;
+        vars u_d_mmHg and u_d_mmHg;
+    enddef;
+
+    def map between PV1 and PV1_module for
+        vars R_constriction_base and R_constriction_base;
+        vars R_constriction_final and R_constriction_final;
+        vars R_constriction and R_constriction;
+        vars tau_sig and tau_sig;
+        vars t0 and t0;
+        vars H_global_L and H_global_L;
+        vars H_global_R and H_global_R;
+        vars gamma_mirror and gamma_mirror;
+        vars tau_H_down and tau_H_down;
+        vars tau_H_mean and tau_H_mean;
+        vars v_eps and v_eps;
+        vars q_C_init and q_C_init;
+        vars r and r;
+        vars mu_plasma and mu_plasma;
+        vars u_ext and u_ext;
+        vars tau_link and tau_link;
+        vars v_scale and v_scale;
+        vars one_mm3 and one_mm3;
+        vars w_v and w_v;
+        vars w_v_d and w_v_d;
+        vars H_link_R and H_link_R;
+        vars H_link_L and H_link_L;
+        vars H_L_in and H_L_in;
+        vars H_R_in and H_R_in;
+        vars H_up and H_up;
+        vars H_down and H_down;
+        vars H_down_target and H_down_target;
+        vars s_v_d and s_v_d;
+        vars H_L_out and H_L_out;
+        vars H_R_out and H_R_out;
+        vars RBC_volume and RBC_volume;
+        vars RBC_volume_init and RBC_volume_init;
+        vars v_pos and v_pos;
+        vars v_neg and v_neg;
+        vars v_d_pos and v_d_pos;
+        vars v_d_neg and v_d_neg;
+        vars H_mean and H_mean;
+        vars H_mass_L and H_mass_L;
+        vars H_mass_R and H_mass_R;
+        vars q_C and q_C;
+        vars q and q;
+        vars q_us and q_us;
+        vars C and C;
+        vars Z and Z;
+        vars mu_45 and mu_45;
+        vars mu and mu;
+        vars hem_dep_u_rel and hem_dep_u_rel;
+        vars R and R;
+        vars v and v;
+        vars v_mm3_s and v_mm3_s;
+        vars u and u;
+        vars u_mmHg and u_mmHg;
+        vars v_d and v_d;
+        vars v_d_mm3_s and v_d_mm3_s;
+    enddef;
+
+    def map between PV2 and PV2_module for
+        vars R_constriction_base and R_constriction_base;
+        vars R_constriction_final and R_constriction_final;
+        vars R_constriction and R_constriction;
+        vars tau_sig and tau_sig;
+        vars t0 and t0;
+        vars H_global_L and H_global_L;
+        vars H_global_R and H_global_R;
+        vars gamma_mirror and gamma_mirror;
+        vars tau_H_down and tau_H_down;
+        vars tau_H_mean and tau_H_mean;
+        vars v_eps and v_eps;
+        vars q_C_init and q_C_init;
+        vars r and r;
+        vars mu_plasma and mu_plasma;
+        vars u_ext and u_ext;
+        vars tau_link and tau_link;
+        vars v_scale and v_scale;
+        vars one_mm3 and one_mm3;
+        vars w_v and w_v;
+        vars w_v_d and w_v_d;
+        vars H_link_R and H_link_R;
+        vars H_link_L and H_link_L;
+        vars H_L_in and H_L_in;
+        vars H_R_in and H_R_in;
+        vars H_up and H_up;
+        vars H_down and H_down;
+        vars H_down_target and H_down_target;
+        vars s_v_d and s_v_d;
+        vars H_L_out and H_L_out;
+        vars H_R_out and H_R_out;
+        vars RBC_volume and RBC_volume;
+        vars RBC_volume_init and RBC_volume_init;
+        vars v_pos and v_pos;
+        vars v_neg and v_neg;
+        vars v_d_pos and v_d_pos;
+        vars v_d_neg and v_d_neg;
+        vars H_mean and H_mean;
+        vars H_mass_L and H_mass_L;
+        vars H_mass_R and H_mass_R;
+        vars q_C and q_C;
+        vars q and q;
+        vars q_us and q_us;
+        vars C and C;
+        vars Z and Z;
+        vars mu_45 and mu_45;
+        vars mu and mu;
+        vars hem_dep_u_rel and hem_dep_u_rel;
+        vars R and R;
+        vars v and v;
+        vars v_mm3_s and v_mm3_s;
+        vars u and u;
+        vars u_mmHg and u_mmHg;
+        vars v_d and v_d;
+        vars v_d_mm3_s and v_d_mm3_s;
+    enddef;
+
+    def map between V1 and V1_module for
+        vars H_global_L and H_global_L;
+        vars H_global_R and H_global_R;
+        vars H_L_out_RHS and H_L_out_RHS;
+        vars gamma_mirror and gamma_mirror;
+        vars tau_H_down and tau_H_down;
+        vars tau_H_mean and tau_H_mean;
+        vars v_eps and v_eps;
+        vars q_C_init and q_C_init;
+        vars r and r;
+        vars mu_plasma and mu_plasma;
+        vars u_out and u_out;
+        vars u_ext and u_ext;
+        vars tau_link and tau_link;
+        vars v_scale and v_scale;
+        vars one_mm3 and one_mm3;
+        vars w_v and w_v;
+        vars H_link_R and H_link_R;
+        vars H_link_L and H_link_L;
+        vars H_L_in and H_L_in;
+        vars H_R_in and H_R_in;
+        vars H_up and H_up;
+        vars H_down and H_down;
+        vars H_down_target and H_down_target;
+        vars s_v and s_v;
+        vars H_L_out and H_L_out;
+        vars H_R_out and H_R_out;
+        vars RBC_volume and RBC_volume;
+        vars RBC_volume_init and RBC_volume_init;
+        vars v_pos and v_pos;
+        vars v_neg and v_neg;
+        vars H_mean and H_mean;
+        vars H_mass_L and H_mass_L;
+        vars H_mass_R and H_mass_R;
+        vars q_C and q_C;
+        vars q and q;
+        vars q_us and q_us;
+        vars C and C;
+        vars Z and Z;
+        vars mu_45 and mu_45;
+        vars mu and mu;
+        vars hem_dep_u_rel and hem_dep_u_rel;
+        vars R and R;
+        vars v and v;
+        vars v_mm3_s and v_mm3_s;
+        vars u and u;
+        vars u_mmHg and u_mmHg;
+    enddef;
+
+    def map between V2 and V2_module for
+        vars H_global_L and H_global_L;
+        vars H_global_R and H_global_R;
+        vars H_L_out_RHS and H_L_out_RHS;
+        vars gamma_mirror and gamma_mirror;
+        vars tau_H_down and tau_H_down;
+        vars tau_H_mean and tau_H_mean;
+        vars v_eps and v_eps;
+        vars q_C_init and q_C_init;
+        vars r and r;
+        vars mu_plasma and mu_plasma;
+        vars u_out and u_out;
+        vars u_ext and u_ext;
+        vars tau_link and tau_link;
+        vars v_scale and v_scale;
+        vars one_mm3 and one_mm3;
+        vars w_v and w_v;
+        vars H_link_R and H_link_R;
+        vars H_link_L and H_link_L;
+        vars H_L_in and H_L_in;
+        vars H_R_in and H_R_in;
+        vars H_up and H_up;
+        vars H_down and H_down;
+        vars H_down_target and H_down_target;
+        vars s_v and s_v;
+        vars H_L_out and H_L_out;
+        vars H_R_out and H_R_out;
+        vars RBC_volume and RBC_volume;
+        vars RBC_volume_init and RBC_volume_init;
+        vars v_pos and v_pos;
+        vars v_neg and v_neg;
+        vars H_mean and H_mean;
+        vars H_mass_L and H_mass_L;
+        vars H_mass_R and H_mass_R;
+        vars q_C and q_C;
+        vars q and q;
+        vars q_us and q_us;
+        vars C and C;
+        vars Z and Z;
+        vars mu_45 and mu_45;
+        vars mu and mu;
+        vars hem_dep_u_rel and hem_dep_u_rel;
+        vars R and R;
+        vars v and v;
+        vars v_mm3_s and v_mm3_s;
+        vars u and u;
+        vars u_mmHg and u_mmHg;
+    enddef;
+
+    //------------own global parameters mapping------------//
+
+    def map between global and parameters_global for
+        vars H_global_L and H_global_L;
+        vars H_global_R and H_global_R;
+        vars gamma_mirror and gamma_mirror;
+        vars tau_H_down and tau_H_down;
+        vars tau_H_mean and tau_H_mean;
+        vars v_eps and v_eps;
+        vars q_C_init and q_C_init;
+        vars mu_plasma and mu_plasma;
+        vars u_ext and u_ext;
+        vars tau_link and tau_link;
+        vars v_scale and v_scale;
+        vars one_mm3 and one_mm3;
+        vars div_0 and div_0;
+        vars div_0y and div_0y;
+        vars tau_junc and tau_junc;
+        vars v_threshold and v_threshold;
+        vars k and k;
+        vars R and R;
+        vars R_constriction_base and R_constriction_base;
+        vars tau_sig and tau_sig;
+        vars t0 and t0;
+    enddef;
+
+    //------------parameters mapping to modules------------//
+
+    def map between parameters and inlet_module for
+        vars H_R_out_LHS_inlet and H_R_out_LHS;
+        vars l_inlet and l;
+        vars r_inlet and r;
+        vars u_in_inlet and u_in;
+    enddef;
+
+    def map between parameters_global and inlet_module for
+        vars H_global_L and H_global_L;
+        vars H_global_R and H_global_R;
+        vars gamma_mirror and gamma_mirror;
+        vars tau_H_down and tau_H_down;
+        vars tau_H_mean and tau_H_mean;
+        vars v_eps and v_eps;
+        vars q_C_init and q_C_init;
+        vars mu_plasma and mu_plasma;
+        vars u_ext and u_ext;
+        vars tau_link and tau_link;
+        vars v_scale and v_scale;
+        vars one_mm3 and one_mm3;
+    enddef;
+
+    def map between parameters and VV_junc1_module for
+        vars l_VV_junc1 and l;
+        vars r_VV_junc1 and r;
+        vars vbc2_VV_junc1 and vbc2;
+        vars H_to2_VV_junc1 and H_to2;
+        vars r_bc2_VV_junc1 and r_bc2;
+        vars C_conn2_VV_junc1 and C_conn2;
+    enddef;
+
+    def map between parameters_global and VV_junc1_module for
+        vars div_0 and div_0;
+        vars div_0y and div_0y;
+        vars tau_junc and tau_junc;
+        vars v_threshold and v_threshold;
+        vars k and k;
+        vars H_global_L and H_global_L;
+        vars H_global_R and H_global_R;
+        vars q_C_init and q_C_init;
+        vars mu_plasma and mu_plasma;
+        vars u_ext and u_ext;
+        vars v_scale and v_scale;
+        vars one_mm3 and one_mm3;
+        vars R and R;
+    enddef;
+
+    def map between parameters and PV1_module for
+        vars R_constriction_final_PV1 and R_constriction_final;
+        vars l_PV1 and l;
+        vars r_PV1 and r;
+    enddef;
+
+    def map between parameters_global and PV1_module for
+        vars R_constriction_base and R_constriction_base;
+        vars tau_sig and tau_sig;
+        vars t0 and t0;
+        vars H_global_L and H_global_L;
+        vars H_global_R and H_global_R;
+        vars gamma_mirror and gamma_mirror;
+        vars tau_H_down and tau_H_down;
+        vars tau_H_mean and tau_H_mean;
+        vars v_eps and v_eps;
+        vars q_C_init and q_C_init;
+        vars mu_plasma and mu_plasma;
+        vars u_ext and u_ext;
+        vars tau_link and tau_link;
+        vars v_scale and v_scale;
+        vars one_mm3 and one_mm3;
+    enddef;
+
+    def map between parameters and PV2_module for
+        vars R_constriction_final_PV2 and R_constriction_final;
+        vars l_PV2 and l;
+        vars r_PV2 and r;
+    enddef;
+
+    def map between parameters_global and PV2_module for
+        vars R_constriction_base and R_constriction_base;
+        vars tau_sig and tau_sig;
+        vars t0 and t0;
+        vars H_global_L and H_global_L;
+        vars H_global_R and H_global_R;
+        vars gamma_mirror and gamma_mirror;
+        vars tau_H_down and tau_H_down;
+        vars tau_H_mean and tau_H_mean;
+        vars v_eps and v_eps;
+        vars q_C_init and q_C_init;
+        vars mu_plasma and mu_plasma;
+        vars u_ext and u_ext;
+        vars tau_link and tau_link;
+        vars v_scale and v_scale;
+        vars one_mm3 and one_mm3;
+    enddef;
+
+    def map between parameters and V1_module for
+        vars H_L_out_RHS_V1 and H_L_out_RHS;
+        vars l_V1 and l;
+        vars r_V1 and r;
+        vars u_out_V1 and u_out;
+    enddef;
+
+    def map between parameters_global and V1_module for
+        vars H_global_L and H_global_L;
+        vars H_global_R and H_global_R;
+        vars gamma_mirror and gamma_mirror;
+        vars tau_H_down and tau_H_down;
+        vars tau_H_mean and tau_H_mean;
+        vars v_eps and v_eps;
+        vars q_C_init and q_C_init;
+        vars mu_plasma and mu_plasma;
+        vars u_ext and u_ext;
+        vars tau_link and tau_link;
+        vars v_scale and v_scale;
+        vars one_mm3 and one_mm3;
+    enddef;
+
+    def map between parameters and V2_module for
+        vars H_L_out_RHS_V2 and H_L_out_RHS;
+        vars l_V2 and l;
+        vars r_V2 and r;
+        vars u_out_V2 and u_out;
+    enddef;
+
+    def map between parameters_global and V2_module for
+        vars H_global_L and H_global_L;
+        vars H_global_R and H_global_R;
+        vars gamma_mirror and gamma_mirror;
+        vars tau_H_down and tau_H_down;
+        vars tau_H_mean and tau_H_mean;
+        vars v_eps and v_eps;
+        vars q_C_init and q_C_init;
+        vars mu_plasma and mu_plasma;
+        vars u_ext and u_ext;
+        vars tau_link and tau_link;
+        vars v_scale and v_scale;
+        vars one_mm3 and one_mm3;
+    enddef;
+
+    //------------time mapping------------//
+
+    def map between environment and inlet_module for
+        vars time and t;
+    enddef;
+
+    def map between environment and VV_junc1_module for
+        vars time and t;
+    enddef;
+
+    def map between environment and PV1_module for
+        vars time and t;
+    enddef;
+
+    def map between environment and PV2_module for
+        vars time and t;
+    enddef;
+
+    def map between environment and V1_module for
+        vars time and t;
+    enddef;
+
+    def map between environment and V2_module for
+        vars time and t;
+    enddef;
+enddef;
+
