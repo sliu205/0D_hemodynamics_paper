@@ -153,13 +153,6 @@
     <units name="m3_per_mol_millis" units_ref="m3_per_mol_millis"/>
     <units name="m3_per_millimol_s" units_ref="m3_per_millimol_s"/>
     <units name="millimol_per_m3" units_ref="millimol_per_m3"/>
-    <units name="mmol_per_l" units_ref="mmol_per_l"/>
-    <units name="l_per_mmol" units_ref="l_per_mmol"/>
-    <units name="l_per_mmol_per_s" units_ref="l_per_mmol_per_s"/>
-    <units name="l2_per_mmol_per_s" units_ref="l2_per_mmol_per_s"/>
-    <units name="mmol_per_s2" units_ref="mmol_per_s2"/>
-    <units name="mmol" units_ref="mmol"/>
-    <units name="mmol_per_l_per_s" units_ref="mmol_per_l_per_s"/>
     <units name="Hz2" units_ref="Hz2"/>
     <units name="cm" units_ref="cm"/>
     <units name="J_per_m4_s" units_ref="J_per_m4_s"/>
@@ -221,6 +214,25 @@
     <units name="kPa_per_L" units_ref="kPa_per_L"/>
     <units name="L_per_kPa" units_ref="L_per_kPa"/>
     <units name="kPa_s_per_L" units_ref="kPa_s_per_L"/>
+    <units name="mol_per_L" units_ref="mol_per_L"/>
+    <units name="L_per_mol" units_ref="L_per_mol"/>
+    <units name="minute" units_ref="minute"/>
+    <units name="umol" units_ref="umol"/>
+    <units name="per_umol" units_ref="per_umol"/>
+    <units name="umol_per_minute" units_ref="umol_per_minute"/>
+    <units name="J_per_umol" units_ref="J_per_umol"/>
+    <units name="per_minute" units_ref="per_minute"/>
+    <units name="per_minute_umol" units_ref="per_minute_umol"/>
+    <units name="umolar" units_ref="umolar"/>
+    <units name="per_umolar" units_ref="per_umolar"/>
+    <units name="umolar_per_minute" units_ref="umolar_per_minute"/>
+    <units name="J_per_umolar" units_ref="J_per_umolar"/>
+    <units name="per_minute_umolar" units_ref="per_minute_umolar"/>
+    <units name="L_per_m3" units_ref="L_per_m3"/>
+    <units name="pH" units_ref="pH"/>
+    <units name="Celsius" units_ref="Celsius"/>
+    <units name="Celsius_1" units_ref="Celsius_1"/>
+    <units name="Celsius_2" units_ref="Celsius_2"/>
 </import>
 <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;imports&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;//-->
 <import xlink:href="B1_I_modules.cellml">

@@ -18,9 +18,9 @@ print("Running PATCHED step2.py (v4 - environment__time fix)")
 print("=" * 60)
 
 # Files
-MAIN = "B1_TD.txt"
-MODULES = "B1_TD_modules.txt"
-PARAMS_CSV = "B1_TD_parameters.csv"
+MAIN = "B2_TD.txt"
+MODULES = "B2_TD_modules.txt"
+PARAMS_CSV = "B2_TD_parameters.csv"
 INITIAL_CSV = "initial_params.csv"
 OUTPUT = "generated_model.py"
 

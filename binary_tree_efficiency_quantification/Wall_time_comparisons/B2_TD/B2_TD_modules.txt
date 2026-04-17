@@ -1,0 +1,1481 @@
+def model modules as
+    //------------module_units------------//
+
+    def import using "B2_TD_units.cellml" for
+        unit s2 using unit s2;
+        unit Hz using unit Hz;
+        unit millis using unit millis;
+        unit per_millis using unit per_millis;
+        unit mm using unit mm;
+        unit m2 using unit m2;
+        unit mm2 using unit mm2;
+        unit m3 using unit m3;
+        unit m4 using unit m4;
+        unit mm3 using unit mm3;
+        unit J_per_s using unit J_per_s;
+        unit mol_per_s using unit mol_per_s;
+        unit mmol_per_s using unit mmol_per_s;
+        unit umol_per_s using unit umol_per_s;
+        unit C_per_s using unit C_per_s;
+        unit mC_per_s using unit mC_per_s;
+        unit uC_per_s using unit uC_per_s;
+        unit nC_per_s using unit nC_per_s;
+        unit Cm_per_millis using unit Cm_per_millis;
+        unit m_per_s using unit m_per_s;
+        unit mm_per_s using unit mm_per_s;
+        unit um_per_s using unit um_per_s;
+        unit rad_per_s using unit rad_per_s;
+        unit m3_per_s using unit m3_per_s;
+        unit mL using unit mL;
+        unit per_milliL_s using unit per_milliL_s;
+        unit s_per_m3 using unit s_per_m3;
+        unit s_per_milliV using unit s_per_milliV;
+        unit s_per_millis using unit s_per_millis;
+        unit millis_per_s using unit millis_per_s;
+        unit mm3_per_s using unit mm3_per_s;
+        unit l_per_s using unit l_per_s;
+        unit per_ml_s using unit per_ml_s;
+        unit per_m3_s using unit per_m3_s;
+        unit J_per_mol using unit J_per_mol;
+        unit J_per_kmol_K using unit J_per_kmol_K;
+        unit J_per_M using unit J_per_M;
+        unit J_per_C using unit J_per_C;
+        unit J_per_C_s using unit J_per_C_s;
+        unit J_per_m using unit J_per_m;
+        unit J_per_m3 using unit J_per_m3;
+        unit mmHg using unit mmHg;
+        unit per_mmHg using unit per_mmHg;
+        unit mmHg2 using unit mmHg2;
+        unit Pa_per_mmHg using unit Pa_per_mmHg;
+        unit m3_per_J using unit m3_per_J;
+        unit J_per_m3s using unit J_per_m3s;
+        unit m3_per_Js using unit m3_per_Js;
+        unit J2_per_m6 using unit J2_per_m6;
+        unit Js2_per_C2 using unit Js2_per_C2;
+        unit Js2_per_mol2 using unit Js2_per_mol2;
+        unit Js_per_mol2 using unit Js_per_mol2;
+        unit Js_per_C2 using unit Js_per_C2;
+        unit J_per_mol2 using unit J_per_mol2;
+        unit C2_per_J_s using unit C2_per_J_s;
+        unit J_per_C2 using unit J_per_C2;
+        unit C2_per_J using unit C2_per_J;
+        unit mol_per_m3 using unit mol_per_m3;
+        unit M using unit M;
+        unit mM using unit mM;
+        unit milliM using unit milliM;
+        unit uM using unit uM;
+        unit kg_per_m3 using unit kg_per_m3;
+        unit m3_per_kg using unit m3_per_kg;
+        unit per_m3 using unit per_m3;
+        unit mol_per_m2_s using unit mol_per_m2_s;
+        unit mM_m_per_s using unit mM_m_per_s;
+        unit J_per_m2_s using unit J_per_m2_s;
+        unit Js_per_m4 using unit Js_per_m4;
+        unit mM_per_s using unit mM_per_s;
+        unit per_s using unit per_s;
+        unit per_s2 using unit per_s2;
+        unit per_mM_s using unit per_mM_s;
+        unit m6_per_mol2_s using unit m6_per_mol2_s;
+        unit m3_per_mol using unit m3_per_mol;
+        unit mol_per_m3_s using unit mol_per_m3_s;
+        unit per_mol using unit per_mol;
+        unit J_per_mol_K using unit J_per_mol_K;
+        unit m2_per_s using unit m2_per_s;
+        unit per_C using unit per_C;
+        unit per_m using unit per_m;
+        unit per_mM using unit per_mM;
+        unit Js2_per_m2 using unit Js2_per_m2;
+        unit Js_per_m2 using unit Js_per_m2;
+        unit J_per_m2 using unit J_per_m2;
+        unit m_per_s2 using unit m_per_s2;
+        unit rad_per_s2 using unit rad_per_s2;
+        unit Js_per_m3 using unit Js_per_m3;
+        unit Js2_per_m5 using unit Js2_per_m5;
+        unit m5_per_Js2 using unit m5_per_Js2;
+        unit J_per_m6 using unit J_per_m6;
+        unit m6_per_J using unit m6_per_J;
+        unit m6_per_Js using unit m6_per_Js;
+        unit mm6_per_J using unit mm6_per_J;
+        unit Js2_per_m9 using unit Js2_per_m9;
+        unit m6s_per_J using unit m6s_per_J;
+        unit Js_per_m6 using unit Js_per_m6;
+        unit Js2_per_m6 using unit Js2_per_m6;
+        unit m3_per_s2 using unit m3_per_s2;
+        unit mm3_per_s2 using unit mm3_per_s2;
+        unit per_mm3 using unit per_mm3;
+        unit UnitValve using unit UnitValve;
+        unit J_per_m9 using unit J_per_m9;
+        unit milliV using unit milliV;
+        unit per_milliV using unit per_milliV;
+        unit millis_per_milliV using unit millis_per_milliV;
+        unit per_V using unit per_V;
+        unit milliV_per_V using unit milliV_per_V;
+        unit V_per_milliV using unit V_per_milliV;
+        unit V_per_s using unit V_per_s;
+        unit milliV_per_kiloV using unit milliV_per_kiloV;
+        unit V2 using unit V2;
+        unit milliV2 using unit milliV2;
+        unit millimol using unit millimol;
+        unit millimolar using unit millimolar;
+        unit per_millimolar using unit per_millimolar;
+        unit per_millimolar_s using unit per_millimolar_s;
+        unit per_millimolar2_s using unit per_millimolar2_s;
+        unit millimolar_per_s using unit millimolar_per_s;
+        unit millimolar_per_megamolar using unit millimolar_per_megamolar;
+        unit per_millimol_milliS using unit per_millimol_milliS;
+        unit per_millimol_millis using unit per_millimol_millis;
+        unit per_millimol_s using unit per_millimol_s;
+        unit microm using unit microm;
+        unit microS using unit microS;
+        unit microm3 using unit microm3;
+        unit m3_per_microm3 using unit m3_per_microm3;
+        unit picoF using unit picoF;
+        unit S_per_F using unit S_per_F;
+        unit m3_per_Fs using unit m3_per_Fs;
+        unit A_per_F using unit A_per_F;
+        unit megaOhm using unit megaOhm;
+        unit nanoA using unit nanoA;
+        unit nanoA_per_milliA using unit nanoA_per_milliA;
+        unit nanoA_per_A using unit nanoA_per_A;
+        unit A_per_nanoA using unit A_per_nanoA;
+        unit C_per_mol using unit C_per_mol;
+        unit m3_per_J_millis using unit m3_per_J_millis;
+        unit m3_per_mol_millis using unit m3_per_mol_millis;
+        unit m3_per_millimol_s using unit m3_per_millimol_s;
+        unit millimol_per_m3 using unit millimol_per_m3;
+        unit mmol_per_l using unit mmol_per_l;
+        unit l_per_mmol using unit l_per_mmol;
+        unit l_per_mmol_per_s using unit l_per_mmol_per_s;
+        unit l2_per_mmol_per_s using unit l2_per_mmol_per_s;
+        unit mmol_per_s2 using unit mmol_per_s2;
+        unit mmol using unit mmol;
+        unit mmol_per_l_per_s using unit mmol_per_l_per_s;
+        unit Hz2 using unit Hz2;
+        unit cm using unit cm;
+        unit J_per_m4_s using unit J_per_m4_s;
+        unit m3_per_mol_per_sec using unit m3_per_mol_per_sec;
+        unit mol_per_m3_per_kPa using unit mol_per_m3_per_kPa;
+        unit mol_per_m3_per_Pa using unit mol_per_m3_per_Pa;
+        unit m3_per_mol_per_s using unit m3_per_mol_per_s;
+        unit mol_per_m3_per_s using unit mol_per_m3_per_s;
+        unit dim using unit dim;
+        unit fmol using unit fmol;
+        unit per_fmol using unit per_fmol;
+        unit nJ_per_s using unit nJ_per_s;
+        unit fmol_per_s using unit fmol_per_s;
+        unit nC_per_fmol using unit nC_per_fmol;
+        unit nC using unit nC;
+        unit nJ_per_fmol using unit nJ_per_fmol;
+        unit nJ_per_nC using unit nJ_per_nC;
+        unit fC using unit fC;
+        unit fF using unit fF;
+        unit volt_per_sec using unit volt_per_sec;
+        unit J_per_K_per_mol using unit J_per_K_per_mol;
+        unit nS using unit nS;
+        unit nSmV using unit nSmV;
+        unit per_ms using unit per_ms;
+        unit mM4 using unit mM4;
+        unit mM_per_ms using unit mM_per_ms;
+        unit mMms using unit mMms;
+        unit per_mMms using unit per_mMms;
+        unit molar using unit molar;
+        unit micromolar using unit micromolar;
+        unit nanomolar using unit nanomolar;
+        unit ms using unit ms;
+        unit m_cubed using unit m_cubed;
+        unit mV using unit mV;
+        unit m_cubed_per_second using unit m_cubed_per_second;
+        unit micromolar_m_cubed using unit micromolar_m_cubed;
+        unit C using unit C;
+        unit C_per_millimol using unit C_per_millimol;
+        unit picoA using unit picoA;
+        unit picoA_per_picoFarad using unit picoA_per_picoFarad;
+        unit microL using unit microL;
+        unit picoFarad using unit picoFarad;
+        unit cm3_per_second using unit cm3_per_second;
+        unit um3_per_second using unit um3_per_second;
+        unit m3mM using unit m3mM;
+        unit ms2 using unit ms2;
+        unit nM3_per_ps using unit nM3_per_ps;
+        unit per_s_squared_m_cubed using unit per_s_squared_m_cubed;
+        unit per_meters_cubed using unit per_meters_cubed;
+        unit umeter3 using unit umeter3;
+        unit mill1 using unit mill1;
+        unit picoV using unit picoV;
+        unit pic0 using unit pic0;
+        unit nanoV using unit nanoV;
+        unit nan0 using unit nan0;
+        unit kPa using unit kPa;
+        unit L_per_s using unit L_per_s;
+        unit L_per_s_per_kPa using unit L_per_s_per_kPa;
+        unit kPa_per_L using unit kPa_per_L;
+        unit L_per_kPa using unit L_per_kPa;
+        unit kPa_s_per_L using unit kPa_s_per_L;
+    enddef;
+
+    def comp zero_flow as
+        var v_zero: m3_per_s {pub: out};
+
+        v_zero = 0{m3_per_s};
+    enddef;
+
+    def comp PP_capillary_H_D as
+        //import variables
+
+        var t: second {pub: in};
+        var H_global_L: dimensionless {pub: in};
+        var H_global_R: dimensionless {pub: in};
+        var H_L_out_RHS: dimensionless {pub: in};
+        var H_R_out_LHS: dimensionless {pub: in};
+        var gamma_mirror: dimensionless {pub: in};
+        var tau_H_down: second {pub: in};
+        var tau_H_mean: second {pub: in};
+
+        //0.001
+
+        var v_eps: m3_per_s {pub: in};
+        var q_C_init: m3 {pub: in};
+
+        //0
+
+        var l: metre {pub: in};
+        var r: metre {pub: in};
+        var mu_plasma: Js_per_m3 {pub: in};
+        var u_in: J_per_m3 {pub: in};
+        var u_ext: J_per_m3 {pub: in};
+        var u_out: J_per_m3 {pub: in};
+        var tau_link: second {pub: in};
+        var v_scale: m3_per_s {pub: in};
+        var one_mm3: m3 {pub: in};
+        var w_v: dimensionless {pub: out};
+        var w_v_d: dimensionless {pub: out};
+
+        w_v   = 0.5{dimensionless}+1{dimensionless}/pi*atan(v/v_scale);
+        w_v_d = 0.5{dimensionless}+1{dimensionless}/pi*atan(v_d/v_scale);
+
+        ///////////////////////////coupling with RHS vessel using ode to break 
+        //instaneous coupling requirement/////////
+
+        var H_link_R: dimensionless {init: H_global_L, pub: out};
+
+        ode(H_link_R, t) = (H_L_out_RHS-H_link_R)/tau_link;
+
+        //RHS means RHS vessel
+
+        var H_link_L: dimensionless {init: H_global_L, pub: out};
+
+        ode(H_link_L, t) = (H_R_out_LHS-H_link_L)/tau_link;
+
+        //RHS means RHS vessel
+
+        var H_L_in: dimensionless {pub: out};
+
+        H_L_in = H_link_L;
+
+        var H_R_in: dimensionless {pub: out};
+
+        H_R_in = H_link_R;
+
+        var H_up: dimensionless {pub: out};
+
+        H_up = w_v_d*H_L_in+(1{dimensionless}-w_v_d)*H_R_in;
+
+        var H_down: dimensionless {init: H_global_L, pub: out};
+        var H_down_target: dimensionless {pub: out};
+
+        H_down_target  = s_v_d*(H_mean+gamma_mirror*(H_mean-H_up))+(1{dimensionless}-s_v_d)*H_mean;
+        ode(H_down, t) = (H_down_target-H_down)/tau_H_down;
+
+        var s_v_d: dimensionless {pub: out};
+
+        s_v_d = abs(v_d)/(abs(v_d)+v_eps);
+
+        ///useful when flow =0, if 0, make H_down=H_mean
+
+        var H_L_out: dimensionless {pub: out};
+        var H_R_out: dimensionless {pub: out};
+
+        H_L_out = (1{dimensionless}-w_v_d)*H_down+w_v_d*H_L_in;
+        H_R_out = w_v_d*H_down+(1{dimensionless}-w_v_d)*H_R_in;
+
+        var RBC_volume: m3 {init: RBC_volume_init, pub: out};
+
+        ode(RBC_volume, t) = v*H_mass_L-v_d*H_mass_R;
+
+        var RBC_volume_init: m3 {pub: out};
+
+        RBC_volume_init = H_global_L*q_us;
+
+        //pos/neg for RBC mass conservation only
+
+        var v_pos: m3_per_s {pub: out};
+        var v_neg: m3_per_s {pub: out};
+        var v_d_pos: m3_per_s {pub: out};
+        var v_d_neg: m3_per_s {pub: out};
+
+        v_pos = w_v*v;
+
+        // inflow from left (v>0)
+
+        v_neg = (1{dimensionless}-w_v)*-v;
+
+        // outflow to left (v<0)
+
+        v_d_pos = w_v_d*v_d;
+
+        // flow from left to right (v_d>0) => outflow on right
+
+        v_d_neg = (1{dimensionless}-w_v_d)*-v_d;
+
+        // inflow from right (v_d<0)
+
+        //var H_target: dimensionless {pub: out};
+
+        //H_target = RBC_volume/q;
+
+        H_mean = RBC_volume/q;
+
+        var H_mean: dimensionless {pub: out};
+
+        //ode(H_mean, t) = (H_target-H_mean)/tau_H_mean;
+
+        var H_mass_L: dimensionless {pub: out};
+        var H_mass_R: dimensionless {pub: out};
+
+        H_mass_L = w_v*H_L_in+(1{dimensionless}-w_v)*H_L_out;
+        H_mass_R = w_v_d*H_R_out+(1{dimensionless}-w_v_d)*H_R_in;
+
+        ////////////////
+
+        var q_C: m3 {init: q_C_init, pub: out};
+        var q: m3 {pub: out};
+        var q_us: m3 {pub: out};
+
+        q_us = pi*sqr(r)*l;
+        q    = q_us+q_C;
+
+        var C: m6_per_J {pub: out};
+
+        C = pi*sqr(8.5e-9{metre})*l/133.322{J_per_m3};
+
+        var Z: dimensionless {pub: out};
+
+        Z = (0.8{dimensionless}+exp(-0.075{dimensionless}*2{dimensionless}*r*1e6{dimensionless}))*(-1{dimensionless}+1{dimensionless}/(1{dimensionless}+pow(10{dimensionless}, -11{dimensionless})*pow(2{dimensionless}*r*1e6{dimensionless}, 12{dimensionless})))+1{dimensionless}/(1{dimensionless}+pow(10{dimensionless}, -11{dimensionless})*pow(2{dimensionless}*r*1e6{dimensionless}, 12{dimensionless}));
+
+        var mu_45: dimensionless;
+
+        mu_45 = 6{dimensionless}*exp(-0.085{per_m}*2{dimensionless}*r*1e6{dimensionless})+3.2{dimensionless}-2.44{dimensionless}*exp(-0.06{dimensionless}*pow(2{per_m}*r*1e6{dimensionless}, 0.645{dimensionless}));
+
+        var mu: Js_per_m3 {pub: out};
+
+        mu = hem_dep_u_rel*mu_plasma;
+
+        var hem_dep_u_rel: dimensionless;
+
+        hem_dep_u_rel = 1{dimensionless}+(mu_45-1{dimensionless})*(pow(1{dimensionless}-H_mean, Z)-1{dimensionless})/(pow(1{dimensionless}-H_global_L, Z)-1{dimensionless})*sqr(2{dimensionless}*r*1e6{dimensionless}/(2{dimensionless}*r*1e6{dimensionless}-1.1{metre}));
+
+        var R: Js_per_m6 {pub: out};
+
+        R = 8{dimensionless}*mu*l/(pi*pow(r, 4{dimensionless}));
+
+        var v: m3_per_s {pub: out};
+        var v_mm3_s: mm3_per_s {pub: out};
+
+        v_mm3_s = v/one_mm3;
+        v       = (u_in-u)/(R/2{dimensionless});
+
+        var u: J_per_m3 {pub: out};
+        var u_mmHg: dimensionless {pub: out};
+
+        u_mmHg      = u/133.322{J_per_m3};
+        u           = q_C/C+u_ext;
+        ode(q_C, t) = v-v_d;
+
+        var v_d: m3_per_s {pub: out};
+        var v_d_mm3_s: mm3_per_s {pub: out};
+
+        v_d_mm3_s = v_d/one_mm3;
+        v_d       = (u-u_out)/(R/2{dimensionless});
+    enddef;
+
+    def comp PP_pericyte_H_D as
+        //import variables
+
+        var tau_sig: second {pub: in};
+        var t0: second {pub: in};
+        var t: second {pub: in};
+        var R_constriction_base: Js_per_m6 {pub: in};
+        var R_constriction_final: Js_per_m6 {pub: in};
+        var R_constriction: Js_per_m6 {pub: out};
+
+        R_constriction = R_constriction_base+(R_constriction_final-R_constriction_base)/(1{dimensionless}+exp(-(t-t0)/tau_sig));
+
+        var H_global_L: dimensionless {pub: in};
+        var H_global_R: dimensionless {pub: in};
+        var H_L_out_RHS: dimensionless {pub: in};
+        var H_R_out_LHS: dimensionless {pub: in};
+        var gamma_mirror: dimensionless {pub: in};
+        var tau_H_down: second {pub: in};
+        var tau_H_mean: second {pub: in};
+
+        //0.001
+
+        var v_eps: m3_per_s {pub: in};
+        var q_C_init: m3 {pub: in};
+
+        //0
+
+        var l: metre {pub: in};
+        var r: metre {pub: in};
+        var mu_plasma: Js_per_m3 {pub: in};
+        var u_in: J_per_m3 {pub: in};
+        var u_ext: J_per_m3 {pub: in};
+        var u_out: J_per_m3 {pub: in};
+        var tau_link: second {pub: in};
+        var v_scale: m3_per_s {pub: in};
+        var one_mm3: m3 {pub: in};
+        var w_v: dimensionless {pub: out};
+        var w_v_d: dimensionless {pub: out};
+
+        w_v   = 0.5{dimensionless}+1{dimensionless}/pi*atan(v/v_scale);
+        w_v_d = 0.5{dimensionless}+1{dimensionless}/pi*atan(v_d/v_scale);
+
+        ///////////////////////////coupling with RHS vessel using ode to break 
+        //instaneous coupling requirement/////////
+
+        var H_link_R: dimensionless {init: H_global_L, pub: out};
+
+        ode(H_link_R, t) = (H_L_out_RHS-H_link_R)/tau_link;
+
+        //RHS means RHS vessel
+
+        var H_link_L: dimensionless {init: H_global_L, pub: out};
+
+        ode(H_link_L, t) = (H_R_out_LHS-H_link_L)/tau_link;
+
+        //RHS means RHS vessel
+
+        var H_L_in: dimensionless {pub: out};
+
+        H_L_in = H_link_L;
+
+        var H_R_in: dimensionless {pub: out};
+
+        H_R_in = H_link_R;
+
+        var H_up: dimensionless {pub: out};
+
+        H_up = w_v_d*H_L_in+(1{dimensionless}-w_v_d)*H_R_in;
+
+        var H_down: dimensionless {init: H_global_L, pub: out};
+        var H_down_target: dimensionless {pub: out};
+
+        H_down_target  = s_v_d*(H_mean+gamma_mirror*(H_mean-H_up))+(1{dimensionless}-s_v_d)*H_mean;
+        ode(H_down, t) = (H_down_target-H_down)/tau_H_down;
+
+        var s_v_d: dimensionless {pub: out};
+
+        s_v_d = abs(v_d)/(abs(v_d)+v_eps);
+
+        ///useful when flow =0, if 0, make H_down=H_mean
+
+        var H_L_out: dimensionless {pub: out};
+        var H_R_out: dimensionless {pub: out};
+
+        H_L_out = (1{dimensionless}-w_v_d)*H_down+w_v_d*H_L_in;
+        H_R_out = w_v_d*H_down+(1{dimensionless}-w_v_d)*H_R_in;
+
+        var RBC_volume: m3 {init: RBC_volume_init, pub: out};
+
+        ode(RBC_volume, t) = v*H_mass_L-v_d*H_mass_R;
+
+        var RBC_volume_init: m3 {pub: out};
+
+        RBC_volume_init = H_global_L*q_us;
+
+        //pos/neg for RBC mass conservation only
+
+        var v_pos: m3_per_s {pub: out};
+        var v_neg: m3_per_s {pub: out};
+        var v_d_pos: m3_per_s {pub: out};
+        var v_d_neg: m3_per_s {pub: out};
+
+        v_pos = w_v*v;
+
+        // inflow from left (v>0)
+
+        v_neg = (1{dimensionless}-w_v)*-v;
+
+        // outflow to left (v<0)
+
+        v_d_pos = w_v_d*v_d;
+
+        // flow from left to right (v_d>0) => outflow on right
+
+        v_d_neg = (1{dimensionless}-w_v_d)*-v_d;
+
+        // inflow from right (v_d<0)
+
+        //var H_target: dimensionless {pub: out};
+
+        //H_target = RBC_volume/q;
+
+        H_mean = RBC_volume/q;
+
+        var H_mean: dimensionless {pub: out};
+
+        //ode(H_mean, t) = (H_target-H_mean)/tau_H_mean;
+
+        var H_mass_L: dimensionless {pub: out};
+        var H_mass_R: dimensionless {pub: out};
+
+        H_mass_L = w_v*H_L_in+(1{dimensionless}-w_v)*H_L_out;
+        H_mass_R = w_v_d*H_R_out+(1{dimensionless}-w_v_d)*H_R_in;
+
+        ////////////////
+
+        var q_C: m3 {init: q_C_init, pub: out};
+        var q: m3 {pub: out};
+        var q_us: m3 {pub: out};
+
+        q_us = pi*sqr(r)*l;
+        q    = q_us+q_C;
+
+        var C: m6_per_J {pub: out};
+
+        C = pi*sqr(8.5e-9{metre})*l/133.322{J_per_m3};
+
+        var Z: dimensionless {pub: out};
+
+        Z = (0.8{dimensionless}+exp(-0.075{dimensionless}*2{dimensionless}*r*1e6{dimensionless}))*(-1{dimensionless}+1{dimensionless}/(1{dimensionless}+pow(10{dimensionless}, -11{dimensionless})*pow(2{dimensionless}*r*1e6{dimensionless}, 12{dimensionless})))+1{dimensionless}/(1{dimensionless}+pow(10{dimensionless}, -11{dimensionless})*pow(2{dimensionless}*r*1e6{dimensionless}, 12{dimensionless}));
+
+        var mu_45: dimensionless;
+
+        mu_45 = 6{dimensionless}*exp(-0.085{per_m}*2{dimensionless}*r*1e6{dimensionless})+3.2{dimensionless}-2.44{dimensionless}*exp(-0.06{dimensionless}*pow(2{per_m}*r*1e6{dimensionless}, 0.645{dimensionless}));
+
+        var mu: Js_per_m3 {pub: out};
+
+        mu = hem_dep_u_rel*mu_plasma;
+
+        var hem_dep_u_rel: dimensionless;
+
+        hem_dep_u_rel = 1{dimensionless}+(mu_45-1{dimensionless})*(pow(1{dimensionless}-H_mean, Z)-1{dimensionless})/(pow(1{dimensionless}-H_global_L, Z)-1{dimensionless})*sqr(2{dimensionless}*r*1e6{dimensionless}/(2{dimensionless}*r*1e6{dimensionless}-1.1{metre}));
+
+        var R: Js_per_m6 {pub: out};
+
+        R = 8{dimensionless}*mu*l/(pi*pow(r, 4{dimensionless}))+R_constriction;
+
+        var v: m3_per_s {pub: out};
+        var v_mm3_s: mm3_per_s {pub: out};
+
+        v_mm3_s = v/one_mm3;
+        v       = (u_in-u)/(R/2{dimensionless});
+
+        var u: J_per_m3 {pub: out};
+        var u_mmHg: dimensionless {pub: out};
+
+        u_mmHg      = u/133.322{J_per_m3};
+        u           = q_C/C+u_ext;
+        ode(q_C, t) = v-v_d;
+
+        var v_d: m3_per_s {pub: out};
+        var v_d_mm3_s: mm3_per_s {pub: out};
+
+        v_d_mm3_s = v_d/one_mm3;
+        v_d       = (u-u_out)/(R/2{dimensionless});
+    enddef;
+
+    def comp VP_capillary_H_D as
+        //import variables
+
+        var t: second {pub: in};
+        var H_global_L: dimensionless {pub: in};
+        var H_global_R: dimensionless {pub: in};
+        var H_L_out_RHS: dimensionless {pub: in};
+        var H_R_out_LHS: dimensionless {pub: in};
+        var gamma_mirror: dimensionless {pub: in};
+        var tau_H_down: second {pub: in};
+        var tau_H_mean: second {pub: in};
+
+        //0.001
+
+        var v_eps: m3_per_s {pub: in};
+        var q_C_init: m3 {pub: in};
+
+        //0
+
+        var l: metre {pub: in};
+        var r: metre {pub: in};
+        var mu_plasma: Js_per_m3 {pub: in};
+        var v_in: m3_per_s {pub: in};
+        var u_ext: J_per_m3 {pub: in};
+        var u_out: J_per_m3 {pub: in};
+        var tau_link: second {pub: in};
+        var v_scale: m3_per_s {pub: in};
+        var one_mm3: m3 {pub: in};
+        var w_v: dimensionless {pub: out};
+
+        w_v = 0.5{dimensionless}+1{dimensionless}/pi*atan(v/v_scale);
+
+        ///////////////////////////coupling with RHS vessel using ode to break 
+        //instaneous coupling requirement/////////
+
+        var H_link_R: dimensionless {init: H_global_L, pub: out};
+
+        ode(H_link_R, t) = (H_L_out_RHS-H_link_R)/tau_link;
+
+        //RHS means RHS vessel
+
+        var H_link_L: dimensionless {init: H_global_L, pub: out};
+
+        ode(H_link_L, t) = (H_R_out_LHS-H_link_L)/tau_link;
+
+        //RHS means RHS vessel
+
+        var H_L_in: dimensionless {pub: out};
+
+        H_L_in = H_link_L;
+
+        var H_R_in: dimensionless {pub: out};
+
+        H_R_in = H_link_R;
+
+        var H_up: dimensionless {pub: out};
+
+        H_up = w_v*H_L_in+(1{dimensionless}-w_v)*H_R_in;
+
+        var H_down: dimensionless {init: H_global_L, pub: out};
+        var H_down_target: dimensionless {pub: out};
+
+        H_down_target  = s_v*(H_mean+gamma_mirror*(H_mean-H_up))+(1{dimensionless}-s_v)*H_mean;
+        ode(H_down, t) = (H_down_target-H_down)/tau_H_down;
+
+        var s_v: dimensionless {pub: out};
+
+        s_v = abs(v)/(abs(v)+v_eps);
+
+        ///useful when flow =0, if 0, make H_down=H_mean
+
+        var H_L_out: dimensionless {pub: out};
+        var H_R_out: dimensionless {pub: out};
+
+        H_L_out = (1{dimensionless}-w_v)*H_down+w_v*H_L_in;
+        H_R_out = w_v*H_down+(1{dimensionless}-w_v)*H_R_in;
+
+        var RBC_volume: m3 {init: RBC_volume_init, pub: out};
+
+        ode(RBC_volume, t) = v_in*H_mass_L-v*H_mass_R;
+
+        var RBC_volume_init: m3 {pub: out};
+
+        RBC_volume_init = H_global_L*q_us;
+
+        //pos/neg for RBC mass conservation only
+
+        var v_pos: m3_per_s {pub: out};
+        var v_neg: m3_per_s {pub: out};
+
+        v_pos = w_v*v;
+
+        // inflow from left (v>0)
+
+        v_neg = (1{dimensionless}-w_v)*-v;
+
+        // outflow to left (v<0)
+
+        //var H_target: dimensionless {pub: out};
+
+        //H_target = RBC_volume/q;
+
+        H_mean = RBC_volume/q;
+
+        var H_mean: dimensionless {pub: out};
+
+        //ode(H_mean, t) = (H_target-H_mean)/tau_H_mean;
+
+        var H_mass_L: dimensionless {pub: out};
+        var H_mass_R: dimensionless {pub: out};
+
+        H_mass_L = w_v*H_L_in+(1{dimensionless}-w_v)*H_L_out;
+        H_mass_R = w_v*H_R_out+(1{dimensionless}-w_v)*H_R_in;
+
+        ////////////////
+
+        var q_C: m3 {init: q_C_init, pub: out};
+        var q: m3 {pub: out};
+        var q_us: m3 {pub: out};
+
+        q_us = pi*sqr(r)*l;
+        q    = q_us+q_C;
+
+        var C: m6_per_J {pub: out};
+
+        C = pi*sqr(8.5e-9{metre})*l/133.322{J_per_m3};
+
+        var Z: dimensionless {pub: out};
+
+        Z = (0.8{dimensionless}+exp(-0.075{dimensionless}*2{dimensionless}*r*1e6{dimensionless}))*(-1{dimensionless}+1{dimensionless}/(1{dimensionless}+pow(10{dimensionless}, -11{dimensionless})*pow(2{dimensionless}*r*1e6{dimensionless}, 12{dimensionless})))+1{dimensionless}/(1{dimensionless}+pow(10{dimensionless}, -11{dimensionless})*pow(2{dimensionless}*r*1e6{dimensionless}, 12{dimensionless}));
+
+        var mu_45: dimensionless;
+
+        mu_45 = 6{dimensionless}*exp(-0.085{per_m}*2{dimensionless}*r*1e6{dimensionless})+3.2{dimensionless}-2.44{dimensionless}*exp(-0.06{dimensionless}*pow(2{per_m}*r*1e6{dimensionless}, 0.645{dimensionless}));
+
+        var mu: Js_per_m3 {pub: out};
+
+        mu = hem_dep_u_rel*mu_plasma;
+
+        var hem_dep_u_rel: dimensionless;
+
+        hem_dep_u_rel = 1{dimensionless}+(mu_45-1{dimensionless})*(pow(1{dimensionless}-H_mean, Z)-1{dimensionless})/(pow(1{dimensionless}-H_global_L, Z)-1{dimensionless})*sqr(2{dimensionless}*r*1e6{dimensionless}/(2{dimensionless}*r*1e6{dimensionless}-1.1{metre}));
+
+        var R: Js_per_m6 {pub: out};
+
+        R = 8{dimensionless}*mu*l/(pi*pow(r, 4{dimensionless}));
+
+        var v: m3_per_s {pub: out};
+        var v_mm3_s: mm3_per_s {pub: out};
+
+        v_mm3_s = v/one_mm3;
+        v       = (u-u_out)/R;
+
+        var u: J_per_m3 {pub: out};
+        var u_mmHg: dimensionless {pub: out};
+
+        u_mmHg      = u/133.322{J_per_m3};
+        u           = q_C/C+u_ext;
+        ode(q_C, t) = v_in-v;
+    enddef;
+
+    def comp VV_junction_H_D as
+        var div_0: dimensionless {pub: in};
+        var div_0y: dimensionless {pub: in};
+        var tau_junc: second {pub: in};
+        var v_threshold: m3_per_s {pub: in};
+        var k: dimensionless {pub: in};
+        var t: second {pub: in};
+        var H_global_L: dimensionless {pub: in};
+        var H_global_R: dimensionless {pub: in};
+        var q_C_init: m3 {pub: in};
+        var l: metre {pub: in};
+        var r: metre {pub: in};
+        var mu_plasma: Js_per_m3 {pub: in};
+        var u_ext: J_per_m3 {pub: in};
+        var v_scale: m3_per_s {pub: in};
+        var one_mm3: m3 {pub: in};
+
+        /////////////////////////vessel mapping coupling module/////////////////////
+
+        var vbc1: m3_per_s {pub: in};
+        var vbc2: m3_per_s {pub: in};
+        var vbc3: m3_per_s {pub: in};
+        var vbc4: m3_per_s {pub: in};
+        var vj1: m3_per_s {pub: out};
+        var vj2: m3_per_s {pub: out};
+        var vj3: m3_per_s {pub: out};
+        var vj4: m3_per_s {pub: out};
+
+        vj1 = vbc1;
+        vj2 = vbc2;
+        vj3 = -vbc3;
+        vj4 = -vbc4;
+
+        //////////////Hematocrit to port (vessel to junction) mapping////////////
+
+        var H_to1: dimensionless {pub: in};
+        var H_to2: dimensionless {pub: in};
+        var H_to3: dimensionless {pub: in};
+        var H_to4: dimensionless {pub: in};
+
+        // EXAMPLES — replace these with your actual port hematocrits:H_to1 = H_R_out_VP1;
+
+        var H_split1: dimensionless {pub: out};
+        var H_split2: dimensionless {pub: out};
+        var H_split3: dimensionless {pub: out};
+        var H_split4: dimensionless {pub: out};
+
+        H_split1 = sel
+            case alpha1 == 1{dimensionless}:
+                H_VV_out_alpha;
+            case beta1 == 1{dimensionless}:
+                H_VV_out_beta;
+            case true:
+                H_to1;
+        endsel;
+
+        // not a split-daughter => unchanged
+
+        H_split2 = sel
+            case alpha2 == 1{dimensionless}:
+                H_VV_out_alpha;
+            case beta2 == 1{dimensionless}:
+                H_VV_out_beta;
+            case true:
+                H_to2;
+        endsel;
+
+        H_split3 = sel
+            case alpha3 == 1{dimensionless}:
+                H_VV_out_alpha;
+            case beta3 == 1{dimensionless}:
+                H_VV_out_beta;
+            case true:
+                H_to3;
+        endsel;
+
+        H_split4 = sel
+            case alpha4 == 1{dimensionless}:
+                H_VV_out_alpha;
+            case beta4 == 1{dimensionless}:
+                H_VV_out_beta;
+            case true:
+                H_to4;
+        endsel;
+
+        var H_daughter1: dimensionless {pub: out};
+        var H_daughter2: dimensionless {pub: out};
+        var H_daughter3: dimensionless {pub: out};
+        var H_daughter4: dimensionless {pub: out};
+
+        H_daughter1 = sel
+            case is_merge == 1{dimensionless}:
+                H_mean;
+            case is_split == 1{dimensionless}:
+                H_split1;
+            case true:
+                H_to1;
+        endsel;
+
+        H_daughter2 = sel
+            case is_merge == 1{dimensionless}:
+                H_mean;
+            case is_split == 1{dimensionless}:
+                H_split2;
+            case true:
+                H_to2;
+        endsel;
+
+        H_daughter3 = sel
+            case is_merge == 1{dimensionless}:
+                H_mean;
+            case is_split == 1{dimensionless}:
+                H_split3;
+            case true:
+                H_to3;
+        endsel;
+
+        H_daughter4 = sel
+            case is_merge == 1{dimensionless}:
+                H_mean;
+            case is_split == 1{dimensionless}:
+                H_split4;
+            case true:
+                H_to4;
+        endsel;
+
+        // ---------- H_from*_target: if daughter -> H_daughter*, else unchanged ----------
+
+        var H_from1_target: dimensionless {pub: out};
+        var H_from2_target: dimensionless {pub: out};
+        var H_from3_target: dimensionless {pub: out};
+        var H_from4_target: dimensionless {pub: out};
+
+        H_from1_target = sel
+            case bc1_is_out == 1{dimensionless}:
+                H_daughter1;
+            case true:
+                H_to1;
+        endsel;
+
+        H_from2_target = sel
+            case bc2_is_out == 1{dimensionless}:
+                H_daughter2;
+            case true:
+                H_to2;
+        endsel;
+
+        H_from3_target = sel
+            case bc3_is_out == 1{dimensionless}:
+                H_daughter3;
+            case true:
+                H_to3;
+        endsel;
+
+        H_from4_target = sel
+            case bc4_is_out == 1{dimensionless}:
+                H_daughter4;
+            case true:
+                H_to4;
+        endsel;
+
+        var H_from1: dimensionless {init: H_global_L, pub: out};
+        var H_from2: dimensionless {init: H_global_L, pub: out};
+        var H_from3: dimensionless {init: H_global_L, pub: out};
+        var H_from4: dimensionless {init: H_global_L, pub: out};
+
+        // When w_out ~ 0 (not a daughter), derivative ~0 => holds last daughter value.
+
+        ode(H_from1, t) = w_out1*(H_from1_target-H_from1)/tau_junc;
+        ode(H_from2, t) = w_out2*(H_from2_target-H_from2)/tau_junc;
+        ode(H_from3, t) = w_out3*(H_from3_target-H_from3)/tau_junc;
+        ode(H_from4, t) = w_out4*(H_from4_target-H_from4)/tau_junc;
+
+        var r_bc1: metre {pub: in};
+
+        // diameter of vessel at port 1 (junction side)
+
+        var r_bc2: metre {pub: in};
+
+        // diameter of vessel at port 2
+
+        var r_bc3: metre {pub: in};
+
+        // diameter of vessel at port 3
+
+        var r_bc4: metre {pub: in};
+        var D1: metre {pub: out};
+
+        // diameter of vessel at port 1 (junction side)
+
+        var D2: metre {pub: out};
+
+        // diameter of vessel at port 2
+
+        var D3: metre {pub: out};
+
+        // diameter of vessel at port 3
+
+        var D4: metre {pub: out};
+
+        D1 = 2{dimensionless}*r_bc1;
+
+        // <-- port1 attached vessel diameter (example: parent VV side)
+
+        D2 = 2{dimensionless}*r_bc2;
+
+        // <-- port2 (if unused, still define)
+
+        D3 = 2{dimensionless}*r_bc3;
+
+        // <-- port3 daughter candidate
+
+        D4 = 2{dimensionless}*r_bc4;
+
+        var w_in1: dimensionless {pub: out};
+        var w_in2: dimensionless {pub: out};
+        var w_in3: dimensionless {pub: out};
+        var w_in4: dimensionless {pub: out};
+
+        //1 when vj is positive, 0 when vj is 0
+
+        w_in1 = 0.5{dimensionless}+1{dimensionless}/pi*atan(vj1/v_scale);
+        w_in2 = 0.5{dimensionless}+1{dimensionless}/pi*atan(vj2/v_scale);
+        w_in3 = 0.5{dimensionless}+1{dimensionless}/pi*atan(vj3/v_scale);
+        w_in4 = 0.5{dimensionless}+1{dimensionless}/pi*atan(vj4/v_scale);
+
+        var w_out1: dimensionless {pub: out};
+        var w_out2: dimensionless {pub: out};
+        var w_out3: dimensionless {pub: out};
+        var w_out4: dimensionless {pub: out};
+
+        w_out1 = 1{dimensionless}-w_in1;
+
+        // ~1 if vj1<0
+
+        w_out2 = 1{dimensionless}-w_in2;
+        w_out3 = 1{dimensionless}-w_in3;
+        w_out4 = 1{dimensionless}-w_in4;
+
+        var Qin1: m3_per_s {pub: out};
+        var Qin2: m3_per_s {pub: out};
+        var Qin3: m3_per_s {pub: out};
+        var Qin4: m3_per_s {pub: out};
+        var Qout1: m3_per_s {pub: out};
+        var Qout2: m3_per_s {pub: out};
+        var Qout3: m3_per_s {pub: out};
+        var Qout4: m3_per_s {pub: out};
+
+        //absolute flow into the junction
+
+        Qin1 = w_in1*vj1;
+        Qin2 = w_in2*vj2;
+        Qin3 = w_in3*vj3;
+        Qin4 = w_in4*vj4;
+
+        //absolute (magnitude) of flow out of the junction
+
+        Qout1 = w_out1*-vj1;
+        Qout2 = w_out2*-vj2;
+        Qout3 = w_out3*-vj3;
+        Qout4 = w_out4*-vj4;
+
+        var Qin_tot: m3_per_s {pub: out};
+        var Qout_tot: m3_per_s {pub: out};
+
+        Qin_tot  = Qin1+Qin2+Qin3+Qin4;
+        Qout_tot = Qout1+Qout2+Qout3+Qout4;
+
+        var bc1_is_in: dimensionless {pub: out};
+        var bc2_is_in: dimensionless {pub: out};
+        var bc3_is_in: dimensionless {pub: out};
+        var bc4_is_in: dimensionless {pub: out};
+        var bc1_is_out: dimensionless {pub: out};
+        var bc2_is_out: dimensionless {pub: out};
+        var bc3_is_out: dimensionless {pub: out};
+        var bc4_is_out: dimensionless {pub: out};
+
+        bc1_is_in = sel
+            case Qin1 > v_threshold:
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        bc2_is_in = sel
+            case Qin2 > v_threshold:
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        bc3_is_in = sel
+            case Qin3 > v_threshold:
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        bc4_is_in = sel
+            case Qin4 > v_threshold:
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        bc1_is_out = sel
+            case Qout1 > v_threshold:
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        bc2_is_out = sel
+            case Qout2 > v_threshold:
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        bc3_is_out = sel
+            case Qout3 > v_threshold:
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        bc4_is_out = sel
+            case Qout4 > v_threshold:
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        var n_in: dimensionless {pub: out};
+        var n_out: dimensionless {pub: out};
+
+        n_in  = bc1_is_in+bc2_is_in+bc3_is_in+bc4_is_in;
+        n_out = bc1_is_out+bc2_is_out+bc3_is_out+bc4_is_out;
+
+        // junction_type: +1 split (1 feeder), -1 merge (>=2 feeders), 0 other/degenerate
+
+        var junction_type: dimensionless {pub: out};
+
+        junction_type = sel
+            case n_in == 1{dimensionless}:
+                1{dimensionless};
+            case n_in >= 2{dimensionless}:
+                -1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        // --- junction mode flags derived from your junction_type ---
+
+        var is_split: dimensionless {pub: out};
+        var is_merge: dimensionless {pub: out};
+
+        is_split = sel
+            case junction_type == 1{dimensionless}:
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        is_merge = sel
+            case junction_type == -1{dimensionless}:
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        // ---------- pick FEED port in split: the largest Qin (ties broken 1->2->3->4) ----------
+
+        var feed1: dimensionless {pub: out};
+        var feed2: dimensionless {pub: out};
+        var feed3: dimensionless {pub: out};
+        var feed4: dimensionless {pub: out};
+
+        feed1 = sel
+            case (is_split == 1{dimensionless}) and (Qin1 >= Qin2) and (Qin1 >= Qin3) and (Qin1 >= Qin4):
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        feed2 = sel
+            case (is_split == 1{dimensionless}) and (Qin2 > Qin1) and (Qin2 >= Qin3) and (Qin2 >= Qin4):
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        feed3 = sel
+            case (is_split == 1{dimensionless}) and (Qin3 > Qin1) and (Qin3 > Qin2) and (Qin3 >= Qin4):
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        feed4 = sel
+            case (is_split == 1{dimensionless}) and (Qin4 > Qin1) and (Qin4 > Qin2) and (Qin4 > Qin3):
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        // ---------- alpha = daughter port with biggest Qout (ties 1->2->3->4) ----------
+
+        var alpha1: dimensionless {pub: out};
+        var alpha2: dimensionless {pub: out};
+        var alpha3: dimensionless {pub: out};
+        var alpha4: dimensionless {pub: out};
+
+        // alpha1 if port1 is a daughter AND has >= Qout than others
+
+        alpha1 = sel
+            case (is_split == 1{dimensionless}) and (bc1_is_out == 1{dimensionless}) and (Qout1 >= Qout2) and (Qout1 >= Qout3) and (Qout1 >= Qout4):
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        // alpha2 only if not alpha1 (tie-break) and port2 is a daughter and beats remaining
+
+        alpha2 = sel
+            case (is_split == 1{dimensionless}) and (bc2_is_out == 1{dimensionless}) and (Qout2 > Qout1) and (Qout2 >= Qout3) and (Qout2 >= Qout4):
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        alpha3 = sel
+            case (is_split == 1{dimensionless}) and (bc3_is_out == 1{dimensionless}) and (Qout3 > Qout1) and (Qout3 > Qout2) and (Qout3 >= Qout4):
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        alpha4 = sel
+            case (is_split == 1{dimensionless}) and (bc4_is_out == 1{dimensionless}) and (Qout4 > Qout1) and (Qout4 > Qout2) and (Qout4 > Qout3):
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        var Qout1_rem: m3_per_s {pub: out};
+        var Qout2_rem: m3_per_s {pub: out};
+        var Qout3_rem: m3_per_s {pub: out};
+        var Qout4_rem: m3_per_s {pub: out};
+
+        // if this port is alpha, remove it by setting to 0; else keep Qout
+
+        Qout1_rem = sel
+            case alpha1 == 1{dimensionless}:
+                0{m3_per_s};
+            case true:
+                Qout1;
+        endsel;
+
+        Qout2_rem = sel
+            case alpha2 == 1{dimensionless}:
+                0{m3_per_s};
+            case true:
+                Qout2;
+        endsel;
+
+        Qout3_rem = sel
+            case alpha3 == 1{dimensionless}:
+                0{m3_per_s};
+            case true:
+                Qout3;
+        endsel;
+
+        Qout4_rem = sel
+            case alpha4 == 1{dimensionless}:
+                0{m3_per_s};
+            case true:
+                Qout4;
+        endsel;
+
+        var beta1: dimensionless {pub: out};
+        var beta2: dimensionless {pub: out};
+        var beta3: dimensionless {pub: out};
+        var beta4: dimensionless {pub: out};
+
+        // beta among remaining daughters (ties 1->2->3->4), must be a daughter
+
+        beta1 = sel
+            case (is_split == 1{dimensionless}) and (bc1_is_out == 1{dimensionless}) and (alpha1 == 0{dimensionless}) and (Qout1_rem >= Qout2_rem) and (Qout1_rem >= Qout3_rem) and (Qout1_rem >= Qout4_rem):
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        beta2 = sel
+            case (is_split == 1{dimensionless}) and (bc2_is_out == 1{dimensionless}) and (alpha2 == 0{dimensionless}) and (Qout2_rem > Qout1_rem) and (Qout2_rem >= Qout3_rem) and (Qout2_rem >= Qout4_rem):
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        beta3 = sel
+            case (is_split == 1{dimensionless}) and (bc3_is_out == 1{dimensionless}) and (alpha3 == 0{dimensionless}) and (Qout3_rem > Qout1_rem) and (Qout3_rem > Qout2_rem) and (Qout3_rem >= Qout4_rem):
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        beta4 = sel
+            case (is_split == 1{dimensionless}) and (bc4_is_out == 1{dimensionless}) and (alpha4 == 0{dimensionless}) and (Qout4_rem > Qout1_rem) and (Qout4_rem > Qout2_rem) and (Qout4_rem > Qout3_rem):
+                1{dimensionless};
+            case true:
+                0{dimensionless};
+        endsel;
+
+        var D_F: metre {pub: out};
+
+        D_F = sel
+            case feed1 == 1{dimensionless}:
+                D1;
+            case feed2 == 1{dimensionless}:
+                D2;
+            case feed3 == 1{dimensionless}:
+                D3;
+            case feed4 == 1{dimensionless}:
+                D4;
+            case true:
+                D1;
+        endsel;
+
+        // ---------- D_alpha from which ALPHA port? ----------
+
+        var D_alpha: metre {pub: out};
+
+        D_alpha = sel
+            case alpha1 == 1{dimensionless}:
+                D1;
+            case alpha2 == 1{dimensionless}:
+                D2;
+            case alpha3 == 1{dimensionless}:
+                D3;
+            case alpha4 == 1{dimensionless}:
+                D4;
+            case true:
+                D3;
+        endsel;
+
+        // ---------- D_beta from which BETA port? ----------
+
+        var D_beta: metre {pub: out};
+
+        D_beta = sel
+            case beta1 == 1{dimensionless}:
+                D1;
+            case beta2 == 1{dimensionless}:
+                D2;
+            case beta3 == 1{dimensionless}:
+                D3;
+            case beta4 == 1{dimensionless}:
+                D4;
+            case true:
+                D4;
+        endsel;
+
+        // ---------- daughter outflow magnitudes for alpha/beta ----------
+
+        var v_alpha: m3_per_s {pub: out};
+        var v_beta: m3_per_s {pub: out};
+
+        v_alpha = sel
+            case alpha1 == 1{dimensionless}:
+                Qout1;
+            case alpha2 == 1{dimensionless}:
+                Qout2;
+            case alpha3 == 1{dimensionless}:
+                Qout3;
+            case alpha4 == 1{dimensionless}:
+                Qout4;
+            case true:
+                0{m3_per_s};
+        endsel;
+
+        v_beta = sel
+            case beta1 == 1{dimensionless}:
+                Qout1;
+            case beta2 == 1{dimensionless}:
+                Qout2;
+            case beta3 == 1{dimensionless}:
+                Qout3;
+            case beta4 == 1{dimensionless}:
+                Qout4;
+            case true:
+                0{m3_per_s};
+        endsel;
+
+        var FQB_alpha: dimensionless {pub: out};
+
+        FQB_alpha = (v_alpha+div_0)/(v_alpha+v_beta+2{dimensionless}*div_0);
+
+        var FQE_alpha: dimensionless {pub: out};
+
+        FQE_alpha = 1{dimensionless}/(1{dimensionless}+exp(-(A+B*ph)));
+
+        var B: dimensionless {pub: out};
+
+        B = 1{dimensionless}+6.98{dimensionless}*(1{dimensionless}-H_mean)/(D_F*1e6{dimensionless});
+
+        var A: dimensionless {pub: out};
+
+        A = -6.96{dimensionless}*ln(D_alpha*1e6{dimensionless}/(D_beta*1e6{dimensionless}))/(D_F*1e6{dimensionless});
+
+        var X_0: dimensionless {pub: out};
+
+        X_0 = 0.4{dimensionless}/(D_F*1e6{dimensionless});
+
+        var ph: dimensionless {pub: out};
+
+        ph = ln(y/(1{dimensionless}-y));
+
+        var y_raw: dimensionless {pub: out};
+
+        y_raw = (FQB_alpha-X_0)/(1{dimensionless}-2{dimensionless}*X_0+div_0);
+
+        var y: dimensionless {pub: out};
+
+        y = min(max(y_raw, div_0y), 1{dimensionless}-div_0y);
+
+        var epsilon_alpha: dimensionless {pub: out};
+
+        epsilon_alpha = H_VV_out_alpha-H_mean*FQE_alpha/(FQB_alpha+div_0);
+
+        var H_VV_out_alpha: dimensionless {init: H_global_L, pub: out};
+
+        ode(H_VV_out_alpha, t) = is_split*-k*epsilon_alpha;
+
+        var H_VV_out_beta: dimensionless {pub: out};
+
+        H_VV_out_beta = H_mean*(1{dimensionless}-FQE_alpha)/(1{dimensionless}-FQB_alpha+div_0);
+
+        //////////////////////////////////VV_BG////////////////////////////////
+        //////////////////////////////////////////////
+
+        var RBC_in: m3_per_s {pub: out};
+
+        RBC_in = Qin1*H_to1+Qin2*H_to2+Qin3*H_to3+Qin4*H_to4;
+
+        var RBC_out: m3_per_s {pub: out};
+
+        RBC_out = Qout1*H_from1+Qout2*H_from2+Qout3*H_from3+Qout4*H_from4;
+
+        // --- stored RBC volume inside VV1 ---
+
+        var RBC_volume_init: m3 {pub: out};
+        var RBC_volume: m3 {init: RBC_volume_init, pub: out};
+
+        RBC_volume_init = H_global_L*q_us;
+
+        // mass balance
+
+        ode(RBC_volume, t) = RBC_in-RBC_out;
+
+        // --- mean VV1 hematocrit (concentration) ---
+
+        var H_mean: dimensionless {pub: out};
+
+        H_mean = RBC_volume/(q_us+div_0);
+
+        ///////////////////////////////setting junctional compliance to greatest compliance of the vessels connected to it 
+
+        var C_conn1: m6_per_J {pub: in};
+        var C_conn2: m6_per_J {pub: in};
+        var C_conn3: m6_per_J {pub: in};
+        var C_conn4: m6_per_J {pub: in};
+        var C_max12: m6_per_J {pub: out};
+        var C_max123: m6_per_J {pub: out};
+        var C: m6_per_J {pub: out};
+
+        C_max12 = sel
+            case C_conn1 > C_conn2:
+                C_conn1;
+            case C_conn1 <= C_conn2:
+                C_conn2;
+        endsel;
+
+        C_max123 = sel
+            case C_max12 > C_conn3:
+                C_max12;
+            case C_max12 <= C_conn3:
+                C_conn3;
+        endsel;
+
+        C = sel
+            case C_max123 > C_conn4:
+                C_max123;
+            case C_max123 <= C_conn4:
+                C_conn4;
+        endsel;
+
+        var q_C: m3 {init: q_C_init, pub: out};
+        var q_C_d: m3 {init: q_C_init, pub: out};
+        var q: m3 {pub: out};
+        var q_us: m3 {pub: out};
+
+        q_us = pi*sqr(r)*l;
+        q    = q_us+q_C+q_C_d;
+
+        var R: Js_per_m6 {pub: in};
+
+        // State Variables
+
+        var u: J_per_m3 {pub: out};
+        var u_mmHg: dimensionless {pub: out};
+        var v: m3_per_s {pub: out};
+        var v_mm3_s: mm3_per_s {pub: out};
+
+        v_mm3_s = v/one_mm3;
+
+        var u_d: J_per_m3 {pub: out};
+        var u_d_mmHg: dimensionless {pub: out};
+
+        // Conservation Laws
+        //question?????????? whether ode (q_c and q_C_d) should be vbc1-4 or vj1-4
+
+        u             = q_C/(C/2{dimensionless})+u_ext;
+        ode(q_C, t)   = vbc1+vbc2-v;
+        u_mmHg        = u/133.322{J_per_m3};
+        v             = (u-u_d)/R;
+        u_d           = q_C_d/(C/2{dimensionless})+u_ext;
+        ode(q_C_d, t) = v-vbc3-vbc4;
+        u_d_mmHg      = u_d/133.322{J_per_m3};
+    enddef;
+enddef;
+
