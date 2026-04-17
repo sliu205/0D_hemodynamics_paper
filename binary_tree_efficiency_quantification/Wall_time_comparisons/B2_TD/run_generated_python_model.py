@@ -23,11 +23,11 @@ except ImportError as e:
 # =============================================================================
 SOLVER_METHOD = "Radau"  # Options: "BDF", "LSODA", "Radau", "RK45"
 T_START = 0
-T_END = 10
-N_POINTS = 11  # Number of output points
+T_END = 1
+N_POINTS = 2  # Number of output points
 
-RTOL = 1e4  # Relative tolerance
-ATOL = 1e4  # Absolute tolerance
+RTOL = 1e-4  # Relative tolerance
+ATOL = 1e-4  # Absolute tolerance
 MAX_STEP = np.inf  # Maximum step size (use np.inf for unlimited)
 
 # CSV output filename
@@ -84,6 +84,13 @@ PLOTS = [
 ]
 
 # =============================================================================
+# Components to probe for R, C, r, l values (edit to match your model's comps)
+# =============================================================================
+PROBE_COMPONENTS = ['PV1', 'PV2', 'PV3', 'PV4', 'PV5', 'PV6',
+                    'V1', 'V2', 'V5', 'V6',
+                    'VV_junc1', 'VV_junc3']
+
+# =============================================================================
 # Run Simulation
 # =============================================================================
 print(f"\n{'='*60}")
@@ -109,16 +116,16 @@ try:
 except Exception as e:
     print(f"  ✗ ERROR evaluating RHS at t=0: {e}")
     sys.exit(1)
-# Probe the Jacobian at the initial point to find stiffness
+
+# =============================================================================
+# Diagnostic: Jacobian diagonal at t=0 (exposes stiff states)
+# =============================================================================
 print("\nProbing Jacobian at initial condition...")
 eps = 1e-8
 f0 = ode_rhs(0, y0)
-# Diagonal of the Jacobian only — full Jacobian is 89x89 finite differences, slow
-# Diagonal tells us each state's "self-stiffness" (λ ≈ df_i/dy_i)
 diag = np.zeros(len(y0))
 for i in range(len(y0)):
     yp = y0.copy()
-    # Use relative perturbation, with a floor for tiny states
     h = max(abs(y0[i]) * eps, 1e-20)
     yp[i] += h
     diag[i] = (ode_rhs(0, yp)[i] - f0[i]) / h
@@ -128,6 +135,49 @@ order = np.argsort(-np.abs(diag))
 for i in order[:10]:
     tau = -1.0/diag[i] if diag[i] < 0 else np.inf
     print(f"  {state_names[i]:40s} dJ/dy = {diag[i]:+.3e}   tau = {tau:.3e}s   y = {y0[i]:+.3e}")
+
+# =============================================================================
+# Diagnostic: R, C, r, l, and R*C time constants per component
+# =============================================================================
+print("\nProbing R, C, and R*C per component at t=0...")
+# compute_algebraics gives us the live values of R and any other pub:out
+# algebraics, which matters because R is recomputed each step.
+alg_t0 = generated_model.compute_algebraics(0, y0)
+
+
+def _get(name):
+    """Look up a value, first in compute_algebraics output, then as module-level
+    constant in generated_model."""
+    if name in alg_t0:
+        return alg_t0[name]
+    if hasattr(generated_model, name):
+        return getattr(generated_model, name)
+    return None
+
+
+def _fmt(x):
+    if isinstance(x, (int, float)) and x is not None and np.isfinite(x):
+        return f"{x:.3e}"
+    return "     -    "
+
+
+print(f"{'component':<15}{'r':>12}{'l':>12}{'mu':>12}{'R':>15}{'C':>15}{'R*C (s)':>15}")
+print("-" * 96)
+for comp in PROBE_COMPONENTS:
+    r  = _get(f"{comp}__r")
+    l  = _get(f"{comp}__l")
+    mu = _get(f"{comp}__mu")
+    if mu is None:
+        mu = _get(f"{comp}__mu_plasma")
+    R  = _get(f"{comp}__R")
+    C  = _get(f"{comp}__C")
+    RC = R * C if (isinstance(R, (int, float)) and isinstance(C, (int, float))) else None
+    print(f"{comp:<15}{_fmt(r):>12}{_fmt(l):>12}{_fmt(mu):>12}{_fmt(R):>15}{_fmt(C):>15}{_fmt(RC):>15}")
+
+print("\nNote: R*C is the natural time constant of q_C dynamics.")
+print("Values below ~1e-6 s indicate an unphysically stiff component that the")
+print("solver cannot integrate over 1-second timescales.\n")
+
 # =============================================================================
 # Progress tracker
 # =============================================================================
@@ -347,28 +397,3 @@ plt.show()
 print(f"\n{'='*60}")
 print("Done!")
 print(f"{'='*60}")
-
-
-# Probe the RHS and algebraics near the failure time
-import numpy as np
-t_probe = 0.227
-# Use y0 as a rough approximation since the solver didn't actually advance the state
-dydt = ode_rhs(t_probe, y0)
-alg = generated_model.compute_algebraics(t_probe, y0)
-
-# Find the biggest derivatives and the most extreme algebraics
-print("\nTop 10 largest |dydt| at t=0.227:")
-order = np.argsort(-np.abs(dydt))
-for i in order[:10]:
-    print(f"  {state_names[i]:40s} dydt = {dydt[i]:+.3e}   y = {y0[i]:+.3e}")
-
-print("\nTop 10 largest |algebraic| at t=0.227:")
-items = sorted(alg.items(), key=lambda kv: -abs(kv[1]) if np.isfinite(kv[1]) else 1e300)
-for name, val in items[:10]:
-    print(f"  {name:40s} = {val:+.3e}")
-
-# Flag any non-finite or extreme values
-print("\nNon-finite algebraics at t=0.227:")
-for name, val in alg.items():
-    if not np.isfinite(val):
-        print(f"  {name:40s} = {val}")
