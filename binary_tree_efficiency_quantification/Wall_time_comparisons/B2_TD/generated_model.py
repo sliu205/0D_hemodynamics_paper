@@ -18,10 +18,7 @@ PV1__H_global_L = 0.45
 PV1__H_global_R = 0.45
 PV1__R_constriction_base = 0.0
 PV1__R_constriction_final = 0.0
-PV1__div_0 = 1e-25
-PV1__div_0y = 1e-08
 PV1__gamma_mirror = 0.1
-PV1__k = 1000.0
 PV1__l = 0.000015
 PV1__mu_plasma = 0.001
 PV1__one_mm3 = 1e-09
@@ -30,21 +27,16 @@ PV1__r = 6e-06
 PV1__t0 = 500.0
 PV1__tau_H_down = 0.001
 PV1__tau_H_mean = 0.001
-PV1__tau_junc = 0.0001
 PV1__tau_link = 0.001
 PV1__tau_sig = 1.0
 PV1__u_ext = 133.0
 PV1__v_eps = 1e-30
 PV1__v_scale = 1e-50
-PV1__v_threshold = 1e-18
 PV2__H_global_L = 0.45
 PV2__H_global_R = 0.45
 PV2__R_constriction_base = 0.0
 PV2__R_constriction_final = 0.0
-PV2__div_0 = 1e-25
-PV2__div_0y = 1e-08
 PV2__gamma_mirror = 0.1
-PV2__k = 1000.0
 PV2__l = 0.000015
 PV2__mu_plasma = 0.001
 PV2__one_mm3 = 1e-09
@@ -53,21 +45,16 @@ PV2__r = 6e-06
 PV2__t0 = 500.0
 PV2__tau_H_down = 0.001
 PV2__tau_H_mean = 0.001
-PV2__tau_junc = 0.0001
 PV2__tau_link = 0.001
 PV2__tau_sig = 1.0
 PV2__u_ext = 133.0
 PV2__v_eps = 1e-30
 PV2__v_scale = 1e-50
-PV2__v_threshold = 1e-18
 PV3__H_global_L = 0.45
 PV3__H_global_R = 0.45
 PV3__R_constriction_base = 0.0
 PV3__R_constriction_final = 0.0
-PV3__div_0 = 1e-25
-PV3__div_0y = 1e-08
 PV3__gamma_mirror = 0.1
-PV3__k = 1000.0
 PV3__l = 0.000015
 PV3__mu_plasma = 0.001
 PV3__one_mm3 = 1e-09
@@ -76,21 +63,16 @@ PV3__r = 5.5e-06
 PV3__t0 = 500.0
 PV3__tau_H_down = 0.001
 PV3__tau_H_mean = 0.001
-PV3__tau_junc = 0.0001
 PV3__tau_link = 0.001
 PV3__tau_sig = 1.0
 PV3__u_ext = 133.0
 PV3__v_eps = 1e-30
 PV3__v_scale = 1e-50
-PV3__v_threshold = 1e-18
 PV4__H_global_L = 0.45
 PV4__H_global_R = 0.45
 PV4__R_constriction_base = 0.0
 PV4__R_constriction_final = 0.0
-PV4__div_0 = 1e-25
-PV4__div_0y = 1e-08
 PV4__gamma_mirror = 0.1
-PV4__k = 1000.0
 PV4__l = 0.000015
 PV4__mu_plasma = 0.001
 PV4__one_mm3 = 1e-09
@@ -99,208 +81,146 @@ PV4__r = 5.5e-06
 PV4__t0 = 500.0
 PV4__tau_H_down = 0.001
 PV4__tau_H_mean = 0.001
-PV4__tau_junc = 0.0001
 PV4__tau_link = 0.001
 PV4__tau_sig = 1.0
 PV4__u_ext = 133.0
 PV4__v_eps = 1e-30
 PV4__v_scale = 1e-50
-PV4__v_threshold = 1e-18
 PV5__H_global_L = 0.45
 PV5__H_global_R = 0.45
 PV5__R_constriction_base = 0.0
-PV5__R_constriction_final = 0.0
-PV5__div_0 = 1e-25
-PV5__div_0y = 1e-08
+PV5__R_constriction_final = 1e21
 PV5__gamma_mirror = 0.1
-PV5__k = 1000.0
 PV5__l = 0.000015
 PV5__mu_plasma = 0.001
 PV5__one_mm3 = 1e-09
 PV5__q_C_init = 0.0
-PV5__r = 0.0002
+PV5__r = 5.5e-06
 PV5__t0 = 500.0
 PV5__tau_H_down = 0.001
 PV5__tau_H_mean = 0.001
-PV5__tau_junc = 0.0001
 PV5__tau_link = 0.001
 PV5__tau_sig = 1.0
 PV5__u_ext = 133.0
 PV5__v_eps = 1e-30
 PV5__v_scale = 1e-50
-PV5__v_threshold = 1e-18
 PV6__H_global_L = 0.45
 PV6__H_global_R = 0.45
 PV6__R_constriction_base = 0.0
 PV6__R_constriction_final = 0.0
-PV6__div_0 = 1e-25
-PV6__div_0y = 1e-08
 PV6__gamma_mirror = 0.1
-PV6__k = 1000.0
 PV6__l = 0.000015
 PV6__mu_plasma = 0.001
 PV6__one_mm3 = 1e-09
 PV6__q_C_init = 0.0
-PV6__r = 0.0002
+PV6__r = 5.5e-06
 PV6__t0 = 500.0
 PV6__tau_H_down = 0.001
 PV6__tau_H_mean = 0.001
-PV6__tau_junc = 0.0001
 PV6__tau_link = 0.001
 PV6__tau_sig = 1.0
 PV6__u_ext = 133.0
 PV6__v_eps = 1e-30
 PV6__v_scale = 1e-50
-PV6__v_threshold = 1e-18
 V1__H_global_L = 0.45
 V1__H_global_R = 0.45
-V1__R_constriction_base = 0.0
-V1__div_0 = 1e-25
-V1__div_0y = 1e-08
 V1__gamma_mirror = 0.1
-V1__k = 1000.0
 V1__l = 0.00025
 V1__mu_plasma = 0.001
 V1__one_mm3 = 1e-09
 V1__q_C_init = 0.0
 V1__r = 5.5e-06
-V1__t0 = 500.0
 V1__tau_H_down = 0.001
 V1__tau_H_mean = 0.001
-V1__tau_junc = 0.0001
 V1__tau_link = 0.001
-V1__tau_sig = 1.0
 V1__u_ext = 133.0
 V1__v_eps = 1e-30
 V1__v_scale = 1e-50
-V1__v_threshold = 1e-18
 V2__H_global_L = 0.45
 V2__H_global_R = 0.45
-V2__R_constriction_base = 0.0
-V2__div_0 = 1e-25
-V2__div_0y = 1e-08
 V2__gamma_mirror = 0.1
-V2__k = 1000.0
 V2__l = 0.00025
 V2__mu_plasma = 0.001
 V2__one_mm3 = 1e-09
 V2__q_C_init = 0.0
 V2__r = 5.5e-06
-V2__t0 = 500.0
 V2__tau_H_down = 0.001
 V2__tau_H_mean = 0.001
-V2__tau_junc = 0.0001
 V2__tau_link = 0.001
-V2__tau_sig = 1.0
 V2__u_ext = 133.0
 V2__v_eps = 1e-30
 V2__v_scale = 1e-50
-V2__v_threshold = 1e-18
 V3__H_L_out_RHS = 0.45
 V3__H_global_L = 0.45
 V3__H_global_R = 0.45
-V3__R_constriction_base = 0.0
-V3__div_0 = 1e-25
-V3__div_0y = 1e-08
 V3__gamma_mirror = 0.1
-V3__k = 1000.0
 V3__l = 0.0002
 V3__mu_plasma = 0.001
 V3__one_mm3 = 1e-09
 V3__q_C_init = 0.0
 V3__r = 5e-06
-V3__t0 = 500.0
 V3__tau_H_down = 0.001
 V3__tau_H_mean = 0.001
-V3__tau_junc = 0.0001
 V3__tau_link = 0.001
-V3__tau_sig = 1.0
 V3__u_ext = 133.0
 V3__u_out = 6599.44
 V3__v_eps = 1e-30
 V3__v_scale = 1e-50
-V3__v_threshold = 1e-18
 V4__H_L_out_RHS = 0.45
 V4__H_global_L = 0.45
 V4__H_global_R = 0.45
-V4__R_constriction_base = 0.0
-V4__div_0 = 1e-25
-V4__div_0y = 1e-08
 V4__gamma_mirror = 0.1
-V4__k = 1000.0
 V4__l = 0.0002
 V4__mu_plasma = 0.001
 V4__one_mm3 = 1e-09
 V4__q_C_init = 0.0
 V4__r = 5e-06
-V4__t0 = 500.0
 V4__tau_H_down = 0.001
 V4__tau_H_mean = 0.001
-V4__tau_junc = 0.0001
 V4__tau_link = 0.001
-V4__tau_sig = 1.0
 V4__u_ext = 133.0
 V4__u_out = 6599.44
 V4__v_eps = 1e-30
 V4__v_scale = 1e-50
-V4__v_threshold = 1e-18
 V5__H_L_out_RHS = 0.45
 V5__H_global_L = 0.45
 V5__H_global_R = 0.45
-V5__R_constriction_base = 0.0
-V5__div_0 = 1e-25
-V5__div_0y = 1e-08
 V5__gamma_mirror = 0.1
-V5__k = 1000.0
 V5__l = 0.0002
 V5__mu_plasma = 0.001
 V5__one_mm3 = 1e-09
 V5__q_C_init = 0.0
 V5__r = 5e-06
-V5__t0 = 500.0
 V5__tau_H_down = 0.001
 V5__tau_H_mean = 0.001
-V5__tau_junc = 0.0001
 V5__tau_link = 0.001
-V5__tau_sig = 1.0
 V5__u_ext = 133.0
 V5__u_out = 6599.44
 V5__v_eps = 1e-30
 V5__v_scale = 1e-50
-V5__v_threshold = 1e-18
 V6__H_L_out_RHS = 0.45
 V6__H_global_L = 0.45
 V6__H_global_R = 0.45
-V6__R_constriction_base = 0.0
-V6__div_0 = 1e-25
-V6__div_0y = 1e-08
 V6__gamma_mirror = 0.1
-V6__k = 1000.0
 V6__l = 0.0002
 V6__mu_plasma = 0.001
 V6__one_mm3 = 1e-09
 V6__q_C_init = 0.0
 V6__r = 5e-06
-V6__t0 = 500.0
 V6__tau_H_down = 0.001
 V6__tau_H_mean = 0.001
-V6__tau_junc = 0.0001
 V6__tau_link = 0.001
-V6__tau_sig = 1.0
 V6__u_ext = 133.0
 V6__u_out = 6599.44
 V6__v_eps = 1e-30
 V6__v_scale = 1e-50
-V6__v_threshold = 1e-18
 VV_junc1__C_conn2 = 8.51e-22
 VV_junc1__H_global_L = 0.45
 VV_junc1__H_global_R = 0.45
 VV_junc1__H_to2 = 0.0
-VV_junc1__R = 1000000000000000.0
-VV_junc1__R_constriction_base = 0.0
+VV_junc1__R_VV_junc = 1000000000000000.0
 VV_junc1__div_0 = 1e-25
 VV_junc1__div_0y = 1e-08
-VV_junc1__gamma_mirror = 0.1
 VV_junc1__k = 1000.0
 VV_junc1__l = 0.000001
 VV_junc1__mu_plasma = 0.001
@@ -308,14 +228,7 @@ VV_junc1__one_mm3 = 1e-09
 VV_junc1__q_C_init = 0.0
 VV_junc1__r = 6e-06
 VV_junc1__r_bc2 = 0.0
-VV_junc1__t0 = 500.0
-VV_junc1__tau_H_down = 0.001
-VV_junc1__tau_H_mean = 0.001
-VV_junc1__tau_junc = 0.0001
-VV_junc1__tau_link = 0.001
-VV_junc1__tau_sig = 1.0
 VV_junc1__u_ext = 133.0
-VV_junc1__v_eps = 1e-30
 VV_junc1__v_scale = 1e-50
 VV_junc1__v_threshold = 1e-18
 VV_junc1__vbc2 = 0.0
@@ -323,11 +236,9 @@ VV_junc2__C_conn2 = 8.51e-22
 VV_junc2__H_global_L = 0.45
 VV_junc2__H_global_R = 0.45
 VV_junc2__H_to2 = 0.0
-VV_junc2__R = 1000000000000000.0
-VV_junc2__R_constriction_base = 0.0
+VV_junc2__R_VV_junc = 1000000000000000.0
 VV_junc2__div_0 = 1e-25
 VV_junc2__div_0y = 1e-08
-VV_junc2__gamma_mirror = 0.1
 VV_junc2__k = 1000.0
 VV_junc2__l = 0.000001
 VV_junc2__mu_plasma = 0.001
@@ -335,14 +246,7 @@ VV_junc2__one_mm3 = 1e-09
 VV_junc2__q_C_init = 0.0
 VV_junc2__r = 5.5e-06
 VV_junc2__r_bc2 = 0.0
-VV_junc2__t0 = 500.0
-VV_junc2__tau_H_down = 0.001
-VV_junc2__tau_H_mean = 0.001
-VV_junc2__tau_junc = 0.0001
-VV_junc2__tau_link = 0.001
-VV_junc2__tau_sig = 1.0
 VV_junc2__u_ext = 133.0
-VV_junc2__v_eps = 1e-30
 VV_junc2__v_scale = 1e-50
 VV_junc2__v_threshold = 1e-18
 VV_junc2__vbc2 = 0.0
@@ -350,11 +254,9 @@ VV_junc3__C_conn2 = 8.51e-22
 VV_junc3__H_global_L = 0.45
 VV_junc3__H_global_R = 0.45
 VV_junc3__H_to2 = 0.0
-VV_junc3__R = 1000000000000000.0
-VV_junc3__R_constriction_base = 0.0
+VV_junc3__R_VV_junc = 1000000000000000.0
 VV_junc3__div_0 = 1e-25
 VV_junc3__div_0y = 1e-08
-VV_junc3__gamma_mirror = 0.1
 VV_junc3__k = 1000.0
 VV_junc3__l = 0.000001
 VV_junc3__mu_plasma = 0.001
@@ -362,20 +264,13 @@ VV_junc3__one_mm3 = 1e-09
 VV_junc3__q_C_init = 0.0
 VV_junc3__r = 5.5e-06
 VV_junc3__r_bc2 = 0.0
-VV_junc3__t0 = 500.0
-VV_junc3__tau_H_down = 0.001
-VV_junc3__tau_H_mean = 0.001
-VV_junc3__tau_junc = 0.0001
-VV_junc3__tau_link = 0.001
-VV_junc3__tau_sig = 1.0
 VV_junc3__u_ext = 133.0
-VV_junc3__v_eps = 1e-30
 VV_junc3__v_scale = 1e-50
 VV_junc3__v_threshold = 1e-18
 VV_junc3__vbc2 = 0.0
 global__H_global_L = 0.45
 global__H_global_R = 0.45
-global__R = 1000000000000000.0
+global__R_VV_junc = 1000000000000000.0
 global__R_constriction_base = 0.0
 global__div_0 = 1e-25
 global__div_0y = 1e-08
@@ -387,7 +282,6 @@ global__q_C_init = 0.0
 global__t0 = 500.0
 global__tau_H_down = 0.001
 global__tau_H_mean = 0.001
-global__tau_junc = 0.0001
 global__tau_link = 0.001
 global__tau_sig = 1.0
 global__u_ext = 133.0
@@ -397,27 +291,19 @@ global__v_threshold = 1e-18
 inlet__H_R_out_LHS = 0.45
 inlet__H_global_L = 0.45
 inlet__H_global_R = 0.45
-inlet__R_constriction_base = 0.0
-inlet__div_0 = 1e-25
-inlet__div_0y = 1e-08
 inlet__gamma_mirror = 0.1
-inlet__k = 1000.0
 inlet__l = 0.0003
 inlet__mu_plasma = 0.001
 inlet__one_mm3 = 1e-09
 inlet__q_C_init = 0.0
 inlet__r = 6e-06
-inlet__t0 = 500.0
 inlet__tau_H_down = 0.001
 inlet__tau_H_mean = 0.001
-inlet__tau_junc = 0.0001
 inlet__tau_link = 0.001
-inlet__tau_sig = 1.0
 inlet__u_ext = 133.0
 inlet__u_in = 6666.1
 inlet__v_eps = 1e-30
 inlet__v_scale = 1e-50
-inlet__v_threshold = 1e-18
 
 # State names
 state_names = [
@@ -426,11 +312,6 @@ state_names = [
     'inlet__H_down',
     'inlet__RBC_volume',
     'inlet__q_C',
-    'VV_junc1__H_from1',
-    'VV_junc1__H_from2',
-    'VV_junc1__H_from3',
-    'VV_junc1__H_from4',
-    'VV_junc1__H_VV_out_alpha',
     'VV_junc1__RBC_volume',
     'VV_junc1__q_C',
     'VV_junc1__q_C_d',
@@ -454,11 +335,6 @@ state_names = [
     'V2__H_down',
     'V2__RBC_volume',
     'V2__q_C',
-    'VV_junc2__H_from1',
-    'VV_junc2__H_from2',
-    'VV_junc2__H_from3',
-    'VV_junc2__H_from4',
-    'VV_junc2__H_VV_out_alpha',
     'VV_junc2__RBC_volume',
     'VV_junc2__q_C',
     'VV_junc2__q_C_d',
@@ -482,11 +358,6 @@ state_names = [
     'V4__H_down',
     'V4__RBC_volume',
     'V4__q_C',
-    'VV_junc3__H_from1',
-    'VV_junc3__H_from2',
-    'VV_junc3__H_from3',
-    'VV_junc3__H_from4',
-    'VV_junc3__H_VV_out_alpha',
     'VV_junc3__RBC_volume',
     'VV_junc3__q_C',
     'VV_junc3__q_C_d',
@@ -514,95 +385,80 @@ state_names = [
 
 # Initial conditions
 y0 = np.array([
+    0.16554533503524738,
     0.45,
+    0.449999999005151,
+    1.5269638949389773e-14,
+    3.3304324226885967e-18,
+    5.3129684920468425e-17,
+    2.769272006972341e-18,
+    2.764894767188325e-18,
+    0.4499606157540015,
+    0.4629569747141832,
+    0.4494584270115804,
+    7.635217082420872e-16,
+    1.6593367921428482e-19,
+    0.44996062342925724,
+    0.4629455867731889,
+    0.44945881826960615,
+    7.635216829641695e-16,
+    1.659336758114149e-19,
+    0.16877102489882437,
+    0.4498340144397035,
+    0.4500038278206632,
+    1.0692476758257886e-14,
+    2.7654351283631478e-18,
+    0.16877102492005452,
+    0.4498340821456568,
+    0.45000382704704384,
+    1.0692476758081617e-14,
+    2.7654351290434194e-18,
+    4.5091178832564876e-17,
+    2.7580055576032245e-18,
+    2.7558170606915004e-18,
+    0.45001259668412064,
+    0.4616498943276744,
+    0.4497385713914187,
+    6.415547157656964e-16,
+    1.653905004600027e-19,
+    0.4500125966841176,
+    0.46164989432758646,
+    0.449738571391391,
+    6.415547157656421e-16,
+    1.6539050046000347e-19,
     0.45,
-    0.44999999999978424,
-    1.5269638980947235e-14,
-    3.3304100022007534e-18,
+    0.44998862167485104,
+    0.44999874157007946,
+    7.069575833985925e-15,
+    2.2051360761119726e-18,
     0.45,
-    0.0030304372081619902,
-    0.46960467660585914,
-    0.46357568603273064,
-    0.46446029804327094,
-    5.325507956209272e-17,
-    2.7692346734392117e-18,
-    2.7648420113638745e-18,
-    0.4499741438430332,
-    0.46166248034022545,
-    0.4495619834497541,
-    7.635130096201316e-16,
-    1.6593089687582992e-19,
-    0.4499928609103,
-    0.45540098039695914,
-    0.4498426337988574,
-    7.634925604467997e-16,
-    1.6593077855686796e-19,
-    0.4521538227287373,
-    0.4498793661556424,
-    0.45000257920109266,
-    1.0692476761639023e-14,
-    2.7653833978996735e-18,
-    0.4522089471092198,
-    0.449963176418735,
-    0.45000070802444786,
-    1.069247687755114e-14,
-    2.765379453934032e-18,
-    0.45342769074746897,
-    0.0030304372081619902,
-    0.46497009562281033,
-    0.4753901318677901,
-    0.4660119563450339,
-    4.516794760226283e-17,
-    2.7579796284145686e-18,
-    2.7557996792297734e-18,
-    0.4499928672200254,
-    0.45580122364794357,
-    0.4498345538668819,
-    6.415539443210172e-16,
-    1.6539015085502025e-19,
-    0.4499680110389531,
-    0.4648469359738592,
-    0.4494463986983048,
-    6.415680102854312e-16,
-    1.6539015067283592e-19,
+    0.4499886216748402,
+    0.44999874157007974,
+    7.069575833985925e-15,
+    2.2051360761119726e-18,
+    4.509154804731749e-17,
+    2.758005575811102e-18,
+    2.7558170844178176e-18,
+    0.4500126003633829,
+    0.46165405002189513,
+    0.44973848705000746,
+    6.415546237201658e-16,
+    1.6539042269352074e-19,
+    0.45001259208841843,
+    0.4616484826165441,
+    0.4497385592079264,
+    6.415546197280901e-16,
+    1.6539042412527714e-19,
     0.45,
-    0.44996227683071843,
-    0.45000071303472855,
-    7.069575753798429e-15,
-    2.2051227949778856e-18,
+    0.4499886239845553,
+    0.4499987412086233,
+    7.069575834279371e-15,
+    2.205136094950624e-18,
     0.45,
-    0.44984926600388503,
-    0.4500031977154906,
-    7.069575675609164e-15,
-    2.2051227901197373e-18,
-    0.4535159107894262,
-    0.0030304372081619902,
-    0.4755048411310569,
-    0.4650122885170312,
-    0.4660509415683085,
-    4.518044206455309e-17,
-    2.757876499929099e-18,
-    2.7556637870380967e-18,
-    0.4499679637624264,
-    0.46474400723281645,
-    0.4494473802425953,
-    3.1101771967556655e-13,
-    6.06422432666866e-20,
-    0.44999286038407266,
-    0.45592594769932776,
-    0.4498294688725247,
-    3.110177057497587e-13,
-    6.064224326668661e-20,
-    0.45,
-    0.4498494294449694,
-    0.45000320242786457,
-    7.0695756964237685e-15,
-    2.205172482413065e-18,
-    0.45,
-    0.4499615550361841,
-    0.45000071373073747,
-    7.069575776130933e-15,
-    2.205172482413065e-18,
+    0.4499886068011827,
+    0.4499987420357697,
+    7.069575834252539e-15,
+    2.2051360949497965e-18,
 ])
 
 def ode_rhs(t, y):
@@ -612,90 +468,75 @@ def ode_rhs(t, y):
     inlet__H_down = y[2]
     inlet__RBC_volume = y[3]
     inlet__q_C = y[4]
-    VV_junc1__H_from1 = y[5]
-    VV_junc1__H_from2 = y[6]
-    VV_junc1__H_from3 = y[7]
-    VV_junc1__H_from4 = y[8]
-    VV_junc1__H_VV_out_alpha = y[9]
-    VV_junc1__RBC_volume = y[10]
-    VV_junc1__q_C = y[11]
-    VV_junc1__q_C_d = y[12]
-    PV1__H_link_R = y[13]
-    PV1__H_link_L = y[14]
-    PV1__H_down = y[15]
-    PV1__RBC_volume = y[16]
-    PV1__q_C = y[17]
-    PV2__H_link_R = y[18]
-    PV2__H_link_L = y[19]
-    PV2__H_down = y[20]
-    PV2__RBC_volume = y[21]
-    PV2__q_C = y[22]
-    V1__H_link_R = y[23]
-    V1__H_link_L = y[24]
-    V1__H_down = y[25]
-    V1__RBC_volume = y[26]
-    V1__q_C = y[27]
-    V2__H_link_R = y[28]
-    V2__H_link_L = y[29]
-    V2__H_down = y[30]
-    V2__RBC_volume = y[31]
-    V2__q_C = y[32]
-    VV_junc2__H_from1 = y[33]
-    VV_junc2__H_from2 = y[34]
-    VV_junc2__H_from3 = y[35]
-    VV_junc2__H_from4 = y[36]
-    VV_junc2__H_VV_out_alpha = y[37]
-    VV_junc2__RBC_volume = y[38]
-    VV_junc2__q_C = y[39]
-    VV_junc2__q_C_d = y[40]
-    PV3__H_link_R = y[41]
-    PV3__H_link_L = y[42]
-    PV3__H_down = y[43]
-    PV3__RBC_volume = y[44]
-    PV3__q_C = y[45]
-    PV4__H_link_R = y[46]
-    PV4__H_link_L = y[47]
-    PV4__H_down = y[48]
-    PV4__RBC_volume = y[49]
-    PV4__q_C = y[50]
-    V3__H_link_R = y[51]
-    V3__H_link_L = y[52]
-    V3__H_down = y[53]
-    V3__RBC_volume = y[54]
-    V3__q_C = y[55]
-    V4__H_link_R = y[56]
-    V4__H_link_L = y[57]
-    V4__H_down = y[58]
-    V4__RBC_volume = y[59]
-    V4__q_C = y[60]
-    VV_junc3__H_from1 = y[61]
-    VV_junc3__H_from2 = y[62]
-    VV_junc3__H_from3 = y[63]
-    VV_junc3__H_from4 = y[64]
-    VV_junc3__H_VV_out_alpha = y[65]
-    VV_junc3__RBC_volume = y[66]
-    VV_junc3__q_C = y[67]
-    VV_junc3__q_C_d = y[68]
-    PV5__H_link_R = y[69]
-    PV5__H_link_L = y[70]
-    PV5__H_down = y[71]
-    PV5__RBC_volume = y[72]
-    PV5__q_C = y[73]
-    PV6__H_link_R = y[74]
-    PV6__H_link_L = y[75]
-    PV6__H_down = y[76]
-    PV6__RBC_volume = y[77]
-    PV6__q_C = y[78]
-    V5__H_link_R = y[79]
-    V5__H_link_L = y[80]
-    V5__H_down = y[81]
-    V5__RBC_volume = y[82]
-    V5__q_C = y[83]
-    V6__H_link_R = y[84]
-    V6__H_link_L = y[85]
-    V6__H_down = y[86]
-    V6__RBC_volume = y[87]
-    V6__q_C = y[88]
+    VV_junc1__RBC_volume = y[5]
+    VV_junc1__q_C = y[6]
+    VV_junc1__q_C_d = y[7]
+    PV1__H_link_R = y[8]
+    PV1__H_link_L = y[9]
+    PV1__H_down = y[10]
+    PV1__RBC_volume = y[11]
+    PV1__q_C = y[12]
+    PV2__H_link_R = y[13]
+    PV2__H_link_L = y[14]
+    PV2__H_down = y[15]
+    PV2__RBC_volume = y[16]
+    PV2__q_C = y[17]
+    V1__H_link_R = y[18]
+    V1__H_link_L = y[19]
+    V1__H_down = y[20]
+    V1__RBC_volume = y[21]
+    V1__q_C = y[22]
+    V2__H_link_R = y[23]
+    V2__H_link_L = y[24]
+    V2__H_down = y[25]
+    V2__RBC_volume = y[26]
+    V2__q_C = y[27]
+    VV_junc2__RBC_volume = y[28]
+    VV_junc2__q_C = y[29]
+    VV_junc2__q_C_d = y[30]
+    PV3__H_link_R = y[31]
+    PV3__H_link_L = y[32]
+    PV3__H_down = y[33]
+    PV3__RBC_volume = y[34]
+    PV3__q_C = y[35]
+    PV4__H_link_R = y[36]
+    PV4__H_link_L = y[37]
+    PV4__H_down = y[38]
+    PV4__RBC_volume = y[39]
+    PV4__q_C = y[40]
+    V3__H_link_R = y[41]
+    V3__H_link_L = y[42]
+    V3__H_down = y[43]
+    V3__RBC_volume = y[44]
+    V3__q_C = y[45]
+    V4__H_link_R = y[46]
+    V4__H_link_L = y[47]
+    V4__H_down = y[48]
+    V4__RBC_volume = y[49]
+    V4__q_C = y[50]
+    VV_junc3__RBC_volume = y[51]
+    VV_junc3__q_C = y[52]
+    VV_junc3__q_C_d = y[53]
+    PV5__H_link_R = y[54]
+    PV5__H_link_L = y[55]
+    PV5__H_down = y[56]
+    PV5__RBC_volume = y[57]
+    PV5__q_C = y[58]
+    PV6__H_link_R = y[59]
+    PV6__H_link_L = y[60]
+    PV6__H_down = y[61]
+    PV6__RBC_volume = y[62]
+    PV6__q_C = y[63]
+    V5__H_link_R = y[64]
+    V5__H_link_L = y[65]
+    V5__H_down = y[66]
+    V5__RBC_volume = y[67]
+    V5__q_C = y[68]
+    V6__H_link_R = y[69]
+    V6__H_link_L = y[70]
+    V6__H_down = y[71]
+    V6__RBC_volume = y[72]
+    V6__q_C = y[73]
 
     # Time variable
     environment__time = t
@@ -994,8 +835,7 @@ def ode_rhs(t, y):
     VV_junc1__Qout4 = VV_junc1__w_out4*-VV_junc1__vj4
     VV_junc1__Qin_tot = VV_junc1__Qin1+VV_junc1__Qin2+VV_junc1__Qin3+VV_junc1__Qin4
     VV_junc1__Qout_tot = VV_junc1__Qout1+VV_junc1__Qout2+VV_junc1__Qout3+VV_junc1__Qout4
-    VV_junc1__RBC_out = VV_junc1__Qout1*VV_junc1__H_from1+VV_junc1__Qout2*VV_junc1__H_from2+VV_junc1__Qout3*VV_junc1__H_from3+VV_junc1__Qout4*VV_junc1__H_from4
-    VV_junc1__v = (VV_junc1__u-VV_junc1__u_d)/VV_junc1__R
+    VV_junc1__v = (VV_junc1__u-VV_junc1__u_d)/VV_junc1__R_VV_junc
     VV_junc1__bc1_is_in = (1 if VV_junc1__Qin1 > VV_junc1__v_threshold else 0)
     VV_junc1__bc3_is_in = (1 if VV_junc1__Qin3 > VV_junc1__v_threshold else 0)
     VV_junc1__bc4_is_in = (1 if VV_junc1__Qin4 > VV_junc1__v_threshold else 0)
@@ -1012,8 +852,8 @@ def ode_rhs(t, y):
     PV1__v_neg = (1-PV1__w_v)*-PV1__v
     PV1__v_d_pos = PV1__w_v_d*PV1__v_d
     PV1__v_d_neg = (1-PV1__w_v_d)*-PV1__v_d
-    PV1__H_mass_L = PV1__w_v*PV1__H_L_in+(1-PV1__w_v)*PV1__H_L_out
-    PV1__H_mass_R = PV1__w_v_d*PV1__H_R_out+(1-PV1__w_v_d)*PV1__H_R_in
+    PV1__H_volume_L = PV1__w_v*PV1__H_L_in+(1-PV1__w_v)*PV1__H_L_out
+    PV1__H_volume_R = PV1__w_v_d*PV1__H_R_out+(1-PV1__w_v_d)*PV1__H_R_in
     PV1__v_mm3_s = PV1__v/PV1__one_mm3
     PV1__v_d_mm3_s = PV1__v_d/PV1__one_mm3
     PV2__w_v = 0.5+1/np.pi*np.arctan(PV2__v/PV2__v_scale)
@@ -1026,8 +866,8 @@ def ode_rhs(t, y):
     PV2__v_neg = (1-PV2__w_v)*-PV2__v
     PV2__v_d_pos = PV2__w_v_d*PV2__v_d
     PV2__v_d_neg = (1-PV2__w_v_d)*-PV2__v_d
-    PV2__H_mass_L = PV2__w_v*PV2__H_L_in+(1-PV2__w_v)*PV2__H_L_out
-    PV2__H_mass_R = PV2__w_v_d*PV2__H_R_out+(1-PV2__w_v_d)*PV2__H_R_in
+    PV2__H_volume_L = PV2__w_v*PV2__H_L_in+(1-PV2__w_v)*PV2__H_L_out
+    PV2__H_volume_R = PV2__w_v_d*PV2__H_R_out+(1-PV2__w_v_d)*PV2__H_R_in
     PV2__v_mm3_s = PV2__v/PV2__one_mm3
     PV2__v_d_mm3_s = PV2__v_d/PV2__one_mm3
     V1__v = (V1__u-VV_junc2__u)/V1__R
@@ -1049,8 +889,7 @@ def ode_rhs(t, y):
     VV_junc2__Qout4 = VV_junc2__w_out4*-VV_junc2__vj4
     VV_junc2__Qin_tot = VV_junc2__Qin1+VV_junc2__Qin2+VV_junc2__Qin3+VV_junc2__Qin4
     VV_junc2__Qout_tot = VV_junc2__Qout1+VV_junc2__Qout2+VV_junc2__Qout3+VV_junc2__Qout4
-    VV_junc2__RBC_out = VV_junc2__Qout1*VV_junc2__H_from1+VV_junc2__Qout2*VV_junc2__H_from2+VV_junc2__Qout3*VV_junc2__H_from3+VV_junc2__Qout4*VV_junc2__H_from4
-    VV_junc2__v = (VV_junc2__u-VV_junc2__u_d)/VV_junc2__R
+    VV_junc2__v = (VV_junc2__u-VV_junc2__u_d)/VV_junc2__R_VV_junc
     VV_junc2__bc1_is_in = (1 if VV_junc2__Qin1 > VV_junc2__v_threshold else 0)
     VV_junc2__bc3_is_in = (1 if VV_junc2__Qin3 > VV_junc2__v_threshold else 0)
     VV_junc2__bc4_is_in = (1 if VV_junc2__Qin4 > VV_junc2__v_threshold else 0)
@@ -1067,8 +906,8 @@ def ode_rhs(t, y):
     PV3__v_neg = (1-PV3__w_v)*-PV3__v
     PV3__v_d_pos = PV3__w_v_d*PV3__v_d
     PV3__v_d_neg = (1-PV3__w_v_d)*-PV3__v_d
-    PV3__H_mass_L = PV3__w_v*PV3__H_L_in+(1-PV3__w_v)*PV3__H_L_out
-    PV3__H_mass_R = PV3__w_v_d*PV3__H_R_out+(1-PV3__w_v_d)*PV3__H_R_in
+    PV3__H_volume_L = PV3__w_v*PV3__H_L_in+(1-PV3__w_v)*PV3__H_L_out
+    PV3__H_volume_R = PV3__w_v_d*PV3__H_R_out+(1-PV3__w_v_d)*PV3__H_R_in
     PV3__v_mm3_s = PV3__v/PV3__one_mm3
     PV3__v_d_mm3_s = PV3__v_d/PV3__one_mm3
     PV4__w_v = 0.5+1/np.pi*np.arctan(PV4__v/PV4__v_scale)
@@ -1081,8 +920,8 @@ def ode_rhs(t, y):
     PV4__v_neg = (1-PV4__w_v)*-PV4__v
     PV4__v_d_pos = PV4__w_v_d*PV4__v_d
     PV4__v_d_neg = (1-PV4__w_v_d)*-PV4__v_d
-    PV4__H_mass_L = PV4__w_v*PV4__H_L_in+(1-PV4__w_v)*PV4__H_L_out
-    PV4__H_mass_R = PV4__w_v_d*PV4__H_R_out+(1-PV4__w_v_d)*PV4__H_R_in
+    PV4__H_volume_L = PV4__w_v*PV4__H_L_in+(1-PV4__w_v)*PV4__H_L_out
+    PV4__H_volume_R = PV4__w_v_d*PV4__H_R_out+(1-PV4__w_v_d)*PV4__H_R_in
     PV4__v_mm3_s = PV4__v/PV4__one_mm3
     PV4__v_d_mm3_s = PV4__v_d/PV4__one_mm3
     V3__w_v = 0.5+1/np.pi*np.arctan(V3__v/V3__v_scale)
@@ -1092,8 +931,8 @@ def ode_rhs(t, y):
     V3__H_R_out = V3__w_v*V3__H_down+(1-V3__w_v)*V3__H_R_in
     V3__v_pos = V3__w_v*V3__v
     V3__v_neg = (1-V3__w_v)*-V3__v
-    V3__H_mass_L = V3__w_v*V3__H_L_in+(1-V3__w_v)*V3__H_L_out
-    V3__H_mass_R = V3__w_v*V3__H_R_out+(1-V3__w_v)*V3__H_R_in
+    V3__H_volume_L = V3__w_v*V3__H_L_in+(1-V3__w_v)*V3__H_L_out
+    V3__H_volume_R = V3__w_v*V3__H_R_out+(1-V3__w_v)*V3__H_R_in
     V3__v_mm3_s = V3__v/V3__one_mm3
     V4__w_v = 0.5+1/np.pi*np.arctan(V4__v/V4__v_scale)
     V4__H_up = V4__w_v*V4__H_L_in+(1-V4__w_v)*V4__H_R_in
@@ -1102,8 +941,8 @@ def ode_rhs(t, y):
     V4__H_R_out = V4__w_v*V4__H_down+(1-V4__w_v)*V4__H_R_in
     V4__v_pos = V4__w_v*V4__v
     V4__v_neg = (1-V4__w_v)*-V4__v
-    V4__H_mass_L = V4__w_v*V4__H_L_in+(1-V4__w_v)*V4__H_L_out
-    V4__H_mass_R = V4__w_v*V4__H_R_out+(1-V4__w_v)*V4__H_R_in
+    V4__H_volume_L = V4__w_v*V4__H_L_in+(1-V4__w_v)*V4__H_L_out
+    V4__H_volume_R = V4__w_v*V4__H_R_out+(1-V4__w_v)*V4__H_R_in
     V4__v_mm3_s = V4__v/V4__one_mm3
     VV_junc3__vj1 = V2__v
     VV_junc3__vj3 = -PV5__v
@@ -1122,8 +961,7 @@ def ode_rhs(t, y):
     VV_junc3__Qout4 = VV_junc3__w_out4*-VV_junc3__vj4
     VV_junc3__Qin_tot = VV_junc3__Qin1+VV_junc3__Qin2+VV_junc3__Qin3+VV_junc3__Qin4
     VV_junc3__Qout_tot = VV_junc3__Qout1+VV_junc3__Qout2+VV_junc3__Qout3+VV_junc3__Qout4
-    VV_junc3__RBC_out = VV_junc3__Qout1*VV_junc3__H_from1+VV_junc3__Qout2*VV_junc3__H_from2+VV_junc3__Qout3*VV_junc3__H_from3+VV_junc3__Qout4*VV_junc3__H_from4
-    VV_junc3__v = (VV_junc3__u-VV_junc3__u_d)/VV_junc3__R
+    VV_junc3__v = (VV_junc3__u-VV_junc3__u_d)/VV_junc3__R_VV_junc
     VV_junc3__bc1_is_in = (1 if VV_junc3__Qin1 > VV_junc3__v_threshold else 0)
     VV_junc3__bc3_is_in = (1 if VV_junc3__Qin3 > VV_junc3__v_threshold else 0)
     VV_junc3__bc4_is_in = (1 if VV_junc3__Qin4 > VV_junc3__v_threshold else 0)
@@ -1140,8 +978,8 @@ def ode_rhs(t, y):
     PV5__v_neg = (1-PV5__w_v)*-PV5__v
     PV5__v_d_pos = PV5__w_v_d*PV5__v_d
     PV5__v_d_neg = (1-PV5__w_v_d)*-PV5__v_d
-    PV5__H_mass_L = PV5__w_v*PV5__H_L_in+(1-PV5__w_v)*PV5__H_L_out
-    PV5__H_mass_R = PV5__w_v_d*PV5__H_R_out+(1-PV5__w_v_d)*PV5__H_R_in
+    PV5__H_volume_L = PV5__w_v*PV5__H_L_in+(1-PV5__w_v)*PV5__H_L_out
+    PV5__H_volume_R = PV5__w_v_d*PV5__H_R_out+(1-PV5__w_v_d)*PV5__H_R_in
     PV5__v_mm3_s = PV5__v/PV5__one_mm3
     PV5__v_d_mm3_s = PV5__v_d/PV5__one_mm3
     PV6__w_v = 0.5+1/np.pi*np.arctan(PV6__v/PV6__v_scale)
@@ -1154,8 +992,8 @@ def ode_rhs(t, y):
     PV6__v_neg = (1-PV6__w_v)*-PV6__v
     PV6__v_d_pos = PV6__w_v_d*PV6__v_d
     PV6__v_d_neg = (1-PV6__w_v_d)*-PV6__v_d
-    PV6__H_mass_L = PV6__w_v*PV6__H_L_in+(1-PV6__w_v)*PV6__H_L_out
-    PV6__H_mass_R = PV6__w_v_d*PV6__H_R_out+(1-PV6__w_v_d)*PV6__H_R_in
+    PV6__H_volume_L = PV6__w_v*PV6__H_L_in+(1-PV6__w_v)*PV6__H_L_out
+    PV6__H_volume_R = PV6__w_v_d*PV6__H_R_out+(1-PV6__w_v_d)*PV6__H_R_in
     PV6__v_mm3_s = PV6__v/PV6__one_mm3
     PV6__v_d_mm3_s = PV6__v_d/PV6__one_mm3
     V5__w_v = 0.5+1/np.pi*np.arctan(V5__v/V5__v_scale)
@@ -1165,8 +1003,8 @@ def ode_rhs(t, y):
     V5__H_R_out = V5__w_v*V5__H_down+(1-V5__w_v)*V5__H_R_in
     V5__v_pos = V5__w_v*V5__v
     V5__v_neg = (1-V5__w_v)*-V5__v
-    V5__H_mass_L = V5__w_v*V5__H_L_in+(1-V5__w_v)*V5__H_L_out
-    V5__H_mass_R = V5__w_v*V5__H_R_out+(1-V5__w_v)*V5__H_R_in
+    V5__H_volume_L = V5__w_v*V5__H_L_in+(1-V5__w_v)*V5__H_L_out
+    V5__H_volume_R = V5__w_v*V5__H_R_out+(1-V5__w_v)*V5__H_R_in
     V5__v_mm3_s = V5__v/V5__one_mm3
     V6__w_v = 0.5+1/np.pi*np.arctan(V6__v/V6__v_scale)
     V6__H_up = V6__w_v*V6__H_L_in+(1-V6__w_v)*V6__H_R_in
@@ -1175,8 +1013,8 @@ def ode_rhs(t, y):
     V6__H_R_out = V6__w_v*V6__H_down+(1-V6__w_v)*V6__H_R_in
     V6__v_pos = V6__w_v*V6__v
     V6__v_neg = (1-V6__w_v)*-V6__v
-    V6__H_mass_L = V6__w_v*V6__H_L_in+(1-V6__w_v)*V6__H_L_out
-    V6__H_mass_R = V6__w_v*V6__H_R_out+(1-V6__w_v)*V6__H_R_in
+    V6__H_volume_L = V6__w_v*V6__H_L_in+(1-V6__w_v)*V6__H_L_out
+    V6__H_volume_R = V6__w_v*V6__H_R_out+(1-V6__w_v)*V6__H_R_in
     V6__v_mm3_s = V6__v/V6__one_mm3
     inlet__w_v_d = 0.5+1/np.pi*np.arctan(inlet__v_d/inlet__v_scale)
     inlet__H_up = inlet__w_v_d*inlet__H_L_in+(1-inlet__w_v_d)*inlet__H_R_in
@@ -1185,8 +1023,8 @@ def ode_rhs(t, y):
     inlet__H_R_out = inlet__w_v_d*inlet__H_down+(1-inlet__w_v_d)*inlet__H_R_in
     inlet__v_d_pos = inlet__w_v_d*inlet__v_d
     inlet__v_d_neg = (1-inlet__w_v_d)*-inlet__v_d
-    inlet__H_mass_L = inlet__w_v*inlet__H_L_in+(1-inlet__w_v)*inlet__H_L_out
-    inlet__H_mass_R = inlet__w_v_d*inlet__H_R_out+(1-inlet__w_v_d)*inlet__H_R_in
+    inlet__H_volume_L = inlet__w_v*inlet__H_L_in+(1-inlet__w_v)*inlet__H_L_out
+    inlet__H_volume_R = inlet__w_v_d*inlet__H_R_out+(1-inlet__w_v_d)*inlet__H_R_in
     inlet__v_d_mm3_s = inlet__v_d/inlet__one_mm3
     VV_junc1__n_in = VV_junc1__bc1_is_in+VV_junc1__bc2_is_in+VV_junc1__bc3_is_in+VV_junc1__bc4_is_in
     VV_junc1__n_out = VV_junc1__bc1_is_out+VV_junc1__bc2_is_out+VV_junc1__bc3_is_out+VV_junc1__bc4_is_out
@@ -1225,8 +1063,8 @@ def ode_rhs(t, y):
     V1__H_R_out = V1__w_v*V1__H_down+(1-V1__w_v)*V1__H_R_in
     V1__v_pos = V1__w_v*V1__v
     V1__v_neg = (1-V1__w_v)*-V1__v
-    V1__H_mass_L = V1__w_v*V1__H_L_in+(1-V1__w_v)*V1__H_L_out
-    V1__H_mass_R = V1__w_v*V1__H_R_out+(1-V1__w_v)*V1__H_R_in
+    V1__H_volume_L = V1__w_v*V1__H_L_in+(1-V1__w_v)*V1__H_L_out
+    V1__H_volume_R = V1__w_v*V1__H_R_out+(1-V1__w_v)*V1__H_R_in
     V1__v_mm3_s = V1__v/V1__one_mm3
     V2__w_v = 0.5+1/np.pi*np.arctan(V2__v/V2__v_scale)
     V2__H_up = V2__w_v*V2__H_L_in+(1-V2__w_v)*V2__H_R_in
@@ -1235,8 +1073,8 @@ def ode_rhs(t, y):
     V2__H_R_out = V2__w_v*V2__H_down+(1-V2__w_v)*V2__H_R_in
     V2__v_pos = V2__w_v*V2__v
     V2__v_neg = (1-V2__w_v)*-V2__v
-    V2__H_mass_L = V2__w_v*V2__H_L_in+(1-V2__w_v)*V2__H_L_out
-    V2__H_mass_R = V2__w_v*V2__H_R_out+(1-V2__w_v)*V2__H_R_in
+    V2__H_volume_L = V2__w_v*V2__H_L_in+(1-V2__w_v)*V2__H_L_out
+    V2__H_volume_R = V2__w_v*V2__H_R_out+(1-V2__w_v)*V2__H_R_in
     V2__v_mm3_s = V2__v/V2__one_mm3
     VV_junc2__n_in = VV_junc2__bc1_is_in+VV_junc2__bc2_is_in+VV_junc2__bc3_is_in+VV_junc2__bc4_is_in
     VV_junc2__n_out = VV_junc2__bc1_is_out+VV_junc2__bc2_is_out+VV_junc2__bc3_is_out+VV_junc2__bc4_is_out
@@ -1327,7 +1165,7 @@ def ode_rhs(t, y):
     VV_junc2__ph = np.log(VV_junc2__y/(1-VV_junc2__y))
     VV_junc3__ph = np.log(VV_junc3__y/(1-VV_junc3__y))
     VV_junc1__FQE_alpha = 1/(1+np.exp(-(VV_junc1__A+VV_junc1__B*VV_junc1__ph)))
-    VV_junc1__epsilon_alpha = VV_junc1__H_VV_out_alpha-VV_junc1__H_mean*VV_junc1__FQE_alpha/(VV_junc1__FQB_alpha+VV_junc1__div_0)
+    VV_junc1__H_VV_out_alpha = VV_junc1__H_mean*VV_junc1__FQE_alpha/(VV_junc1__FQB_alpha+VV_junc1__div_0)
     VV_junc1__H_VV_out_beta = VV_junc1__H_mean*(1-VV_junc1__FQE_alpha)/(1-VV_junc1__FQB_alpha+VV_junc1__div_0)
     VV_junc1__H_split1 = (VV_junc1__H_VV_out_alpha if VV_junc1__alpha1 == 1 else (VV_junc1__H_VV_out_beta if VV_junc1__beta1 == 1 else inlet__H_R_out))
     VV_junc1__H_split2 = (VV_junc1__H_VV_out_alpha if VV_junc1__alpha2 == 1 else (VV_junc1__H_VV_out_beta if VV_junc1__beta2 == 1 else VV_junc1__H_to2))
@@ -1342,7 +1180,7 @@ def ode_rhs(t, y):
     VV_junc1__H_from3_target = (VV_junc1__H_daughter3 if VV_junc1__bc3_is_out == 1 else PV1__H_L_out)
     VV_junc1__H_from4_target = (VV_junc1__H_daughter4 if VV_junc1__bc4_is_out == 1 else PV2__H_L_out)
     VV_junc2__FQE_alpha = 1/(1+np.exp(-(VV_junc2__A+VV_junc2__B*VV_junc2__ph)))
-    VV_junc2__epsilon_alpha = VV_junc2__H_VV_out_alpha-VV_junc2__H_mean*VV_junc2__FQE_alpha/(VV_junc2__FQB_alpha+VV_junc2__div_0)
+    VV_junc2__H_VV_out_alpha = VV_junc2__H_mean*VV_junc2__FQE_alpha/(VV_junc2__FQB_alpha+VV_junc2__div_0)
     VV_junc2__H_VV_out_beta = VV_junc2__H_mean*(1-VV_junc2__FQE_alpha)/(1-VV_junc2__FQB_alpha+VV_junc2__div_0)
     VV_junc2__H_split1 = (VV_junc2__H_VV_out_alpha if VV_junc2__alpha1 == 1 else (VV_junc2__H_VV_out_beta if VV_junc2__beta1 == 1 else V1__H_R_out))
     VV_junc2__H_split2 = (VV_junc2__H_VV_out_alpha if VV_junc2__alpha2 == 1 else (VV_junc2__H_VV_out_beta if VV_junc2__beta2 == 1 else VV_junc2__H_to2))
@@ -1357,7 +1195,7 @@ def ode_rhs(t, y):
     VV_junc2__H_from3_target = (VV_junc2__H_daughter3 if VV_junc2__bc3_is_out == 1 else PV3__H_L_out)
     VV_junc2__H_from4_target = (VV_junc2__H_daughter4 if VV_junc2__bc4_is_out == 1 else PV4__H_L_out)
     VV_junc3__FQE_alpha = 1/(1+np.exp(-(VV_junc3__A+VV_junc3__B*VV_junc3__ph)))
-    VV_junc3__epsilon_alpha = VV_junc3__H_VV_out_alpha-VV_junc3__H_mean*VV_junc3__FQE_alpha/(VV_junc3__FQB_alpha+VV_junc3__div_0)
+    VV_junc3__H_VV_out_alpha = VV_junc3__H_mean*VV_junc3__FQE_alpha/(VV_junc3__FQB_alpha+VV_junc3__div_0)
     VV_junc3__H_VV_out_beta = VV_junc3__H_mean*(1-VV_junc3__FQE_alpha)/(1-VV_junc3__FQB_alpha+VV_junc3__div_0)
     VV_junc3__H_split1 = (VV_junc3__H_VV_out_alpha if VV_junc3__alpha1 == 1 else (VV_junc3__H_VV_out_beta if VV_junc3__beta1 == 1 else V2__H_R_out))
     VV_junc3__H_split2 = (VV_junc3__H_VV_out_alpha if VV_junc3__alpha2 == 1 else (VV_junc3__H_VV_out_beta if VV_junc3__beta2 == 1 else VV_junc3__H_to2))
@@ -1371,98 +1209,98 @@ def ode_rhs(t, y):
     VV_junc3__H_from2_target = (VV_junc3__H_daughter2 if VV_junc3__bc2_is_out == 1 else VV_junc3__H_to2)
     VV_junc3__H_from3_target = (VV_junc3__H_daughter3 if VV_junc3__bc3_is_out == 1 else PV5__H_L_out)
     VV_junc3__H_from4_target = (VV_junc3__H_daughter4 if VV_junc3__bc4_is_out == 1 else PV6__H_L_out)
+    VV_junc1__H_from1 = VV_junc1__w_out1*VV_junc1__H_from1_target
+    VV_junc1__H_from2 = VV_junc1__w_out2*VV_junc1__H_from2_target
+    VV_junc1__H_from3 = VV_junc1__w_out3*VV_junc1__H_from3_target
+    VV_junc1__H_from4 = VV_junc1__w_out4*VV_junc1__H_from4_target
+    VV_junc1__RBC_out = VV_junc1__Qout1*VV_junc1__H_from1+VV_junc1__Qout2*VV_junc1__H_from2+VV_junc1__Qout3*VV_junc1__H_from3+VV_junc1__Qout4*VV_junc1__H_from4
+    VV_junc2__H_from1 = VV_junc2__w_out1*VV_junc2__H_from1_target
+    VV_junc2__H_from2 = VV_junc2__w_out2*VV_junc2__H_from2_target
+    VV_junc2__H_from3 = VV_junc2__w_out3*VV_junc2__H_from3_target
+    VV_junc2__H_from4 = VV_junc2__w_out4*VV_junc2__H_from4_target
+    VV_junc2__RBC_out = VV_junc2__Qout1*VV_junc2__H_from1+VV_junc2__Qout2*VV_junc2__H_from2+VV_junc2__Qout3*VV_junc2__H_from3+VV_junc2__Qout4*VV_junc2__H_from4
+    VV_junc3__H_from1 = VV_junc3__w_out1*VV_junc3__H_from1_target
+    VV_junc3__H_from2 = VV_junc3__w_out2*VV_junc3__H_from2_target
+    VV_junc3__H_from3 = VV_junc3__w_out3*VV_junc3__H_from3_target
+    VV_junc3__H_from4 = VV_junc3__w_out4*VV_junc3__H_from4_target
+    VV_junc3__RBC_out = VV_junc3__Qout1*VV_junc3__H_from1+VV_junc3__Qout2*VV_junc3__H_from2+VV_junc3__Qout3*VV_junc3__H_from3+VV_junc3__Qout4*VV_junc3__H_from4
 
     # ODEs
     dydt = np.zeros(len(y))
     dydt[0] = (VV_junc1__H_from1-inlet__H_link_R)/inlet__tau_link
     dydt[1] = (inlet__H_R_out_LHS-inlet__H_link_L)/inlet__tau_link
     dydt[2] = (inlet__H_down_target-inlet__H_down)/inlet__tau_H_down
-    dydt[3] = inlet__v*inlet__H_mass_L-inlet__v_d*inlet__H_mass_R
+    dydt[3] = inlet__v*inlet__H_volume_L-inlet__v_d*inlet__H_volume_R
     dydt[4] = inlet__v-inlet__v_d
-    dydt[5] = VV_junc1__w_out1*(VV_junc1__H_from1_target-VV_junc1__H_from1)/VV_junc1__tau_junc
-    dydt[6] = VV_junc1__w_out2*(VV_junc1__H_from2_target-VV_junc1__H_from2)/VV_junc1__tau_junc
-    dydt[7] = VV_junc1__w_out3*(VV_junc1__H_from3_target-VV_junc1__H_from3)/VV_junc1__tau_junc
-    dydt[8] = VV_junc1__w_out4*(VV_junc1__H_from4_target-VV_junc1__H_from4)/VV_junc1__tau_junc
-    dydt[9] = VV_junc1__is_split*-VV_junc1__k*VV_junc1__epsilon_alpha
-    dydt[10] = VV_junc1__RBC_in-VV_junc1__RBC_out
-    dydt[11] = inlet__v_d+VV_junc1__vbc2-VV_junc1__v
-    dydt[12] = VV_junc1__v-PV1__v-PV2__v
-    dydt[13] = (V1__H_L_out-PV1__H_link_R)/PV1__tau_link
-    dydt[14] = (VV_junc1__H_from3-PV1__H_link_L)/PV1__tau_link
-    dydt[15] = (PV1__H_down_target-PV1__H_down)/PV1__tau_H_down
-    dydt[16] = PV1__v*PV1__H_mass_L-PV1__v_d*PV1__H_mass_R
-    dydt[17] = PV1__v-PV1__v_d
-    dydt[18] = (V2__H_L_out-PV2__H_link_R)/PV2__tau_link
-    dydt[19] = (VV_junc1__H_from4-PV2__H_link_L)/PV2__tau_link
-    dydt[20] = (PV2__H_down_target-PV2__H_down)/PV2__tau_H_down
-    dydt[21] = PV2__v*PV2__H_mass_L-PV2__v_d*PV2__H_mass_R
-    dydt[22] = PV2__v-PV2__v_d
-    dydt[23] = (VV_junc2__H_from1-V1__H_link_R)/V1__tau_link
-    dydt[24] = (PV1__H_R_out-V1__H_link_L)/V1__tau_link
-    dydt[25] = (V1__H_down_target-V1__H_down)/V1__tau_H_down
-    dydt[26] = PV1__v_d*V1__H_mass_L-V1__v*V1__H_mass_R
-    dydt[27] = PV1__v_d-V1__v
-    dydt[28] = (VV_junc3__H_from1-V2__H_link_R)/V2__tau_link
-    dydt[29] = (PV2__H_R_out-V2__H_link_L)/V2__tau_link
-    dydt[30] = (V2__H_down_target-V2__H_down)/V2__tau_H_down
-    dydt[31] = PV2__v_d*V2__H_mass_L-V2__v*V2__H_mass_R
-    dydt[32] = PV2__v_d-V2__v
-    dydt[33] = VV_junc2__w_out1*(VV_junc2__H_from1_target-VV_junc2__H_from1)/VV_junc2__tau_junc
-    dydt[34] = VV_junc2__w_out2*(VV_junc2__H_from2_target-VV_junc2__H_from2)/VV_junc2__tau_junc
-    dydt[35] = VV_junc2__w_out3*(VV_junc2__H_from3_target-VV_junc2__H_from3)/VV_junc2__tau_junc
-    dydt[36] = VV_junc2__w_out4*(VV_junc2__H_from4_target-VV_junc2__H_from4)/VV_junc2__tau_junc
-    dydt[37] = VV_junc2__is_split*-VV_junc2__k*VV_junc2__epsilon_alpha
-    dydt[38] = VV_junc2__RBC_in-VV_junc2__RBC_out
-    dydt[39] = V1__v+VV_junc2__vbc2-VV_junc2__v
-    dydt[40] = VV_junc2__v-PV3__v-PV4__v
-    dydt[41] = (V3__H_L_out-PV3__H_link_R)/PV3__tau_link
-    dydt[42] = (VV_junc2__H_from3-PV3__H_link_L)/PV3__tau_link
-    dydt[43] = (PV3__H_down_target-PV3__H_down)/PV3__tau_H_down
-    dydt[44] = PV3__v*PV3__H_mass_L-PV3__v_d*PV3__H_mass_R
-    dydt[45] = PV3__v-PV3__v_d
-    dydt[46] = (V4__H_L_out-PV4__H_link_R)/PV4__tau_link
-    dydt[47] = (VV_junc2__H_from4-PV4__H_link_L)/PV4__tau_link
-    dydt[48] = (PV4__H_down_target-PV4__H_down)/PV4__tau_H_down
-    dydt[49] = PV4__v*PV4__H_mass_L-PV4__v_d*PV4__H_mass_R
-    dydt[50] = PV4__v-PV4__v_d
-    dydt[51] = (V3__H_L_out_RHS-V3__H_link_R)/V3__tau_link
-    dydt[52] = (PV3__H_R_out-V3__H_link_L)/V3__tau_link
-    dydt[53] = (V3__H_down_target-V3__H_down)/V3__tau_H_down
-    dydt[54] = PV3__v_d*V3__H_mass_L-V3__v*V3__H_mass_R
-    dydt[55] = PV3__v_d-V3__v
-    dydt[56] = (V4__H_L_out_RHS-V4__H_link_R)/V4__tau_link
-    dydt[57] = (PV4__H_R_out-V4__H_link_L)/V4__tau_link
-    dydt[58] = (V4__H_down_target-V4__H_down)/V4__tau_H_down
-    dydt[59] = PV4__v_d*V4__H_mass_L-V4__v*V4__H_mass_R
-    dydt[60] = PV4__v_d-V4__v
-    dydt[61] = VV_junc3__w_out1*(VV_junc3__H_from1_target-VV_junc3__H_from1)/VV_junc3__tau_junc
-    dydt[62] = VV_junc3__w_out2*(VV_junc3__H_from2_target-VV_junc3__H_from2)/VV_junc3__tau_junc
-    dydt[63] = VV_junc3__w_out3*(VV_junc3__H_from3_target-VV_junc3__H_from3)/VV_junc3__tau_junc
-    dydt[64] = VV_junc3__w_out4*(VV_junc3__H_from4_target-VV_junc3__H_from4)/VV_junc3__tau_junc
-    dydt[65] = VV_junc3__is_split*-VV_junc3__k*VV_junc3__epsilon_alpha
-    dydt[66] = VV_junc3__RBC_in-VV_junc3__RBC_out
-    dydt[67] = V2__v+VV_junc3__vbc2-VV_junc3__v
-    dydt[68] = VV_junc3__v-PV5__v-PV6__v
-    dydt[69] = (V5__H_L_out-PV5__H_link_R)/PV5__tau_link
-    dydt[70] = (VV_junc3__H_from3-PV5__H_link_L)/PV5__tau_link
-    dydt[71] = (PV5__H_down_target-PV5__H_down)/PV5__tau_H_down
-    dydt[72] = PV5__v*PV5__H_mass_L-PV5__v_d*PV5__H_mass_R
-    dydt[73] = PV5__v-PV5__v_d
-    dydt[74] = (V6__H_L_out-PV6__H_link_R)/PV6__tau_link
-    dydt[75] = (VV_junc3__H_from4-PV6__H_link_L)/PV6__tau_link
-    dydt[76] = (PV6__H_down_target-PV6__H_down)/PV6__tau_H_down
-    dydt[77] = PV6__v*PV6__H_mass_L-PV6__v_d*PV6__H_mass_R
-    dydt[78] = PV6__v-PV6__v_d
-    dydt[79] = (V5__H_L_out_RHS-V5__H_link_R)/V5__tau_link
-    dydt[80] = (PV5__H_R_out-V5__H_link_L)/V5__tau_link
-    dydt[81] = (V5__H_down_target-V5__H_down)/V5__tau_H_down
-    dydt[82] = PV5__v_d*V5__H_mass_L-V5__v*V5__H_mass_R
-    dydt[83] = PV5__v_d-V5__v
-    dydt[84] = (V6__H_L_out_RHS-V6__H_link_R)/V6__tau_link
-    dydt[85] = (PV6__H_R_out-V6__H_link_L)/V6__tau_link
-    dydt[86] = (V6__H_down_target-V6__H_down)/V6__tau_H_down
-    dydt[87] = PV6__v_d*V6__H_mass_L-V6__v*V6__H_mass_R
-    dydt[88] = PV6__v_d-V6__v
+    dydt[5] = VV_junc1__RBC_in-VV_junc1__RBC_out
+    dydt[6] = inlet__v_d+VV_junc1__vbc2-VV_junc1__v
+    dydt[7] = VV_junc1__v-PV1__v-PV2__v
+    dydt[8] = (V1__H_L_out-PV1__H_link_R)/PV1__tau_link
+    dydt[9] = (VV_junc1__H_from3-PV1__H_link_L)/PV1__tau_link
+    dydt[10] = (PV1__H_down_target-PV1__H_down)/PV1__tau_H_down
+    dydt[11] = PV1__v*PV1__H_volume_L-PV1__v_d*PV1__H_volume_R
+    dydt[12] = PV1__v-PV1__v_d
+    dydt[13] = (V2__H_L_out-PV2__H_link_R)/PV2__tau_link
+    dydt[14] = (VV_junc1__H_from4-PV2__H_link_L)/PV2__tau_link
+    dydt[15] = (PV2__H_down_target-PV2__H_down)/PV2__tau_H_down
+    dydt[16] = PV2__v*PV2__H_volume_L-PV2__v_d*PV2__H_volume_R
+    dydt[17] = PV2__v-PV2__v_d
+    dydt[18] = (VV_junc2__H_from1-V1__H_link_R)/V1__tau_link
+    dydt[19] = (PV1__H_R_out-V1__H_link_L)/V1__tau_link
+    dydt[20] = (V1__H_down_target-V1__H_down)/V1__tau_H_down
+    dydt[21] = PV1__v_d*V1__H_volume_L-V1__v*V1__H_volume_R
+    dydt[22] = PV1__v_d-V1__v
+    dydt[23] = (VV_junc3__H_from1-V2__H_link_R)/V2__tau_link
+    dydt[24] = (PV2__H_R_out-V2__H_link_L)/V2__tau_link
+    dydt[25] = (V2__H_down_target-V2__H_down)/V2__tau_H_down
+    dydt[26] = PV2__v_d*V2__H_volume_L-V2__v*V2__H_volume_R
+    dydt[27] = PV2__v_d-V2__v
+    dydt[28] = VV_junc2__RBC_in-VV_junc2__RBC_out
+    dydt[29] = V1__v+VV_junc2__vbc2-VV_junc2__v
+    dydt[30] = VV_junc2__v-PV3__v-PV4__v
+    dydt[31] = (V3__H_L_out-PV3__H_link_R)/PV3__tau_link
+    dydt[32] = (VV_junc2__H_from3-PV3__H_link_L)/PV3__tau_link
+    dydt[33] = (PV3__H_down_target-PV3__H_down)/PV3__tau_H_down
+    dydt[34] = PV3__v*PV3__H_volume_L-PV3__v_d*PV3__H_volume_R
+    dydt[35] = PV3__v-PV3__v_d
+    dydt[36] = (V4__H_L_out-PV4__H_link_R)/PV4__tau_link
+    dydt[37] = (VV_junc2__H_from4-PV4__H_link_L)/PV4__tau_link
+    dydt[38] = (PV4__H_down_target-PV4__H_down)/PV4__tau_H_down
+    dydt[39] = PV4__v*PV4__H_volume_L-PV4__v_d*PV4__H_volume_R
+    dydt[40] = PV4__v-PV4__v_d
+    dydt[41] = (V3__H_L_out_RHS-V3__H_link_R)/V3__tau_link
+    dydt[42] = (PV3__H_R_out-V3__H_link_L)/V3__tau_link
+    dydt[43] = (V3__H_down_target-V3__H_down)/V3__tau_H_down
+    dydt[44] = PV3__v_d*V3__H_volume_L-V3__v*V3__H_volume_R
+    dydt[45] = PV3__v_d-V3__v
+    dydt[46] = (V4__H_L_out_RHS-V4__H_link_R)/V4__tau_link
+    dydt[47] = (PV4__H_R_out-V4__H_link_L)/V4__tau_link
+    dydt[48] = (V4__H_down_target-V4__H_down)/V4__tau_H_down
+    dydt[49] = PV4__v_d*V4__H_volume_L-V4__v*V4__H_volume_R
+    dydt[50] = PV4__v_d-V4__v
+    dydt[51] = VV_junc3__RBC_in-VV_junc3__RBC_out
+    dydt[52] = V2__v+VV_junc3__vbc2-VV_junc3__v
+    dydt[53] = VV_junc3__v-PV5__v-PV6__v
+    dydt[54] = (V5__H_L_out-PV5__H_link_R)/PV5__tau_link
+    dydt[55] = (VV_junc3__H_from3-PV5__H_link_L)/PV5__tau_link
+    dydt[56] = (PV5__H_down_target-PV5__H_down)/PV5__tau_H_down
+    dydt[57] = PV5__v*PV5__H_volume_L-PV5__v_d*PV5__H_volume_R
+    dydt[58] = PV5__v-PV5__v_d
+    dydt[59] = (V6__H_L_out-PV6__H_link_R)/PV6__tau_link
+    dydt[60] = (VV_junc3__H_from4-PV6__H_link_L)/PV6__tau_link
+    dydt[61] = (PV6__H_down_target-PV6__H_down)/PV6__tau_H_down
+    dydt[62] = PV6__v*PV6__H_volume_L-PV6__v_d*PV6__H_volume_R
+    dydt[63] = PV6__v-PV6__v_d
+    dydt[64] = (V5__H_L_out_RHS-V5__H_link_R)/V5__tau_link
+    dydt[65] = (PV5__H_R_out-V5__H_link_L)/V5__tau_link
+    dydt[66] = (V5__H_down_target-V5__H_down)/V5__tau_H_down
+    dydt[67] = PV5__v_d*V5__H_volume_L-V5__v*V5__H_volume_R
+    dydt[68] = PV5__v_d-V5__v
+    dydt[69] = (V6__H_L_out_RHS-V6__H_link_R)/V6__tau_link
+    dydt[70] = (PV6__H_R_out-V6__H_link_L)/V6__tau_link
+    dydt[71] = (V6__H_down_target-V6__H_down)/V6__tau_H_down
+    dydt[72] = PV6__v_d*V6__H_volume_L-V6__v*V6__H_volume_R
+    dydt[73] = PV6__v_d-V6__v
 
     return dydt
 
@@ -1474,90 +1312,75 @@ def compute_algebraics(t, y):
     inlet__H_down = y[2]
     inlet__RBC_volume = y[3]
     inlet__q_C = y[4]
-    VV_junc1__H_from1 = y[5]
-    VV_junc1__H_from2 = y[6]
-    VV_junc1__H_from3 = y[7]
-    VV_junc1__H_from4 = y[8]
-    VV_junc1__H_VV_out_alpha = y[9]
-    VV_junc1__RBC_volume = y[10]
-    VV_junc1__q_C = y[11]
-    VV_junc1__q_C_d = y[12]
-    PV1__H_link_R = y[13]
-    PV1__H_link_L = y[14]
-    PV1__H_down = y[15]
-    PV1__RBC_volume = y[16]
-    PV1__q_C = y[17]
-    PV2__H_link_R = y[18]
-    PV2__H_link_L = y[19]
-    PV2__H_down = y[20]
-    PV2__RBC_volume = y[21]
-    PV2__q_C = y[22]
-    V1__H_link_R = y[23]
-    V1__H_link_L = y[24]
-    V1__H_down = y[25]
-    V1__RBC_volume = y[26]
-    V1__q_C = y[27]
-    V2__H_link_R = y[28]
-    V2__H_link_L = y[29]
-    V2__H_down = y[30]
-    V2__RBC_volume = y[31]
-    V2__q_C = y[32]
-    VV_junc2__H_from1 = y[33]
-    VV_junc2__H_from2 = y[34]
-    VV_junc2__H_from3 = y[35]
-    VV_junc2__H_from4 = y[36]
-    VV_junc2__H_VV_out_alpha = y[37]
-    VV_junc2__RBC_volume = y[38]
-    VV_junc2__q_C = y[39]
-    VV_junc2__q_C_d = y[40]
-    PV3__H_link_R = y[41]
-    PV3__H_link_L = y[42]
-    PV3__H_down = y[43]
-    PV3__RBC_volume = y[44]
-    PV3__q_C = y[45]
-    PV4__H_link_R = y[46]
-    PV4__H_link_L = y[47]
-    PV4__H_down = y[48]
-    PV4__RBC_volume = y[49]
-    PV4__q_C = y[50]
-    V3__H_link_R = y[51]
-    V3__H_link_L = y[52]
-    V3__H_down = y[53]
-    V3__RBC_volume = y[54]
-    V3__q_C = y[55]
-    V4__H_link_R = y[56]
-    V4__H_link_L = y[57]
-    V4__H_down = y[58]
-    V4__RBC_volume = y[59]
-    V4__q_C = y[60]
-    VV_junc3__H_from1 = y[61]
-    VV_junc3__H_from2 = y[62]
-    VV_junc3__H_from3 = y[63]
-    VV_junc3__H_from4 = y[64]
-    VV_junc3__H_VV_out_alpha = y[65]
-    VV_junc3__RBC_volume = y[66]
-    VV_junc3__q_C = y[67]
-    VV_junc3__q_C_d = y[68]
-    PV5__H_link_R = y[69]
-    PV5__H_link_L = y[70]
-    PV5__H_down = y[71]
-    PV5__RBC_volume = y[72]
-    PV5__q_C = y[73]
-    PV6__H_link_R = y[74]
-    PV6__H_link_L = y[75]
-    PV6__H_down = y[76]
-    PV6__RBC_volume = y[77]
-    PV6__q_C = y[78]
-    V5__H_link_R = y[79]
-    V5__H_link_L = y[80]
-    V5__H_down = y[81]
-    V5__RBC_volume = y[82]
-    V5__q_C = y[83]
-    V6__H_link_R = y[84]
-    V6__H_link_L = y[85]
-    V6__H_down = y[86]
-    V6__RBC_volume = y[87]
-    V6__q_C = y[88]
+    VV_junc1__RBC_volume = y[5]
+    VV_junc1__q_C = y[6]
+    VV_junc1__q_C_d = y[7]
+    PV1__H_link_R = y[8]
+    PV1__H_link_L = y[9]
+    PV1__H_down = y[10]
+    PV1__RBC_volume = y[11]
+    PV1__q_C = y[12]
+    PV2__H_link_R = y[13]
+    PV2__H_link_L = y[14]
+    PV2__H_down = y[15]
+    PV2__RBC_volume = y[16]
+    PV2__q_C = y[17]
+    V1__H_link_R = y[18]
+    V1__H_link_L = y[19]
+    V1__H_down = y[20]
+    V1__RBC_volume = y[21]
+    V1__q_C = y[22]
+    V2__H_link_R = y[23]
+    V2__H_link_L = y[24]
+    V2__H_down = y[25]
+    V2__RBC_volume = y[26]
+    V2__q_C = y[27]
+    VV_junc2__RBC_volume = y[28]
+    VV_junc2__q_C = y[29]
+    VV_junc2__q_C_d = y[30]
+    PV3__H_link_R = y[31]
+    PV3__H_link_L = y[32]
+    PV3__H_down = y[33]
+    PV3__RBC_volume = y[34]
+    PV3__q_C = y[35]
+    PV4__H_link_R = y[36]
+    PV4__H_link_L = y[37]
+    PV4__H_down = y[38]
+    PV4__RBC_volume = y[39]
+    PV4__q_C = y[40]
+    V3__H_link_R = y[41]
+    V3__H_link_L = y[42]
+    V3__H_down = y[43]
+    V3__RBC_volume = y[44]
+    V3__q_C = y[45]
+    V4__H_link_R = y[46]
+    V4__H_link_L = y[47]
+    V4__H_down = y[48]
+    V4__RBC_volume = y[49]
+    V4__q_C = y[50]
+    VV_junc3__RBC_volume = y[51]
+    VV_junc3__q_C = y[52]
+    VV_junc3__q_C_d = y[53]
+    PV5__H_link_R = y[54]
+    PV5__H_link_L = y[55]
+    PV5__H_down = y[56]
+    PV5__RBC_volume = y[57]
+    PV5__q_C = y[58]
+    PV6__H_link_R = y[59]
+    PV6__H_link_L = y[60]
+    PV6__H_down = y[61]
+    PV6__RBC_volume = y[62]
+    PV6__q_C = y[63]
+    V5__H_link_R = y[64]
+    V5__H_link_L = y[65]
+    V5__H_down = y[66]
+    V5__RBC_volume = y[67]
+    V5__q_C = y[68]
+    V6__H_link_R = y[69]
+    V6__H_link_L = y[70]
+    V6__H_down = y[71]
+    V6__RBC_volume = y[72]
+    V6__q_C = y[73]
 
     # Time variable
     environment__time = t
@@ -1856,8 +1679,7 @@ def compute_algebraics(t, y):
     VV_junc1__Qout4 = VV_junc1__w_out4*-VV_junc1__vj4
     VV_junc1__Qin_tot = VV_junc1__Qin1+VV_junc1__Qin2+VV_junc1__Qin3+VV_junc1__Qin4
     VV_junc1__Qout_tot = VV_junc1__Qout1+VV_junc1__Qout2+VV_junc1__Qout3+VV_junc1__Qout4
-    VV_junc1__RBC_out = VV_junc1__Qout1*VV_junc1__H_from1+VV_junc1__Qout2*VV_junc1__H_from2+VV_junc1__Qout3*VV_junc1__H_from3+VV_junc1__Qout4*VV_junc1__H_from4
-    VV_junc1__v = (VV_junc1__u-VV_junc1__u_d)/VV_junc1__R
+    VV_junc1__v = (VV_junc1__u-VV_junc1__u_d)/VV_junc1__R_VV_junc
     VV_junc1__bc1_is_in = (1 if VV_junc1__Qin1 > VV_junc1__v_threshold else 0)
     VV_junc1__bc3_is_in = (1 if VV_junc1__Qin3 > VV_junc1__v_threshold else 0)
     VV_junc1__bc4_is_in = (1 if VV_junc1__Qin4 > VV_junc1__v_threshold else 0)
@@ -1874,8 +1696,8 @@ def compute_algebraics(t, y):
     PV1__v_neg = (1-PV1__w_v)*-PV1__v
     PV1__v_d_pos = PV1__w_v_d*PV1__v_d
     PV1__v_d_neg = (1-PV1__w_v_d)*-PV1__v_d
-    PV1__H_mass_L = PV1__w_v*PV1__H_L_in+(1-PV1__w_v)*PV1__H_L_out
-    PV1__H_mass_R = PV1__w_v_d*PV1__H_R_out+(1-PV1__w_v_d)*PV1__H_R_in
+    PV1__H_volume_L = PV1__w_v*PV1__H_L_in+(1-PV1__w_v)*PV1__H_L_out
+    PV1__H_volume_R = PV1__w_v_d*PV1__H_R_out+(1-PV1__w_v_d)*PV1__H_R_in
     PV1__v_mm3_s = PV1__v/PV1__one_mm3
     PV1__v_d_mm3_s = PV1__v_d/PV1__one_mm3
     PV2__w_v = 0.5+1/np.pi*np.arctan(PV2__v/PV2__v_scale)
@@ -1888,8 +1710,8 @@ def compute_algebraics(t, y):
     PV2__v_neg = (1-PV2__w_v)*-PV2__v
     PV2__v_d_pos = PV2__w_v_d*PV2__v_d
     PV2__v_d_neg = (1-PV2__w_v_d)*-PV2__v_d
-    PV2__H_mass_L = PV2__w_v*PV2__H_L_in+(1-PV2__w_v)*PV2__H_L_out
-    PV2__H_mass_R = PV2__w_v_d*PV2__H_R_out+(1-PV2__w_v_d)*PV2__H_R_in
+    PV2__H_volume_L = PV2__w_v*PV2__H_L_in+(1-PV2__w_v)*PV2__H_L_out
+    PV2__H_volume_R = PV2__w_v_d*PV2__H_R_out+(1-PV2__w_v_d)*PV2__H_R_in
     PV2__v_mm3_s = PV2__v/PV2__one_mm3
     PV2__v_d_mm3_s = PV2__v_d/PV2__one_mm3
     V1__v = (V1__u-VV_junc2__u)/V1__R
@@ -1911,8 +1733,7 @@ def compute_algebraics(t, y):
     VV_junc2__Qout4 = VV_junc2__w_out4*-VV_junc2__vj4
     VV_junc2__Qin_tot = VV_junc2__Qin1+VV_junc2__Qin2+VV_junc2__Qin3+VV_junc2__Qin4
     VV_junc2__Qout_tot = VV_junc2__Qout1+VV_junc2__Qout2+VV_junc2__Qout3+VV_junc2__Qout4
-    VV_junc2__RBC_out = VV_junc2__Qout1*VV_junc2__H_from1+VV_junc2__Qout2*VV_junc2__H_from2+VV_junc2__Qout3*VV_junc2__H_from3+VV_junc2__Qout4*VV_junc2__H_from4
-    VV_junc2__v = (VV_junc2__u-VV_junc2__u_d)/VV_junc2__R
+    VV_junc2__v = (VV_junc2__u-VV_junc2__u_d)/VV_junc2__R_VV_junc
     VV_junc2__bc1_is_in = (1 if VV_junc2__Qin1 > VV_junc2__v_threshold else 0)
     VV_junc2__bc3_is_in = (1 if VV_junc2__Qin3 > VV_junc2__v_threshold else 0)
     VV_junc2__bc4_is_in = (1 if VV_junc2__Qin4 > VV_junc2__v_threshold else 0)
@@ -1929,8 +1750,8 @@ def compute_algebraics(t, y):
     PV3__v_neg = (1-PV3__w_v)*-PV3__v
     PV3__v_d_pos = PV3__w_v_d*PV3__v_d
     PV3__v_d_neg = (1-PV3__w_v_d)*-PV3__v_d
-    PV3__H_mass_L = PV3__w_v*PV3__H_L_in+(1-PV3__w_v)*PV3__H_L_out
-    PV3__H_mass_R = PV3__w_v_d*PV3__H_R_out+(1-PV3__w_v_d)*PV3__H_R_in
+    PV3__H_volume_L = PV3__w_v*PV3__H_L_in+(1-PV3__w_v)*PV3__H_L_out
+    PV3__H_volume_R = PV3__w_v_d*PV3__H_R_out+(1-PV3__w_v_d)*PV3__H_R_in
     PV3__v_mm3_s = PV3__v/PV3__one_mm3
     PV3__v_d_mm3_s = PV3__v_d/PV3__one_mm3
     PV4__w_v = 0.5+1/np.pi*np.arctan(PV4__v/PV4__v_scale)
@@ -1943,8 +1764,8 @@ def compute_algebraics(t, y):
     PV4__v_neg = (1-PV4__w_v)*-PV4__v
     PV4__v_d_pos = PV4__w_v_d*PV4__v_d
     PV4__v_d_neg = (1-PV4__w_v_d)*-PV4__v_d
-    PV4__H_mass_L = PV4__w_v*PV4__H_L_in+(1-PV4__w_v)*PV4__H_L_out
-    PV4__H_mass_R = PV4__w_v_d*PV4__H_R_out+(1-PV4__w_v_d)*PV4__H_R_in
+    PV4__H_volume_L = PV4__w_v*PV4__H_L_in+(1-PV4__w_v)*PV4__H_L_out
+    PV4__H_volume_R = PV4__w_v_d*PV4__H_R_out+(1-PV4__w_v_d)*PV4__H_R_in
     PV4__v_mm3_s = PV4__v/PV4__one_mm3
     PV4__v_d_mm3_s = PV4__v_d/PV4__one_mm3
     V3__w_v = 0.5+1/np.pi*np.arctan(V3__v/V3__v_scale)
@@ -1954,8 +1775,8 @@ def compute_algebraics(t, y):
     V3__H_R_out = V3__w_v*V3__H_down+(1-V3__w_v)*V3__H_R_in
     V3__v_pos = V3__w_v*V3__v
     V3__v_neg = (1-V3__w_v)*-V3__v
-    V3__H_mass_L = V3__w_v*V3__H_L_in+(1-V3__w_v)*V3__H_L_out
-    V3__H_mass_R = V3__w_v*V3__H_R_out+(1-V3__w_v)*V3__H_R_in
+    V3__H_volume_L = V3__w_v*V3__H_L_in+(1-V3__w_v)*V3__H_L_out
+    V3__H_volume_R = V3__w_v*V3__H_R_out+(1-V3__w_v)*V3__H_R_in
     V3__v_mm3_s = V3__v/V3__one_mm3
     V4__w_v = 0.5+1/np.pi*np.arctan(V4__v/V4__v_scale)
     V4__H_up = V4__w_v*V4__H_L_in+(1-V4__w_v)*V4__H_R_in
@@ -1964,8 +1785,8 @@ def compute_algebraics(t, y):
     V4__H_R_out = V4__w_v*V4__H_down+(1-V4__w_v)*V4__H_R_in
     V4__v_pos = V4__w_v*V4__v
     V4__v_neg = (1-V4__w_v)*-V4__v
-    V4__H_mass_L = V4__w_v*V4__H_L_in+(1-V4__w_v)*V4__H_L_out
-    V4__H_mass_R = V4__w_v*V4__H_R_out+(1-V4__w_v)*V4__H_R_in
+    V4__H_volume_L = V4__w_v*V4__H_L_in+(1-V4__w_v)*V4__H_L_out
+    V4__H_volume_R = V4__w_v*V4__H_R_out+(1-V4__w_v)*V4__H_R_in
     V4__v_mm3_s = V4__v/V4__one_mm3
     VV_junc3__vj1 = V2__v
     VV_junc3__vj3 = -PV5__v
@@ -1984,8 +1805,7 @@ def compute_algebraics(t, y):
     VV_junc3__Qout4 = VV_junc3__w_out4*-VV_junc3__vj4
     VV_junc3__Qin_tot = VV_junc3__Qin1+VV_junc3__Qin2+VV_junc3__Qin3+VV_junc3__Qin4
     VV_junc3__Qout_tot = VV_junc3__Qout1+VV_junc3__Qout2+VV_junc3__Qout3+VV_junc3__Qout4
-    VV_junc3__RBC_out = VV_junc3__Qout1*VV_junc3__H_from1+VV_junc3__Qout2*VV_junc3__H_from2+VV_junc3__Qout3*VV_junc3__H_from3+VV_junc3__Qout4*VV_junc3__H_from4
-    VV_junc3__v = (VV_junc3__u-VV_junc3__u_d)/VV_junc3__R
+    VV_junc3__v = (VV_junc3__u-VV_junc3__u_d)/VV_junc3__R_VV_junc
     VV_junc3__bc1_is_in = (1 if VV_junc3__Qin1 > VV_junc3__v_threshold else 0)
     VV_junc3__bc3_is_in = (1 if VV_junc3__Qin3 > VV_junc3__v_threshold else 0)
     VV_junc3__bc4_is_in = (1 if VV_junc3__Qin4 > VV_junc3__v_threshold else 0)
@@ -2002,8 +1822,8 @@ def compute_algebraics(t, y):
     PV5__v_neg = (1-PV5__w_v)*-PV5__v
     PV5__v_d_pos = PV5__w_v_d*PV5__v_d
     PV5__v_d_neg = (1-PV5__w_v_d)*-PV5__v_d
-    PV5__H_mass_L = PV5__w_v*PV5__H_L_in+(1-PV5__w_v)*PV5__H_L_out
-    PV5__H_mass_R = PV5__w_v_d*PV5__H_R_out+(1-PV5__w_v_d)*PV5__H_R_in
+    PV5__H_volume_L = PV5__w_v*PV5__H_L_in+(1-PV5__w_v)*PV5__H_L_out
+    PV5__H_volume_R = PV5__w_v_d*PV5__H_R_out+(1-PV5__w_v_d)*PV5__H_R_in
     PV5__v_mm3_s = PV5__v/PV5__one_mm3
     PV5__v_d_mm3_s = PV5__v_d/PV5__one_mm3
     PV6__w_v = 0.5+1/np.pi*np.arctan(PV6__v/PV6__v_scale)
@@ -2016,8 +1836,8 @@ def compute_algebraics(t, y):
     PV6__v_neg = (1-PV6__w_v)*-PV6__v
     PV6__v_d_pos = PV6__w_v_d*PV6__v_d
     PV6__v_d_neg = (1-PV6__w_v_d)*-PV6__v_d
-    PV6__H_mass_L = PV6__w_v*PV6__H_L_in+(1-PV6__w_v)*PV6__H_L_out
-    PV6__H_mass_R = PV6__w_v_d*PV6__H_R_out+(1-PV6__w_v_d)*PV6__H_R_in
+    PV6__H_volume_L = PV6__w_v*PV6__H_L_in+(1-PV6__w_v)*PV6__H_L_out
+    PV6__H_volume_R = PV6__w_v_d*PV6__H_R_out+(1-PV6__w_v_d)*PV6__H_R_in
     PV6__v_mm3_s = PV6__v/PV6__one_mm3
     PV6__v_d_mm3_s = PV6__v_d/PV6__one_mm3
     V5__w_v = 0.5+1/np.pi*np.arctan(V5__v/V5__v_scale)
@@ -2027,8 +1847,8 @@ def compute_algebraics(t, y):
     V5__H_R_out = V5__w_v*V5__H_down+(1-V5__w_v)*V5__H_R_in
     V5__v_pos = V5__w_v*V5__v
     V5__v_neg = (1-V5__w_v)*-V5__v
-    V5__H_mass_L = V5__w_v*V5__H_L_in+(1-V5__w_v)*V5__H_L_out
-    V5__H_mass_R = V5__w_v*V5__H_R_out+(1-V5__w_v)*V5__H_R_in
+    V5__H_volume_L = V5__w_v*V5__H_L_in+(1-V5__w_v)*V5__H_L_out
+    V5__H_volume_R = V5__w_v*V5__H_R_out+(1-V5__w_v)*V5__H_R_in
     V5__v_mm3_s = V5__v/V5__one_mm3
     V6__w_v = 0.5+1/np.pi*np.arctan(V6__v/V6__v_scale)
     V6__H_up = V6__w_v*V6__H_L_in+(1-V6__w_v)*V6__H_R_in
@@ -2037,8 +1857,8 @@ def compute_algebraics(t, y):
     V6__H_R_out = V6__w_v*V6__H_down+(1-V6__w_v)*V6__H_R_in
     V6__v_pos = V6__w_v*V6__v
     V6__v_neg = (1-V6__w_v)*-V6__v
-    V6__H_mass_L = V6__w_v*V6__H_L_in+(1-V6__w_v)*V6__H_L_out
-    V6__H_mass_R = V6__w_v*V6__H_R_out+(1-V6__w_v)*V6__H_R_in
+    V6__H_volume_L = V6__w_v*V6__H_L_in+(1-V6__w_v)*V6__H_L_out
+    V6__H_volume_R = V6__w_v*V6__H_R_out+(1-V6__w_v)*V6__H_R_in
     V6__v_mm3_s = V6__v/V6__one_mm3
     inlet__w_v_d = 0.5+1/np.pi*np.arctan(inlet__v_d/inlet__v_scale)
     inlet__H_up = inlet__w_v_d*inlet__H_L_in+(1-inlet__w_v_d)*inlet__H_R_in
@@ -2047,8 +1867,8 @@ def compute_algebraics(t, y):
     inlet__H_R_out = inlet__w_v_d*inlet__H_down+(1-inlet__w_v_d)*inlet__H_R_in
     inlet__v_d_pos = inlet__w_v_d*inlet__v_d
     inlet__v_d_neg = (1-inlet__w_v_d)*-inlet__v_d
-    inlet__H_mass_L = inlet__w_v*inlet__H_L_in+(1-inlet__w_v)*inlet__H_L_out
-    inlet__H_mass_R = inlet__w_v_d*inlet__H_R_out+(1-inlet__w_v_d)*inlet__H_R_in
+    inlet__H_volume_L = inlet__w_v*inlet__H_L_in+(1-inlet__w_v)*inlet__H_L_out
+    inlet__H_volume_R = inlet__w_v_d*inlet__H_R_out+(1-inlet__w_v_d)*inlet__H_R_in
     inlet__v_d_mm3_s = inlet__v_d/inlet__one_mm3
     VV_junc1__n_in = VV_junc1__bc1_is_in+VV_junc1__bc2_is_in+VV_junc1__bc3_is_in+VV_junc1__bc4_is_in
     VV_junc1__n_out = VV_junc1__bc1_is_out+VV_junc1__bc2_is_out+VV_junc1__bc3_is_out+VV_junc1__bc4_is_out
@@ -2087,8 +1907,8 @@ def compute_algebraics(t, y):
     V1__H_R_out = V1__w_v*V1__H_down+(1-V1__w_v)*V1__H_R_in
     V1__v_pos = V1__w_v*V1__v
     V1__v_neg = (1-V1__w_v)*-V1__v
-    V1__H_mass_L = V1__w_v*V1__H_L_in+(1-V1__w_v)*V1__H_L_out
-    V1__H_mass_R = V1__w_v*V1__H_R_out+(1-V1__w_v)*V1__H_R_in
+    V1__H_volume_L = V1__w_v*V1__H_L_in+(1-V1__w_v)*V1__H_L_out
+    V1__H_volume_R = V1__w_v*V1__H_R_out+(1-V1__w_v)*V1__H_R_in
     V1__v_mm3_s = V1__v/V1__one_mm3
     V2__w_v = 0.5+1/np.pi*np.arctan(V2__v/V2__v_scale)
     V2__H_up = V2__w_v*V2__H_L_in+(1-V2__w_v)*V2__H_R_in
@@ -2097,8 +1917,8 @@ def compute_algebraics(t, y):
     V2__H_R_out = V2__w_v*V2__H_down+(1-V2__w_v)*V2__H_R_in
     V2__v_pos = V2__w_v*V2__v
     V2__v_neg = (1-V2__w_v)*-V2__v
-    V2__H_mass_L = V2__w_v*V2__H_L_in+(1-V2__w_v)*V2__H_L_out
-    V2__H_mass_R = V2__w_v*V2__H_R_out+(1-V2__w_v)*V2__H_R_in
+    V2__H_volume_L = V2__w_v*V2__H_L_in+(1-V2__w_v)*V2__H_L_out
+    V2__H_volume_R = V2__w_v*V2__H_R_out+(1-V2__w_v)*V2__H_R_in
     V2__v_mm3_s = V2__v/V2__one_mm3
     VV_junc2__n_in = VV_junc2__bc1_is_in+VV_junc2__bc2_is_in+VV_junc2__bc3_is_in+VV_junc2__bc4_is_in
     VV_junc2__n_out = VV_junc2__bc1_is_out+VV_junc2__bc2_is_out+VV_junc2__bc3_is_out+VV_junc2__bc4_is_out
@@ -2189,7 +2009,7 @@ def compute_algebraics(t, y):
     VV_junc2__ph = np.log(VV_junc2__y/(1-VV_junc2__y))
     VV_junc3__ph = np.log(VV_junc3__y/(1-VV_junc3__y))
     VV_junc1__FQE_alpha = 1/(1+np.exp(-(VV_junc1__A+VV_junc1__B*VV_junc1__ph)))
-    VV_junc1__epsilon_alpha = VV_junc1__H_VV_out_alpha-VV_junc1__H_mean*VV_junc1__FQE_alpha/(VV_junc1__FQB_alpha+VV_junc1__div_0)
+    VV_junc1__H_VV_out_alpha = VV_junc1__H_mean*VV_junc1__FQE_alpha/(VV_junc1__FQB_alpha+VV_junc1__div_0)
     VV_junc1__H_VV_out_beta = VV_junc1__H_mean*(1-VV_junc1__FQE_alpha)/(1-VV_junc1__FQB_alpha+VV_junc1__div_0)
     VV_junc1__H_split1 = (VV_junc1__H_VV_out_alpha if VV_junc1__alpha1 == 1 else (VV_junc1__H_VV_out_beta if VV_junc1__beta1 == 1 else inlet__H_R_out))
     VV_junc1__H_split2 = (VV_junc1__H_VV_out_alpha if VV_junc1__alpha2 == 1 else (VV_junc1__H_VV_out_beta if VV_junc1__beta2 == 1 else VV_junc1__H_to2))
@@ -2204,7 +2024,7 @@ def compute_algebraics(t, y):
     VV_junc1__H_from3_target = (VV_junc1__H_daughter3 if VV_junc1__bc3_is_out == 1 else PV1__H_L_out)
     VV_junc1__H_from4_target = (VV_junc1__H_daughter4 if VV_junc1__bc4_is_out == 1 else PV2__H_L_out)
     VV_junc2__FQE_alpha = 1/(1+np.exp(-(VV_junc2__A+VV_junc2__B*VV_junc2__ph)))
-    VV_junc2__epsilon_alpha = VV_junc2__H_VV_out_alpha-VV_junc2__H_mean*VV_junc2__FQE_alpha/(VV_junc2__FQB_alpha+VV_junc2__div_0)
+    VV_junc2__H_VV_out_alpha = VV_junc2__H_mean*VV_junc2__FQE_alpha/(VV_junc2__FQB_alpha+VV_junc2__div_0)
     VV_junc2__H_VV_out_beta = VV_junc2__H_mean*(1-VV_junc2__FQE_alpha)/(1-VV_junc2__FQB_alpha+VV_junc2__div_0)
     VV_junc2__H_split1 = (VV_junc2__H_VV_out_alpha if VV_junc2__alpha1 == 1 else (VV_junc2__H_VV_out_beta if VV_junc2__beta1 == 1 else V1__H_R_out))
     VV_junc2__H_split2 = (VV_junc2__H_VV_out_alpha if VV_junc2__alpha2 == 1 else (VV_junc2__H_VV_out_beta if VV_junc2__beta2 == 1 else VV_junc2__H_to2))
@@ -2219,7 +2039,7 @@ def compute_algebraics(t, y):
     VV_junc2__H_from3_target = (VV_junc2__H_daughter3 if VV_junc2__bc3_is_out == 1 else PV3__H_L_out)
     VV_junc2__H_from4_target = (VV_junc2__H_daughter4 if VV_junc2__bc4_is_out == 1 else PV4__H_L_out)
     VV_junc3__FQE_alpha = 1/(1+np.exp(-(VV_junc3__A+VV_junc3__B*VV_junc3__ph)))
-    VV_junc3__epsilon_alpha = VV_junc3__H_VV_out_alpha-VV_junc3__H_mean*VV_junc3__FQE_alpha/(VV_junc3__FQB_alpha+VV_junc3__div_0)
+    VV_junc3__H_VV_out_alpha = VV_junc3__H_mean*VV_junc3__FQE_alpha/(VV_junc3__FQB_alpha+VV_junc3__div_0)
     VV_junc3__H_VV_out_beta = VV_junc3__H_mean*(1-VV_junc3__FQE_alpha)/(1-VV_junc3__FQB_alpha+VV_junc3__div_0)
     VV_junc3__H_split1 = (VV_junc3__H_VV_out_alpha if VV_junc3__alpha1 == 1 else (VV_junc3__H_VV_out_beta if VV_junc3__beta1 == 1 else V2__H_R_out))
     VV_junc3__H_split2 = (VV_junc3__H_VV_out_alpha if VV_junc3__alpha2 == 1 else (VV_junc3__H_VV_out_beta if VV_junc3__beta2 == 1 else VV_junc3__H_to2))
@@ -2233,6 +2053,21 @@ def compute_algebraics(t, y):
     VV_junc3__H_from2_target = (VV_junc3__H_daughter2 if VV_junc3__bc2_is_out == 1 else VV_junc3__H_to2)
     VV_junc3__H_from3_target = (VV_junc3__H_daughter3 if VV_junc3__bc3_is_out == 1 else PV5__H_L_out)
     VV_junc3__H_from4_target = (VV_junc3__H_daughter4 if VV_junc3__bc4_is_out == 1 else PV6__H_L_out)
+    VV_junc1__H_from1 = VV_junc1__w_out1*VV_junc1__H_from1_target
+    VV_junc1__H_from2 = VV_junc1__w_out2*VV_junc1__H_from2_target
+    VV_junc1__H_from3 = VV_junc1__w_out3*VV_junc1__H_from3_target
+    VV_junc1__H_from4 = VV_junc1__w_out4*VV_junc1__H_from4_target
+    VV_junc1__RBC_out = VV_junc1__Qout1*VV_junc1__H_from1+VV_junc1__Qout2*VV_junc1__H_from2+VV_junc1__Qout3*VV_junc1__H_from3+VV_junc1__Qout4*VV_junc1__H_from4
+    VV_junc2__H_from1 = VV_junc2__w_out1*VV_junc2__H_from1_target
+    VV_junc2__H_from2 = VV_junc2__w_out2*VV_junc2__H_from2_target
+    VV_junc2__H_from3 = VV_junc2__w_out3*VV_junc2__H_from3_target
+    VV_junc2__H_from4 = VV_junc2__w_out4*VV_junc2__H_from4_target
+    VV_junc2__RBC_out = VV_junc2__Qout1*VV_junc2__H_from1+VV_junc2__Qout2*VV_junc2__H_from2+VV_junc2__Qout3*VV_junc2__H_from3+VV_junc2__Qout4*VV_junc2__H_from4
+    VV_junc3__H_from1 = VV_junc3__w_out1*VV_junc3__H_from1_target
+    VV_junc3__H_from2 = VV_junc3__w_out2*VV_junc3__H_from2_target
+    VV_junc3__H_from3 = VV_junc3__w_out3*VV_junc3__H_from3_target
+    VV_junc3__H_from4 = VV_junc3__w_out4*VV_junc3__H_from4_target
+    VV_junc3__RBC_out = VV_junc3__Qout1*VV_junc3__H_from1+VV_junc3__Qout2*VV_junc3__H_from2+VV_junc3__Qout3*VV_junc3__H_from3+VV_junc3__Qout4*VV_junc3__H_from4
 
     # Return dictionary of all algebraic variables
     return {
@@ -2529,7 +2364,6 @@ def compute_algebraics(t, y):
         "VV_junc1__Qout4": VV_junc1__Qout4,
         "VV_junc1__Qin_tot": VV_junc1__Qin_tot,
         "VV_junc1__Qout_tot": VV_junc1__Qout_tot,
-        "VV_junc1__RBC_out": VV_junc1__RBC_out,
         "VV_junc1__v": VV_junc1__v,
         "VV_junc1__bc1_is_in": VV_junc1__bc1_is_in,
         "VV_junc1__bc3_is_in": VV_junc1__bc3_is_in,
@@ -2547,8 +2381,8 @@ def compute_algebraics(t, y):
         "PV1__v_neg": PV1__v_neg,
         "PV1__v_d_pos": PV1__v_d_pos,
         "PV1__v_d_neg": PV1__v_d_neg,
-        "PV1__H_mass_L": PV1__H_mass_L,
-        "PV1__H_mass_R": PV1__H_mass_R,
+        "PV1__H_volume_L": PV1__H_volume_L,
+        "PV1__H_volume_R": PV1__H_volume_R,
         "PV1__v_mm3_s": PV1__v_mm3_s,
         "PV1__v_d_mm3_s": PV1__v_d_mm3_s,
         "PV2__w_v": PV2__w_v,
@@ -2561,8 +2395,8 @@ def compute_algebraics(t, y):
         "PV2__v_neg": PV2__v_neg,
         "PV2__v_d_pos": PV2__v_d_pos,
         "PV2__v_d_neg": PV2__v_d_neg,
-        "PV2__H_mass_L": PV2__H_mass_L,
-        "PV2__H_mass_R": PV2__H_mass_R,
+        "PV2__H_volume_L": PV2__H_volume_L,
+        "PV2__H_volume_R": PV2__H_volume_R,
         "PV2__v_mm3_s": PV2__v_mm3_s,
         "PV2__v_d_mm3_s": PV2__v_d_mm3_s,
         "V1__v": V1__v,
@@ -2584,7 +2418,6 @@ def compute_algebraics(t, y):
         "VV_junc2__Qout4": VV_junc2__Qout4,
         "VV_junc2__Qin_tot": VV_junc2__Qin_tot,
         "VV_junc2__Qout_tot": VV_junc2__Qout_tot,
-        "VV_junc2__RBC_out": VV_junc2__RBC_out,
         "VV_junc2__v": VV_junc2__v,
         "VV_junc2__bc1_is_in": VV_junc2__bc1_is_in,
         "VV_junc2__bc3_is_in": VV_junc2__bc3_is_in,
@@ -2602,8 +2435,8 @@ def compute_algebraics(t, y):
         "PV3__v_neg": PV3__v_neg,
         "PV3__v_d_pos": PV3__v_d_pos,
         "PV3__v_d_neg": PV3__v_d_neg,
-        "PV3__H_mass_L": PV3__H_mass_L,
-        "PV3__H_mass_R": PV3__H_mass_R,
+        "PV3__H_volume_L": PV3__H_volume_L,
+        "PV3__H_volume_R": PV3__H_volume_R,
         "PV3__v_mm3_s": PV3__v_mm3_s,
         "PV3__v_d_mm3_s": PV3__v_d_mm3_s,
         "PV4__w_v": PV4__w_v,
@@ -2616,8 +2449,8 @@ def compute_algebraics(t, y):
         "PV4__v_neg": PV4__v_neg,
         "PV4__v_d_pos": PV4__v_d_pos,
         "PV4__v_d_neg": PV4__v_d_neg,
-        "PV4__H_mass_L": PV4__H_mass_L,
-        "PV4__H_mass_R": PV4__H_mass_R,
+        "PV4__H_volume_L": PV4__H_volume_L,
+        "PV4__H_volume_R": PV4__H_volume_R,
         "PV4__v_mm3_s": PV4__v_mm3_s,
         "PV4__v_d_mm3_s": PV4__v_d_mm3_s,
         "V3__w_v": V3__w_v,
@@ -2627,8 +2460,8 @@ def compute_algebraics(t, y):
         "V3__H_R_out": V3__H_R_out,
         "V3__v_pos": V3__v_pos,
         "V3__v_neg": V3__v_neg,
-        "V3__H_mass_L": V3__H_mass_L,
-        "V3__H_mass_R": V3__H_mass_R,
+        "V3__H_volume_L": V3__H_volume_L,
+        "V3__H_volume_R": V3__H_volume_R,
         "V3__v_mm3_s": V3__v_mm3_s,
         "V4__w_v": V4__w_v,
         "V4__H_up": V4__H_up,
@@ -2637,8 +2470,8 @@ def compute_algebraics(t, y):
         "V4__H_R_out": V4__H_R_out,
         "V4__v_pos": V4__v_pos,
         "V4__v_neg": V4__v_neg,
-        "V4__H_mass_L": V4__H_mass_L,
-        "V4__H_mass_R": V4__H_mass_R,
+        "V4__H_volume_L": V4__H_volume_L,
+        "V4__H_volume_R": V4__H_volume_R,
         "V4__v_mm3_s": V4__v_mm3_s,
         "VV_junc3__vj1": VV_junc3__vj1,
         "VV_junc3__vj3": VV_junc3__vj3,
@@ -2657,7 +2490,6 @@ def compute_algebraics(t, y):
         "VV_junc3__Qout4": VV_junc3__Qout4,
         "VV_junc3__Qin_tot": VV_junc3__Qin_tot,
         "VV_junc3__Qout_tot": VV_junc3__Qout_tot,
-        "VV_junc3__RBC_out": VV_junc3__RBC_out,
         "VV_junc3__v": VV_junc3__v,
         "VV_junc3__bc1_is_in": VV_junc3__bc1_is_in,
         "VV_junc3__bc3_is_in": VV_junc3__bc3_is_in,
@@ -2675,8 +2507,8 @@ def compute_algebraics(t, y):
         "PV5__v_neg": PV5__v_neg,
         "PV5__v_d_pos": PV5__v_d_pos,
         "PV5__v_d_neg": PV5__v_d_neg,
-        "PV5__H_mass_L": PV5__H_mass_L,
-        "PV5__H_mass_R": PV5__H_mass_R,
+        "PV5__H_volume_L": PV5__H_volume_L,
+        "PV5__H_volume_R": PV5__H_volume_R,
         "PV5__v_mm3_s": PV5__v_mm3_s,
         "PV5__v_d_mm3_s": PV5__v_d_mm3_s,
         "PV6__w_v": PV6__w_v,
@@ -2689,8 +2521,8 @@ def compute_algebraics(t, y):
         "PV6__v_neg": PV6__v_neg,
         "PV6__v_d_pos": PV6__v_d_pos,
         "PV6__v_d_neg": PV6__v_d_neg,
-        "PV6__H_mass_L": PV6__H_mass_L,
-        "PV6__H_mass_R": PV6__H_mass_R,
+        "PV6__H_volume_L": PV6__H_volume_L,
+        "PV6__H_volume_R": PV6__H_volume_R,
         "PV6__v_mm3_s": PV6__v_mm3_s,
         "PV6__v_d_mm3_s": PV6__v_d_mm3_s,
         "V5__w_v": V5__w_v,
@@ -2700,8 +2532,8 @@ def compute_algebraics(t, y):
         "V5__H_R_out": V5__H_R_out,
         "V5__v_pos": V5__v_pos,
         "V5__v_neg": V5__v_neg,
-        "V5__H_mass_L": V5__H_mass_L,
-        "V5__H_mass_R": V5__H_mass_R,
+        "V5__H_volume_L": V5__H_volume_L,
+        "V5__H_volume_R": V5__H_volume_R,
         "V5__v_mm3_s": V5__v_mm3_s,
         "V6__w_v": V6__w_v,
         "V6__H_up": V6__H_up,
@@ -2710,8 +2542,8 @@ def compute_algebraics(t, y):
         "V6__H_R_out": V6__H_R_out,
         "V6__v_pos": V6__v_pos,
         "V6__v_neg": V6__v_neg,
-        "V6__H_mass_L": V6__H_mass_L,
-        "V6__H_mass_R": V6__H_mass_R,
+        "V6__H_volume_L": V6__H_volume_L,
+        "V6__H_volume_R": V6__H_volume_R,
         "V6__v_mm3_s": V6__v_mm3_s,
         "inlet__w_v_d": inlet__w_v_d,
         "inlet__H_up": inlet__H_up,
@@ -2720,8 +2552,8 @@ def compute_algebraics(t, y):
         "inlet__H_R_out": inlet__H_R_out,
         "inlet__v_d_pos": inlet__v_d_pos,
         "inlet__v_d_neg": inlet__v_d_neg,
-        "inlet__H_mass_L": inlet__H_mass_L,
-        "inlet__H_mass_R": inlet__H_mass_R,
+        "inlet__H_volume_L": inlet__H_volume_L,
+        "inlet__H_volume_R": inlet__H_volume_R,
         "inlet__v_d_mm3_s": inlet__v_d_mm3_s,
         "VV_junc1__n_in": VV_junc1__n_in,
         "VV_junc1__n_out": VV_junc1__n_out,
@@ -2760,8 +2592,8 @@ def compute_algebraics(t, y):
         "V1__H_R_out": V1__H_R_out,
         "V1__v_pos": V1__v_pos,
         "V1__v_neg": V1__v_neg,
-        "V1__H_mass_L": V1__H_mass_L,
-        "V1__H_mass_R": V1__H_mass_R,
+        "V1__H_volume_L": V1__H_volume_L,
+        "V1__H_volume_R": V1__H_volume_R,
         "V1__v_mm3_s": V1__v_mm3_s,
         "V2__w_v": V2__w_v,
         "V2__H_up": V2__H_up,
@@ -2770,8 +2602,8 @@ def compute_algebraics(t, y):
         "V2__H_R_out": V2__H_R_out,
         "V2__v_pos": V2__v_pos,
         "V2__v_neg": V2__v_neg,
-        "V2__H_mass_L": V2__H_mass_L,
-        "V2__H_mass_R": V2__H_mass_R,
+        "V2__H_volume_L": V2__H_volume_L,
+        "V2__H_volume_R": V2__H_volume_R,
         "V2__v_mm3_s": V2__v_mm3_s,
         "VV_junc2__n_in": VV_junc2__n_in,
         "VV_junc2__n_out": VV_junc2__n_out,
@@ -2862,7 +2694,7 @@ def compute_algebraics(t, y):
         "VV_junc2__ph": VV_junc2__ph,
         "VV_junc3__ph": VV_junc3__ph,
         "VV_junc1__FQE_alpha": VV_junc1__FQE_alpha,
-        "VV_junc1__epsilon_alpha": VV_junc1__epsilon_alpha,
+        "VV_junc1__H_VV_out_alpha": VV_junc1__H_VV_out_alpha,
         "VV_junc1__H_VV_out_beta": VV_junc1__H_VV_out_beta,
         "VV_junc1__H_split1": VV_junc1__H_split1,
         "VV_junc1__H_split2": VV_junc1__H_split2,
@@ -2877,7 +2709,7 @@ def compute_algebraics(t, y):
         "VV_junc1__H_from3_target": VV_junc1__H_from3_target,
         "VV_junc1__H_from4_target": VV_junc1__H_from4_target,
         "VV_junc2__FQE_alpha": VV_junc2__FQE_alpha,
-        "VV_junc2__epsilon_alpha": VV_junc2__epsilon_alpha,
+        "VV_junc2__H_VV_out_alpha": VV_junc2__H_VV_out_alpha,
         "VV_junc2__H_VV_out_beta": VV_junc2__H_VV_out_beta,
         "VV_junc2__H_split1": VV_junc2__H_split1,
         "VV_junc2__H_split2": VV_junc2__H_split2,
@@ -2892,7 +2724,7 @@ def compute_algebraics(t, y):
         "VV_junc2__H_from3_target": VV_junc2__H_from3_target,
         "VV_junc2__H_from4_target": VV_junc2__H_from4_target,
         "VV_junc3__FQE_alpha": VV_junc3__FQE_alpha,
-        "VV_junc3__epsilon_alpha": VV_junc3__epsilon_alpha,
+        "VV_junc3__H_VV_out_alpha": VV_junc3__H_VV_out_alpha,
         "VV_junc3__H_VV_out_beta": VV_junc3__H_VV_out_beta,
         "VV_junc3__H_split1": VV_junc3__H_split1,
         "VV_junc3__H_split2": VV_junc3__H_split2,
@@ -2906,4 +2738,19 @@ def compute_algebraics(t, y):
         "VV_junc3__H_from2_target": VV_junc3__H_from2_target,
         "VV_junc3__H_from3_target": VV_junc3__H_from3_target,
         "VV_junc3__H_from4_target": VV_junc3__H_from4_target,
+        "VV_junc1__H_from1": VV_junc1__H_from1,
+        "VV_junc1__H_from2": VV_junc1__H_from2,
+        "VV_junc1__H_from3": VV_junc1__H_from3,
+        "VV_junc1__H_from4": VV_junc1__H_from4,
+        "VV_junc1__RBC_out": VV_junc1__RBC_out,
+        "VV_junc2__H_from1": VV_junc2__H_from1,
+        "VV_junc2__H_from2": VV_junc2__H_from2,
+        "VV_junc2__H_from3": VV_junc2__H_from3,
+        "VV_junc2__H_from4": VV_junc2__H_from4,
+        "VV_junc2__RBC_out": VV_junc2__RBC_out,
+        "VV_junc3__H_from1": VV_junc3__H_from1,
+        "VV_junc3__H_from2": VV_junc3__H_from2,
+        "VV_junc3__H_from3": VV_junc3__H_from3,
+        "VV_junc3__H_from4": VV_junc3__H_from4,
+        "VV_junc3__RBC_out": VV_junc3__RBC_out,
     }

@@ -20889,7 +20889,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="mu_45" public_interface="out" units="dimensionless"/>
+        <variable name="mu_45" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -20956,7 +20956,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="hem_dep_u_rel" public_interface="out" units="dimensionless"/>
+        <variable name="hem_dep_u_rel" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -21790,7 +21790,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="mu_45" public_interface="out" units="dimensionless"/>
+        <variable name="mu_45" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -21857,7 +21857,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="hem_dep_u_rel" public_interface="out" units="dimensionless"/>
+        <variable name="hem_dep_u_rel" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -22599,7 +22599,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="mu_45" public_interface="out" units="dimensionless"/>
+        <variable name="mu_45" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -22666,7 +22666,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="hem_dep_u_rel" public_interface="out" units="dimensionless"/>
+        <variable name="hem_dep_u_rel" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -23412,7 +23412,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="mu_45" public_interface="out" units="dimensionless"/>
+        <variable name="mu_45" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -23479,7 +23479,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="hem_dep_u_rel" public_interface="out" units="dimensionless"/>
+        <variable name="hem_dep_u_rel" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -25925,7 +25925,7 @@ ode(H_from4, t) = w_out4*(H_from4_target-H_from4)/tau_junc;-->
                 </apply>
             </apply>
         </math>
-        <variable name="R" public_interface="in" units="Js_per_m6"/>
+        <variable name="R_VV_junc" public_interface="in" units="Js_per_m6"/>
         <!-- State Variables-->
         <variable name="u" public_interface="out" units="J_per_m3"/>
         <variable name="u_mmHg" public_interface="out" units="dimensionless"/>
@@ -26002,7 +26002,7 @@ question?????????? whether ode (q_c and q_C_d) should be vbc1-4 or vj1-4-->
                         <ci>u</ci>
                         <ci>u_d</ci>
                     </apply>
-                    <ci>R</ci>
+                    <ci>R_VV_junc</ci>
                 </apply>
             </apply>
             <apply>
@@ -28326,7 +28326,7 @@ ode(H_from4, t) = w_out4*(H_from4_target-H_from4)/tau_junc;-->
                 </apply>
             </apply>
         </math>
-        <variable name="R" public_interface="in" units="Js_per_m6"/>
+        <variable name="R_VV_junc" public_interface="in" units="Js_per_m6"/>
         <!-- State Variables-->
         <variable name="u" public_interface="out" units="J_per_m3"/>
         <variable name="u_mmHg" public_interface="out" units="dimensionless"/>
@@ -28403,7 +28403,7 @@ question?????????? whether ode (q_c and q_C_d) should be vbc1-4 or vj1-4-->
                         <ci>u</ci>
                         <ci>u_d</ci>
                     </apply>
-                    <ci>R</ci>
+                    <ci>R_VV_junc</ci>
                 </apply>
             </apply>
             <apply>
@@ -28741,10 +28741,46 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <!--var RBC_volume: m3 {pub: out};-->
-        <!--RBC_volume = (v*H_volume_L-v_d*H_volume_R)/(v+v_d);-->
-        <!--var RBC_volume_init: m3 {pub: out};-->
-        <!--RBC_volume_init = H_global_L*q_us;-->
+        <variable name="RBC_volume" public_interface="out" units="m3"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>RBC_volume</ci>
+                <apply>
+                    <divide/>
+                    <apply>
+                        <minus/>
+                        <apply>
+                            <times/>
+                            <ci>v</ci>
+                            <ci>H_volume_L</ci>
+                        </apply>
+                        <apply>
+                            <times/>
+                            <ci>v_d</ci>
+                            <ci>H_volume_R</ci>
+                        </apply>
+                    </apply>
+                    <apply>
+                        <plus/>
+                        <ci>v</ci>
+                        <ci>v_d</ci>
+                    </apply>
+                </apply>
+            </apply>
+        </math>
+        <variable name="RBC_volume_init" public_interface="out" units="m3"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>RBC_volume_init</ci>
+                <apply>
+                    <times/>
+                    <ci>H_global_L</ci>
+                    <ci>q_us</ci>
+                </apply>
+            </apply>
+        </math>
         <!--pos/neg for RBC mass conservation only-->
         <variable name="v_pos" public_interface="out" units="m3_per_s"/>
         <variable name="v_neg" public_interface="out" units="m3_per_s"/>
@@ -28812,33 +28848,8 @@ instaneous coupling requirement/////////-->
                 <ci>H_mean</ci>
                 <apply>
                     <divide/>
-                    <apply>
-                        <plus/>
-                        <apply>
-                            <minus/>
-                            <apply>
-                                <times/>
-                                <ci>v</ci>
-                                <ci>H_volume_L</ci>
-                            </apply>
-                            <apply>
-                                <times/>
-                                <ci>v_d</ci>
-                                <ci>H_volume_R</ci>
-                            </apply>
-                        </apply>
-                        <ci>v_scale</ci>
-                    </apply>
-                    <apply>
-                        <plus/>
-                        <ci>v</ci>
-                        <ci>v_d</ci>
-                        <apply>
-                            <times/>
-                            <cn cellml:units="dimensionless">2</cn>
-                            <ci>v_scale</ci>
-                        </apply>
-                    </apply>
+                    <ci>RBC_volume</ci>
+                    <ci>q</ci>
                 </apply>
             </apply>
         </math>
@@ -29035,7 +29046,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="mu_45" public_interface="out" units="dimensionless"/>
+        <variable name="mu_45" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -29102,7 +29113,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="hem_dep_u_rel" public_interface="out" units="dimensionless"/>
+        <variable name="hem_dep_u_rel" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -29633,10 +29644,46 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <!--var RBC_volume: m3 {pub: out};-->
-        <!--RBC_volume = (v*H_volume_L-v_d*H_volume_R)/(v+v_d);-->
-        <!--var RBC_volume_init: m3 {pub: out};-->
-        <!--RBC_volume_init = H_global_L*q_us;-->
+        <variable name="RBC_volume" public_interface="out" units="m3"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>RBC_volume</ci>
+                <apply>
+                    <divide/>
+                    <apply>
+                        <minus/>
+                        <apply>
+                            <times/>
+                            <ci>v</ci>
+                            <ci>H_volume_L</ci>
+                        </apply>
+                        <apply>
+                            <times/>
+                            <ci>v_d</ci>
+                            <ci>H_volume_R</ci>
+                        </apply>
+                    </apply>
+                    <apply>
+                        <plus/>
+                        <ci>v</ci>
+                        <ci>v_d</ci>
+                    </apply>
+                </apply>
+            </apply>
+        </math>
+        <variable name="RBC_volume_init" public_interface="out" units="m3"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>RBC_volume_init</ci>
+                <apply>
+                    <times/>
+                    <ci>H_global_L</ci>
+                    <ci>q_us</ci>
+                </apply>
+            </apply>
+        </math>
         <!--pos/neg for RBC mass conservation only-->
         <variable name="v_pos" public_interface="out" units="m3_per_s"/>
         <variable name="v_neg" public_interface="out" units="m3_per_s"/>
@@ -29704,33 +29751,8 @@ instaneous coupling requirement/////////-->
                 <ci>H_mean</ci>
                 <apply>
                     <divide/>
-                    <apply>
-                        <plus/>
-                        <apply>
-                            <minus/>
-                            <apply>
-                                <times/>
-                                <ci>v</ci>
-                                <ci>H_volume_L</ci>
-                            </apply>
-                            <apply>
-                                <times/>
-                                <ci>v_d</ci>
-                                <ci>H_volume_R</ci>
-                            </apply>
-                        </apply>
-                        <ci>v_scale</ci>
-                    </apply>
-                    <apply>
-                        <plus/>
-                        <ci>v</ci>
-                        <ci>v_d</ci>
-                        <apply>
-                            <times/>
-                            <cn cellml:units="dimensionless">2</cn>
-                            <ci>v_scale</ci>
-                        </apply>
-                    </apply>
+                    <ci>RBC_volume</ci>
+                    <ci>q</ci>
                 </apply>
             </apply>
         </math>
@@ -29927,7 +29949,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="mu_45" public_interface="out" units="dimensionless"/>
+        <variable name="mu_45" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -29994,7 +30016,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="hem_dep_u_rel" public_interface="out" units="dimensionless"/>
+        <variable name="hem_dep_u_rel" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -30462,10 +30484,46 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <!--var RBC_volume: m3 {pub: out};-->
-        <!--RBC_volume = (v_in*H_volume_L-v*H_volume_R)/(v_in+v);-->
-        <!--var RBC_volume_init: m3 {pub: out};-->
-        <!--RBC_volume_init = H_global_L*q_us;-->
+        <variable name="RBC_volume" public_interface="out" units="m3"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>RBC_volume</ci>
+                <apply>
+                    <divide/>
+                    <apply>
+                        <minus/>
+                        <apply>
+                            <times/>
+                            <ci>v_in</ci>
+                            <ci>H_volume_L</ci>
+                        </apply>
+                        <apply>
+                            <times/>
+                            <ci>v</ci>
+                            <ci>H_volume_R</ci>
+                        </apply>
+                    </apply>
+                    <apply>
+                        <plus/>
+                        <ci>v_in</ci>
+                        <ci>v</ci>
+                    </apply>
+                </apply>
+            </apply>
+        </math>
+        <variable name="RBC_volume_init" public_interface="out" units="m3"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>RBC_volume_init</ci>
+                <apply>
+                    <times/>
+                    <ci>H_global_L</ci>
+                    <ci>q_us</ci>
+                </apply>
+            </apply>
+        </math>
         <!--pos/neg for RBC mass conservation only-->
         <variable name="v_pos" public_interface="out" units="m3_per_s"/>
         <variable name="v_neg" public_interface="out" units="m3_per_s"/>
@@ -30504,33 +30562,8 @@ instaneous coupling requirement/////////-->
                 <ci>H_mean</ci>
                 <apply>
                     <divide/>
-                    <apply>
-                        <plus/>
-                        <apply>
-                            <minus/>
-                            <apply>
-                                <times/>
-                                <ci>v_in</ci>
-                                <ci>H_volume_L</ci>
-                            </apply>
-                            <apply>
-                                <times/>
-                                <ci>v</ci>
-                                <ci>H_volume_R</ci>
-                            </apply>
-                        </apply>
-                        <ci>v_scale</ci>
-                    </apply>
-                    <apply>
-                        <plus/>
-                        <ci>v_in</ci>
-                        <ci>v</ci>
-                        <apply>
-                            <times/>
-                            <cn cellml:units="dimensionless">2</cn>
-                            <ci>v_scale</ci>
-                        </apply>
-                    </apply>
+                    <ci>RBC_volume</ci>
+                    <ci>q</ci>
                 </apply>
             </apply>
         </math>
@@ -30727,7 +30760,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="mu_45" public_interface="out" units="dimensionless"/>
+        <variable name="mu_45" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -30794,7 +30827,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="hem_dep_u_rel" public_interface="out" units="dimensionless"/>
+        <variable name="hem_dep_u_rel" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -31266,10 +31299,46 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <!--var RBC_volume: m3 {pub: out};-->
-        <!--RBC_volume = (v_in*H_volume_L-v*H_volume_R)/(v_in+v);-->
-        <!--var RBC_volume_init: m3 {pub: out};-->
-        <!--RBC_volume_init = H_global_L*q_us;-->
+        <variable name="RBC_volume" public_interface="out" units="m3"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>RBC_volume</ci>
+                <apply>
+                    <divide/>
+                    <apply>
+                        <minus/>
+                        <apply>
+                            <times/>
+                            <ci>v_in</ci>
+                            <ci>H_volume_L</ci>
+                        </apply>
+                        <apply>
+                            <times/>
+                            <ci>v</ci>
+                            <ci>H_volume_R</ci>
+                        </apply>
+                    </apply>
+                    <apply>
+                        <plus/>
+                        <ci>v_in</ci>
+                        <ci>v</ci>
+                    </apply>
+                </apply>
+            </apply>
+        </math>
+        <variable name="RBC_volume_init" public_interface="out" units="m3"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>RBC_volume_init</ci>
+                <apply>
+                    <times/>
+                    <ci>H_global_L</ci>
+                    <ci>q_us</ci>
+                </apply>
+            </apply>
+        </math>
         <!--pos/neg for RBC mass conservation only-->
         <variable name="v_pos" public_interface="out" units="m3_per_s"/>
         <variable name="v_neg" public_interface="out" units="m3_per_s"/>
@@ -31308,33 +31377,8 @@ instaneous coupling requirement/////////-->
                 <ci>H_mean</ci>
                 <apply>
                     <divide/>
-                    <apply>
-                        <plus/>
-                        <apply>
-                            <minus/>
-                            <apply>
-                                <times/>
-                                <ci>v_in</ci>
-                                <ci>H_volume_L</ci>
-                            </apply>
-                            <apply>
-                                <times/>
-                                <ci>v</ci>
-                                <ci>H_volume_R</ci>
-                            </apply>
-                        </apply>
-                        <ci>v_scale</ci>
-                    </apply>
-                    <apply>
-                        <plus/>
-                        <ci>v_in</ci>
-                        <ci>v</ci>
-                        <apply>
-                            <times/>
-                            <cn cellml:units="dimensionless">2</cn>
-                            <ci>v_scale</ci>
-                        </apply>
-                    </apply>
+                    <ci>RBC_volume</ci>
+                    <ci>q</ci>
                 </apply>
             </apply>
         </math>
@@ -31531,7 +31575,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="mu_45" public_interface="out" units="dimensionless"/>
+        <variable name="mu_45" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -31598,7 +31642,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="hem_dep_u_rel" public_interface="out" units="dimensionless"/>
+        <variable name="hem_dep_u_rel" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>

@@ -526,12 +526,12 @@ instaneous coupling requirement/////////-->
                     <apply>
                         <times/>
                         <ci>v</ci>
-                        <ci>H_mass_L</ci>
+                        <ci>H_volume_L</ci>
                     </apply>
                     <apply>
                         <times/>
                         <ci>v_d</ci>
-                        <ci>H_mass_R</ci>
+                        <ci>H_volume_R</ci>
                     </apply>
                 </apply>
             </apply>
@@ -622,12 +622,12 @@ instaneous coupling requirement/////////-->
         </math>
         <variable name="H_mean" public_interface="out" units="dimensionless"/>
         <!--ode(H_mean, t) = (H_target-H_mean)/tau_H_mean;-->
-        <variable name="H_mass_L" public_interface="out" units="dimensionless"/>
-        <variable name="H_mass_R" public_interface="out" units="dimensionless"/>
+        <variable name="H_volume_L" public_interface="out" units="dimensionless"/>
+        <variable name="H_volume_R" public_interface="out" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
-                <ci>H_mass_L</ci>
+                <ci>H_volume_L</ci>
                 <apply>
                     <plus/>
                     <apply>
@@ -648,7 +648,7 @@ instaneous coupling requirement/////////-->
             </apply>
             <apply>
                 <eq/>
-                <ci>H_mass_R</ci>
+                <ci>H_volume_R</ci>
                 <apply>
                     <plus/>
                     <apply>
@@ -1427,12 +1427,12 @@ instaneous coupling requirement/////////-->
                     <apply>
                         <times/>
                         <ci>v</ci>
-                        <ci>H_mass_L</ci>
+                        <ci>H_volume_L</ci>
                     </apply>
                     <apply>
                         <times/>
                         <ci>v_d</ci>
-                        <ci>H_mass_R</ci>
+                        <ci>H_volume_R</ci>
                     </apply>
                 </apply>
             </apply>
@@ -1523,12 +1523,12 @@ instaneous coupling requirement/////////-->
         </math>
         <variable name="H_mean" public_interface="out" units="dimensionless"/>
         <!--ode(H_mean, t) = (H_target-H_mean)/tau_H_mean;-->
-        <variable name="H_mass_L" public_interface="out" units="dimensionless"/>
-        <variable name="H_mass_R" public_interface="out" units="dimensionless"/>
+        <variable name="H_volume_L" public_interface="out" units="dimensionless"/>
+        <variable name="H_volume_R" public_interface="out" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
-                <ci>H_mass_L</ci>
+                <ci>H_volume_L</ci>
                 <apply>
                     <plus/>
                     <apply>
@@ -1549,7 +1549,7 @@ instaneous coupling requirement/////////-->
             </apply>
             <apply>
                 <eq/>
-                <ci>H_mass_R</ci>
+                <ci>H_volume_R</ci>
                 <apply>
                     <plus/>
                     <apply>
@@ -2265,12 +2265,12 @@ instaneous coupling requirement/////////-->
                     <apply>
                         <times/>
                         <ci>v_in</ci>
-                        <ci>H_mass_L</ci>
+                        <ci>H_volume_L</ci>
                     </apply>
                     <apply>
                         <times/>
                         <ci>v</ci>
-                        <ci>H_mass_R</ci>
+                        <ci>H_volume_R</ci>
                     </apply>
                 </apply>
             </apply>
@@ -2332,12 +2332,12 @@ instaneous coupling requirement/////////-->
         </math>
         <variable name="H_mean" public_interface="out" units="dimensionless"/>
         <!--ode(H_mean, t) = (H_target-H_mean)/tau_H_mean;-->
-        <variable name="H_mass_L" public_interface="out" units="dimensionless"/>
-        <variable name="H_mass_R" public_interface="out" units="dimensionless"/>
+        <variable name="H_volume_L" public_interface="out" units="dimensionless"/>
+        <variable name="H_volume_R" public_interface="out" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
-                <ci>H_mass_L</ci>
+                <ci>H_volume_L</ci>
                 <apply>
                     <plus/>
                     <apply>
@@ -2358,7 +2358,7 @@ instaneous coupling requirement/////////-->
             </apply>
             <apply>
                 <eq/>
-                <ci>H_mass_R</ci>
+                <ci>H_volume_R</ci>
                 <apply>
                     <plus/>
                     <apply>
@@ -2760,7 +2760,6 @@ instaneous coupling requirement/////////-->
     <component name="VV_junction_H_D">
         <variable name="div_0" public_interface="in" units="dimensionless"/>
         <variable name="div_0y" public_interface="in" units="dimensionless"/>
-        <variable name="tau_junc" public_interface="in" units="second"/>
         <variable name="v_threshold" public_interface="in" units="m3_per_s"/>
         <variable name="k" public_interface="in" units="dimensionless"/>
         <variable name="t" public_interface="in" units="second"/>
@@ -3116,105 +3115,53 @@ instaneous coupling requirement/////////-->
                 </piecewise>
             </apply>
         </math>
-        <variable initial_value="H_global_L" name="H_from1" public_interface="out" units="dimensionless"/>
-        <variable initial_value="H_global_L" name="H_from2" public_interface="out" units="dimensionless"/>
-        <variable initial_value="H_global_L" name="H_from3" public_interface="out" units="dimensionless"/>
-        <variable initial_value="H_global_L" name="H_from4" public_interface="out" units="dimensionless"/>
+        <variable name="H_from1" public_interface="out" units="dimensionless"/>
+        <variable name="H_from2" public_interface="out" units="dimensionless"/>
+        <variable name="H_from3" public_interface="out" units="dimensionless"/>
+        <variable name="H_from4" public_interface="out" units="dimensionless"/>
         <!-- When w_out ~ 0 (not a daughter), derivative ~0 => holds last daughter value.-->
+        <!--ode(H_from1, t) = w_out1*(H_from1_target-H_from1)/tau_junc;-->
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
+                <ci>H_from1</ci>
                 <apply>
-                    <diff/>
-                    <bvar>
-                        <ci>t</ci>
-                    </bvar>
-                    <ci>H_from1</ci>
-                </apply>
-                <apply>
-                    <divide/>
-                    <apply>
-                        <times/>
-                        <ci>w_out1</ci>
-                        <apply>
-                            <minus/>
-                            <ci>H_from1_target</ci>
-                            <ci>H_from1</ci>
-                        </apply>
-                    </apply>
-                    <ci>tau_junc</ci>
+                    <times/>
+                    <ci>w_out1</ci>
+                    <ci>H_from1_target</ci>
                 </apply>
             </apply>
             <apply>
                 <eq/>
+                <ci>H_from2</ci>
                 <apply>
-                    <diff/>
-                    <bvar>
-                        <ci>t</ci>
-                    </bvar>
-                    <ci>H_from2</ci>
-                </apply>
-                <apply>
-                    <divide/>
-                    <apply>
-                        <times/>
-                        <ci>w_out2</ci>
-                        <apply>
-                            <minus/>
-                            <ci>H_from2_target</ci>
-                            <ci>H_from2</ci>
-                        </apply>
-                    </apply>
-                    <ci>tau_junc</ci>
+                    <times/>
+                    <ci>w_out2</ci>
+                    <ci>H_from2_target</ci>
                 </apply>
             </apply>
             <apply>
                 <eq/>
+                <ci>H_from3</ci>
                 <apply>
-                    <diff/>
-                    <bvar>
-                        <ci>t</ci>
-                    </bvar>
-                    <ci>H_from3</ci>
-                </apply>
-                <apply>
-                    <divide/>
-                    <apply>
-                        <times/>
-                        <ci>w_out3</ci>
-                        <apply>
-                            <minus/>
-                            <ci>H_from3_target</ci>
-                            <ci>H_from3</ci>
-                        </apply>
-                    </apply>
-                    <ci>tau_junc</ci>
+                    <times/>
+                    <ci>w_out3</ci>
+                    <ci>H_from3_target</ci>
                 </apply>
             </apply>
             <apply>
                 <eq/>
+                <ci>H_from4</ci>
                 <apply>
-                    <diff/>
-                    <bvar>
-                        <ci>t</ci>
-                    </bvar>
-                    <ci>H_from4</ci>
-                </apply>
-                <apply>
-                    <divide/>
-                    <apply>
-                        <times/>
-                        <ci>w_out4</ci>
-                        <apply>
-                            <minus/>
-                            <ci>H_from4_target</ci>
-                            <ci>H_from4</ci>
-                        </apply>
-                    </apply>
-                    <ci>tau_junc</ci>
+                    <times/>
+                    <ci>w_out4</ci>
+                    <ci>H_from4_target</ci>
                 </apply>
             </apply>
         </math>
+        <!--ode(H_from2, t) = w_out2*(H_from2_target-H_from2)/tau_junc;
+ode(H_from3, t) = w_out3*(H_from3_target-H_from3)/tau_junc;
+ode(H_from4, t) = w_out4*(H_from4_target-H_from4)/tau_junc;-->
         <variable name="r_bc1" public_interface="in" units="metre"/>
         <!-- diameter of vessel at port 1 (junction side)-->
         <variable name="r_bc2" public_interface="in" units="metre"/>
@@ -4819,52 +4766,29 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="epsilon_alpha" public_interface="out" units="dimensionless"/>
+        <!--var epsilon_alpha: dimensionless {pub: out};-->
+        <!--epsilon_alpha = H_VV_out_alpha-H_mean*FQE_alpha/(FQB_alpha+div_0);-->
+        <variable name="H_VV_out_alpha" public_interface="out" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
-                <ci>epsilon_alpha</ci>
+                <ci>H_VV_out_alpha</ci>
                 <apply>
-                    <minus/>
-                    <ci>H_VV_out_alpha</ci>
+                    <divide/>
                     <apply>
-                        <divide/>
-                        <apply>
-                            <times/>
-                            <ci>H_mean</ci>
-                            <ci>FQE_alpha</ci>
-                        </apply>
-                        <apply>
-                            <plus/>
-                            <ci>FQB_alpha</ci>
-                            <ci>div_0</ci>
-                        </apply>
+                        <times/>
+                        <ci>H_mean</ci>
+                        <ci>FQE_alpha</ci>
+                    </apply>
+                    <apply>
+                        <plus/>
+                        <ci>FQB_alpha</ci>
+                        <ci>div_0</ci>
                     </apply>
                 </apply>
             </apply>
         </math>
-        <variable initial_value="H_global_L" name="H_VV_out_alpha" public_interface="out" units="dimensionless"/>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <apply>
-                <eq/>
-                <apply>
-                    <diff/>
-                    <bvar>
-                        <ci>t</ci>
-                    </bvar>
-                    <ci>H_VV_out_alpha</ci>
-                </apply>
-                <apply>
-                    <times/>
-                    <ci>is_split</ci>
-                    <apply>
-                        <minus/>
-                        <ci>k</ci>
-                    </apply>
-                    <ci>epsilon_alpha</ci>
-                </apply>
-            </apply>
-        </math>
+        <!--ode(H_VV_out_alpha, t) = is_split*-k*epsilon_alpha;-->
         <variable name="H_VV_out_beta" public_interface="out" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
@@ -5108,7 +5032,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="R" public_interface="in" units="Js_per_m6"/>
+        <variable name="R_VV_junc" public_interface="in" units="Js_per_m6"/>
         <!-- State Variables-->
         <variable name="u" public_interface="out" units="J_per_m3"/>
         <variable name="u_mmHg" public_interface="out" units="dimensionless"/>
@@ -5185,7 +5109,7 @@ question?????????? whether ode (q_c and q_C_d) should be vbc1-4 or vj1-4-->
                         <ci>u</ci>
                         <ci>u_d</ci>
                     </apply>
-                    <ci>R</ci>
+                    <ci>R_VV_junc</ci>
                 </apply>
             </apply>
             <apply>

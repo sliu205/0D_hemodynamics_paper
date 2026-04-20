@@ -11658,7 +11658,7 @@
 	  ["q", "m3", "access", "variable"],
 	  ["q_us", "m3", "access", "variable"],
 	  
-	  ["R", "Js_per_m6", "access", "global_constant"],
+	  ["R_VV_junc", "Js_per_m6", "access", "global_constant"],
 	  
 	  ["u", "J_per_m3", "access", "variable"],
           ["u_mmHg", "dimensionless", "access", "variable"],
@@ -11910,7 +11910,7 @@
 	  ["q", "m3", "access", "variable"],
 	  ["q_us", "m3", "access", "variable"],
 	  
-	  ["R", "Js_per_m6", "access", "global_constant"],
+	  ["R_VV_junc", "Js_per_m6", "access", "global_constant"],
 	  
 	  ["u", "J_per_m3", "access", "variable"],
           ["u_mmHg", "dimensionless", "access", "variable"],

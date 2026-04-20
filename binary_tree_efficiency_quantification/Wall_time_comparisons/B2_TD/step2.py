@@ -1,11 +1,18 @@
 """
-Complete CellML to Python Generator - PATCHED VERSION v4
+Complete CellML to Python Generator - PATCHED VERSION v5
 Includes fixes for:
   1. pub:in skip check (not CSV-row check)
   2. sel block stripping before algebraic regex
   3. computed vars excluded from topo-sort predefined set
   4. computed vars not written as module-level constants
   5. environment__time registered as predefined (assigned at top of ode_rhs)
+  6. Global parameters auto-detected from mappings: any variable mapped from
+     `parameters` or `parameters_global` is treated as a global. CSV rows that
+     don't match a component-specific suffix (e.g. `R_VV_junc`) are checked
+     against this set and replicated to every consumer component.
+  7. Final dependency check warns loudly if a referenced variable has no
+     value, no equation, and no state — instead of silently shipping a broken
+     generated_model.py.
 """
 
 import re
@@ -14,7 +21,7 @@ from collections import defaultdict
 import numpy as np
 
 print("=" * 60)
-print("Running PATCHED step2.py (v4 - environment__time fix)")
+print("Running PATCHED step2.py (v5 - generalized global params)")
 print("=" * 60)
 
 # Files
@@ -71,14 +78,29 @@ print(f"Found {len(var_mappings)//2} variable mapping pairs")
 # ==============================================================================
 # 2. Parse templates to get variables and equations
 # ==============================================================================
+def convert_cases_to_ternary(cases):
+    """Convert CellML case statements to Python ternary."""
+    if not cases:
+        return '0.0'
+    cond, val = cases[0]
+    cond = cond.strip()
+    val = val.strip().rstrip(';')
+    if cond.lower() == 'true':
+        return val
+    cond = cond.replace('==', ' == ').replace('>=', ' >= ').replace('<=', ' <= ')
+    cond = re.sub(r'\s+', ' ', cond).strip()
+    if len(cases) > 1:
+        return f"({val} if {cond} else {convert_cases_to_ternary(cases[1:])})"
+    else:
+        return f"({val} if {cond} else 0.0)"
+
+
 def parse_template(text, name):
-    # Find this template
     match = re.search(rf'def\s+comp\s+{name}\s+as(.*?)enddef', text, re.DOTALL)
     if not match:
         return None
     body = match.group(1)
     
-    # Variables - track which are pub:in (constants) vs pub:out (computed)
     vars_info = {}
     for m in re.finditer(r'var\s+(\w+)\s*:\s*\w+(?:\s*\{([^}]*)\})?', body):
         vname = m.group(1)
@@ -90,63 +112,35 @@ def parse_template(text, name):
             'is_input': is_input
         }
     
-    # ODEs
     clean = re.sub(r'//.*', '', body)
     clean = re.sub(r'var\s+\w+[^;]*;', '', clean)
     
     odes = []
     for m in re.finditer(r'ode\s*\(\s*(\w+)\s*,\s*\w+\s*\)\s*=(.*?);', clean, re.DOTALL):
-        state = m.group(1).strip()
-        rhs = m.group(2).strip()
-        odes.append((state, rhs))
+        odes.append((m.group(1).strip(), m.group(2).strip()))
     
-    # Algebraic equations - ONLY for variables that are NOT pub:in
     clean2 = re.sub(r'ode\s*\([^)]+\)\s*=[^;]*;', '', clean, flags=re.DOTALL)
-    # Also strip sel/case blocks — they're parsed separately below. If left in,
-    # the algebraic regex below would match partial content inside them (e.g.
-    # "X = sel\n case cond: val_a" captured up to the first ";"), polluting the
-    # algebraic equation list with garbage.
+    # Strip sel/case blocks before the algebraic regex so it doesn't capture
+    # garbage from inside them (matches stop at the first ';').
     clean2 = re.sub(r'\w+\s*=\s*sel\s*.*?endsel\s*;', '', clean2, flags=re.DOTALL)
     alg = []
     for m in re.finditer(r'(\w+)\s*=(.*?);', clean2, re.DOTALL):
         lhs = m.group(1).strip()
         rhs = m.group(2).strip()
-        # Only include if it's a variable we know about and NOT an input
         if lhs in vars_info and not vars_info[lhs]['is_input'] and lhs != 't':
             alg.append((lhs, rhs))
     
-    # sel/case statements
     sel_cases = []
     for m in re.finditer(r'(\w+)\s*=\s*sel\s*(.*?)endsel\s*;', body, re.DOTALL):
         lhs = m.group(1).strip()
         cases_text = m.group(2).strip()
-        # Only if not an input variable
         if lhs in vars_info and not vars_info[lhs]['is_input']:
-            # Parse case statements
             cases = re.findall(r'case\s+(.*?)\s*:\s*(.*?)(?=case\s|$)', cases_text, re.DOTALL)
-            # Convert to ternary
             ternary = convert_cases_to_ternary(cases)
             sel_cases.append((lhs, ternary))
     
     return {'vars': vars_info, 'odes': odes, 'alg': alg, 'sel': sel_cases}
 
-def convert_cases_to_ternary(cases):
-    """Convert CellML case statements to Python ternary."""
-    if not cases:
-        return '0.0'
-    cond, val = cases[0]
-    cond = cond.strip()
-    val = val.strip().rstrip(';')
-    if cond.lower() == 'true':
-        return val
-    # Convert condition
-    cond = cond.replace('==', ' == ').replace('>=', ' >= ').replace('<=', ' <= ')
-    cond = re.sub(r'\s+', ' ', cond).strip()
-    # Recurse for remaining cases
-    if len(cases) > 1:
-        return f"({val} if {cond} else {convert_cases_to_ternary(cases[1:])})"
-    else:
-        return f"({val} if {cond} else 0.0)"
 
 templates = {}
 for comp_inst, tmpl_name in comp_to_template.items():
@@ -183,11 +177,52 @@ if 'inlet_module' in templates:
         print(f"    {state}")
 
 # ==============================================================================
+# NEW (v5): Detect global parameters from the mappings BEFORE loading CSVs
+# ==============================================================================
+# A "global" parameter is any variable that gets mapped from `parameters` or
+# `parameters_global` to one or more component modules. These need to be
+# replicated under each consuming component's namespace, regardless of whether
+# the CSV row uses a `global/` prefix.
+print("\nDetecting global parameters from CellML mappings...")
+global_param_names = set()
+global_param_consumers = defaultdict(set)
+for (comp_a, var_a), (comp_b, var_b) in var_mappings.items():
+    a_is_param = comp_a in ('parameters', 'parameters_global')
+    b_is_param = comp_b in ('parameters', 'parameters_global')
+    if a_is_param and not b_is_param:
+        # var_a is the name on the parameters side; var_b is the local module name.
+        # Both names get registered so a CSV row using either spelling works.
+        global_param_names.add(var_a)
+        global_param_names.add(var_b)
+        global_param_consumers[var_a].add(comp_b)
+        global_param_consumers[var_b].add(comp_b)
+    elif b_is_param and not a_is_param:
+        global_param_names.add(var_b)
+        global_param_names.add(var_a)
+        global_param_consumers[var_b].add(comp_a)
+        global_param_consumers[var_a].add(comp_a)
+
+# Belt-and-suspenders: also register every `pub:in` variable as potentially
+# global. If the CSV has a bare row matching one of these names, it'll be
+# replicated to all components that declare that variable as input.
+for comp_inst, tmpl in templates.items():
+    cb = comp_inst.replace('_module', '')
+    if cb in ('parameters', 'parameters_global'):
+        continue
+    for vname, info in tmpl['vars'].items():
+        if info.get('is_input'):
+            global_param_names.add(vname)
+            global_param_consumers[vname].add(cb)
+
+print(f"  Found {len(global_param_names)} global variable name(s)")
+
+# ==============================================================================
 # 3. Load parameters from CSVs
 # ==============================================================================
 params = {}
+unmatched_csv_rows = []   # rows from PARAMS_CSV we couldn't place anywhere
 
-# From B1_TD_parameters.csv
+# From <model>_parameters.csv
 with open(PARAMS_CSV) as f:
     reader = csv.DictReader(f)
     for row in reader:
@@ -195,6 +230,7 @@ with open(PARAMS_CSV) as f:
         value = row['value'].strip()
         
         matched = False
+        # Step 1: try to match a component suffix (e.g. r_PV1 -> PV1__r)
         for comp_base in comp_base_names:
             if comp_base in raw_name:
                 var_part = raw_name.replace(f'_{comp_base}', '').replace(f'{comp_base}_', '')
@@ -203,8 +239,25 @@ with open(PARAMS_CSV) as f:
                     matched = True
                     break
         
-        if not matched:
-            params[raw_name] = value
+        if matched:
+            continue
+        
+        # Step 2: NEW — if the bare name is a known global parameter, replicate
+        # it to every component that has it as `pub: in`.
+        if raw_name in global_param_names:
+            consumers = global_param_consumers.get(raw_name, set())
+            if not consumers:
+                consumers = {cb for cb in comp_base_names
+                             if cb not in ('parameters', 'parameters_global')}
+            for cb in consumers:
+                params[f"{cb}__{raw_name}"] = value
+            params[raw_name] = value  # also keep bare copy, harmless
+            print(f"  [global] {raw_name} = {value}  -> replicated to {len(consumers)} component(s)")
+            continue
+        
+        # Step 3: still nothing matched — keep it bare and remember for warning
+        params[raw_name] = value
+        unmatched_csv_rows.append(raw_name)
 
 # From initial_params.csv  
 with open(INITIAL_CSV) as f:
@@ -218,18 +271,29 @@ with open(INITIAL_CSV) as f:
             py_name = var.replace('/', '__').replace('_module', '')
             params[py_name] = value
             
-            # If it's a global parameter, replicate it for each component
+            # If it's a global parameter (CSV uses 'global/' convention),
+            # replicate it for each component that has it as pub:in. Falls back
+            # to "all non-parameter components" if the consumer set is unknown.
             if var.startswith('global/'):
                 var_name = var.replace('global/', '')
-                for comp_base in comp_base_names:
-                    if comp_base not in ['parameters', 'parameters_global', 'global']:
-                        params[f"{comp_base}__{var_name}"] = value
+                consumers = global_param_consumers.get(var_name)
+                if not consumers:
+                    consumers = {cb for cb in comp_base_names
+                                 if cb not in ('parameters', 'parameters_global', 'global')}
+                for cb in consumers:
+                    params[f"{cb}__{var_name}"] = value
         elif cat == 'state':
             # Store initial conditions separately
             py_name = var.replace('/', '__').replace('_module', '')
             params[f"INIT_{py_name}"] = value
 
 print(f"Loaded {len(params)} parameters")
+if unmatched_csv_rows:
+    print(f"  ⚠ {len(unmatched_csv_rows)} CSV row(s) didn't match any component or known global:")
+    for n in unmatched_csv_rows[:10]:
+        print(f"      {n}")
+    if len(unmatched_csv_rows) > 10:
+        print(f"      ... and {len(unmatched_csv_rows)-10} more")
 
 # Debug: check if the problematic ones are in params
 for check in ['inlet__v', 'inlet__v_scale', 'inlet__v_d', 'inlet__l', 'inlet__r']:
@@ -246,7 +310,6 @@ for comp_inst, tmpl in templates.items():
     comp_base = comp_inst.replace('_module', '')
     for state_var, rhs in tmpl['odes']:
         state_name = f"{comp_base}__{state_var}"
-        # Get initial value
         init_key = f"INIT_{state_name}"
         if init_key in params:
             init_val = params[init_key]
@@ -262,20 +325,17 @@ print(f"Found {len(state_list)} state variables")
 all_equations = []
 ode_equations = []
 
-# Get set of variables that are already parameters (have values)
 param_vars = {name for name in params.keys() if '__' in name and not name.startswith('INIT_')}
 
 for comp_inst, tmpl in templates.items():
     comp_base = comp_inst.replace('_module', '')
     
-    # Skip parameter holder components - they don't have real equations
     if comp_base in ['parameters', 'parameters_global']:
         continue
     
     # ODEs
     for state_var, rhs in tmpl['odes']:
         state_name = f"{comp_base}__{state_var}"
-        # Namespace the RHS
         ns_rhs = rhs
         for var in tmpl['vars']:
             ns_rhs = re.sub(rf'\b{var}\b', f'{comp_base}__{var}', ns_rhs)
@@ -284,10 +344,6 @@ for comp_inst, tmpl in templates.items():
     # Algebraic
     for lhs, rhs in tmpl['alg']:
         lhs_name = f"{comp_base}__{lhs}"
-        # Only skip if this variable is a true input (pub:in) — NOT just because
-        # it happens to have a row in the parameters CSV. Computed outputs
-        # (pub:out) must keep their governing equations; any CSV value for
-        # them is just a default/initial guess and should be overridden.
         if tmpl['vars'].get(lhs, {}).get('is_input', False):
             continue
         ns_rhs = rhs
@@ -298,23 +354,17 @@ for comp_inst, tmpl in templates.items():
     # sel/case equations
     for lhs, rhs in tmpl.get('sel', []):
         lhs_name = f"{comp_base}__{lhs}"
-        # Same rule as above: only skip true inputs.
         if tmpl['vars'].get(lhs, {}).get('is_input', False):
             continue
         ns_rhs = rhs
         for var in tmpl['vars']:
             ns_rhs = re.sub(rf'\b{var}\b', f'{comp_base}__{var}', ns_rhs)
-        # Remove any duplicate algebraic equation for this variable
         all_equations = [(l, r) for l, r in all_equations if l != lhs_name]
         all_equations.append((lhs_name, ns_rhs))
 
 # Apply variable mappings to replace mapped variables
 def apply_mappings(expr, var_mappings):
-    """Replace variables in expression according to mappings.
-    Apply in two phases:
-    1. Component-to-component connections
-    2. Remove parameters/parameters_global references
-    """
+    """Replace variables in expression according to mappings."""
     # Phase 1: Component connections (neither side is parameters)
     for (comp_a, var_a), (comp_b, var_b) in var_mappings.items():
         if comp_a not in ['parameters', 'parameters_global'] and comp_b not in ['parameters', 'parameters_global']:
@@ -343,13 +393,12 @@ ode_equations = [(lhs, apply_mappings(rhs, var_mappings)) for lhs, rhs in ode_eq
 def clean_expr(e):
     e = re.sub(r'\{[^}]+\}', '', e)
     e = e.replace('sqr(', 'np.square(')
-    e = e.replace('pow(', 'safe_power(')  # Use safe_power instead
+    e = e.replace('pow(', 'safe_power(')
     e = e.replace('exp(', 'np.exp(')
     e = e.replace('abs(', 'np.abs(')
     e = e.replace('ln(', 'np.log(')
     e = e.replace('atan(', 'np.arctan(')
     e = re.sub(r'\bpi\b', 'np.pi', e)
-    # Fix integer literals in safe_power to be floats
     e = re.sub(r'safe_power\((\d+),', r'safe_power(\1.0,', e)
     return e
 
@@ -363,8 +412,6 @@ print(f"Found {len(ode_equations)} ODE equations")
 # Sort algebraic equations topologically
 # ==============================================================================
 def topo_sort_equations(equations, defined_vars):
-    """Simple topological sort - defined_vars are already available."""
-    # Start with provided defined vars
     defined = set(defined_vars)
     
     ordered = []
@@ -378,13 +425,11 @@ def topo_sort_equations(equations, defined_vars):
         progress = False
         
         for lhs, rhs in remaining:
-            # Find all variables used in RHS
             deps = set(re.findall(r'\b([a-zA-Z_]\w*__\w+)\b', rhs))
-            # Check if all dependencies are satisfied
             unmet = deps - defined
             if not unmet:
                 ordered.append((lhs, rhs))
-                defined.add(lhs)  # Now THIS variable is defined
+                defined.add(lhs)
                 progress = True
             else:
                 next_rem.append((lhs, rhs))
@@ -393,8 +438,6 @@ def topo_sort_equations(equations, defined_vars):
         if not progress:
             print(f"  WARNING: Topological sort stuck at iteration {iteration}")
             print(f"  Remaining equations: {len(remaining)}")
-            # Detailed diagnostic: find equations that have MINIMUM unmet deps
-            # — these show the true "root" of the blockage.
             rem_with_unmet = []
             for lhs, rhs in remaining:
                 deps = set(re.findall(r'\b([a-zA-Z_]\w*__\w+)\b', rhs))
@@ -404,7 +447,6 @@ def topo_sort_equations(equations, defined_vars):
             print(f"  --- First 10 stuck equations (fewest unmet deps first) ---")
             stuck_lhs = {x[0] for x in rem_with_unmet}
             for lhs, rhs, unmet in rem_with_unmet[:10]:
-                # Classify each unmet dep
                 cat = []
                 for u in sorted(unmet):
                     if u in stuck_lhs:
@@ -414,8 +456,6 @@ def topo_sort_equations(equations, defined_vars):
                 print(f"    {lhs}:")
                 print(f"      RHS: {rhs[:120]}")
                 print(f"      unmet: {cat}")
-            # Also print all the TRULY-MISSING names (ones that aren't in `defined`
-            # and aren't in `pending` either — i.e. nothing ever resolves them)
             truly_missing = set()
             for _, _, unmet in rem_with_unmet:
                 truly_missing |= (unmet - stuck_lhs)
@@ -425,46 +465,37 @@ def topo_sort_equations(equations, defined_vars):
                     print(f"    {tm}")
             break
     
-    # Add remaining (circular dependencies) at the end
     ordered.extend(remaining)
     return ordered
 
-# State variables and parameters are already defined
-# Include ALL parameter names EXCEPT those that will be recomputed by an
-# algebraic equation — if a variable is on the LHS of an equation we're about
-# to emit inside ode_rhs, it's NOT predefined (it needs to be topo-sorted).
+# Build the predefined set
 computed_lhs = {lhs for lhs, _ in all_equations}
 
 predefined = set()
 for name in params.keys():
     if '__' in name and not name.startswith('INIT_'):
         if name in computed_lhs:
-            continue  # will be computed inside ode_rhs
+            continue
         predefined.add(name)
-# Add state variable names
 for s, _ in state_list:
     predefined.add(s)
-# The simulation time `environment__time` is assigned at the top of ode_rhs
-# (as `environment__time = t`), so it's available to every equation. The topo
-# sort doesn't know this on its own, so tell it explicitly.
 predefined.add('environment__time')
 
 print(f"Predefined variables: {len(predefined)}")
-# Check if the problematic ones are there
-for check in ['inlet__v', 'inlet__v_scale', 'inlet__v_d', 'VV_junc1__w_in2']:
+for check in ['inlet__v', 'inlet__v_scale', 'inlet__v_d', 'VV_junc1__w_in2',
+              'VV_junc1__R_VV_junc']:
     if check in predefined:
         print(f"  ✓ {check}")
     else:
-        print(f"  ✗ {check} MISSING")
+        in_computed = check in computed_lhs
+        print(f"  ✗ {check} MISSING (in computed_lhs={in_computed})")
 
-# Diagnostic: verify that equations we expect to be computed actually exist
 print("--- computed_lhs membership check ---")
 for check in ['PV1__v', 'PV1__u', 'PV1__R', 'VV_junc1__u_d', 'VV_junc1__vj3',
-              'VV_junc1__H_from1', 'VV_junc1__H_from1_target']:
+              'VV_junc1__H_from1', 'VV_junc1__H_from1_target', 'VV_junc1__v']:
     in_computed = check in computed_lhs
     in_predef   = check in predefined
     print(f"  {check}: computed_lhs={in_computed}  predefined={in_predef}")
-# Also verify PV1__v's RHS survived all transforms
 for lhs, rhs in all_equations:
     if lhs == 'PV1__v':
         print(f"  PV1__v RHS: {rhs}")
@@ -481,6 +512,44 @@ print(f"First 10 sorted equations:")
 for i, (lhs, rhs) in enumerate(all_equations[:10]):
     deps = set(re.findall(r'\b([a-zA-Z_]\w*__\w+)\b', rhs))
     print(f"  {i}: {lhs} (deps: {len(deps)})")
+
+# ==============================================================================
+# NEW (v5): Final dependency audit — warn loudly if anything is missing
+# ==============================================================================
+# Walk every emitted equation (sorted alg + ODE) and check that each name
+# appearing on the RHS is either: predefined, a state, or computed earlier.
+# Anything else means the generated_model.py will throw UnboundLocalError when
+# someone tries to run it.
+print("\n--- Final dependency audit ---")
+known_at_runtime = set(predefined)
+truly_missing_audit = set()
+for lhs, rhs in all_equations:
+    deps = set(re.findall(r'\b([a-zA-Z_]\w*__\w+)\b', rhs))
+    missing = deps - known_at_runtime
+    if missing:
+        for m in missing:
+            truly_missing_audit.add(m)
+    known_at_runtime.add(lhs)
+# ODE RHSes are evaluated AFTER all algebraics, so their deps need to be in
+# `known_at_runtime` as it stands at the end.
+for state_name, rhs in ode_equations:
+    deps = set(re.findall(r'\b([a-zA-Z_]\w*__\w+)\b', rhs))
+    missing = deps - known_at_runtime
+    if missing:
+        for m in missing:
+            truly_missing_audit.add(m)
+
+if truly_missing_audit:
+    print(f"  ⚠⚠⚠ {len(truly_missing_audit)} variable(s) referenced but never defined:")
+    for m in sorted(truly_missing_audit):
+        print(f"      {m}")
+    print(f"  The generated model WILL FAIL at runtime.")
+    print(f"  Likely causes:")
+    print(f"    - Missing entry in parameters CSV (add a row for the bare name).")
+    print(f"    - Variable declared pub:in but no mapping ever resolves it.")
+    print(f"    - CellML typo in the variable name vs. how it's referenced.")
+else:
+    print(f"  ✓ All references resolved — generated model should run.")
 
 # ==============================================================================
 # 6. Write output
@@ -504,18 +573,13 @@ lines = [
     '# Parameters',
 ]
 
-# Write all parameters
 state_names = {s for s, _ in state_list}
-# Variables that get recomputed inside ode_rhs — don't emit a module-level
-# value for them. Python would make them function-local anyway once they're
-# assigned inside ode_rhs, so a top-level value would be misleading/unused.
 computed_lhs_set = {lhs for lhs, _ in all_equations}
 
 for name, value in sorted(params.items()):
     if '__' in name and not name.startswith('INIT_'):
         if name in computed_lhs_set:
-            continue  # will be computed inside ode_rhs
-        # Write ALL parameters - they'll be overridden if computed later
+            continue
         lines.append(f"{name} = {value}")
 
 lines.extend([
@@ -599,14 +663,10 @@ lines.extend([
     '    return {',
 ])
 
-# Add all algebraic variables to return dict
 for lhs, _ in all_equations:
     lines.append(f'        "{lhs}": {lhs},')
 
 lines.append('    }')
-
-# Don't include the if __name__ == "__main__" block in generated model
-# Let run_generated_model.py handle execution
 
 with open(OUTPUT, 'w') as f:
     f.write('\n'.join(lines))
