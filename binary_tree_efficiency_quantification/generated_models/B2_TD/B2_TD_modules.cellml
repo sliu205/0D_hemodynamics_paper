@@ -813,7 +813,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="mu_45" units="dimensionless"/>
+        <variable name="mu_45" public_interface="out" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -880,7 +880,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="hem_dep_u_rel" units="dimensionless"/>
+        <variable name="hem_dep_u_rel" public_interface="out" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -1714,7 +1714,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="mu_45" units="dimensionless"/>
+        <variable name="mu_45" public_interface="out" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -1781,7 +1781,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="hem_dep_u_rel" units="dimensionless"/>
+        <variable name="hem_dep_u_rel" public_interface="out" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -2523,7 +2523,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="mu_45" units="dimensionless"/>
+        <variable name="mu_45" public_interface="out" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -2590,7 +2590,7 @@ instaneous coupling requirement/////////-->
                 </apply>
             </apply>
         </math>
-        <variable name="hem_dep_u_rel" units="dimensionless"/>
+        <variable name="hem_dep_u_rel" public_interface="out" units="dimensionless"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>

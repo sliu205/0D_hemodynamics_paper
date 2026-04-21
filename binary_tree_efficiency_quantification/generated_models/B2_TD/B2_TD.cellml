@@ -276,63 +276,33 @@
    <map_components component_1="inlet_module" component_2="VV_junc1_module"/>
    <map_variables variable_1="H_R_out" variable_2="H_to1"/>
    <map_variables variable_1="H_L_out_RHS" variable_2="H_from1"/>
-</connection>
-<connection>
-   <map_components component_1="inlet_module" component_2="VV_junc1_module"/>
    <map_variables variable_1="v_d" variable_2="vbc1"/>
    <map_variables variable_1="u_out" variable_2="u"/>
-</connection>
-<connection>
-   <map_components component_1="inlet_module" component_2="VV_junc1_module"/>
    <map_variables variable_1="r" variable_2="r_bc1"/>
-</connection>
-<connection>
-   <map_components component_1="inlet_module" component_2="VV_junc1_module"/>
    <map_variables variable_1="C" variable_2="C_conn1"/>
 </connection>
 <connection>
    <map_components component_1="VV_junc1_module" component_2="PV1_module"/>
    <map_variables variable_1="vbc3" variable_2="v"/>
    <map_variables variable_1="u_d" variable_2="u_in"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc1_module" component_2="PV1_module"/>
    <map_variables variable_1="H_from3" variable_2="H_R_out_LHS"/>
    <map_variables variable_1="H_to3" variable_2="H_L_out"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc1_module" component_2="PV1_module"/>
    <map_variables variable_1="r_bc3" variable_2="r"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc1_module" component_2="PV1_module"/>
    <map_variables variable_1="C_conn3" variable_2="C"/>
 </connection>
 <connection>
    <map_components component_1="VV_junc1_module" component_2="PV2_module"/>
    <map_variables variable_1="vbc4" variable_2="v"/>
    <map_variables variable_1="u_d" variable_2="u_in"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc1_module" component_2="PV2_module"/>
    <map_variables variable_1="H_from4" variable_2="H_R_out_LHS"/>
    <map_variables variable_1="H_to4" variable_2="H_L_out"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc1_module" component_2="PV2_module"/>
    <map_variables variable_1="r_bc4" variable_2="r"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc1_module" component_2="PV2_module"/>
    <map_variables variable_1="C_conn4" variable_2="C"/>
 </connection>
 <connection>
    <map_components component_1="PV1_module" component_2="V1_module"/>
    <map_variables variable_1="H_R_out" variable_2="H_R_out_LHS"/>
    <map_variables variable_1="H_L_out_RHS" variable_2="H_L_out"/>
-</connection>
-<connection>
-   <map_components component_1="PV1_module" component_2="V1_module"/>
    <map_variables variable_1="v_d" variable_2="v_in"/>
    <map_variables variable_1="u_out" variable_2="u"/>
 </connection>
@@ -340,9 +310,6 @@
    <map_components component_1="PV2_module" component_2="V2_module"/>
    <map_variables variable_1="H_R_out" variable_2="H_R_out_LHS"/>
    <map_variables variable_1="H_L_out_RHS" variable_2="H_L_out"/>
-</connection>
-<connection>
-   <map_components component_1="PV2_module" component_2="V2_module"/>
    <map_variables variable_1="v_d" variable_2="v_in"/>
    <map_variables variable_1="u_out" variable_2="u"/>
 </connection>
@@ -350,81 +317,42 @@
    <map_components component_1="V1_module" component_2="VV_junc2_module"/>
    <map_variables variable_1="H_R_out" variable_2="H_to1"/>
    <map_variables variable_1="H_L_out_RHS" variable_2="H_from1"/>
-</connection>
-<connection>
-   <map_components component_1="V1_module" component_2="VV_junc2_module"/>
    <map_variables variable_1="v" variable_2="vbc1"/>
    <map_variables variable_1="u_out" variable_2="u"/>
-</connection>
-<connection>
-   <map_components component_1="V1_module" component_2="VV_junc2_module"/>
    <map_variables variable_1="r" variable_2="r_bc1"/>
-</connection>
-<connection>
-   <map_components component_1="V1_module" component_2="VV_junc2_module"/>
    <map_variables variable_1="C" variable_2="C_conn1"/>
 </connection>
 <connection>
    <map_components component_1="V2_module" component_2="VV_junc3_module"/>
    <map_variables variable_1="H_R_out" variable_2="H_to1"/>
    <map_variables variable_1="H_L_out_RHS" variable_2="H_from1"/>
-</connection>
-<connection>
-   <map_components component_1="V2_module" component_2="VV_junc3_module"/>
    <map_variables variable_1="v" variable_2="vbc1"/>
    <map_variables variable_1="u_out" variable_2="u"/>
-</connection>
-<connection>
-   <map_components component_1="V2_module" component_2="VV_junc3_module"/>
    <map_variables variable_1="r" variable_2="r_bc1"/>
-</connection>
-<connection>
-   <map_components component_1="V2_module" component_2="VV_junc3_module"/>
    <map_variables variable_1="C" variable_2="C_conn1"/>
 </connection>
 <connection>
    <map_components component_1="VV_junc2_module" component_2="PV3_module"/>
    <map_variables variable_1="vbc3" variable_2="v"/>
    <map_variables variable_1="u_d" variable_2="u_in"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc2_module" component_2="PV3_module"/>
    <map_variables variable_1="H_from3" variable_2="H_R_out_LHS"/>
    <map_variables variable_1="H_to3" variable_2="H_L_out"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc2_module" component_2="PV3_module"/>
    <map_variables variable_1="r_bc3" variable_2="r"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc2_module" component_2="PV3_module"/>
    <map_variables variable_1="C_conn3" variable_2="C"/>
 </connection>
 <connection>
    <map_components component_1="VV_junc2_module" component_2="PV4_module"/>
    <map_variables variable_1="vbc4" variable_2="v"/>
    <map_variables variable_1="u_d" variable_2="u_in"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc2_module" component_2="PV4_module"/>
    <map_variables variable_1="H_from4" variable_2="H_R_out_LHS"/>
    <map_variables variable_1="H_to4" variable_2="H_L_out"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc2_module" component_2="PV4_module"/>
    <map_variables variable_1="r_bc4" variable_2="r"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc2_module" component_2="PV4_module"/>
    <map_variables variable_1="C_conn4" variable_2="C"/>
 </connection>
 <connection>
    <map_components component_1="PV3_module" component_2="V3_module"/>
    <map_variables variable_1="H_R_out" variable_2="H_R_out_LHS"/>
    <map_variables variable_1="H_L_out_RHS" variable_2="H_L_out"/>
-</connection>
-<connection>
-   <map_components component_1="PV3_module" component_2="V3_module"/>
    <map_variables variable_1="v_d" variable_2="v_in"/>
    <map_variables variable_1="u_out" variable_2="u"/>
 </connection>
@@ -432,9 +360,6 @@
    <map_components component_1="PV4_module" component_2="V4_module"/>
    <map_variables variable_1="H_R_out" variable_2="H_R_out_LHS"/>
    <map_variables variable_1="H_L_out_RHS" variable_2="H_L_out"/>
-</connection>
-<connection>
-   <map_components component_1="PV4_module" component_2="V4_module"/>
    <map_variables variable_1="v_d" variable_2="v_in"/>
    <map_variables variable_1="u_out" variable_2="u"/>
 </connection>
@@ -442,45 +367,24 @@
    <map_components component_1="VV_junc3_module" component_2="PV5_module"/>
    <map_variables variable_1="vbc3" variable_2="v"/>
    <map_variables variable_1="u_d" variable_2="u_in"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc3_module" component_2="PV5_module"/>
    <map_variables variable_1="H_from3" variable_2="H_R_out_LHS"/>
    <map_variables variable_1="H_to3" variable_2="H_L_out"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc3_module" component_2="PV5_module"/>
    <map_variables variable_1="r_bc3" variable_2="r"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc3_module" component_2="PV5_module"/>
    <map_variables variable_1="C_conn3" variable_2="C"/>
 </connection>
 <connection>
    <map_components component_1="VV_junc3_module" component_2="PV6_module"/>
    <map_variables variable_1="vbc4" variable_2="v"/>
    <map_variables variable_1="u_d" variable_2="u_in"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc3_module" component_2="PV6_module"/>
    <map_variables variable_1="H_from4" variable_2="H_R_out_LHS"/>
    <map_variables variable_1="H_to4" variable_2="H_L_out"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc3_module" component_2="PV6_module"/>
    <map_variables variable_1="r_bc4" variable_2="r"/>
-</connection>
-<connection>
-   <map_components component_1="VV_junc3_module" component_2="PV6_module"/>
    <map_variables variable_1="C_conn4" variable_2="C"/>
 </connection>
 <connection>
    <map_components component_1="PV5_module" component_2="V5_module"/>
    <map_variables variable_1="H_R_out" variable_2="H_R_out_LHS"/>
    <map_variables variable_1="H_L_out_RHS" variable_2="H_L_out"/>
-</connection>
-<connection>
-   <map_components component_1="PV5_module" component_2="V5_module"/>
    <map_variables variable_1="v_d" variable_2="v_in"/>
    <map_variables variable_1="u_out" variable_2="u"/>
 </connection>
@@ -488,9 +392,6 @@
    <map_components component_1="PV6_module" component_2="V6_module"/>
    <map_variables variable_1="H_R_out" variable_2="H_R_out_LHS"/>
    <map_variables variable_1="H_L_out_RHS" variable_2="H_L_out"/>
-</connection>
-<connection>
-   <map_components component_1="PV6_module" component_2="V6_module"/>
    <map_variables variable_1="v_d" variable_2="v_in"/>
    <map_variables variable_1="u_out" variable_2="u"/>
 </connection>

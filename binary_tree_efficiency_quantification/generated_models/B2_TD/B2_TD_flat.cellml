@@ -953,9 +953,9 @@
     <variable name="q_us" units="m3" interface="public"/>
     <variable name="C" units="m6_per_J" interface="public"/>
     <variable name="Z" units="dimensionless" interface="public"/>
-    <variable name="mu_45" units="dimensionless"/>
+    <variable name="mu_45" units="dimensionless" interface="public"/>
     <variable name="mu" units="Js_per_m3" interface="public"/>
-    <variable name="hem_dep_u_rel" units="dimensionless"/>
+    <variable name="hem_dep_u_rel" units="dimensionless" interface="public"/>
     <variable name="R" units="Js_per_m6" interface="public"/>
     <variable name="v" units="m3_per_s" interface="public"/>
     <variable name="v_mm3_s" units="mm3_per_s" interface="public"/>
@@ -4170,9 +4170,9 @@
     <variable name="q_us" units="m3" interface="public"/>
     <variable name="C" units="m6_per_J" interface="public"/>
     <variable name="Z" units="dimensionless" interface="public"/>
-    <variable name="mu_45" units="dimensionless"/>
+    <variable name="mu_45" units="dimensionless" interface="public"/>
     <variable name="mu" units="Js_per_m3" interface="public"/>
-    <variable name="hem_dep_u_rel" units="dimensionless"/>
+    <variable name="hem_dep_u_rel" units="dimensionless" interface="public"/>
     <variable name="R" units="Js_per_m6" interface="public"/>
     <variable name="v" units="m3_per_s" interface="public"/>
     <variable name="v_mm3_s" units="mm3_per_s" interface="public"/>
@@ -5064,9 +5064,9 @@
     <variable name="q_us" units="m3" interface="public"/>
     <variable name="C" units="m6_per_J" interface="public"/>
     <variable name="Z" units="dimensionless" interface="public"/>
-    <variable name="mu_45" units="dimensionless"/>
+    <variable name="mu_45" units="dimensionless" interface="public"/>
     <variable name="mu" units="Js_per_m3" interface="public"/>
-    <variable name="hem_dep_u_rel" units="dimensionless"/>
+    <variable name="hem_dep_u_rel" units="dimensionless" interface="public"/>
     <variable name="R" units="Js_per_m6" interface="public"/>
     <variable name="v" units="m3_per_s" interface="public"/>
     <variable name="v_mm3_s" units="mm3_per_s" interface="public"/>
@@ -5950,9 +5950,9 @@
     <variable name="q_us" units="m3" interface="public"/>
     <variable name="C" units="m6_per_J" interface="public"/>
     <variable name="Z" units="dimensionless" interface="public"/>
-    <variable name="mu_45" units="dimensionless"/>
+    <variable name="mu_45" units="dimensionless" interface="public"/>
     <variable name="mu" units="Js_per_m3" interface="public"/>
-    <variable name="hem_dep_u_rel" units="dimensionless"/>
+    <variable name="hem_dep_u_rel" units="dimensionless" interface="public"/>
     <variable name="R" units="Js_per_m6" interface="public"/>
     <variable name="v" units="m3_per_s" interface="public"/>
     <variable name="v_mm3_s" units="mm3_per_s" interface="public"/>
@@ -6710,9 +6710,9 @@
     <variable name="q_us" units="m3" interface="public"/>
     <variable name="C" units="m6_per_J" interface="public"/>
     <variable name="Z" units="dimensionless" interface="public"/>
-    <variable name="mu_45" units="dimensionless"/>
+    <variable name="mu_45" units="dimensionless" interface="public"/>
     <variable name="mu" units="Js_per_m3" interface="public"/>
-    <variable name="hem_dep_u_rel" units="dimensionless"/>
+    <variable name="hem_dep_u_rel" units="dimensionless" interface="public"/>
     <variable name="R" units="Js_per_m6" interface="public"/>
     <variable name="v" units="m3_per_s" interface="public"/>
     <variable name="v_mm3_s" units="mm3_per_s" interface="public"/>
@@ -9842,9 +9842,9 @@
     <variable name="q_us" units="m3" interface="public"/>
     <variable name="C" units="m6_per_J" interface="public"/>
     <variable name="Z" units="dimensionless" interface="public"/>
-    <variable name="mu_45" units="dimensionless"/>
+    <variable name="mu_45" units="dimensionless" interface="public"/>
     <variable name="mu" units="Js_per_m3" interface="public"/>
-    <variable name="hem_dep_u_rel" units="dimensionless"/>
+    <variable name="hem_dep_u_rel" units="dimensionless" interface="public"/>
     <variable name="R" units="Js_per_m6" interface="public"/>
     <variable name="v" units="m3_per_s" interface="public"/>
     <variable name="v_mm3_s" units="mm3_per_s" interface="public"/>
@@ -10736,9 +10736,9 @@
     <variable name="q_us" units="m3" interface="public"/>
     <variable name="C" units="m6_per_J" interface="public"/>
     <variable name="Z" units="dimensionless" interface="public"/>
-    <variable name="mu_45" units="dimensionless"/>
+    <variable name="mu_45" units="dimensionless" interface="public"/>
     <variable name="mu" units="Js_per_m3" interface="public"/>
-    <variable name="hem_dep_u_rel" units="dimensionless"/>
+    <variable name="hem_dep_u_rel" units="dimensionless" interface="public"/>
     <variable name="R" units="Js_per_m6" interface="public"/>
     <variable name="v" units="m3_per_s" interface="public"/>
     <variable name="v_mm3_s" units="mm3_per_s" interface="public"/>
@@ -11622,9 +11622,9 @@
     <variable name="q_us" units="m3" interface="public"/>
     <variable name="C" units="m6_per_J" interface="public"/>
     <variable name="Z" units="dimensionless" interface="public"/>
-    <variable name="mu_45" units="dimensionless"/>
+    <variable name="mu_45" units="dimensionless" interface="public"/>
     <variable name="mu" units="Js_per_m3" interface="public"/>
-    <variable name="hem_dep_u_rel" units="dimensionless"/>
+    <variable name="hem_dep_u_rel" units="dimensionless" interface="public"/>
     <variable name="R" units="Js_per_m6" interface="public"/>
     <variable name="v" units="m3_per_s" interface="public"/>
     <variable name="v_mm3_s" units="mm3_per_s" interface="public"/>
@@ -12382,9 +12382,9 @@
     <variable name="q_us" units="m3" interface="public"/>
     <variable name="C" units="m6_per_J" interface="public"/>
     <variable name="Z" units="dimensionless" interface="public"/>
-    <variable name="mu_45" units="dimensionless"/>
+    <variable name="mu_45" units="dimensionless" interface="public"/>
     <variable name="mu" units="Js_per_m3" interface="public"/>
-    <variable name="hem_dep_u_rel" units="dimensionless"/>
+    <variable name="hem_dep_u_rel" units="dimensionless" interface="public"/>
     <variable name="R" units="Js_per_m6" interface="public"/>
     <variable name="v" units="m3_per_s" interface="public"/>
     <variable name="v_mm3_s" units="mm3_per_s" interface="public"/>
@@ -15514,9 +15514,9 @@
     <variable name="q_us" units="m3" interface="public"/>
     <variable name="C" units="m6_per_J" interface="public"/>
     <variable name="Z" units="dimensionless" interface="public"/>
-    <variable name="mu_45" units="dimensionless"/>
+    <variable name="mu_45" units="dimensionless" interface="public"/>
     <variable name="mu" units="Js_per_m3" interface="public"/>
-    <variable name="hem_dep_u_rel" units="dimensionless"/>
+    <variable name="hem_dep_u_rel" units="dimensionless" interface="public"/>
     <variable name="R" units="Js_per_m6" interface="public"/>
     <variable name="v" units="m3_per_s" interface="public"/>
     <variable name="v_mm3_s" units="mm3_per_s" interface="public"/>
@@ -16408,9 +16408,9 @@
     <variable name="q_us" units="m3" interface="public"/>
     <variable name="C" units="m6_per_J" interface="public"/>
     <variable name="Z" units="dimensionless" interface="public"/>
-    <variable name="mu_45" units="dimensionless"/>
+    <variable name="mu_45" units="dimensionless" interface="public"/>
     <variable name="mu" units="Js_per_m3" interface="public"/>
-    <variable name="hem_dep_u_rel" units="dimensionless"/>
+    <variable name="hem_dep_u_rel" units="dimensionless" interface="public"/>
     <variable name="R" units="Js_per_m6" interface="public"/>
     <variable name="v" units="m3_per_s" interface="public"/>
     <variable name="v_mm3_s" units="mm3_per_s" interface="public"/>
@@ -17294,9 +17294,9 @@
     <variable name="q_us" units="m3" interface="public"/>
     <variable name="C" units="m6_per_J" interface="public"/>
     <variable name="Z" units="dimensionless" interface="public"/>
-    <variable name="mu_45" units="dimensionless"/>
+    <variable name="mu_45" units="dimensionless" interface="public"/>
     <variable name="mu" units="Js_per_m3" interface="public"/>
-    <variable name="hem_dep_u_rel" units="dimensionless"/>
+    <variable name="hem_dep_u_rel" units="dimensionless" interface="public"/>
     <variable name="R" units="Js_per_m6" interface="public"/>
     <variable name="v" units="m3_per_s" interface="public"/>
     <variable name="v_mm3_s" units="mm3_per_s" interface="public"/>
@@ -18054,9 +18054,9 @@
     <variable name="q_us" units="m3" interface="public"/>
     <variable name="C" units="m6_per_J" interface="public"/>
     <variable name="Z" units="dimensionless" interface="public"/>
-    <variable name="mu_45" units="dimensionless"/>
+    <variable name="mu_45" units="dimensionless" interface="public"/>
     <variable name="mu" units="Js_per_m3" interface="public"/>
-    <variable name="hem_dep_u_rel" units="dimensionless"/>
+    <variable name="hem_dep_u_rel" units="dimensionless" interface="public"/>
     <variable name="R" units="Js_per_m6" interface="public"/>
     <variable name="v" units="m3_per_s" interface="public"/>
     <variable name="v_mm3_s" units="mm3_per_s" interface="public"/>
