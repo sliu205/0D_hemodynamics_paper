@@ -1,0 +1,77 @@
+name,BC_type,vessel_type,inp_vessels,out_vessels
+inlet,pp_H1,capillary_H_D,,VV_junc1
+VV_junc1,vv_junction,capillary_H_D,inlet,PV1 PV2
+PV1,pp_H3,capillary_H_D_pericyte,VV_junc1,V1
+PV2,pp_H4,capillary_H_D_pericyte,VV_junc1,V2
+V1,vp_H1,capillary_H_D,PV1,VV_junc2
+V2,vp_H1,capillary_H_D,PV2,VV_junc3
+VV_junc2,vv_junction,capillary_H_D,V1,PV3 PV4
+PV3,pp_H3,capillary_H_D_pericyte,VV_junc2,V3
+PV4,pp_H4,capillary_H_D_pericyte,VV_junc2,V4
+V3,vp_H1,capillary_H_D,PV3,VV_junc4
+V4,vp_H1,capillary_H_D,PV4,VV_junc5
+VV_junc3,vv_junction,capillary_H_D,V2,PV5 PV6
+PV5,pp_H3,capillary_H_D_pericyte,VV_junc3,V5
+PV6,pp_H4,capillary_H_D_pericyte,VV_junc3,V6
+V5,vp_H1,capillary_H_D,PV5,VV_junc6
+V6,vp_H1,capillary_H_D,PV6,VV_junc7
+VV_junc4,vv_junction,capillary_H_D,V3,PV7 PV8
+PV7,pp_H3,capillary_H_D_pericyte,VV_junc4,V7
+PV8,pp_H4,capillary_H_D_pericyte,VV_junc4,V8
+V7,vp_H1,capillary_H_D,PV7,VV_junc8
+V8,vp_H1,capillary_H_D,PV8,VV_junc9
+VV_junc5,vv_junction,capillary_H_D,V4,PV9 PV10
+PV9,pp_H3,capillary_H_D_pericyte,VV_junc5,V9
+PV10,pp_H4,capillary_H_D_pericyte,VV_junc5,V10
+V9,vp_H1,capillary_H_D,PV9,VV_junc10
+V10,vp_H1,capillary_H_D,PV10,VV_junc11
+VV_junc6,vv_junction,capillary_H_D,V5,PV11 PV12
+PV11,pp_H3,capillary_H_D_pericyte,VV_junc6,V11
+PV12,pp_H4,capillary_H_D_pericyte,VV_junc6,V12
+V11,vp_H1,capillary_H_D,PV11,VV_junc12
+V12,vp_H1,capillary_H_D,PV12,VV_junc13
+VV_junc7,vv_junction,capillary_H_D,V6,PV13 PV14
+PV13,pp_H3,capillary_H_D_pericyte,VV_junc7,V13
+PV14,pp_H4,capillary_H_D_pericyte,VV_junc7,V14
+V13,vp_H1,capillary_H_D,PV13,VV_junc14
+V14,vp_H1,capillary_H_D,PV14,VV_junc15
+VV_junc8,vv_junction,capillary_H_D,V7,PV15 PV16
+PV15,pp_H3,capillary_H_D_pericyte,VV_junc8,V15
+PV16,pp_H4,capillary_H_D_pericyte,VV_junc8,V16
+V15,vp,capillary_H_D,PV15,
+V16,vp,capillary_H_D,PV16,
+VV_junc9,vv_junction,capillary_H_D,V8,PV17 PV18
+PV17,pp_H3,capillary_H_D_pericyte,VV_junc9,V17
+PV18,pp_H4,capillary_H_D_pericyte,VV_junc9,V18
+V17,vp,capillary_H_D,PV17,
+V18,vp,capillary_H_D,PV18,
+VV_junc10,vv_junction,capillary_H_D,V9,PV19 PV20
+PV19,pp_H3,capillary_H_D_pericyte,VV_junc10,V19
+PV20,pp_H4,capillary_H_D_pericyte,VV_junc10,V20
+V19,vp,capillary_H_D,PV19,
+V20,vp,capillary_H_D,PV20,
+VV_junc11,vv_junction,capillary_H_D,V10,PV21 PV22
+PV21,pp_H3,capillary_H_D_pericyte,VV_junc11,V21
+PV22,pp_H4,capillary_H_D_pericyte,VV_junc11,V22
+V21,vp,capillary_H_D,PV21,
+V22,vp,capillary_H_D,PV22,
+VV_junc12,vv_junction,capillary_H_D,V11,PV23 PV24
+PV23,pp_H3,capillary_H_D_pericyte,VV_junc12,V23
+PV24,pp_H4,capillary_H_D_pericyte,VV_junc12,V24
+V23,vp,capillary_H_D,PV23,
+V24,vp,capillary_H_D,PV24,
+VV_junc13,vv_junction,capillary_H_D,V12,PV25 PV26
+PV25,pp_H3,capillary_H_D_pericyte,VV_junc13,V25
+PV26,pp_H4,capillary_H_D_pericyte,VV_junc13,V26
+V25,vp,capillary_H_D,PV25,
+V26,vp,capillary_H_D,PV26,
+VV_junc14,vv_junction,capillary_H_D,V13,PV27 PV28
+PV27,pp_H3,capillary_H_D_pericyte,VV_junc14,V27
+PV28,pp_H4,capillary_H_D_pericyte,VV_junc14,V28
+V27,vp,capillary_H_D,PV27,
+V28,vp,capillary_H_D,PV28,
+VV_junc15,vv_junction,capillary_H_D,V14,PV29 PV30
+PV29,pp_H3,capillary_H_D_pericyte,VV_junc15,V29
+PV30,pp_H4,capillary_H_D_pericyte,VV_junc15,V30
+V29,vp,capillary_H_D,PV29,
+V30,vp,capillary_H_D,PV30,

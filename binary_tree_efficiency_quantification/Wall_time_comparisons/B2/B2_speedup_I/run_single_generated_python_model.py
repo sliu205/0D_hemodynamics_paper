@@ -60,8 +60,8 @@ T_START = 0
 T_END = 1000
 N_POINTS = 1001  # Number of output points
 
-RTOL = 1e-7  # Relative tolerance
-ATOL = 1e-7  # Absolute tolerance
+RTOL = 1e-100  # Relative tolerance
+ATOL = 1e-30  # Absolute tolerance
 MAX_STEP = 5  # Maximum step size (use np.inf for unlimited)
 
 # =============================================================================

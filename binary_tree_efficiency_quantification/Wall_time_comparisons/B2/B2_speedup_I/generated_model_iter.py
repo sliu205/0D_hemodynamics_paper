@@ -54,7 +54,7 @@ PV2__v_scale = 1e-50
 PV3__H_global_L = 0.45
 PV3__H_global_R = 0.45
 PV3__R_constriction_base = 0.0
-PV3__R_constriction_final = 0.0
+PV3__R_constriction_final = 0
 PV3__gamma_mirror = 0.1
 PV3__l = 0.000015
 PV3__mu_plasma = 0.001
@@ -1134,39 +1134,39 @@ def _iter_residual(H_means, t, y):
 
     # Residuals + zero-flow regularization
     res = np.empty(len(H_means))
-    res[0] = ((PV1__v*PV1__H_volume_L-PV1__v_d*PV1__H_volume_R)) - H_means[0] * ((PV1__q)*(PV1__v+PV1__v_d))
+    res[0] = ((PV1__v*PV1__H_volume_L-PV1__v_d*PV1__H_volume_R)) - H_means[0] * ((PV1__v+PV1__v_d))
     _flow = abs(PV1__v) + abs(PV1__v_d)
     _gate = ZERO_FLOW_REG_EPS**2 / (_flow**2 + ZERO_FLOW_REG_EPS**2 + 1e-300)
     res[0] += _gate * ZERO_FLOW_ANCHOR_STRENGTH * (PV1__H_global_L - H_means[0])
-    res[1] = ((PV2__v*PV2__H_volume_L-PV2__v_d*PV2__H_volume_R)) - H_means[1] * ((PV2__q)*(PV2__v+PV2__v_d))
+    res[1] = ((PV2__v*PV2__H_volume_L-PV2__v_d*PV2__H_volume_R)) - H_means[1] * ((PV2__v+PV2__v_d))
     _flow = abs(PV2__v) + abs(PV2__v_d)
     _gate = ZERO_FLOW_REG_EPS**2 / (_flow**2 + ZERO_FLOW_REG_EPS**2 + 1e-300)
     res[1] += _gate * ZERO_FLOW_ANCHOR_STRENGTH * (PV2__H_global_L - H_means[1])
-    res[2] = ((PV3__v*PV3__H_volume_L-PV3__v_d*PV3__H_volume_R)) - H_means[2] * ((PV3__q)*(PV3__v+PV3__v_d))
+    res[2] = ((PV3__v*PV3__H_volume_L-PV3__v_d*PV3__H_volume_R)) - H_means[2] * ((PV3__v+PV3__v_d))
     _flow = abs(PV3__v) + abs(PV3__v_d)
     _gate = ZERO_FLOW_REG_EPS**2 / (_flow**2 + ZERO_FLOW_REG_EPS**2 + 1e-300)
     res[2] += _gate * ZERO_FLOW_ANCHOR_STRENGTH * (PV3__H_global_L - H_means[2])
-    res[3] = ((PV4__v*PV4__H_volume_L-PV4__v_d*PV4__H_volume_R)) - H_means[3] * ((PV4__q)*(PV4__v+PV4__v_d))
+    res[3] = ((PV4__v*PV4__H_volume_L-PV4__v_d*PV4__H_volume_R)) - H_means[3] * ((PV4__v+PV4__v_d))
     _flow = abs(PV4__v) + abs(PV4__v_d)
     _gate = ZERO_FLOW_REG_EPS**2 / (_flow**2 + ZERO_FLOW_REG_EPS**2 + 1e-300)
     res[3] += _gate * ZERO_FLOW_ANCHOR_STRENGTH * (PV4__H_global_L - H_means[3])
-    res[4] = ((PV5__v*PV5__H_volume_L-PV5__v_d*PV5__H_volume_R)) - H_means[4] * ((PV5__q)*(PV5__v+PV5__v_d))
+    res[4] = ((PV5__v*PV5__H_volume_L-PV5__v_d*PV5__H_volume_R)) - H_means[4] * ((PV5__v+PV5__v_d))
     _flow = abs(PV5__v) + abs(PV5__v_d)
     _gate = ZERO_FLOW_REG_EPS**2 / (_flow**2 + ZERO_FLOW_REG_EPS**2 + 1e-300)
     res[4] += _gate * ZERO_FLOW_ANCHOR_STRENGTH * (PV5__H_global_L - H_means[4])
-    res[5] = ((PV6__v*PV6__H_volume_L-PV6__v_d*PV6__H_volume_R)) - H_means[5] * ((PV6__q)*(PV6__v+PV6__v_d))
+    res[5] = ((PV6__v*PV6__H_volume_L-PV6__v_d*PV6__H_volume_R)) - H_means[5] * ((PV6__v+PV6__v_d))
     _flow = abs(PV6__v) + abs(PV6__v_d)
     _gate = ZERO_FLOW_REG_EPS**2 / (_flow**2 + ZERO_FLOW_REG_EPS**2 + 1e-300)
     res[5] += _gate * ZERO_FLOW_ANCHOR_STRENGTH * (PV6__H_global_L - H_means[5])
-    res[6] = ((PV1__v_d*V1__H_volume_L-V1__v*V1__H_volume_R)) - H_means[6] * ((V1__q)*(PV1__v_d+V1__v))
-    _flow = abs(V1__v)
+    res[6] = ((PV1__v_d*V1__H_volume_L-V1__v*V1__H_volume_R)) - H_means[6] * ((PV1__v_d+V1__v))
+    _flow = abs(PV1__v_d) + abs(V1__v)
     _gate = ZERO_FLOW_REG_EPS**2 / (_flow**2 + ZERO_FLOW_REG_EPS**2 + 1e-300)
     res[6] += _gate * ZERO_FLOW_ANCHOR_STRENGTH * (V1__H_global_L - H_means[6])
-    res[7] = ((PV2__v_d*V2__H_volume_L-V2__v*V2__H_volume_R)) - H_means[7] * ((V2__q)*(PV2__v_d+V2__v))
-    _flow = abs(V2__v)
+    res[7] = ((PV2__v_d*V2__H_volume_L-V2__v*V2__H_volume_R)) - H_means[7] * ((PV2__v_d+V2__v))
+    _flow = abs(PV2__v_d) + abs(V2__v)
     _gate = ZERO_FLOW_REG_EPS**2 / (_flow**2 + ZERO_FLOW_REG_EPS**2 + 1e-300)
     res[7] += _gate * ZERO_FLOW_ANCHOR_STRENGTH * (V2__H_global_L - H_means[7])
-    res[8] = ((inlet__v*inlet__H_volume_L-inlet__v_d*inlet__H_volume_R)) - H_means[8] * ((inlet__q)*(inlet__v+inlet__v_d))
+    res[8] = ((inlet__v*inlet__H_volume_L-inlet__v_d*inlet__H_volume_R)) - H_means[8] * ((inlet__v+inlet__v_d))
     _flow = abs(inlet__v) + abs(inlet__v_d)
     _gate = ZERO_FLOW_REG_EPS**2 / (_flow**2 + ZERO_FLOW_REG_EPS**2 + 1e-300)
     res[8] += _gate * ZERO_FLOW_ANCHOR_STRENGTH * (inlet__H_global_L - H_means[8])
@@ -1194,7 +1194,7 @@ def _solve_iterative(t, y):
     # Levenberg-Marquardt under bounds via trust region reflective.
     sol = least_squares(_iter_residual, x0, args=(t, y),
                         bounds=(_H_LO, _H_HI),
-                        method="trf", xtol=1e-12, ftol=1e-12,
+                        method="trf", xtol=1e-100, ftol=1e-00,
                         max_nfev=50)
     if sol.success or np.linalg.norm(sol.fun) < RES_ACCEPT_TOL:
         _iter_last_solution[0] = sol.x.copy()

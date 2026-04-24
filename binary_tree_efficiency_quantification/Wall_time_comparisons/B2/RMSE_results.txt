@@ -35,7 +35,7 @@ PV5__v_mm3_s              |         8.36131e-13         0.0006%  |         8.139
 V3__v_mm3_s               |         3.49089e-13         0.0000%  |         2.64384e-09         0.1028%
 PV3__v_mm3_s              |         7.12742e-13         0.0000%  |         2.64381e-09         0.1028%
 
-Aggregate NRMSE% (mean across variables)
---------------------------------------------------
-  generated   mean NRMSE =   0.0015%   median =   0.0001%   max =   0.0442%
-  iterative   mean NRMSE =  20.3755%   median =   8.3652%   max =  65.2164%
+  Aggregate NRMSE% (mean across variables)
+  --------------------------------------------------
+    generated   mean NRMSE =   0.0015%   median =   0.0001%   max =   0.0442%
+    iterative   mean NRMSE =  20.3755%   median =   8.3652%   max =  65.2164%

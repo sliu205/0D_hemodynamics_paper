@@ -37,9 +37,9 @@ print("Running step2_iter.py (v5-iter1 - iterative H_mean solver)")
 print("=" * 60)
 
 # Files
-MAIN = "B1_I.txt"
-MODULES = "B1_I_modules.txt"
-PARAMS_CSV = "B1_I_parameters.csv"
+MAIN = "B2_speedup_I.txt"
+MODULES = "B2_speedup_I_modules.txt"
+PARAMS_CSV = "B2_speedup_I_parameters.csv"
 INITIAL_CSV = "initial_params.csv"
 OUTPUT = "generated_model_iter.py"
 
@@ -483,6 +483,83 @@ for lhs, rhs in all_equations:
         _new_all_equations.append((lhs, rhs))
 all_equations = _new_all_equations
 
+# ==============================================================================
+# IT-2b (BUG FIX): Override iter_residual_rhs with the correct flux-balance form.
+# ==============================================================================
+# The CellML template defines `H_mean = RBC_volume / q` and separately defines
+# `RBC_volume = (v*H_vol_L - v_d*H_vol_R)/(v+v_d)` as an algebraic equation
+# (see B2_speedup_I_modules.txt lines 1198-1200, 1385-1387, 1562-1564).
+#
+# The previous pipeline took `H_mean = RBC_volume/q` verbatim and multiplied
+# through to get residual:
+#     res = RBC_volume - H_mean * q
+# Then _expand_divs substituted RBC_volume's algebraic definition, pulling the
+# (v+v_d) denominator up onto the H_mean side, giving:
+#     res = (v*H_vol_L - v_d*H_vol_R) - H_mean * q * (v + v_d)
+#
+# The user's specified residual (what the physics actually says at quasi-SS) is:
+#     res = (v*H_vol_L - v_d*H_vol_R) - H_mean * (v + v_d)
+# i.e. H_mean equals the flow-averaged hematocrit directly — no q.
+#
+# The simplest correct interpretation: for iterative vessels, bypass the
+# spurious /q in `H_mean = RBC_volume/q` and use RBC_volume's own algebraic
+# definition directly as the residual source:
+#     H_mean = RBC_volume  (substituting RBC_volume = num/denom directly)
+# which gives the desired residual shape after _expand_divs.
+#
+# We do this by looking up RBC_volume's algebraic equation in `all_equations`
+# and rewriting iter_residual_rhs[comp__H_mean] to point at that RHS directly.
+_alg_rhs_of_lookup = {lhs: rhs for lhs, rhs in all_equations}
+
+_fixed_count = 0
+iter_flow_terms = {}  # {comp_base: (flow_L_expr, flow_R_expr)} for anchor use later
+
+def _extract_flow_terms_from_rbc_rhs(rhs_str):
+    """
+    Given an RBC_volume algebraic RHS like
+        '(A*X__H_volume_L - B*X__H_volume_R) / (A + B)'
+    or any equivalent bracketing, return (A, B) as strings so the anchor can
+    use `abs(A) + abs(B)` for the flow magnitude. Returns None if the pattern
+    doesn't match (we still keep the fix; the anchor just falls back).
+    """
+    # Remove outer parens pairs if present, then try to match the numerator
+    # flow*H_L - flow*H_R pattern. We don't try to be fully general; we just
+    # want to expose the two flow expressions for the anchor.
+    s = rhs_str.strip()
+    # Match '(num)/(den)' where num contains the pattern
+    m = re.match(r'^\s*\((.*)\)\s*/\s*\(.*\)\s*$', s, re.DOTALL)
+    inner = m.group(1) if m else s
+    m2 = re.match(
+        r'^\s*(.+?)\s*\*\s*[A-Za-z_]\w*__H_(?:mass|volume)_L\s*'
+        r'-\s*(.+?)\s*\*\s*[A-Za-z_]\w*__H_(?:mass|volume)_R\s*$',
+        inner
+    )
+    if not m2:
+        return None
+    return m2.group(1).strip(), m2.group(2).strip()
+
+for comp_base in iter_vessel_comps:
+    hmean_name = f"{comp_base}__H_mean"
+    rbc_name   = f"{comp_base}__RBC_volume"
+    rbc_rhs = _alg_rhs_of_lookup.get(rbc_name)
+    if rbc_rhs is None:
+        print(f"  ⚠ IT-2b: no RBC_volume algebraic equation found for iterative "
+              f"vessel {comp_base}; leaving residual as-is (will be WRONG)")
+        continue
+    # Point the H_mean residual source directly at RBC_volume's algebraic RHS.
+    # _expand_divs will then pull num up as numerator and denom up as the
+    # (v+v_d) factor on the H_mean side — with NO extra q.
+    iter_residual_rhs[hmean_name] = rbc_rhs
+    # Extract the two flow terms so the zero-flow anchor uses the correct
+    # flows (v_in+v for V*, v+v_d for PV*/inlet).
+    terms = _extract_flow_terms_from_rbc_rhs(rbc_rhs)
+    if terms is not None:
+        iter_flow_terms[comp_base] = terms
+    _fixed_count += 1
+
+print(f"  IT-2b (fix): rewrote {_fixed_count}/{len(iter_vessel_comps)} residual "
+      f"expression(s) to use RBC_volume's algebraic RHS directly (drops spurious /q)")
+
 # Sanity: every declared iterative unknown must have had an equation.
 _missing_iter = [n for n in iter_unknown_names if n not in iter_residual_rhs]
 if _missing_iter:
@@ -899,22 +976,21 @@ for i, n in enumerate(iter_unknown_names):
             f"    res[{i}] = ({num_expr}) - H_means[{i}] * ({den_expr})"
         )
     # Zero-flow anchor (IT-4e). Flow vars are locals, not dict lookups.
-    # Fall back to 0.0 if {comp}__v / {comp}__v_d aren't in scope — but by
-    # construction they will be, since any iterative vessel has them.
-    v_name = f"{comp_base}__v"
-    vd_name = f"{comp_base}__v_d"
-    # We can't do runtime .get() on locals, but both of these variables are
-    # *guaranteed* to be defined for any iterative vessel template (see
-    # ITERATIVE_VESSEL_TEMPLATES). Reference them directly.
-    if v_name in computed_lhs_set and vd_name in computed_lhs_set:
-        lines.append(
-            f"    _flow = abs({v_name}) + abs({vd_name})"
-        )
-    elif v_name in computed_lhs_set:
-        lines.append(f"    _flow = abs({v_name})")
+    # Use the same flow terms that appear in the residual denominator (set up
+    # by IT-2b fix) so the gate correctly detects when the residual becomes
+    # degenerate. Falls back to the old v/v_d heuristic if flow_terms unset.
+    if comp_base in iter_flow_terms:
+        flow_L, flow_R = iter_flow_terms[comp_base]
+        lines.append(f"    _flow = abs({flow_L}) + abs({flow_R})")
     else:
-        # Shouldn't happen for declared iterative vessels, but be safe.
-        lines.append(f"    _flow = 0.0")
+        v_name = f"{comp_base}__v"
+        vd_name = f"{comp_base}__v_d"
+        if v_name in computed_lhs_set and vd_name in computed_lhs_set:
+            lines.append(f"    _flow = abs({v_name}) + abs({vd_name})")
+        elif v_name in computed_lhs_set:
+            lines.append(f"    _flow = abs({v_name})")
+        else:
+            lines.append(f"    _flow = 0.0")
     lines.append(
         f"    _gate = ZERO_FLOW_REG_EPS**2 / "
         f"(_flow**2 + ZERO_FLOW_REG_EPS**2 + 1e-300)"
