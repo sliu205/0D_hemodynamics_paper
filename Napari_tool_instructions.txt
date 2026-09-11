@@ -1,0 +1,8 @@
+~/napari-venv/bin/python \
+  ~/Documents/git_projects/Haemolynx/HaemoLynx/Network_creation_scripts/curate_network_v13.py \
+  ~/Documents/git_projects/Haemolynx/HaemoLynx/outputs/vessel-Zstack2_Male_SM_9W_16072024_segmented_graph.pkl \
+  --image ~/Documents/git_projects/Haemolynx/HaemoLynx/outputs/HaemoLynx_image.tif
+  
+  
+  ~/napari-venv/bin/python   ~/Documents/git_projects/Haemolynx/HaemoLynx/Network_creation_scripts/build_vessel_array.py   ~/Documents/git_projects/Haemolynx/HaemoLynx/outputs/Post_processed/vessel-Zstack2_Male_SM_9W_16072024_segmented_graph_curated_174625_Manual_pruned.vtp   --image ~/Documents/git_projects/Haemolynx/HaemoLynx/outputs/HaemoLynx_image.tif
+
